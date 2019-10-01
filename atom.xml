@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.vincent.ac.cn/</id>
     <title>Vincent的博客</title>
-    <updated>2019-09-19T11:32:13.523Z</updated>
+    <updated>2019-10-01T09:37:54.444Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.vincent.ac.cn/"/>
     <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
@@ -11,7 +11,59 @@
     <icon>http://www.vincent.ac.cn//favicon.ico</icon>
     <rights>All rights reserved 2019, Vincent的博客</rights>
     <entry>
-        <title type="html"><![CDATA[Docker入门之路 1]]></title>
+        <title type="html"><![CDATA[ Centos安装docker 以及 docker基本概念]]></title>
+        <id>http://www.vincent.ac.cn//post/centos-an-zhuang-docker-yi-ji-docker-ji-ben-gai-nian</id>
+        <link href="http://www.vincent.ac.cn//post/centos-an-zhuang-docker-yi-ji-docker-ji-ben-gai-nian">
+        </link>
+        <updated>2019-10-01T09:29:08.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="centos-安装docker">Centos 安装docker</h2>
+<ol>
+<li>更新update到最新的版本<br>
+yum update</li>
+<li>卸载老版本docker<br>
+yum remove docker docker-common docker-selinux docker-engine</li>
+<li>安装需要的软件包<br>
+yum install -y yum-utils device-mapper-persistent-data lvm2</li>
+<li>设置yum源<br>
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</li>
+<li>查看docker版本<br>
+yum list docker-ce --showduplicates|sort -r</li>
+<li>安装docker<br>
+yum install docker-ce-18.03.1.ce -y</li>
+<li>启动docker<br>
+systemctl start docker</li>
+<li>加入开机自启<br>
+systemctl enable docker</li>
+<li>配置国内镜像<br>
+vi /etc/docker/daemon.json { &quot;registry-mirrors&quot;: [&quot;http://hub-mirror.c.163.com&quot;] }</li>
+</ol>
+<h2 id="docker基本概念">Docker基本概念</h2>
+<p>Docker 包括三个基本概念: 镜像（Image） 容器（Container） 仓库（Repository）</p>
+<ol>
+<li>
+<p>Docker 镜像就是一个只读的模板。</p>
+<ul>
+<li>例如：一个镜像可以包含一个完整的 ubuntu 操作系统环境，里面仅安装了 Apache 或用户需要的其它应用程序。 镜像可以用来创建 Docker 容器。 Docker 提供了一个很简单的机制来创建镜像或者更新现有的镜像，用户甚至可以直接从其他人那里下载一个已经做好的镜像来直接使用。</li>
+</ul>
+</li>
+<li>
+<p>Docker 容器</p>
+<ul>
+<li>Docker 利用容器来运行应用。</li>
+<li>容器是从镜像创建的运行实例。它可以被启动、开始、停止、删除。每个容器都是相互隔离的、保证安全的平台。 可以把容器看做是一个简易版的 Linux 环境（包括root用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。</li>
+</ul>
+</li>
+<li>
+<p>Docker 仓库</p>
+<ul>
+<li>仓库是集中存放镜像文件的场所。有时候会把仓库和仓库注册服务器（Registry）混为一谈，并不严格区分。实际上，仓库注册服务器上往往存放着多个仓库， 每个仓库中又包含了多个镜像，每个镜像有不同的标签（tag）。 仓库分为公开仓库（Public）和私有仓库（Private）两种形式。 最大的公开仓库是 Docker Hub，存放了数量庞大的镜像供用户下载。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker是什么？]]></title>
         <id>http://www.vincent.ac.cn//post/docker-ru-men-zhi-lu-1</id>
         <link href="http://www.vincent.ac.cn//post/docker-ru-men-zhi-lu-1">
         </link>
@@ -51,7 +103,9 @@
 <ul>
 <li>Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易，也使得应用的维护更新更加简单，基于基础镜像进一步扩展镜像也变得非常简单。此外，Docker 团队同各个开源项目团队一起维护了一大批高质量的 官方镜像，既可以直接在生产环境使用，又可以作为基础进一步定制，大大的降低了应用服务的镜像制作成本。</li>
 </ul>
-<h1 id="docker-的主要用途目前有三大类">Docker 的主要用途，目前有三大类。</h1>
+<h2 id="对比传统虚拟机总结">对比传统虚拟机总结</h2>
+<p><img src="http://www.vincent.ac.cn//post-images/1569922573445.png" alt=""></p>
+<h2 id="docker-的主要用途目前有三大类">Docker 的主要用途，目前有三大类。</h2>
 <ol>
 <li>提供一次性的环境。比如，本地测试他人的软件、持续集成的时候提供单元测试和构建的环境。</li>
 <li>提供弹性的云服务。因为 Docker 容器可以随开随关，很适合动态扩容和缩容。</li>
