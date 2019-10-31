@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title> Centos安装docker 以及 docker基本概念 | Vincent的博客</title>
+<title>laravel 学习之路 - 1  安装  | Vincent的博客</title>
 <meta name="description" content="不愤不启不悱不发">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -101,61 +101,87 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title"> Centos安装docker 以及 docker基本概念</h2>
-            <div class="post-date">2019-10-01</div>
+            <h2 class="post-title">laravel 学习之路 - 1  安装 </h2>
+            <div class="post-date">2019-10-31</div>
             
             <div class="post-content">
-              <h2 id="centos-安装docker">Centos 安装docker</h2>
+              <h2 id="安装条件">安装条件</h2>
+<p>安装需要的环境搞定后，咱在来说laravel的下载</p>
 <ol>
-<li>更新update到最新的版本<br>
-yum update</li>
-<li>卸载老版本docker<br>
-yum remove docker docker-common docker-selinux docker-engine</li>
-<li>安装需要的软件包<br>
-yum install -y yum-utils device-mapper-persistent-data lvm2</li>
-<li>设置yum源<br>
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</li>
-<li>查看docker版本<br>
-yum list docker-ce --showduplicates|sort -r</li>
-<li>安装docker<br>
-yum install docker-ce-18.03.1.ce -y</li>
-<li>启动docker<br>
-systemctl start docker</li>
-<li>加入开机自启<br>
-systemctl enable docker</li>
-<li>配置国内镜像<br>
-vi /etc/docker/daemon.json { &quot;registry-mirrors&quot;: [&quot;http://hub-mirror.c.163.com&quot;] }</li>
+<li>composer</li>
 </ol>
-<h2 id="docker基本概念">Docker基本概念</h2>
-<p>Docker 包括三个基本概念: 镜像（Image） 容器（Container） 仓库（Repository）</p>
+<ul>
+<li>你需要安装好 composer <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> 配置好本地环境，</li>
+</ul>
+<ol start="2">
+<li>PHP开发环境</li>
+</ol>
+<p>我用的是 Homebrew <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> 安装的。</p>
+<p>环境的安装网上很多教程我就不多描述了，最新版是 Laravel 6 让我们来大胆的学习最新版本</p>
+<h2 id="好现在我们来玩安装-laravel-6-中文文档">好现在我们来玩安装 （<a href="https://learnku.com/docs/laravel/6.x/installation/5124">Laravel 6 中文文档</a>）</h2>
+<ul>
+<li>laravel 安装方式很多这里介绍两种</li>
+</ul>
+<blockquote>
 <ol>
-<li>
-<p>Docker 镜像就是一个只读的模板。</p>
+<li>一种是使用 [^composer create-project]: composer 直接创建项目</li>
+</ol>
 <ul>
-<li>例如：一个镜像可以包含一个完整的 ubuntu 操作系统环境，里面仅安装了 Apache 或用户需要的其它应用程序。 镜像可以用来创建 Docker 容器。 Docker 提供了一个很简单的机制来创建镜像或者更新现有的镜像，用户甚至可以直接从其他人那里下载一个已经做好的镜像来直接使用。</li>
+<li><code>composer create-project --prefer-dist laravel/laravel LaravelStudy</code></li>
 </ul>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>一种是 使用 laravel 的安装器；</li>
+</ol>
+<ul>
+<li><code>composer global require &quot;laravel/installer&quot;</code></li>
+<li>composer global后就可以各种 new 项目了；</li>
+<li><code>laravel new LaravelStudy</code></li>
+</ul>
+</blockquote>
+<p>我选择了 laravel 安装器,因为更加方便并且可以直接从缓存中加载,速度更加快；</p>
+<h2 id="简单了解目录结构">简单了解目录结构</h2>
+<p>我这边操作完有了一个LaravelStudy目录我们来看一下</p>
+<p><img src="http://www.vincent.ac.cn//post-images/1572506148376.png" alt=""></p>
+<p>目录是挺多的不过刚开始记住截图里标注的就好了<br>
+不过在我截图的时候发现并没有models目录于是我去翻看了官方文档 下面是官方解释<br>
+<img src="http://www.vincent.ac.cn//post-images/1572506159439.png" alt=""></p>
+<p>所以不用担心我们手动创建个Models就好了</p>
+<h2 id="访问laravel">访问Laravel</h2>
+<p>public/index.php 文件是项目的入口文件，laravel 框架是单入口所有的请求都是先到 index.php ，也就是说我们在配置环境的时候，需要把根目录指向到 index.php 所在的目录，也就是 public 目录下面；</p>
+<p>nginx 是这样的；</p>
+<pre><code class="language-nginx">server
+{
+    # ...
+    root /Users/vincent/LocalProject/laravelStudy/public;
+    # ...
+}
+</code></pre>
+<p>配置好目录我们就可以访问项目了；</p>
+<p>打开 http://study.laraveltest.com/</p>
+<p><img src="http://www.vincent.ac.cn//post-images/1572506168093.png" alt=""></p>
+<p>今天要学习实现的目标就达到了；</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>PHP 世界的包管理工具 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li>
-<p>Docker 容器</p>
-<ul>
-<li>Docker 利用容器来运行应用。</li>
-<li>容器是从镜像创建的运行实例。它可以被启动、开始、停止、删除。每个容器都是相互隔离的、保证安全的平台。 可以把容器看做是一个简易版的 Linux 环境（包括root用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。</li>
-</ul>
-</li>
-<li>
-<p>Docker 仓库</p>
-<ul>
-<li>仓库是集中存放镜像文件的场所。有时候会把仓库和仓库注册服务器（Registry）混为一谈，并不严格区分。实际上，仓库注册服务器上往往存放着多个仓库， 每个仓库中又包含了多个镜像，每个镜像有不同的标签（tag）。 仓库分为公开仓库（Public）和私有仓库（Private）两种形式。 最大的公开仓库是 Docker Hub，存放了数量庞大的镜像供用户下载。</li>
-</ul>
+<li id="fn2" class="footnote-item"><p>Homebrew是一款MacOS平台下的软件包管理工具 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
+</section>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="http://www.vincent.ac.cn//tag/Wf9dxWbla" class="tag">
-                    docker
+                  <a href="http://www.vincent.ac.cn//tag/ULKwYDOFh" class="tag">
+                    php
+                  </a>
+                
+                  <a href="http://www.vincent.ac.cn//tag/r9lWhqCpR5" class="tag">
+                    Laravel
                   </a>
                 
               </div>
@@ -163,9 +189,9 @@ vi /etc/docker/daemon.json { &quot;registry-mirrors&quot;: [&quot;http://hub-mir
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="http://www.vincent.ac.cn//post/docker-ru-men-zhi-lu-1">
+                <a href="http://www.vincent.ac.cn//post/centos-an-zhuang-docker-yi-ji-docker-ji-ben-gai-nian">
                   <h3 class="post-title">
-                    Docker是什么？
+                     Centos安装docker 以及 docker基本概念
                   </h3>
                 </a>
               </div>

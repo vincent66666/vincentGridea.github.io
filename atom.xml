@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.vincent.ac.cn/</id>
     <title>Vincent的博客</title>
-    <updated>2019-10-01T09:37:54.444Z</updated>
+    <updated>2019-10-31T07:52:40.902Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.vincent.ac.cn/"/>
     <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
@@ -10,6 +10,80 @@
     <logo>http://www.vincent.ac.cn//images/avatar.png</logo>
     <icon>http://www.vincent.ac.cn//favicon.ico</icon>
     <rights>All rights reserved 2019, Vincent的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[laravel 学习之路 - 1  安装 ]]></title>
+        <id>http://www.vincent.ac.cn//post/cai-ji-xue-xi-zhi-lu-laravel-1-an-zhuang</id>
+        <link href="http://www.vincent.ac.cn//post/cai-ji-xue-xi-zhi-lu-laravel-1-an-zhuang">
+        </link>
+        <updated>2019-10-31T07:14:48.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="安装条件">安装条件</h2>
+<p>安装需要的环境搞定后，咱在来说laravel的下载</p>
+<ol>
+<li>composer</li>
+</ol>
+<ul>
+<li>你需要安装好 composer <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> 配置好本地环境，</li>
+</ul>
+<ol start="2">
+<li>PHP开发环境</li>
+</ol>
+<p>我用的是 Homebrew <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> 安装的。</p>
+<p>环境的安装网上很多教程我就不多描述了，最新版是 Laravel 6 让我们来大胆的学习最新版本</p>
+<h2 id="好现在我们来玩安装-laravel-6-中文文档">好现在我们来玩安装 （<a href="https://learnku.com/docs/laravel/6.x/installation/5124">Laravel 6 中文文档</a>）</h2>
+<ul>
+<li>laravel 安装方式很多这里介绍两种</li>
+</ul>
+<blockquote>
+<ol>
+<li>一种是使用 [^composer create-project]: composer 直接创建项目</li>
+</ol>
+<ul>
+<li><code>composer create-project --prefer-dist laravel/laravel LaravelStudy</code></li>
+</ul>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>一种是 使用 laravel 的安装器；</li>
+</ol>
+<ul>
+<li><code>composer global require &quot;laravel/installer&quot;</code></li>
+<li>composer global后就可以各种 new 项目了；</li>
+<li><code>laravel new LaravelStudy</code></li>
+</ul>
+</blockquote>
+<p>我选择了 laravel 安装器,因为更加方便并且可以直接从缓存中加载,速度更加快；</p>
+<h2 id="简单了解目录结构">简单了解目录结构</h2>
+<p>我这边操作完有了一个LaravelStudy目录我们来看一下</p>
+<p><img src="http://www.vincent.ac.cn//post-images/1572506148376.png" alt=""></p>
+<p>目录是挺多的不过刚开始记住截图里标注的就好了<br>
+不过在我截图的时候发现并没有models目录于是我去翻看了官方文档 下面是官方解释<br>
+<img src="http://www.vincent.ac.cn//post-images/1572506159439.png" alt=""></p>
+<p>所以不用担心我们手动创建个Models就好了</p>
+<h2 id="访问laravel">访问Laravel</h2>
+<p>public/index.php 文件是项目的入口文件，laravel 框架是单入口所有的请求都是先到 index.php ，也就是说我们在配置环境的时候，需要把根目录指向到 index.php 所在的目录，也就是 public 目录下面；</p>
+<p>nginx 是这样的；</p>
+<pre><code class="language-nginx">server
+{
+    # ...
+    root /Users/vincent/LocalProject/laravelStudy/public;
+    # ...
+}
+</code></pre>
+<p>配置好目录我们就可以访问项目了；</p>
+<p>打开 http://study.laraveltest.com/</p>
+<p><img src="http://www.vincent.ac.cn//post-images/1572506168093.png" alt=""></p>
+<p>今天要学习实现的目标就达到了；</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>PHP 世界的包管理工具 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Homebrew是一款MacOS平台下的软件包管理工具 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ Centos安装docker 以及 docker基本概念]]></title>
         <id>http://www.vincent.ac.cn//post/centos-an-zhuang-docker-yi-ji-docker-ji-ben-gai-nian</id>
