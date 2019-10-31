@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.vincent.ac.cn/</id>
-    <title>Vincent的博客</title>
-    <updated>2019-10-31T07:52:40.902Z</updated>
+    <title>清风醉的博客</title>
+    <updated>2019-10-31T07:53:24.887Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.vincent.ac.cn/"/>
     <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
     <subtitle>不愤不启不悱不发</subtitle>
     <logo>http://www.vincent.ac.cn//images/avatar.png</logo>
     <icon>http://www.vincent.ac.cn//favicon.ico</icon>
-    <rights>All rights reserved 2019, Vincent的博客</rights>
+    <rights>All rights reserved 2019, 清风醉的博客</rights>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路 - 1  安装 ]]></title>
         <id>http://www.vincent.ac.cn//post/cai-ji-xue-xi-zhi-lu-laravel-1-an-zhuang</id>
