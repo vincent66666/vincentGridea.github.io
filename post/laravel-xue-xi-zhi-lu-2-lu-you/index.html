@@ -44,17 +44,10 @@
           </p>
           <div class="toc-container hidden lg:block">
             <ul class="markdownIt-TOC">
-<li><a href="#docker%E6%98%AF%E4%BB%80%E4%B9%88">Docker是什么？</a>
+<li>
 <ul>
-<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-docker">为什么要使用 Docker？</a></li>
-<li><a href="#%E6%9B%B4%E9%AB%98%E6%95%88%E7%9A%84%E5%88%A9%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%B5%84%E6%BA%90">更高效的利用系统资源</a></li>
-<li><a href="#%E6%9B%B4%E5%BF%AB%E9%80%9F%E7%9A%84%E5%90%AF%E5%8A%A8%E6%97%B6%E9%97%B4">更快速的启动时间</a></li>
-<li><a href="#%E4%B8%80%E8%87%B4%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83">一致的运行环境</a></li>
-<li><a href="#%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98%E5%92%8C%E9%83%A8%E7%BD%B2">持续交付和部署</a></li>
-<li><a href="#%E6%9B%B4%E8%BD%BB%E6%9D%BE%E7%9A%84%E8%BF%81%E7%A7%BB">更轻松的迁移</a></li>
-<li><a href="#%E6%9B%B4%E8%BD%BB%E6%9D%BE%E7%9A%84%E7%BB%B4%E6%8A%A4%E5%92%8C%E6%89%A9%E5%B1%95">更轻松的维护和扩展</a></li>
-<li><a href="#%E5%AF%B9%E6%AF%94%E4%BC%A0%E7%BB%9F%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%80%BB%E7%BB%93">对比传统虚拟机总结</a></li>
-<li><a href="#docker-%E7%9A%84%E4%B8%BB%E8%A6%81%E7%94%A8%E9%80%94%E7%9B%AE%E5%89%8D%E6%9C%89%E4%B8%89%E5%A4%A7%E7%B1%BB">Docker 的主要用途，目前有三大类。</a></li>
+<li><a href="#route%E8%B7%AF%E7%94%B1%E6%98%AF%E4%BB%80%E4%B9%88">Route（路由）是什么？</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1">配置路由</a></li>
 </ul>
 </li>
 </ul>
@@ -109,82 +102,102 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Docker是什么？</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">laravel 学习之路 - 2 路由视图初探</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-09-19 / 4 min read
+          2019-11-01 / 5 min read
         </div>
         
         <div class="post-content yue">
-          <h1 id="docker是什么">Docker是什么？</h1>
-<ul>
-<li>Docker 是一个开源的应用容器引擎，你可以将其理解为一个轻量级的虚拟机，开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上。</li>
-</ul>
-<h2 id="为什么要使用-docker">为什么要使用 Docker？</h2>
-<ul>
-<li>作为一种新兴的虚拟化方式，Docker 跟传统的虚拟化方式相比具有众多的优势。</li>
-</ul>
-<h2 id="更高效的利用系统资源">更高效的利用系统资源</h2>
-<ul>
-<li>由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统资源的利用率更高。</li>
-<li>无论是应用执行速度、内存损耗或者文件存储速度，都要比传统虚拟机技术更高效。因此，相比虚拟机技术，一个相同配置的主机，往往可以运行更多数 量的应用。</li>
-</ul>
-<h2 id="更快速的启动时间">更快速的启动时间</h2>
-<ul>
-<li>传统的虚拟机技术启动应用服务往往需要数分钟，而 Docker 容器应用，由于直接运行于宿主内核，无需启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、部署的时间。</li>
-</ul>
-<h2 id="一致的运行环境">一致的运行环境</h2>
-<ul>
-<li>开发过程中一个常见的问题是环境一致性问题。由于开发环境、测试环境、生产环境不一致，导致有些 bug 并未在开发过程中被发现。而 Docker 的镜像提供了除内核外完整的运行时环境，确保了应用运行环境一致性，从而不会再出现 「这段代码在我机器上没问题啊」 这类问题。</li>
-</ul>
-<h2 id="持续交付和部署">持续交付和部署</h2>
-<ul>
-<li>对开发和运维（DevOps）人员来说，最希望的就是一次创建或配置，可以在任意地方正常运行。</li>
-<li>使用 Docker 可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过 Dockerfile 来进行镜像构建，并结合持续集成(Continuous Integration) 系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合 持续部署(Continuous Delivery/Deployment) 系统进行自动部署。</li>
-<li>而且使用 Dockerfile 使镜像构建透明化，不仅仅开发团队可以理解应用运行环境，也方便运维团队理解应用运行所需条件，帮助更好的生产环境中部署该镜像。</li>
-</ul>
-<h2 id="更轻松的迁移">更轻松的迁移</h2>
-<ul>
-<li>由于 Docker 确保了执行环境的一致性，使得应用的迁移更加容易。Docker 可以在很多平台上运行，无论是物理机、虚拟机、公有云、私有云，甚至是笔记本，其运行结果是一致的。因此用户可以很轻易的将在一个平台上运行的应用，迁移到另一个平台上，而不用担心运行环境的变化导致应用无法正常运行的情况。</li>
-</ul>
-<h2 id="更轻松的维护和扩展">更轻松的维护和扩展</h2>
-<ul>
-<li>Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易，也使得应用的维护更新更加简单，基于基础镜像进一步扩展镜像也变得非常简单。此外，Docker 团队同各个开源项目团队一起维护了一大批高质量的 官方镜像，既可以直接在生产环境使用，又可以作为基础进一步定制，大大的降低了应用服务的镜像制作成本。</li>
-</ul>
-<h2 id="对比传统虚拟机总结">对比传统虚拟机总结</h2>
-<figure data-type="image" tabindex="1"><img src="http://www.vincent.ac.cn//post-images/1569922573445.png" alt=""></figure>
-<h2 id="docker-的主要用途目前有三大类">Docker 的主要用途，目前有三大类。</h2>
+          <p>我大致了解了 laravel 下，在开始一个 Http 程序需要先定义路由。之前的例子中，我们的业务逻辑都是在路由里实现，这对于简单的网站或 web 应用没什么问题，当我们需要扩大规模，程序变得复杂，分层的业务逻辑更为适合。这时候，我们就应该使用控制器。<br>
+了解 MVC 的都对控制器的作用有所了解，控制器是实现主要业务逻辑的。在其他框架，控制器一般就是一个类，laravel 也不例外，laravel 的控制其结构并没有什么特殊。</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\User;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * @return string
+     */
+    public function index($id)
+    {
+        return 'hello world!';
+    }
+}
+</code></pre>
+<h2 id="route路由是什么">Route（路由）是什么？</h2>
+<p>路由就是网络请求的 url 与 laravel 应用层的逻辑处理地址的对应关系。<br>
+通俗的说：路由就是把url的请求优雅的对应到你想要执行的操作方法，路由的作用是简化URL访问地址，并根据定义的路由类型做出正确的解析。</p>
+<p>laravel 中的路由 跟路由器很像好比你家里只有一根网线网线上接着 wifi 路由器，多部手机和电脑就可以通过 wifi 上网了，路由器起到了一个分发的作用，大致是这样实现的<br>
+<img src="http://www.vincent.ac.cn//post-images/1572597112430.jpg" alt=""></p>
+<p>我们访问项目的时候最先请求到的是<strong>index.php</strong>这个入口文件这个<br>
+<strong>public/index.php</strong> 这个时候我们把<strong>public/index.php</strong> 比作网线，<strong>route/web.php</strong> 类比成路由器设备，<strong>controller</strong>控制器比作多部手机设备变很好理解</p>
+<h2 id="配置路由">配置路由</h2>
+<p><strong>laravel</strong> 的每一个路由是需要手动定义的，<strong>Laravel</strong> 的控制器非常的干净，与其他类的耦合度相当的低。得益于 <strong>laravel</strong> 的 <strong>IoC</strong> 容器，我们很容易实现相当丰富的功能，且不会产生紧密耦合。那么如何才能访问到这个控制器里的逻辑呢？</p>
+<blockquote>
 <ol>
-<li>提供一次性的环境。比如，本地测试他人的软件、持续集成的时候提供单元测试和构建的环境。</li>
-<li>提供弹性的云服务。因为 Docker 容器可以随开随关，很适合动态扩容和缩容。</li>
-<li>组建微服务架构。通过多个容器，一台机器可以跑多个服务，因此在本机就可以模拟出微服务架构。</li>
+<li>我们所知道的许多框架，通常有着既定的路由规则，我个人比较熟悉 TP，TP 的默认路由规则是 <strong>http://xxxx/Module/Controller/Action</strong>，假如我们访问<strong>http://xxxx/Content/Home/index</strong>，默认会将请求派发至 <strong>Content</strong> 模块下的<strong>HomeController</strong>类的 <strong>index</strong> 方法。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>ThinkPHP 这种默认路由规则使得框架开箱即用，十分便捷。但是这样并不灵活，假如我想通过访问 http://xxxx/user/1 就访问到 UserController 控制器下的 show 方法并包含一个值为 1 的参数，ThinkPHP 你需要修改配置（并且那个配置非常不优雅），亦或者我想要通过向 http://xxxx/topic POST 一个数据以添加一篇文章，处理这个过程的实际是 Admin\TopicController 类的 create 方法，且该方法只接受 POST 请求，这时候似乎大多数框架就要通过写更多的代码实现了。</li>
+<li>说到这里，似乎大家是不是想起了 laravel 那种路由定义方式的好处了？虽然 laravel 没有强加给你既定的路由规则，但你拥有了更多定制的权利，并且 laravel 定义路由的方式非常优雅，带给你的体验非常丰富。另一个好消息是，定义控制器路由和普通路由有所差别，这个差别是在便利性上的，你将很快感受到这种便利带给你的好处！<br>
+打开 <strong>routes/web.php</strong>  我们直接看代码<br>
+<img src="http://www.vincent.ac.cn//post-images/1572597133893.jpg" alt=""></li>
+</ol>
+</blockquote>
+<p>其中 <em>Route</em>  是一个静态类 ，<em>get</em>是<em>Route</em>类的静态方法，<em>get</em>方法传递了2个参数，第一个是 / 、第二个是一个闭包并且在闭包函数中return返回的东西就是我们请求到的内容，从中可以看出</p>
+<ol>
+<li>
+<p><em>Route::</em> 后面可以跟一个请求方法代码中就是 <em>get</em> 请求，那么很容易就联想到如果写成 <em>post</em> 哪就表示是接受一个post请求</p>
+</li>
+<li>
+<p>斜杠 <em>/</em> 表示首页 在 url 中就是域名后面的那个斜杠 <strong>study.laraveltest.com/</strong> 只不过后面如果没有其他内容的话一般是被省略了于是我们就很容易的模仿一下</p>
+<pre><code>Route::get('test1', function () {
+    return view('welcome');
+});
+</code></pre>
+<p>这样的写的话那 url 就应该是 http://study.laraveltest.com/article</p>
+</li>
+<li>
+<p><em>view</em> 函数可以直接定位到 <em>resources/views</em> 目录，它可以接受一个参数这个参数就是 <em>resources/views</em> 目录下的文件名去掉 <em>blade.php</em> 后缀，这样我们创建一个<em>hello.blade.php</em>文件 里面写个hello world吧，<br>
+<img src="http://www.vincent.ac.cn//post-images/1572597143938.jpg" alt=""></p>
+<p>在注册下路由</p>
+<pre><code>Route::get('hello', function () {
+    return view('hello');
+});
+</code></pre>
+<p>我们访问 <em>http://study.laraveltest.com/hello</em> 看到这样的内容就表示成功了；<br>
+<img src="http://www.vincent.ac.cn//post-images/1572597152425.jpg" alt=""><br>
+如果访问 <em>http://study.laraveltest.com/hello</em> 报错可以试一下<em>http://study.laraveltest.com/index.php/hello</em> 加了 index.php 就正常了的话说明是没有成功开启 rewrite ；</p>
+</li>
 </ol>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/Wf9dxWbla">
-            <span class="flex-auto">docker</span>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/ULKwYDOFh">
+            <span class="flex-auto">php</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/r9lWhqCpR5">
+            <span class="flex-auto">Laravel</span>
           </a>
         
 
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="http://www.vincent.ac.cn//post/centos-an-zhuang-docker-yi-ji-docker-ji-ben-gai-nian">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                   Centos安装docker 以及 docker基本概念
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="http://www.vincent.ac.cn//post/hello-gridea">
+              <a href="http://www.vincent.ac.cn//post/cai-ji-xue-xi-zhi-lu-laravel-1-an-zhuang">
                 <h3 class="post-title">
-                  Hello Gridea
+                  laravel 学习之路 - 1  安装 
                   <i class="remixicon-arrow-right-line"></i>
                 </h3>
               </a>

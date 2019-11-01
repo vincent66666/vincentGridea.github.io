@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.vincent.ac.cn/</id>
     <title>清风醉的博客</title>
-    <updated>2019-10-31T09:15:07.263Z</updated>
+    <updated>2019-11-01T08:43:25.243Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.vincent.ac.cn/"/>
     <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
@@ -10,6 +10,82 @@
     <logo>http://www.vincent.ac.cn//images/avatar.png</logo>
     <icon>http://www.vincent.ac.cn//favicon.ico</icon>
     <rights>All rights reserved 2019, 清风醉的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[laravel 学习之路 - 2 路由视图初探]]></title>
+        <id>http://www.vincent.ac.cn//post/laravel-xue-xi-zhi-lu-2-lu-you</id>
+        <link href="http://www.vincent.ac.cn//post/laravel-xue-xi-zhi-lu-2-lu-you">
+        </link>
+        <updated>2019-11-01T08:30:43.000Z</updated>
+        <content type="html"><![CDATA[<p>我大致了解了 laravel 下，在开始一个 Http 程序需要先定义路由。之前的例子中，我们的业务逻辑都是在路由里实现，这对于简单的网站或 web 应用没什么问题，当我们需要扩大规模，程序变得复杂，分层的业务逻辑更为适合。这时候，我们就应该使用控制器。<br>
+了解 MVC 的都对控制器的作用有所了解，控制器是实现主要业务逻辑的。在其他框架，控制器一般就是一个类，laravel 也不例外，laravel 的控制其结构并没有什么特殊。</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\User;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * @return string
+     */
+    public function index($id)
+    {
+        return 'hello world!';
+    }
+}
+</code></pre>
+<h2 id="route路由是什么">Route（路由）是什么？</h2>
+<p>路由就是网络请求的 url 与 laravel 应用层的逻辑处理地址的对应关系。<br>
+通俗的说：路由就是把url的请求优雅的对应到你想要执行的操作方法，路由的作用是简化URL访问地址，并根据定义的路由类型做出正确的解析。</p>
+<p>laravel 中的路由 跟路由器很像好比你家里只有一根网线网线上接着 wifi 路由器，多部手机和电脑就可以通过 wifi 上网了，路由器起到了一个分发的作用，大致是这样实现的<br>
+<img src="http://www.vincent.ac.cn//post-images/1572597112430.jpg" alt=""></p>
+<p>我们访问项目的时候最先请求到的是<strong>index.php</strong>这个入口文件这个<br>
+<strong>public/index.php</strong> 这个时候我们把<strong>public/index.php</strong> 比作网线，<strong>route/web.php</strong> 类比成路由器设备，<strong>controller</strong>控制器比作多部手机设备变很好理解</p>
+<h2 id="配置路由">配置路由</h2>
+<p><strong>laravel</strong> 的每一个路由是需要手动定义的，<strong>Laravel</strong> 的控制器非常的干净，与其他类的耦合度相当的低。得益于 <strong>laravel</strong> 的 <strong>IoC</strong> 容器，我们很容易实现相当丰富的功能，且不会产生紧密耦合。那么如何才能访问到这个控制器里的逻辑呢？</p>
+<blockquote>
+<ol>
+<li>我们所知道的许多框架，通常有着既定的路由规则，我个人比较熟悉 TP，TP 的默认路由规则是 <strong>http://xxxx/Module/Controller/Action</strong>，假如我们访问<strong>http://xxxx/Content/Home/index</strong>，默认会将请求派发至 <strong>Content</strong> 模块下的<strong>HomeController</strong>类的 <strong>index</strong> 方法。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>ThinkPHP 这种默认路由规则使得框架开箱即用，十分便捷。但是这样并不灵活，假如我想通过访问 http://xxxx/user/1 就访问到 UserController 控制器下的 show 方法并包含一个值为 1 的参数，ThinkPHP 你需要修改配置（并且那个配置非常不优雅），亦或者我想要通过向 http://xxxx/topic POST 一个数据以添加一篇文章，处理这个过程的实际是 Admin\TopicController 类的 create 方法，且该方法只接受 POST 请求，这时候似乎大多数框架就要通过写更多的代码实现了。</li>
+<li>说到这里，似乎大家是不是想起了 laravel 那种路由定义方式的好处了？虽然 laravel 没有强加给你既定的路由规则，但你拥有了更多定制的权利，并且 laravel 定义路由的方式非常优雅，带给你的体验非常丰富。另一个好消息是，定义控制器路由和普通路由有所差别，这个差别是在便利性上的，你将很快感受到这种便利带给你的好处！<br>
+打开 <strong>routes/web.php</strong>  我们直接看代码<br>
+<img src="http://www.vincent.ac.cn//post-images/1572597133893.jpg" alt=""></li>
+</ol>
+</blockquote>
+<p>其中 <em>Route</em>  是一个静态类 ，<em>get</em>是<em>Route</em>类的静态方法，<em>get</em>方法传递了2个参数，第一个是 / 、第二个是一个闭包并且在闭包函数中return返回的东西就是我们请求到的内容，从中可以看出</p>
+<ol>
+<li>
+<p><em>Route::</em> 后面可以跟一个请求方法代码中就是 <em>get</em> 请求，那么很容易就联想到如果写成 <em>post</em> 哪就表示是接受一个post请求</p>
+</li>
+<li>
+<p>斜杠 <em>/</em> 表示首页 在 url 中就是域名后面的那个斜杠 <strong>study.laraveltest.com/</strong> 只不过后面如果没有其他内容的话一般是被省略了于是我们就很容易的模仿一下</p>
+<pre><code>Route::get('test1', function () {
+    return view('welcome');
+});
+</code></pre>
+<p>这样的写的话那 url 就应该是 http://study.laraveltest.com/article</p>
+</li>
+<li>
+<p><em>view</em> 函数可以直接定位到 <em>resources/views</em> 目录，它可以接受一个参数这个参数就是 <em>resources/views</em> 目录下的文件名去掉 <em>blade.php</em> 后缀，这样我们创建一个<em>hello.blade.php</em>文件 里面写个hello world吧，<br>
+<img src="http://www.vincent.ac.cn//post-images/1572597143938.jpg" alt=""></p>
+<p>在注册下路由</p>
+<pre><code>Route::get('hello', function () {
+    return view('hello');
+});
+</code></pre>
+<p>我们访问 <em>http://study.laraveltest.com/hello</em> 看到这样的内容就表示成功了；<br>
+<img src="http://www.vincent.ac.cn//post-images/1572597152425.jpg" alt=""><br>
+如果访问 <em>http://study.laraveltest.com/hello</em> 报错可以试一下<em>http://study.laraveltest.com/index.php/hello</em> 加了 index.php 就正常了的话说明是没有成功开启 rewrite ；</p>
+</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路 - 1  安装 ]]></title>
         <id>http://www.vincent.ac.cn//post/cai-ji-xue-xi-zhi-lu-laravel-1-an-zhuang</id>
