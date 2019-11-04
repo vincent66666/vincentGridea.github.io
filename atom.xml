@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.vincent.ac.cn/</id>
     <title>清风醉的博客</title>
-    <updated>2019-11-04T08:23:25.629Z</updated>
+    <updated>2019-11-04T08:25:00.478Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.vincent.ac.cn/"/>
     <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
@@ -16,7 +16,7 @@
         <link href="http://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he">
         </link>
         <updated>2019-11-04T08:05:25.000Z</updated>
-        <content type="html"><![CDATA[<p>#算法1：暴力法</p>
+        <content type="html"><![CDATA[<h2 id="算法1暴力法">算法1：暴力法</h2>
 <pre><code>int MaxSubseqSum1(int A[], int N) {
     int ThisSum, MaxSum = 0;
     int i, j, k;
@@ -33,7 +33,7 @@
     return MaxSum;
 }   // T(N) = O(N^3)
 </code></pre>
-<p>#算法2：还是暴力法</p>
+<h2 id="算法2还是暴力法">算法2：还是暴力法</h2>
 <pre><code>int MaxSubseqSum2(int A[], int N) {
     int ThisSum, MaxSum = 0;
     int i, j, k;
@@ -48,7 +48,7 @@
     return MaxSum;
 }   // T(N) = O(N^2)
 </code></pre>
-<p>#算法3：二分法</p>
+<h2 id="算法3二分法">算法3：二分法</h2>
 <pre><code>//返回3个整数中的最大的一个
 int getmaxint3(int a,int b,int c) {
     return a&gt;b?(a&gt;c?a:c):(b&gt;c?b:c);
@@ -102,7 +102,7 @@ int MaxSubseqSum3(int nums[],int left,int right) {
     return getmaxint3( MaxLeftSum, MaxRightSum, MaxLeftBorderSum + MaxRightBorderSum );
 }    
 </code></pre>
-<p>#算法4：在线处理法</p>
+<h2 id="算法4在线处理法">算法4：在线处理法</h2>
 <pre><code>int MaxSubseqSum4(int A[], int N) {
     int ThisSum, MaxSum;
     int i;
