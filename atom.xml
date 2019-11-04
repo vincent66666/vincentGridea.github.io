@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.vincent.ac.cn/</id>
-    <title>清风醉的博客</title>
-    <updated>2019-11-04T08:26:50.757Z</updated>
+    <title>清风醉`s blog</title>
+    <updated>2019-11-04T08:34:49.533Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.vincent.ac.cn/"/>
     <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
     <subtitle>不愤不启不悱不发</subtitle>
     <logo>http://www.vincent.ac.cn//images/avatar.png</logo>
     <icon>http://www.vincent.ac.cn//favicon.ico</icon>
-    <rights>All rights reserved 2019, 清风醉的博客</rights>
+    <rights>All rights reserved 2019, 清风醉`s blog</rights>
     <entry>
         <title type="html"><![CDATA[转载 -《数据结构与算法》Day.1 最大子列和]]></title>
         <id>http://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he</id>
