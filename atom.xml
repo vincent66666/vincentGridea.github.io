@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.vincent.ac.cn/</id>
     <title>清风醉的博客</title>
-    <updated>2019-11-01T08:51:03.716Z</updated>
+    <updated>2019-11-04T08:21:07.114Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.vincent.ac.cn/"/>
     <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
@@ -10,6 +10,118 @@
     <logo>http://www.vincent.ac.cn//images/avatar.png</logo>
     <icon>http://www.vincent.ac.cn//favicon.ico</icon>
     <rights>All rights reserved 2019, 清风醉的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[转载 -《数据结构与算法》Day.1 最大子列和]]></title>
+        <id>http://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he</id>
+        <link href="http://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he">
+        </link>
+        <updated>2019-11-04T08:05:25.000Z</updated>
+        <content type="html"><![CDATA[<p>#算法1：暴力法</p>
+<pre><code>int MaxSubseqSum1(int A[], int N) {
+    int ThisSum, MaxSum = 0;
+    int i, j, k;
+    for( i = 0; i &lt; N; i++) {
+        for( j = i; j &lt; N; j++) {
+            ThisSum = 0;
+            for( k = i; k &lt;= j; k++) {
+                ThisSum += A[k];
+                if( ThisSum &gt; MaxSum) 
+                    MaxSum = ThisSum;
+            }
+        }
+    }
+    return MaxSum;
+}   // T(N) = O(N^3)
+</code></pre>
+<p>#算法2：还是暴力法</p>
+<pre><code>int MaxSubseqSum2(int A[], int N) {
+    int ThisSum, MaxSum = 0;
+    int i, j, k;
+    for( i = 0; i &lt; N; i++) {
+        ThisSum = 0;
+        for( j = i; j &lt; N; j++) {
+           ThisSum += A[j];
+           if( ThisSum &gt; MaxSum)
+               MaxSum = ThisSum;
+        }
+    }
+    return MaxSum;
+}   // T(N) = O(N^2)
+</code></pre>
+<p>#算法3：二分法</p>
+<pre><code>//返回3个整数中的最大的一个
+int getmaxint3(int a,int b,int c) {
+    return a&gt;b?(a&gt;c?a:c):(b&gt;c?b:c);
+}
+ 
+//递归调用分治思想的核心代码
+int MaxSubseqSum3(int nums[],int left,int right) {
+    //左右最大子列和
+    int MaxLeftSum, MaxRightSum;
+     
+    //跨边界左右最大子列和
+    int MaxLeftBorderSum, MaxRightBorderSum;
+     
+    //当前计算的左右边界子列和
+    int LeftBorderSum, RightBorderSum;
+     
+    int center, i;
+ 
+    //递归调用终止条件，子列只有一个元素
+    if( left == right )  {
+        if( nums[left] &gt; 0 )  return nums[left];
+        else return 0;
+    }
+ 
+    //先分
+    center = ( left + right ) / 2; 
+    //递归调用获取左边最大子列和 left.....center 
+    MaxLeftSum = MaxSubseqSum3( nums, left, center );
+     
+    //递归调用获取右边最大子列和 center+1.....right
+    MaxRightSum = MaxSubseqSum3( nums, center+1, right );
+ 
+    //跨边界最大子列和 
+    MaxLeftBorderSum = 0;
+    LeftBorderSum = 0;
+    for( i=center; i&gt;=left; i-- ) { /* 从中线向左扫描 */
+        LeftBorderSum += nums[i];
+        if( LeftBorderSum &gt; MaxLeftBorderSum )
+            MaxLeftBorderSum = LeftBorderSum;
+    } /* 左边扫描结束 */
+ 
+    MaxRightBorderSum = 0;
+    RightBorderSum = 0;
+    for( i=center+1; i&lt;=right; i++ ) { /* 从中线向右扫描 */
+        RightBorderSum += nums[i];
+        if( RightBorderSum &gt; MaxRightBorderSum )
+            MaxRightBorderSum = RightBorderSum;
+    } /* 右边扫描结束 */
+ 
+    /* 下面返回&quot;治&quot;的结果 */
+    return getmaxint3( MaxLeftSum, MaxRightSum, MaxLeftBorderSum + MaxRightBorderSum );
+}    
+</code></pre>
+<p>#算法4：在线处理法</p>
+<pre><code>int MaxSubseqSum4(int A[], int N) {
+    int ThisSum, MaxSum;
+    int i;
+    ThisSum = MaxSum = 0;
+    for( i = 0; i &lt; N; i++) {
+        ThisSum += A[i];
+        if( ThisSum &gt; MaxSum)
+            MaxSum = ThisSum;
+        else if(ThisSum &lt; 0)
+            ThisSum = 0;    
+    }
+    return MaxSum;
+}   //T(N) = O(N);
+</code></pre>
+<p>————————————————<br>
+版权声明：本文为博主「Sofar」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>
+原文链接：https://sofar1994.github.io/post/19111/</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路 - 2 路由视图初探]]></title>
         <id>http://www.vincent.ac.cn//post/laravel-xue-xi-zhi-lu-2-lu-you</id>
