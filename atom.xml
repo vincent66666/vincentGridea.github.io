@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.vincent.ac.cn/</id>
     <title>清风醉`s blog</title>
-    <updated>2019-11-05T03:02:31.737Z</updated>
+    <updated>2019-11-05T05:01:17.076Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.vincent.ac.cn/"/>
     <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
@@ -10,6 +10,139 @@
     <logo>http://www.vincent.ac.cn//images/avatar.png</logo>
     <icon>http://www.vincent.ac.cn//favicon.ico</icon>
     <rights>All rights reserved 2019, 清风醉`s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[laravel 学习之路 控制器Controller]]></title>
+        <id>http://www.vincent.ac.cn//post/laravel3</id>
+        <link href="http://www.vincent.ac.cn//post/laravel3">
+        </link>
+        <updated>2019-11-05T04:56:19.000Z</updated>
+        <content type="html"><![CDATA[<p>前面学习了路由可以分发请求还可以引入html页面，这些都可以在 <strong>route/web.php</strong> 中搞定。</p>
+<p>但是如果项目设计的业务很繁杂，都写在路由里会非常臃肿难以维护，于是今天的主角 <strong>Controller</strong> 控制器的价值就很明显了，把业务逻辑写在控制器中，路由只负责转发请求到控制器。</p>
+<h2 id="创建控制器">创建控制器</h2>
+<p>都9102年了既然用上了现代话框架必须玩点高逼格的方式使用命令行的方式创建控制器</p>
+<ul>
+<li>laravel 是一个现代化框架，它对命令行有着非常好的支持，artisan 就是 laravel 的命令行接口<br>
+<img src="http://www.vincent.ac.cn//post-images/1572929830404.jpg" alt=""></li>
+<li>我们可以把它理解为命令行级的单入口文件，跟 index.php 文件的使命一样，所有命令都需要通过他，所有如果需要使用命令行就需要 <strong>cd</strong> 到项目根目录去或者指定一长串路径这个看个人喜好了up是喜好到根目录去。</li>
+<li>使用很简单 <strong>php artisan</strong> 起手 后面跟上响应的命令，在命令行中以 php 开头意思是用 php 来执行某个文件，<strong>php index.php</strong> 意思就是使用 php 的命令行模式运行 <strong>index.php</strong> 。</li>
+<li>命令行下是可以不需要文件后缀就能识别的所以根目录下的 artisan 文件并没有带上 .php</li>
+</ul>
+<p>好了让我们用 php artisan 来创建控制器在项目根目录执行下列代码<br>
+<code>php artisan make:controller TestController</code></p>
+<p>如果最近没做坏事，洗过脸的话会看到成功的提示<br>
+<img src="http://www.vincent.ac.cn//post-images/1572929848739.jpg" alt=""><br>
+并会生成一个 app/Http/Controllers/TestController.php 文件，打开是这个样子<br>
+<img src="http://www.vincent.ac.cn//post-images/1572929857892.jpg" alt=""></p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class TestController extends Controller
+{
+    //
+}
+</code></pre>
+<p>不但自动创建了文件还定义了命名空间并且继承好了父级控制器，这样我们直接写<strong>CURD</strong>就好了</p>
+<p>接下来我们给上面的命令加个 <strong>--resource</strong> 选项<br>
+<code>php artisan make:controller TestController --resource</code><br>
+如果直接运行的话是会报错提示<strong>Controller already exists!</strong><br>
+<img src="http://www.vincent.ac.cn//post-images/1572929870204.jpg" alt=""><br>
+这是因为我们刚已经创建过 TestController了，所以我们需要进入项目根目录执行下面的命令把刚刚创建的文件删除掉<br>
+<code>cd app/Http/Controllers/ &amp;&amp; rm -rf TestController.php</code><br>
+删除掉后再回到项目根目录执行刚刚的命令<br>
+<img src="http://www.vincent.ac.cn//post-images/1572929880301.jpg" alt=""><br>
+如果人品正常，那么会再次生成一个 <strong>app/Http/Controllers/TestController.php</strong> 文件,打开会是这个样子</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class TestController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}
+
+</code></pre>
+<p>怎么样逼格高吧，不但增删改查的方法都定义好了，连注释都写好了，这其实是按 RESTful 规范生成的格式。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[转载 -《数据结构与算法》Day.1 最大子列和]]></title>
         <id>http://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he</id>
