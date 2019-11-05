@@ -46,7 +46,9 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E9%A1%B9">配置项</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE-env-%E6%96%87%E4%BB%B6">配置 <code>.env</code> 文件</a></li>
+<li><a href="#config-%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E9%85%8D%E7%BD%AE"><code>/config</code> 目录下的数据库的配置</a></li>
 </ul>
 </li>
 </ul>
@@ -101,57 +103,108 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Hello Gridea</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">laravel 学习之路 配置config</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2018-12-12 / 2 min read
+          2019-11-05 / 4 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://www.vincent.ac.cn//post-images/hello-gridea.png" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://www.vincent.ac.cn//post-images/laravel5.jpeg" alt="">
         
         <div class="post-content yue">
-          <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+          <blockquote>
+<p>前面文章路由与控制器我们都了解了，现在了解一下<code>laravel</code>的<code>config配置</code></p>
+</blockquote>
+<h2 id="配置项">配置项</h2>
+<p><code>laravel</code> 的配置项是在根目录下的 <code>/config</code> 目录中,还有一个是根目录下的 <code>.env</code>文件<br>
+<img src="http://www.vincent.ac.cn//post-images/1572951481225.jpg" alt=""></p>
+<blockquote>
+<p>这里就有个疑问了为啥要有2个地方用于写配置项呢？让我们打开 <code>.env</code> 来看看<br>
+<img src="http://www.vincent.ac.cn//post-images/1572951488708.jpg" alt=""></p>
+</blockquote>
+<p>第一行就是一个 <code>APP_NAME</code> ,我们再打开 <code>config/app.php</code><br>
+<img src="http://www.vincent.ac.cn//post-images/1572951497179.jpg" alt=""><br>
+我们也找到了这个 <code>APP_NAME</code>, 不过是作为一个参数传给了 <code>env()</code> 函数，我们来了解下这个函数</p>
+<ul>
+<li>它是用来获取 .env 文件中的配置的</li>
+<li>它有2个参数</li>
+<li>第一个参数就是配置项名</li>
+<li>第二个参数就是默认值</li>
+</ul>
+<blockquote>
+<p><code>'name' =&gt; env('APP_NAME', 'Laravel')</code> 到这里这句代码的意思就很明显了，从 <code>.env</code> 获取 <code>APP_NAME</code> 的值，如果 <code>.env</code> 中不存在 <code>APP_NAME</code> 那就取默认值 <code>Laravel</code></p>
+</blockquote>
+<p>在 config/database.php 文件中我们可看到数据库的配置<br>
+<img src="http://www.vincent.ac.cn//post-images/1572951507191.jpg" alt=""><br>
+依然是一片熟悉的 <code>env</code> 函数,比如说数据库的 <code>host 、port 、database 、username、password</code> 但是还有一些并没有用 <code>env</code> 函数,比如说<code>charset 、 prefix</code> 那我们不禁迷惑了, 到底什么时候用 <code>env</code> 函数什么时候不用 <code>env</code> 函数呢？</p>
+<p>在理解这个问题前咱还需再穿插一点 git 的小知识在项目根目录下我们可以看到有个 .gitignore 文件.<br>
+<img src="http://www.vincent.ac.cn//post-images/1572951515177.jpg" alt=""><br>
+其中有一行写了 <code>.env</code> ,它的作用就是告诉 <code>git</code> 忽略 <code>.env</code> 文件,所以如果你去 <code>github</code> 上看别的 <code>laravel</code> 项目的时候你会发现并没有 <code>.env</code> 文件.</p>
+<p>很显然需要保密的配置或者每个项目特有的或者每个环境不同的东西我们可以把它卸载 <code>.env</code> 文件里然后在 <code>/config</code> 目录下的配置文件中用 <code>env()</code> 函数获取数据库的配置就很明显属于这类。</p>
+<blockquote>
+<p>并且在团队开发的时候每个人都有自己的本地开发环境还有测试环境生产环境，如果直接写死就需要每个团队成员在这些环境中设置成统一的账号密码，这样做很不安全并且非常麻烦，而那些不需要报名却需要一定统一的性的配置可以直接卸载 <code>/config</code> 目录下的配置文件里。</p>
+</blockquote>
+<p>好了哪我们现在来简单改一下配置</p>
+<h2 id="配置-env-文件">配置 <code>.env</code> 文件</h2>
+<ol>
+<li>首先 <code>APP_NAME</code> 需要该成我们的项目名称，我就随便起名字叫 <code>study</code> 了。</li>
+<li><code>APP_URL</code> 是需要该的，他就是项目的域名，我是在本地开发的 <code>http://study.laraveltest.com/</code></li>
+<li>DB_开头的这一堆配置也都要改成本地数据库。<br>
+<img src="http://www.vincent.ac.cn//post-images/1572951524740.jpg" alt=""></li>
+</ol>
+<h2 id="config-目录下的数据库的配置"><code>/config</code> 目录下的数据库的配置</h2>
+<p><code>laravel 5.4</code> 以后默认使用 <code>utf8mb4</code> 字符集，<code>utf8mb4</code> 主要是用来支持 <code>emoji</code> 表情的，如果你的<code>本地环境</code>的<code>mysql</code> 低于<code>5.7.7</code>，为了防止在以后使用的过程中报如下错误</p>
+<pre><code>    [Illuminate\Database\QueryException]
+    SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table users add unique users_email_unique(email))
+    
+    [PDOException]
+    SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes
+</code></pre>
+<p>需要找到 <code>config/database.php</code> 文件中的 <code>mysql</code><br>
+修改 <code>charset、collation为utf8</code></p>
+<pre><code>    'charset' =&gt; 'utf8',
+    'collation' =&gt; 'utf8_unicode_ci',
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="http://www.vincent.ac.cn//post-images/1572951534788.jpg" alt=""></figure>
+<p>不过这样做的后果就是不能在数据库直接存<code>emoji</code> 表情了，如果说你就是想在数据库中存 <code>emoji</code> 表情,那还有一种方案，找到<code>appProvidersAppServiceProvider.php</code> 文件，<br>
+先 <code>use Schema</code></p>
+<pre><code>use Illuminate\Support\Facades\Schema;
+</code></pre>
+<p>在 boot 中添加如下代码</p>
+<pre><code>public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+</code></pre>
+<p>如果使用 <code>5.7</code> 以上的 <code>mysql 数据库</code>,还可以把 <code>strict</code> 改为 <code>false</code> 关闭严格模式,以防止报类似如下 <code>only_full_group_by</code> 的错误。</p>
+<p>除了数据库还有两个需要改的打开 <code>config/app.php</code>文件把 <code>timezone</code> 改为 <code>PRC</code> ,<code>laravel</code> 默认的时区是 <code>UTC</code>中国的时区是 <code>PRC</code> 如果没有改的话,<br>
+那数据库存自动生成的时间会和我们的实际相差<code>8个小时</code>然后把 <code>locale</code> 改为 <code>zh-CN</code>这个就好理解了把语言改为中文。<br>
+<img src="http://www.vincent.ac.cn//post-images/1572951544238.jpg" alt=""></p>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/Road5r03o">
-            <span class="flex-auto">Gridea</span>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/ULKwYDOFh">
+            <span class="flex-auto">php</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/r9lWhqCpR5">
+            <span class="flex-auto">Laravel</span>
           </a>
         
 
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="http://www.vincent.ac.cn//post/docker1">
+
+          
+            <div class="next-post">
+              <a href="http://www.vincent.ac.cn//post/laravel4">
                 <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  Docker是什么？
+                  laravel 学习之路 路由与控制器
+                  <i class="remixicon-arrow-right-line"></i>
                 </h3>
               </a>
             </div>
-          
-
           
         </div>
 
