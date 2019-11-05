@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.vincent.ac.cn/</id>
     <title>清风醉`s blog</title>
-    <updated>2019-11-05T08:19:49.222Z</updated>
+    <updated>2019-11-05T08:31:14.538Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.vincent.ac.cn/"/>
     <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
@@ -689,8 +689,8 @@ class UserController extends Controller
     </entry>
     <entry>
         <title type="html"><![CDATA[ Centos安装docker 以及 docker基本概念]]></title>
-        <id>http://www.vincent.ac.cn//post/centos-an-zhuang-docker-yi-ji-docker-ji-ben-gai-nian</id>
-        <link href="http://www.vincent.ac.cn//post/centos-an-zhuang-docker-yi-ji-docker-ji-ben-gai-nian">
+        <id>http://www.vincent.ac.cn//post/docker2</id>
+        <link href="http://www.vincent.ac.cn//post/docker2">
         </link>
         <updated>2019-10-01T09:29:08.000Z</updated>
         <content type="html"><![CDATA[<h2 id="centos-安装docker">Centos 安装docker</h2>
@@ -741,8 +741,8 @@ vi /etc/docker/daemon.json { &quot;registry-mirrors&quot;: [&quot;http://hub-mir
     </entry>
     <entry>
         <title type="html"><![CDATA[Docker是什么？]]></title>
-        <id>http://www.vincent.ac.cn//post/docker-ru-men-zhi-lu-1</id>
-        <link href="http://www.vincent.ac.cn//post/docker-ru-men-zhi-lu-1">
+        <id>http://www.vincent.ac.cn//post/docker1</id>
+        <link href="http://www.vincent.ac.cn//post/docker1">
         </link>
         <updated>2019-09-19T08:43:16.000Z</updated>
         <content type="html"><![CDATA[<h1 id="docker是什么">Docker是什么？</h1>
