@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://www.vincent.ac.cn/</id>
     <title>清风醉`s blog</title>
-    <updated>2019-11-05T05:34:22.985Z</updated>
+    <updated>2019-11-05T08:19:49.222Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://www.vincent.ac.cn/"/>
     <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
@@ -10,6 +10,199 @@
     <logo>http://www.vincent.ac.cn//images/avatar.png</logo>
     <icon>http://www.vincent.ac.cn//favicon.ico</icon>
     <rights>All rights reserved 2019, 清风醉`s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[laravel 学习之路 路由与控制器]]></title>
+        <id>http://www.vincent.ac.cn//post/laravel4</id>
+        <link href="http://www.vincent.ac.cn//post/laravel4">
+        </link>
+        <updated>2019-11-05T08:15:54.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>前面学习的路由与控制器，接下来学习如何把路由与控制器关联起来</p>
+</blockquote>
+<h2 id="配置路由关联控制器">配置路由关联控制器</h2>
+<ul>
+<li>
+<p><code>Route</code> 的 <code>get</code> 或者 <code>post</code> 方法，第一个参数就是我们要定义的路由，就是我们在地址栏请求的那段<code>url</code>， 第二个参数可以是一个闭包函数里面写请求定义的路由时执行的内容但是如果把代码都放这个闭包函数中是臃肿且难以维护的所以就需要使用控制器了。</p>
+</li>
+<li>
+<p>很显然控制器就是来替代这第二个参数的闭包函数的写起来也非常简单直接写控制器名即可,然后用 @ 符号分割控制器和控制器的方法<code>Route::get('test/index','TestController@index'); Route::get('test/create','TestController@create'); Route::get('test/store','TestController@store');</code></p>
+</li>
+<li>
+<p>接着在控制器中写点东西<br>
+<img src="http://www.vincent.ac.cn//post-images/1572941780025.jpg" alt=""></p>
+</li>
+<li>
+<p>这样我们在浏览器访问就可以看到返回的响应<br>
+<img src="http://www.vincent.ac.cn//post-images/1572941791533.jpg" alt=""></p>
+</li>
+</ul>
+<h2 id="路由分组">路由分组</h2>
+<blockquote>
+<p>多么完美但是如果你和我一样帅，一样懒，你回发现三条路由都是 <code>test/</code> 未前缀，在路由中应该减少这样的重复但是怎么做呢？接下来我们来了解了路由分组的概念</p>
+</blockquote>
+<h3 id="路由分组有啥好处">路由分组有啥好处？</h3>
+<p>有时候啊 一大堆路由它们都有共同的地方，比如都使用一个中间件(过两天写)或是前缀都一样，避免代码重复 我们可以将他们分到一组中。</p>
+<p>路由组允许你在大量路由之间共享路由属性，例如中间件或命名空间，而不需要为每个路由单独定义这些属性。共享属性应该以数组的形式传入 <code>Route::group</code> 方法的第一个参数中。</p>
+<p>嵌套的组尝试智能地「合并」其属性及其父组。中间件和 <code>where</code> 条件语句在附加名称、命名空间和前缀时被合并。在适当的情况下，命名空间的分隔符和斜线会被自动添加到 URI 前缀中</p>
+<p>我们先来定义一个前缀路由组,上面这3条路由就可以改造成这个样子了</p>
+<pre><code>Route::prefix('test2')-&gt;group(function () {
+    Route::get('index', 'TestController@index');
+    Route::get('create', 'TestController@create');
+    Route::post('store', 'TestController@store');
+});
+</code></pre>
+<p>随着项目的扩大如果控制器都直接放在 <code>app/Http/Controllers</code> 目录下的话,那维护起来也开始也很<code>头疼</code>了于是就可以为控制器分目录存放.</p>
+<p>比方说说建个 <code>app/Http/Controllers/Admin/StoreController.php</code>,再建一个 <code>app/Http/Controllers/Home/IndexController.php</code>命令行也是可以加目录的</p>
+<pre><code>1. php artisan make:controller Admin/StoreController --resource
+
+2. php artisan make:controller Home/IndexController --resource
+</code></pre>
+<p>再在新建的控制器中写点内容加以区分<br>
+<img src="http://www.vincent.ac.cn//post-images/1572941819096.jpg" alt=""><br>
+<img src="http://www.vincent.ac.cn//post-images/1572941843149.jpg" alt=""></p>
+<p>这种多级目录是不需要指明目录的只需要指明相对于app/Http/Controllers 目录的 namespace 即可</p>
+<pre><code>Route::prefix('admin/store')-&gt;namespace('Admin')-&gt;group(function () {
+    Route::get('index', 'StoreController@index');
+    Route::get('create', 'StoreController@create');
+    Route::post('store', 'StoreController@store');
+});
+</code></pre>
+<p>group 是可以嵌套的那么上面这样的路由还可以改造下</p>
+<pre><code>Route::prefix('home')-&gt;namespace('Home')-&gt;group(function () {
+    Route::prefix('index')-&gt;group(function () {
+        Route::get('index', 'IndexController@index');
+        Route::get('create', 'IndexController@create');
+        Route::post('store', 'IndexController@store');
+    });
+});
+</code></pre>
+<p>访问<code>http://study.laraveltest.com/home/index/index</code> 与 <code>http://study.laraveltest.com/admin/store/index</code> 会得到这样的响应<br>
+<img src="http://www.vincent.ac.cn//post-images/1572941855899.jpg" alt=""><br>
+<img src="http://www.vincent.ac.cn//post-images/1572941870129.jpg" alt=""></p>
+<p>因为创建的目录下我们还会创建更多的路由器所以，我们应该使用 group 嵌套的这种方式，比如说我们再有一个 <code>app/Http/Controllers/Home/TagController.php</code>  执行创建控制器命令 <code>php artisan make:controller Home/TagController --resource</code> 那么路由就是这样的</p>
+<pre><code>Route::prefix('home')-&gt;namespace('Home')-&gt;group(function () {
+    Route::prefix('index')-&gt;group(function () {
+        Route::get('index', 'IndexController@index');
+        Route::get('create', 'IndexController@create');
+        Route::post('store', 'IndexController@store');
+    });
+    Route::prefix('tag')-&gt;group(function () {
+        Route::get('index', 'TagController@index');
+        Route::get('create', 'TagController@create');
+        Route::post('store', 'TagController@store');
+    });
+});
+</code></pre>
+<h2 id="路由参数">路由参数</h2>
+<p>到这里我们已经学会了如何组织多级目录了，让我们回到 <code>app/Http/Controllers/TestController.php</code> 控制器上<br>
+<img src="http://www.vincent.ac.cn//post-images/1572941881607.jpg" alt=""><br>
+会发现命令行创建的控制器里面有个 <code>edit</code> 方法，<code>edit</code> 方法有个 <code>$id</code> 参数,通过名字我们很容易就明白这是用来修改数据的，<code>id</code> 一般又是数据库的自增字段,但是这个 id 是哪传来的呢？下面就到了了解路由参数的时候了。</p>
+<p>定义路由的时候我们是可以定义路由参数，我们接着上面的路由加一个 edit ,我们在定义路由的时候用花括号包一个变量名那这个变量就可以直接传到控制器方法中然后在地址栏传什么控制器中就可以接到什么为了方便测试我们在这个方法中返回 id</p>
+<pre><code>Route::prefix('test2')-&gt;group(function () {
+    Route::get('index', 'TestController@index');
+    Route::get('create', 'TestController@create');
+    Route::post('store', 'TestController@store');
+    Route::get('edit/{id}', 'TestController@edit');
+});
+</code></pre>
+<p><img src="http://www.vincent.ac.cn//post-images/1572941893855.jpg" alt=""><br>
+接下来我们访问<code>http://study.laraveltest.com/test2/edit/2344</code><br>
+<img src="http://www.vincent.ac.cn//post-images/1572941903516.jpg" alt=""><br>
+这里面有个值得注意的地方，就是控制器中的参数名跟路由参数名不是必须相同的，一个路由参数的时候这倒不会觉得什么，一旦定义多个路由参数的时候，这就有点坑了<br>
+重新写一个方法<code>edit1</code></p>
+<pre><code>    /**
+     * @param $name
+     * @param $id
+     *
+     * @return string
+     */
+    public function edit1($name,$id)
+    {
+        return '吾乃 Test 控制器的 edit 方法,地址栏的传参id为: &quot;'. $id .'&quot;,name为: &quot;'.$name.'&quot;';
+    }
+</code></pre>
+<p>配置路由</p>
+<pre><code>Route::prefix('test2')-&gt;group(function () {
+            ...
+    Route::get('edit1/{id}/{name}', 'TestController@edit1');
+});
+</code></pre>
+<p>访问 <code>http://study.laraveltest.com/test2/edit1/2344/风清醉</code><br>
+<img src="http://www.vincent.ac.cn//post-images/1572941915585.jpg" alt=""><br>
+你会发现 id 和 name 没对上，这边画个重点 <strong>路由参数中的第一个参数对应控制器中的第一个路由参数以此类推在控制器中路由参数跟参数名是没关系的只跟顺序有关。</strong></p>
+<p>再个 id 一般都是纯数字，这里却传了字母 ，我们应该怎么约束下 id 呢？laravel 方方面面都为我们考虑到了，我们加个 where 就行了。</p>
+<pre><code>Route::prefix('test2')-&gt;group(function () {
+    ...
+    Route::get('edit1/{id}/{name}', 'TestController@edit1')-&gt;where('id', '[0-9]+');;
+});
+</code></pre>
+<p>这样就只能传数字了其实大多的表都是用 id 做主键的如果每个路由都手动定义一遍约束那也是挺麻烦的laravel 又一次方方面面都为我们考虑到了。</p>
+<p>找到 <code>app/Providers/RouteServiceProvider.php</code> 这个文件在 boot 方法中可以定义全局约束  <code>Route::pattern('id', '[0-9]+');</code><br>
+这样就不需要为每条带 id 参数的路由定义约束了,以后所有带 id 参数的路由就只能传数字了。<br>
+<img src="http://www.vincent.ac.cn//post-images/1572941928086.jpg" alt=""></p>
+<h2 id="请求参数">请求参数</h2>
+<blockquote>
+<p>路由参数容易搞混的是请求参数路由参数？请求参数？傻傻分不清楚</p>
+</blockquote>
+<p>我们请求 <code>http://study.laraveltest.com/test2/edit1/2344/清风醉?code=12345&amp;status=succ</code> <code>id</code> 和 <code>name</code> 就是路由参数 <code>code</code> 和 <code>status</code>就是请求参数，路由参数上文已经介绍了，那么请求参数怎么获取呢？</p>
+<p>现在让我们回到控制器里去找 <code>update</code> 方法</p>
+<pre><code>   /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+</code></pre>
+<p>这个 <code>Request $request</code> 就是我们用来获取请求参数的关键,它的意思是向控制器的方法传一个 <code>$request</code> 它是一个 <code>Request</code> 类,我们可以把我们的 <code>edit</code> 方法也加个 <code>$request</code></p>
+<pre><code>    /**
+     * @param Request $request
+     * @param         $name
+     * @param         $id
+     *
+     * @return string
+     */
+    public function edit1(Request $request, $id, $name )
+    {
+
+        $code   = $request-&gt;input('code');
+        $status = request()-&gt;input('status');
+
+        return '吾乃 Test 控制器的 edit 方法,地址栏的传参id为: &quot;' .
+            $id . '&quot;,name为: &quot;' .
+            $name . '&quot;,code为: &quot;'.
+            $code.'&quot;,status为: &quot;'.
+            $status.'&quot;';
+    }
+</code></pre>
+<p><strong>这个 Request $request 是不会影响路由参数的顺序的</strong> 它放前放后都是可以的,我们访问这个方法并携带请求参数<br>
+<img src="http://www.vincent.ac.cn//post-images/1572941940654.jpg" alt=""><br>
+<code>Request 类</code>有一个 <code>input 方法</code>,把要获取的参数名传给它就可以了,我上面示例中还用了个 <code>request()</code> 函数它跟 <code>Request $request</code> 效果是一样的,<code>$request</code> 可以方便复用,所以在控制器中更推荐使用<code>$request</code>,如果传的请求参数比较多的时候这样一个一个取贼麻烦，<code>Request</code> 还有个 <code>all</code> 方法就可以获取全部的请求参数</p>
+<pre><code>public function edit(Request $request, $id, $name)
+{
+    dump($request-&gt;all());
+}
+</code></pre>
+<p>dump 是 laravel 自带的一个打印函数,就是 php 自带的 var_dump 函数的升级版,打印的效果如下<br>
+<img src="http://www.vincent.ac.cn//post-images/1572941950048.jpg" alt=""><br>
+<code>Request</code> 还有个 <code>only</code> 方法作用是从一大堆请求参数中获取指定的请求参数</p>
+<pre><code>public function edit(Request $request, $id, $name)
+{
+    dump($request-&gt;only('music', 'book'));
+}
+</code></pre>
+<p><code>Request</code> 还有个 <code>except</code> 方法作用是排除某个参数剩下的全要</p>
+<pre><code>public function edit(Request $request, $id, $name)
+{
+    dump($request-&gt;except('music'));
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[译 - 为什么要学习Go？]]></title>
         <id>http://www.vincent.ac.cn//post/go1</id>
