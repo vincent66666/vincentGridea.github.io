@@ -4,14 +4,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>清风醉`s blog</title>
 <meta name="description" content="不愤不启不悱不发" />
-<link rel="shortcut icon" href="http://www.vincent.ac.cn//favicon.ico?v=1573115861454">
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573229214808">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-<link rel="stylesheet" href="http://www.vincent.ac.cn//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="http://www.vincent.ac.cn//atom.xml">
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
@@ -32,8 +32,8 @@
     <div class="sidebar-content">
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="http://www.vincent.ac.cn/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://www.vincent.ac.cn//images/avatar.png?v=1573115861454" alt="">
+        <a href="https://www.vincent.ac.cn/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573229214808" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
       </div>
@@ -95,7 +95,7 @@
   </div>
   <div class="site-footer">
     <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
-    <a class="rss" href="http://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
+    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
   </div>
 </div>
 <div class="mask" onclick="closeMenu()">
@@ -106,7 +106,7 @@
           2019-11-05 / 4 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://www.vincent.ac.cn//post-images/laravel3.jpg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/laravel3.jpg" alt="">
         
         <div class="post-content yue">
           <p>前面学习了路由可以分发请求还可以引入html页面，这些都可以在 <strong>route/web.php</strong> 中搞定。</p>
@@ -115,7 +115,7 @@
 <p>都9102年了既然用上了现代话框架必须玩点高逼格的方式使用命令行的方式创建控制器</p>
 <ul>
 <li>laravel 是一个现代化框架，它对命令行有着非常好的支持，artisan 就是 laravel 的命令行接口<br>
-<img src="http://www.vincent.ac.cn//post-images/1572929830404.jpg" alt=""></li>
+<img src="https://www.vincent.ac.cn//post-images/1572929830404.jpg" alt=""></li>
 <li>我们可以把它理解为命令行级的单入口文件，跟 index.php 文件的使命一样，所有命令都需要通过他，所有如果需要使用命令行就需要 <strong>cd</strong> 到项目根目录去或者指定一长串路径这个看个人喜好了up是喜好到根目录去。</li>
 <li>使用很简单 <strong>php artisan</strong> 起手 后面跟上响应的命令，在命令行中以 php 开头意思是用 php 来执行某个文件，<strong>php index.php</strong> 意思就是使用 php 的命令行模式运行 <strong>index.php</strong> 。</li>
 <li>命令行下是可以不需要文件后缀就能识别的所以根目录下的 artisan 文件并没有带上 .php</li>
@@ -123,9 +123,9 @@
 <p>好了让我们用 php artisan 来创建控制器在项目根目录执行下列代码<br>
 <code>php artisan make:controller TestController</code></p>
 <p>如果最近没做坏事，洗过脸的话会看到成功的提示<br>
-<img src="http://www.vincent.ac.cn//post-images/1572929848739.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572929848739.jpg" alt=""><br>
 并会生成一个 app/Http/Controllers/TestController.php 文件，打开是这个样子<br>
-<img src="http://www.vincent.ac.cn//post-images/1572929857892.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572929857892.jpg" alt=""></p>
 <pre><code>&lt;?php
 
 namespace App\Http\Controllers;
@@ -141,11 +141,11 @@ class TestController extends Controller
 <p>接下来我们给上面的命令加个 <strong>--resource</strong> 选项<br>
 <code>php artisan make:controller TestController --resource</code><br>
 如果直接运行的话是会报错提示<strong>Controller already exists!</strong><br>
-<img src="http://www.vincent.ac.cn//post-images/1572929870204.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572929870204.jpg" alt=""><br>
 这是因为我们刚已经创建过 TestController了，所以我们需要进入项目根目录执行下面的命令把刚刚创建的文件删除掉<br>
 <code>cd app/Http/Controllers/ &amp;&amp; rm -rf TestController.php</code><br>
 删除掉后再回到项目根目录执行刚刚的命令<br>
-<img src="http://www.vincent.ac.cn//post-images/1572929880301.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572929880301.jpg" alt=""><br>
 如果人品正常，那么会再次生成一个 <strong>app/Http/Controllers/TestController.php</strong> 文件,打开会是这个样子</p>
 <pre><code>&lt;?php
 
@@ -238,11 +238,11 @@ class TestController extends Controller
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/ULKwYDOFh">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh">
             <span class="flex-auto">php</span>
           </a>
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/r9lWhqCpR5">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/r9lWhqCpR5">
             <span class="flex-auto">Laravel</span>
           </a>
         
@@ -251,7 +251,7 @@ class TestController extends Controller
         <div class="flex justify-between py-8">
           
             <div class="prev-post">
-              <a href="http://www.vincent.ac.cn//post/go1">
+              <a href="https://www.vincent.ac.cn//post/go1">
                 <h3 class="post-title">
                   <i class="remixicon-arrow-left-line"></i>
                   译 - 为什么要学习Go？
@@ -262,7 +262,7 @@ class TestController extends Controller
 
           
             <div class="next-post">
-              <a href="http://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he">
+              <a href="https://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he">
                 <h3 class="post-title">
                   转载 -《数据结构与算法》Day.1 最大子列和
                   <i class="remixicon-arrow-right-line"></i>
@@ -303,7 +303,7 @@ class TestController extends Controller
       </div>
     </div>
 
-    <script src="http://www.vincent.ac.cn//media/prism.js"></script>  
+    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
 <script>
 
 Prism.highlightAll()

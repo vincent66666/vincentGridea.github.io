@@ -4,14 +4,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>清风醉`s blog</title>
 <meta name="description" content="不愤不启不悱不发" />
-<link rel="shortcut icon" href="http://www.vincent.ac.cn//favicon.ico?v=1573115861454">
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573229214808">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-<link rel="stylesheet" href="http://www.vincent.ac.cn//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="http://www.vincent.ac.cn//atom.xml">
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
@@ -32,8 +32,8 @@
     <div class="sidebar-content">
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="http://www.vincent.ac.cn/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://www.vincent.ac.cn//images/avatar.png?v=1573115861454" alt="">
+        <a href="https://www.vincent.ac.cn/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573229214808" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
       </div>
@@ -108,7 +108,7 @@
   </div>
   <div class="site-footer">
     <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
-    <a class="rss" href="http://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
+    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
   </div>
 </div>
 <div class="mask" onclick="closeMenu()">
@@ -119,7 +119,7 @@
           2019-11-06 / 10 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://www.vincent.ac.cn//post-images/xwp3_04xN.jpeg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/xwp3_04xN.jpeg" alt="">
         
         <div class="post-content yue">
           <blockquote>
@@ -138,8 +138,8 @@
 <pre><code>php artisan make:migration create_test_table
 </code></pre>
 <p>新创建的迁移会放在你的 <code>database/migrations</code> 目录。<br>
-<img src="http://www.vincent.ac.cn//post-images/1573039486488.jpg" alt=""><br>
-<img src="http://www.vincent.ac.cn//post-images/1573038791409.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573039486488.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573038791409.jpg" alt=""><br>
 你运行的时候肯定不会跟我这个文件名一样,因为我们很容易就发现这个文件加了时间前缀,也就是说我是在 2019-11-06 16:08:05 创建的这个文件。</p>
 <p><code>--table</code> 和 <code>--create</code> 选项也可用于确定表的名称以及是否在迁移中创建新的数据表。这些选项用指定的迁移模板预先填充指定的数据表，这里就不做过多演示了</p>
 <pre><code>php artisan make:migration create_test_table --create=test
@@ -149,7 +149,7 @@ php artisan make:migration add_votes_to_test_table --table=test
 <h4 id="迁移结构">迁移结构</h4>
 <p>除了我们创建的 <code>test</code> 表迁移文件，我们还发现了 <code>laravel</code>框架自带的 2014 年的 <code>users</code> 表和 <code>password_resets</code> 表，直接打开<code>2014_10_12_000000_create_users_table.php</code><br>
 我们来参考下它的内容<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038813009.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573038813009.jpg" alt=""><br>
 一共有两个方法 <code>up</code> 和 <code>down</code> ，<code>up</code> 方法是用于新增数据库的数据表、字段或者索引的，而 <code>down</code> 方法与 <code>up</code> 方法执行操作相反是用来删除表的。</p>
 <p>在这两种方法中，你可以使用 <code>Laravel</code> 的结构生成器以表达式方式创建和修改表。 <code>Schema</code> 生成器上可用的所有方法 请查阅 <a href="https://learnku.com/docs/laravel/6.x/migrations/5173#creating-tables">官方文档</a></p>
 <p>我们直接来读上图的代码，大致意思是</p>
@@ -165,36 +165,36 @@ php artisan make:migration add_votes_to_test_table --table=test
 </ul>
 <p>这我们就发现了 laravel 的又一特点，整个项目对于各种命名的斟酌，很多时候我们即便不看文档甚至不看源代码注释只看方法名就能猜到作用了，她不只是一个框架还是我们编程的一个范本。<br>
 参考了 <code>users</code> 表我们回到 <code>2019_11_06_160805_create_test_table.php</code> 通过命令行生成文件的同时自动已经生成了下面这样的代码<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038851479.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573038851479.jpg" alt=""><br>
 很明显 <code>laravel</code> 默认表的主键字段名为 <code>id</code>  然后默认表有 <code>created_at</code> 和 <code>updated_at</code> 字段，增删改查不分家，增和改都默认有了个字段记录操作日期了，那删怎么能没有呢？没错 <code>laravel</code> 又为我们设计好了。</p>
 <pre><code>$table-&gt;softDeletes();
 </code></pre>
 <p>这个方法就是为表增加一个 <code>deleted_at</code> ，<code>laravel</code> 会在删除数据的时候记录操作日期，具体到功能比如 <code>回收站</code> 的功能了，我们可能会删除某些数据，但是我们还希望能恢复删除的数据，当某条数据的 <code>deleted_at</code> 为 <code>null</code> 的时候表示正常，当有日期的时候就表示这条数据是在这个日期被删掉了。</p>
 <h4 id="运行迁移">运行迁移</h4>
 <p>现在回到 <code>2019_11_06_160805_create_test_table.php</code>  我们简单编辑下这个文件<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038877436.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573038877436.jpg" alt=""><br>
 我们在之前学习 <a href="http://www.vincent.ac.cn/post/laravel4/"><code>artisan</code></a> 的时候说过 <code>artisan</code>  主要2个作用  一个是<code>创建迁移文件</code>、一个是<code>执行迁移任务</code>，我们已经用 <code>artisan</code> 创建控制器和迁移了现在终于到了执行任务的时候了，我们上面的迁移文件定义了表的结构，执行迁移才会真正生成表</p>
 <pre><code>php artisan migrate
 </code></pre>
 <p>执行上面的命令的时候up遇到了这样的报错<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038889735.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573038889735.jpg" alt=""><br>
 <code>SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client</code><br>
 这是因为  up  本地 使用的是 <code>MySQL 8</code><br>
 是由于 <code>MySQL 8</code> 默认使用了新的密码验证插件：<code>caching_sha2_password</code>，而之前的<code>PHP版本</code>中所带的 <code>mysqlnd</code> 无法支持这种验证。解决这个问题可以在MySQL 8中创建（或修改）使用<code>caching_sha2_password</code> 插件的账户，让其使用<code>mysql_native_password</code> 插件</p>
 <pre><code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'R9s33P8,,8&amp;BH;2';
 </code></pre>
 <p>修改后我们重新执行 <code>php artisan migrate</code> 我们可以看到这样的提示<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038905199.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573038905199.jpg" alt=""><br>
 这意思就是我们的迁移已经完成了,那我们再执行一遍命令呢？我们会看到这样的的提示<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038921282.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1573038921282.jpg" alt=""></p>
 <pre><code>Nothing to migrate.
 </code></pre>
 <p>嗯哼？也就是说已经成功的迁移并不会重复执行，这是在哪控制的呢？让我们 连接上 <code>mysql</code>  <code>show tables</code> 一下<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038933845.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1573038933845.jpg" alt=""></p>
 <p>除了 <code>laravel</code> 自带的 <code>users</code> 表和 <code>password_resets</code> 表，除了我们创建的 <code>test</code> 表，我们还发现了个 <code>migrations</code> 表，我们看下这个表的内容<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038946011.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573038946011.jpg" alt=""><br>
 我们的3个迁移文件名都在里面记录着了,说明这个表里面存的是已经执行过的迁移的文件名,再查看下 <code>test</code> 表的结构.<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038954817.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573038954817.jpg" alt=""><br>
 完美跟我们迁移文件中写的是一样的表就这么轻松的创建了，但是再认真看会发现并没有 <code>string 类型</code>，肯定的喽，因为 <code>mysql</code> 压根就没 <code>string</code>，<code>string</code> 就是 <code>varchar</code> 了，再但是再认真看还会发现除了 <code>timestamp</code> ，其他的字段都多了个 <code>NOT NULL</code> ，这个我们并没有在迁移中指定，这里就需要解释下了，这个 <code>NOT NULL</code> 是 <code>laravel</code> 为我们默认添加的，那如果确实有字段想让它允许为 <code>NULL</code> 怎么办呢？别担心 <code>laravel</code> 还有个 <code>-&gt;nullable()</code> 我们这里学习了最常用的 <code>int 、 varchar 、 text</code> 那更多的类型呢？这时候就是 <code>laravel</code> 官方手册真正的作用了，<code>laravel</code> 官方手册更适合作为一本工具书，我们去像查字典一样去查工具书就可以了。</p>
 <h4 id="修改字段">修改字段</h4>
 <p>创建表的方式我们已经学会了，除了创建表，我们还经常需要改变表结构，默认的 <code>users</code> 并没有 <code>deleted_at</code> 字段，我们如果想为 用户 也增加一个类似回收站的字段怎么办呢？</p>
@@ -206,29 +206,29 @@ php artisan make:migration add_votes_to_test_table --table=test
         $table-&gt;softDeletes();
     });
 </code></pre>
-<figure data-type="image" tabindex="1"><img src="http://www.vincent.ac.cn//post-images/1573038966907.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1573038966907.jpg" alt=""></figure>
 <p>up 中就是我们迁移的内容，创建表的时候我们使用的是 <code>Schema::create</code> ，编辑表的时候我们使用的是 <code>Schema::table</code>，然后回调函数中的内容跟创建表的时候的格式是一样的，现在我们执行 <code>php artisan migrate</code> 迁移命令。<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038978600.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573038978600.jpg" alt=""><br>
 我们在来看看 <code>users</code> 表的结构 <code>deleted_at</code> 就这么加上了<br>
-<img src="http://www.vincent.ac.cn//post-images/1573038987325.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1573038987325.jpg" alt=""></p>
 <h4 id="回退-回滚迁移">回退 回滚迁移</h4>
 <blockquote>
 <p><code>down</code> 方法中就是回退的内容了，创建表的时候 <code>down</code> 中是 <code>drop</code> 表，添加字段的时候 <code>down</code> 中的自然就是 <code>drop</code> 字段了</p>
 </blockquote>
-<figure data-type="image" tabindex="2"><img src="http://www.vincent.ac.cn//post-images/1573039001454.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://www.vincent.ac.cn//post-images/1573039001454.jpg" alt=""></figure>
 <pre><code>    Schema::table('users', function (Blueprint $table) {
         $table-&gt;dropColumn('deleted_at');
     });
 </code></pre>
 <p>我们一直在说回退说 <code>laravel</code> 的迁移功能可以让我们回退到某个状态，那到底是怎么回退呢？其实也很简单同样是运行命令，为了更深刻的理解 <code>migrations</code> 表的作用，在运行回退命令前我们先看下 <code>migrations</code> 表的内容<br>
-<img src="http://www.vincent.ac.cn//post-images/1573039011971.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573039011971.jpg" alt=""><br>
 一共有5条记录 4条创建表的，1条添加字段的好我们来运行回退命令</p>
 <pre><code>php artisan migrate:rollback
 </code></pre>
-<p><img src="http://www.vincent.ac.cn//post-images/1573039027785.jpg" alt=""><br>
+<p><img src="https://www.vincent.ac.cn//post-images/1573039027785.jpg" alt=""><br>
 然后再来看 migrations 表和 users 表<br>
-<img src="http://www.vincent.ac.cn//post-images/1573039041501.jpg" alt=""><br>
-<img src="http://www.vincent.ac.cn//post-images/1573039054814.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573039041501.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573039054814.jpg" alt=""><br>
 <code>migrations</code> 表的第4条添加字段的记录没有了，<code>users</code> 表的 <code>deleted_at</code> 字段也没了，再回退一次就把第一次运行迁移的时候的3张表就全删了，如果再运行迁移命令一切就又有了。</p>
 <p>重命名一个存在的数据库表，请使用 rename 方法：</p>
 <pre><code>Schema::rename($from, $to);
@@ -242,35 +242,35 @@ Schema::dropIfExists('users');
 <p>到这里创建表、删除表、添加字段、删除字段我们都学习了，最后再来学习下修改字段的，修改字段需要借助 <code>dbal扩展包</code> ，先来执行下列命令安装扩展包</p>
 <pre><code>composer require doctrine/dbal
 </code></pre>
-<figure data-type="image" tabindex="3"><img src="http://www.vincent.ac.cn//post-images/1573039066817.jpg" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="https://www.vincent.ac.cn//post-images/1573039066817.jpg" alt=""></figure>
 <p>剩下的工作也很简单我这里举个栗子，比如 <code>test</code>表没有几条数据，用 <code>int</code> 类型太奢侈了，我们改成 <code>tinyint</code> 就足够了。<br>
 那么我们先创建一个迁移文件</p>
 <pre><code>php artisan make:migration change_category_id_in_test_table
 </code></pre>
-<p><img src="http://www.vincent.ac.cn//post-images/1573039083421.jpg" alt=""><br>
+<p><img src="https://www.vincent.ac.cn//post-images/1573039083421.jpg" alt=""><br>
 然后在 up 中写上修改的内容即可<br>
-<img src="http://www.vincent.ac.cn//post-images/1573039095478.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1573039095478.jpg" alt=""></p>
 <pre><code>    Schema::table('test', function (Blueprint $table) {
         $table-&gt;tinyInteger('testId')-&gt;unsigned()-&gt;default(0)-&gt;comment('测试id')-&gt;change();
     });
 </code></pre>
 <p>但是这里要讲一个坑，如果直接运行上面这个迁移文件是会报错的因为 <code>dbal</code> 并不支持修改成 <code>tinyInteger</code> ，为了兼容更多类型的数据库需要使用替代方案使用 <code>boolean</code> 类型<br>
-<img src="http://www.vincent.ac.cn//post-images/1573039104279.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573039104279.jpg" alt=""><br>
 那 <code>down</code> 里面就是相反的内容了</p>
 <p>总结下就是 <code>up</code> 中写需要迁移的内容 <code>down</code> 中写回退的内容。</p>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/MrJ-unZWo">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/MrJ-unZWo">
             <span class="flex-auto">MySQL</span>
           </a>
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/ULKwYDOFh">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh">
             <span class="flex-auto">php</span>
           </a>
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/r9lWhqCpR5">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/r9lWhqCpR5">
             <span class="flex-auto">Laravel</span>
           </a>
         
@@ -279,7 +279,7 @@ Schema::dropIfExists('users');
         <div class="flex justify-between py-8">
           
             <div class="prev-post">
-              <a href="http://www.vincent.ac.cn//post/Wb4f8UHdq">
+              <a href="https://www.vincent.ac.cn//post/Wb4f8UHdq">
                 <h3 class="post-title">
                   <i class="remixicon-arrow-left-line"></i>
                   laravel 学习之路 数据库操作
@@ -290,7 +290,7 @@ Schema::dropIfExists('users');
 
           
             <div class="next-post">
-              <a href="http://www.vincent.ac.cn//post/laravel5">
+              <a href="https://www.vincent.ac.cn//post/laravel5">
                 <h3 class="post-title">
                   laravel 学习之路 配置config
                   <i class="remixicon-arrow-right-line"></i>
@@ -331,7 +331,7 @@ Schema::dropIfExists('users');
       </div>
     </div>
 
-    <script src="http://www.vincent.ac.cn//media/prism.js"></script>  
+    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
 <script>
 
 Prism.highlightAll()

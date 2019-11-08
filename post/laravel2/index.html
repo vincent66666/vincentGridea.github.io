@@ -4,14 +4,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>清风醉`s blog</title>
 <meta name="description" content="不愤不启不悱不发" />
-<link rel="shortcut icon" href="http://www.vincent.ac.cn//favicon.ico?v=1573115861454">
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573229214808">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-<link rel="stylesheet" href="http://www.vincent.ac.cn//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="http://www.vincent.ac.cn//atom.xml">
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
@@ -32,8 +32,8 @@
     <div class="sidebar-content">
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="http://www.vincent.ac.cn/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://www.vincent.ac.cn//images/avatar.png?v=1573115861454" alt="">
+        <a href="https://www.vincent.ac.cn/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573229214808" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
       </div>
@@ -96,7 +96,7 @@
   </div>
   <div class="site-footer">
     <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
-    <a class="rss" href="http://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
+    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
   </div>
 </div>
 <div class="mask" onclick="closeMenu()">
@@ -107,7 +107,7 @@
           2019-11-01 / 5 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://www.vincent.ac.cn//post-images/laravel2.jpg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/laravel2.jpg" alt="">
         
         <div class="post-content yue">
           <p>我大致了解了 laravel 下，在开始一个 Http 程序需要先定义路由。之前的例子中，我们的业务逻辑都是在路由里实现，这对于简单的网站或 web 应用没什么问题，当我们需要扩大规模，程序变得复杂，分层的业务逻辑更为适合。这时候，我们就应该使用控制器。<br>
@@ -134,7 +134,7 @@ class UserController extends Controller
 <p>路由就是网络请求的 url 与 laravel 应用层的逻辑处理地址的对应关系。<br>
 通俗的说：路由就是把url的请求优雅的对应到你想要执行的操作方法，路由的作用是简化URL访问地址，并根据定义的路由类型做出正确的解析。</p>
 <p>laravel 中的路由 跟路由器很像好比你家里只有一根网线网线上接着 wifi 路由器，多部手机和电脑就可以通过 wifi 上网了，路由器起到了一个分发的作用，大致是这样实现的<br>
-<img src="http://www.vincent.ac.cn//post-images/1572597112430.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572597112430.jpg" alt=""></p>
 <p>我们访问项目的时候最先请求到的是<strong>index.php</strong>这个入口文件这个<br>
 <strong>public/index.php</strong> 这个时候我们把<strong>public/index.php</strong> 比作网线，<strong>route/web.php</strong> 类比成路由器设备，<strong>controller</strong>控制器比作多部手机设备变很好理解</p>
 <h2 id="配置路由">配置路由</h2>
@@ -149,7 +149,7 @@ class UserController extends Controller
 <li>ThinkPHP 这种默认路由规则使得框架开箱即用，十分便捷。但是这样并不灵活，假如我想通过访问 http://xxxx/user/1 就访问到 UserController 控制器下的 show 方法并包含一个值为 1 的参数，ThinkPHP 你需要修改配置（并且那个配置非常不优雅），亦或者我想要通过向 http://xxxx/topic POST 一个数据以添加一篇文章，处理这个过程的实际是 Admin\TopicController 类的 create 方法，且该方法只接受 POST 请求，这时候似乎大多数框架就要通过写更多的代码实现了。</li>
 <li>说到这里，似乎大家是不是想起了 laravel 那种路由定义方式的好处了？虽然 laravel 没有强加给你既定的路由规则，但你拥有了更多定制的权利，并且 laravel 定义路由的方式非常优雅，带给你的体验非常丰富。另一个好消息是，定义控制器路由和普通路由有所差别，这个差别是在便利性上的，你将很快感受到这种便利带给你的好处！<br>
 打开 <strong>routes/web.php</strong>  我们直接看代码<br>
-<img src="http://www.vincent.ac.cn//post-images/1572597133893.jpg" alt=""></li>
+<img src="https://www.vincent.ac.cn//post-images/1572597133893.jpg" alt=""></li>
 </ol>
 </blockquote>
 <p>其中 <em>Route</em>  是一个静态类 ，<em>get</em>是<em>Route</em>类的静态方法，<em>get</em>方法传递了2个参数，第一个是 / 、第二个是一个闭包并且在闭包函数中return返回的东西就是我们请求到的内容，从中可以看出</p>
@@ -167,14 +167,14 @@ class UserController extends Controller
 </li>
 <li>
 <p><em>view</em> 函数可以直接定位到 <em>resources/views</em> 目录，它可以接受一个参数这个参数就是 <em>resources/views</em> 目录下的文件名去掉 <em>blade.php</em> 后缀，这样我们创建一个<em>hello.blade.php</em>文件 里面写个hello world吧，<br>
-<img src="http://www.vincent.ac.cn//post-images/1572597143938.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572597143938.jpg" alt=""></p>
 <p>在注册下路由</p>
 <pre><code>Route::get('hello', function () {
     return view('hello');
 });
 </code></pre>
 <p>我们访问 <em>http://study.laraveltest.com/hello</em> 看到这样的内容就表示成功了；<br>
-<img src="http://www.vincent.ac.cn//post-images/1572597152425.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572597152425.jpg" alt=""><br>
 如果访问 <em>http://study.laraveltest.com/hello</em> 报错可以试一下<em>http://study.laraveltest.com/index.php/hello</em> 加了 index.php 就正常了的话说明是没有成功开启 rewrite ；</p>
 </li>
 </ol>
@@ -182,11 +182,11 @@ class UserController extends Controller
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/ULKwYDOFh">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh">
             <span class="flex-auto">php</span>
           </a>
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/r9lWhqCpR5">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/r9lWhqCpR5">
             <span class="flex-auto">Laravel</span>
           </a>
         
@@ -195,7 +195,7 @@ class UserController extends Controller
         <div class="flex justify-between py-8">
           
             <div class="prev-post">
-              <a href="http://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he">
+              <a href="https://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he">
                 <h3 class="post-title">
                   <i class="remixicon-arrow-left-line"></i>
                   转载 -《数据结构与算法》Day.1 最大子列和
@@ -206,7 +206,7 @@ class UserController extends Controller
 
           
             <div class="next-post">
-              <a href="http://www.vincent.ac.cn//post/laravel1">
+              <a href="https://www.vincent.ac.cn//post/laravel1">
                 <h3 class="post-title">
                   laravel 学习之路  安装 
                   <i class="remixicon-arrow-right-line"></i>
@@ -247,7 +247,7 @@ class UserController extends Controller
       </div>
     </div>
 
-    <script src="http://www.vincent.ac.cn//media/prism.js"></script>  
+    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
 <script>
 
 Prism.highlightAll()

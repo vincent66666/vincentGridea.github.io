@@ -4,14 +4,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>清风醉`s blog</title>
 <meta name="description" content="不愤不启不悱不发" />
-<link rel="shortcut icon" href="http://www.vincent.ac.cn//favicon.ico?v=1573115861454">
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573229214808">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-<link rel="stylesheet" href="http://www.vincent.ac.cn//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="http://www.vincent.ac.cn//atom.xml">
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
@@ -32,8 +32,8 @@
     <div class="sidebar-content">
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="http://www.vincent.ac.cn/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://www.vincent.ac.cn//images/avatar.png?v=1573115861454" alt="">
+        <a href="https://www.vincent.ac.cn/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573229214808" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
       </div>
@@ -97,7 +97,7 @@
   </div>
   <div class="site-footer">
     <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
-    <a class="rss" href="http://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
+    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
   </div>
 </div>
 <div class="mask" onclick="closeMenu()">
@@ -108,7 +108,7 @@
           2019-11-05 / 4 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://www.vincent.ac.cn//post-images/laravel5.jpeg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/laravel5.jpeg" alt="">
         
         <div class="post-content yue">
           <blockquote>
@@ -116,13 +116,13 @@
 </blockquote>
 <h2 id="配置项">配置项</h2>
 <p><code>laravel</code> 的配置项是在根目录下的 <code>/config</code> 目录中,还有一个是根目录下的 <code>.env</code>文件<br>
-<img src="http://www.vincent.ac.cn//post-images/1572951481225.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572951481225.jpg" alt=""></p>
 <blockquote>
 <p>这里就有个疑问了为啥要有2个地方用于写配置项呢？让我们打开 <code>.env</code> 来看看<br>
-<img src="http://www.vincent.ac.cn//post-images/1572951488708.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572951488708.jpg" alt=""></p>
 </blockquote>
 <p>第一行就是一个 <code>APP_NAME</code> ,我们再打开 <code>config/app.php</code><br>
-<img src="http://www.vincent.ac.cn//post-images/1572951497179.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572951497179.jpg" alt=""><br>
 我们也找到了这个 <code>APP_NAME</code>, 不过是作为一个参数传给了 <code>env()</code> 函数，我们来了解下这个函数</p>
 <ul>
 <li>它是用来获取 .env 文件中的配置的</li>
@@ -134,10 +134,10 @@
 <p><code>'name' =&gt; env('APP_NAME', 'Laravel')</code> 到这里这句代码的意思就很明显了，从 <code>.env</code> 获取 <code>APP_NAME</code> 的值，如果 <code>.env</code> 中不存在 <code>APP_NAME</code> 那就取默认值 <code>Laravel</code></p>
 </blockquote>
 <p>在 config/database.php 文件中我们可看到数据库的配置<br>
-<img src="http://www.vincent.ac.cn//post-images/1572951507191.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572951507191.jpg" alt=""><br>
 依然是一片熟悉的 <code>env</code> 函数,比如说数据库的 <code>host 、port 、database 、username、password</code> 但是还有一些并没有用 <code>env</code> 函数,比如说<code>charset 、 prefix</code> 那我们不禁迷惑了, 到底什么时候用 <code>env</code> 函数什么时候不用 <code>env</code> 函数呢？</p>
 <p>在理解这个问题前咱还需再穿插一点 git 的小知识在项目根目录下我们可以看到有个 .gitignore 文件.<br>
-<img src="http://www.vincent.ac.cn//post-images/1572951515177.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572951515177.jpg" alt=""><br>
 其中有一行写了 <code>.env</code> ,它的作用就是告诉 <code>git</code> 忽略 <code>.env</code> 文件,所以如果你去 <code>github</code> 上看别的 <code>laravel</code> 项目的时候你会发现并没有 <code>.env</code> 文件.</p>
 <p>很显然需要保密的配置或者每个项目特有的或者每个环境不同的东西我们可以把它卸载 <code>.env</code> 文件里然后在 <code>/config</code> 目录下的配置文件中用 <code>env()</code> 函数获取数据库的配置就很明显属于这类。</p>
 <blockquote>
@@ -149,7 +149,7 @@
 <li>首先 <code>APP_NAME</code> 需要该成我们的项目名称，我就随便起名字叫 <code>study</code> 了。</li>
 <li><code>APP_URL</code> 是需要该的，他就是项目的域名，我是在本地开发的 <code>http://study.laraveltest.com/</code></li>
 <li>DB_开头的这一堆配置也都要改成本地数据库。<br>
-<img src="http://www.vincent.ac.cn//post-images/1572951524740.jpg" alt=""></li>
+<img src="https://www.vincent.ac.cn//post-images/1572951524740.jpg" alt=""></li>
 </ol>
 <h2 id="config-目录下的数据库的配置"><code>/config</code> 目录下的数据库的配置</h2>
 <p><code>laravel 5.4</code> 以后默认使用 <code>utf8mb4</code> 字符集，<code>utf8mb4</code> 主要是用来支持 <code>emoji</code> 表情的，如果你的<code>本地环境</code>的<code>mysql</code> 低于<code>5.7.7</code>，为了防止在以后使用的过程中报如下错误</p>
@@ -164,7 +164,7 @@
 <pre><code>    'charset' =&gt; 'utf8',
     'collation' =&gt; 'utf8_unicode_ci',
 </code></pre>
-<figure data-type="image" tabindex="1"><img src="http://www.vincent.ac.cn//post-images/1572951534788.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1572951534788.jpg" alt=""></figure>
 <p>不过这样做的后果就是不能在数据库直接存<code>emoji</code> 表情了，如果说你就是想在数据库中存 <code>emoji</code> 表情,那还有一种方案，找到<code>appProvidersAppServiceProvider.php</code> 文件，<br>
 先 <code>use Schema</code></p>
 <pre><code>use Illuminate\Support\Facades\Schema;
@@ -178,16 +178,16 @@
 <p>如果使用 <code>5.7</code> 以上的 <code>mysql 数据库</code>,还可以把 <code>strict</code> 改为 <code>false</code> 关闭严格模式,以防止报类似如下 <code>only_full_group_by</code> 的错误。</p>
 <p>除了数据库还有两个需要改的打开 <code>config/app.php</code>文件把 <code>timezone</code> 改为 <code>PRC</code> ,<code>laravel</code> 默认的时区是 <code>UTC</code>中国的时区是 <code>PRC</code> 如果没有改的话,<br>
 那数据库存自动生成的时间会和我们的实际相差<code>8个小时</code>然后把 <code>locale</code> 改为 <code>zh-CN</code>这个就好理解了把语言改为中文。<br>
-<img src="http://www.vincent.ac.cn//post-images/1572951544238.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572951544238.jpg" alt=""></p>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/ULKwYDOFh">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh">
             <span class="flex-auto">php</span>
           </a>
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/r9lWhqCpR5">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/r9lWhqCpR5">
             <span class="flex-auto">Laravel</span>
           </a>
         
@@ -196,7 +196,7 @@
         <div class="flex justify-between py-8">
           
             <div class="prev-post">
-              <a href="http://www.vincent.ac.cn//post/xwp3_04xN">
+              <a href="https://www.vincent.ac.cn//post/xwp3_04xN">
                 <h3 class="post-title">
                   <i class="remixicon-arrow-left-line"></i>
                   laravel 学习之路 Migrations
@@ -207,7 +207,7 @@
 
           
             <div class="next-post">
-              <a href="http://www.vincent.ac.cn//post/laravel4">
+              <a href="https://www.vincent.ac.cn//post/laravel4">
                 <h3 class="post-title">
                   laravel 学习之路 路由与控制器
                   <i class="remixicon-arrow-right-line"></i>
@@ -248,7 +248,7 @@
       </div>
     </div>
 
-    <script src="http://www.vincent.ac.cn//media/prism.js"></script>  
+    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
 <script>
 
 Prism.highlightAll()

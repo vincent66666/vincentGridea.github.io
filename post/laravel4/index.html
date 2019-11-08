@@ -4,14 +4,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>清风醉`s blog</title>
 <meta name="description" content="不愤不启不悱不发" />
-<link rel="shortcut icon" href="http://www.vincent.ac.cn//favicon.ico?v=1573115861454">
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573229214808">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-<link rel="stylesheet" href="http://www.vincent.ac.cn//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="http://www.vincent.ac.cn//atom.xml">
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
@@ -32,8 +32,8 @@
     <div class="sidebar-content">
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="http://www.vincent.ac.cn/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://www.vincent.ac.cn//images/avatar.png?v=1573115861454" alt="">
+        <a href="https://www.vincent.ac.cn/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573229214808" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
       </div>
@@ -102,7 +102,7 @@
   </div>
   <div class="site-footer">
     <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
-    <a class="rss" href="http://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
+    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
   </div>
 </div>
 <div class="mask" onclick="closeMenu()">
@@ -113,7 +113,7 @@
           2019-11-05 / 9 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://www.vincent.ac.cn//post-images/laravel4.jpeg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/laravel4.jpeg" alt="">
         
         <div class="post-content yue">
           <blockquote>
@@ -129,11 +129,11 @@
 </li>
 <li>
 <p>接着在控制器中写点东西<br>
-<img src="http://www.vincent.ac.cn//post-images/1572941780025.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572941780025.jpg" alt=""></p>
 </li>
 <li>
 <p>这样我们在浏览器访问就可以看到返回的响应<br>
-<img src="http://www.vincent.ac.cn//post-images/1572941791533.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572941791533.jpg" alt=""></p>
 </li>
 </ul>
 <h2 id="路由分组">路由分组</h2>
@@ -158,8 +158,8 @@
 2. php artisan make:controller Home/IndexController --resource
 </code></pre>
 <p>再在新建的控制器中写点内容加以区分<br>
-<img src="http://www.vincent.ac.cn//post-images/1572941819096.jpg" alt=""><br>
-<img src="http://www.vincent.ac.cn//post-images/1572941843149.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572941819096.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941843149.jpg" alt=""></p>
 <p>这种多级目录是不需要指明目录的只需要指明相对于app/Http/Controllers 目录的 namespace 即可</p>
 <pre><code>Route::prefix('admin/store')-&gt;namespace('Admin')-&gt;group(function () {
     Route::get('index', 'StoreController@index');
@@ -177,8 +177,8 @@
 });
 </code></pre>
 <p>访问<code>http://study.laraveltest.com/home/index/index</code> 与 <code>http://study.laraveltest.com/admin/store/index</code> 会得到这样的响应<br>
-<img src="http://www.vincent.ac.cn//post-images/1572941855899.jpg" alt=""><br>
-<img src="http://www.vincent.ac.cn//post-images/1572941870129.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572941855899.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941870129.jpg" alt=""></p>
 <p>因为创建的目录下我们还会创建更多的路由器所以，我们应该使用 group 嵌套的这种方式，比如说我们再有一个 <code>app/Http/Controllers/Home/TagController.php</code>  执行创建控制器命令 <code>php artisan make:controller Home/TagController --resource</code> 那么路由就是这样的</p>
 <pre><code>Route::prefix('home')-&gt;namespace('Home')-&gt;group(function () {
     Route::prefix('index')-&gt;group(function () {
@@ -195,7 +195,7 @@
 </code></pre>
 <h2 id="路由参数">路由参数</h2>
 <p>到这里我们已经学会了如何组织多级目录了，让我们回到 <code>app/Http/Controllers/TestController.php</code> 控制器上<br>
-<img src="http://www.vincent.ac.cn//post-images/1572941881607.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941881607.jpg" alt=""><br>
 会发现命令行创建的控制器里面有个 <code>edit</code> 方法，<code>edit</code> 方法有个 <code>$id</code> 参数,通过名字我们很容易就明白这是用来修改数据的，<code>id</code> 一般又是数据库的自增字段,但是这个 id 是哪传来的呢？下面就到了了解路由参数的时候了。</p>
 <p>定义路由的时候我们是可以定义路由参数，我们接着上面的路由加一个 edit ,我们在定义路由的时候用花括号包一个变量名那这个变量就可以直接传到控制器方法中然后在地址栏传什么控制器中就可以接到什么为了方便测试我们在这个方法中返回 id</p>
 <pre><code>Route::prefix('test2')-&gt;group(function () {
@@ -205,9 +205,9 @@
     Route::get('edit/{id}', 'TestController@edit');
 });
 </code></pre>
-<p><img src="http://www.vincent.ac.cn//post-images/1572941893855.jpg" alt=""><br>
+<p><img src="https://www.vincent.ac.cn//post-images/1572941893855.jpg" alt=""><br>
 接下来我们访问<code>http://study.laraveltest.com/test2/edit/2344</code><br>
-<img src="http://www.vincent.ac.cn//post-images/1572941903516.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941903516.jpg" alt=""><br>
 这里面有个值得注意的地方，就是控制器中的参数名跟路由参数名不是必须相同的，一个路由参数的时候这倒不会觉得什么，一旦定义多个路由参数的时候，这就有点坑了<br>
 重新写一个方法<code>edit1</code></p>
 <pre><code>    /**
@@ -228,7 +228,7 @@
 });
 </code></pre>
 <p>访问 <code>http://study.laraveltest.com/test2/edit1/2344/风清醉</code><br>
-<img src="http://www.vincent.ac.cn//post-images/1572941915585.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941915585.jpg" alt=""><br>
 你会发现 id 和 name 没对上，这边画个重点 <strong>路由参数中的第一个参数对应控制器中的第一个路由参数以此类推在控制器中路由参数跟参数名是没关系的只跟顺序有关。</strong></p>
 <p>再个 id 一般都是纯数字，这里却传了字母 ，我们应该怎么约束下 id 呢？laravel 方方面面都为我们考虑到了，我们加个 where 就行了。</p>
 <pre><code>Route::prefix('test2')-&gt;group(function () {
@@ -239,7 +239,7 @@
 <p>这样就只能传数字了其实大多的表都是用 id 做主键的如果每个路由都手动定义一遍约束那也是挺麻烦的laravel 又一次方方面面都为我们考虑到了。</p>
 <p>找到 <code>app/Providers/RouteServiceProvider.php</code> 这个文件在 boot 方法中可以定义全局约束  <code>Route::pattern('id', '[0-9]+');</code><br>
 这样就不需要为每条带 id 参数的路由定义约束了,以后所有带 id 参数的路由就只能传数字了。<br>
-<img src="http://www.vincent.ac.cn//post-images/1572941928086.jpg" alt=""></p>
+<img src="https://www.vincent.ac.cn//post-images/1572941928086.jpg" alt=""></p>
 <h2 id="请求参数">请求参数</h2>
 <blockquote>
 <p>路由参数容易搞混的是请求参数路由参数？请求参数？傻傻分不清楚</p>
@@ -280,7 +280,7 @@
     }
 </code></pre>
 <p><strong>这个 Request $request 是不会影响路由参数的顺序的</strong> 它放前放后都是可以的,我们访问这个方法并携带请求参数<br>
-<img src="http://www.vincent.ac.cn//post-images/1572941940654.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941940654.jpg" alt=""><br>
 <code>Request 类</code>有一个 <code>input 方法</code>,把要获取的参数名传给它就可以了,我上面示例中还用了个 <code>request()</code> 函数它跟 <code>Request $request</code> 效果是一样的,<code>$request</code> 可以方便复用,所以在控制器中更推荐使用<code>$request</code>,如果传的请求参数比较多的时候这样一个一个取贼麻烦，<code>Request</code> 还有个 <code>all</code> 方法就可以获取全部的请求参数</p>
 <pre><code>public function edit(Request $request, $id, $name)
 {
@@ -288,7 +288,7 @@
 }
 </code></pre>
 <p>dump 是 laravel 自带的一个打印函数,就是 php 自带的 var_dump 函数的升级版,打印的效果如下<br>
-<img src="http://www.vincent.ac.cn//post-images/1572941950048.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941950048.jpg" alt=""><br>
 <code>Request</code> 还有个 <code>only</code> 方法作用是从一大堆请求参数中获取指定的请求参数</p>
 <pre><code>public function edit(Request $request, $id, $name)
 {
@@ -305,11 +305,11 @@
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/ULKwYDOFh">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh">
             <span class="flex-auto">php</span>
           </a>
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/r9lWhqCpR5">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/r9lWhqCpR5">
             <span class="flex-auto">Laravel</span>
           </a>
         
@@ -318,7 +318,7 @@
         <div class="flex justify-between py-8">
           
             <div class="prev-post">
-              <a href="http://www.vincent.ac.cn//post/laravel5">
+              <a href="https://www.vincent.ac.cn//post/laravel5">
                 <h3 class="post-title">
                   <i class="remixicon-arrow-left-line"></i>
                   laravel 学习之路 配置config
@@ -329,7 +329,7 @@
 
           
             <div class="next-post">
-              <a href="http://www.vincent.ac.cn//post/go1">
+              <a href="https://www.vincent.ac.cn//post/go1">
                 <h3 class="post-title">
                   译 - 为什么要学习Go？
                   <i class="remixicon-arrow-right-line"></i>
@@ -370,7 +370,7 @@
       </div>
     </div>
 
-    <script src="http://www.vincent.ac.cn//media/prism.js"></script>  
+    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
 <script>
 
 Prism.highlightAll()

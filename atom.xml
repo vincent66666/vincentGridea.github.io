@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://www.vincent.ac.cn/</id>
+    <id>https://www.vincent.ac.cn/</id>
     <title>清风醉`s blog</title>
-    <updated>2019-11-07T08:37:45.947Z</updated>
+    <updated>2019-11-08T16:06:58.004Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://www.vincent.ac.cn/"/>
-    <link rel="self" href="http://www.vincent.ac.cn//atom.xml"/>
+    <link rel="alternate" href="https://www.vincent.ac.cn/"/>
+    <link rel="self" href="https://www.vincent.ac.cn//atom.xml"/>
     <subtitle>不愤不启不悱不发</subtitle>
-    <logo>http://www.vincent.ac.cn//images/avatar.png</logo>
-    <icon>http://www.vincent.ac.cn//favicon.ico</icon>
+    <logo>https://www.vincent.ac.cn//images/avatar.png</logo>
+    <icon>https://www.vincent.ac.cn//favicon.ico</icon>
     <rights>All rights reserved 2019, 清风醉`s blog</rights>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路 数据库操作]]></title>
-        <id>http://www.vincent.ac.cn//post/Wb4f8UHdq</id>
-        <link href="http://www.vincent.ac.cn//post/Wb4f8UHdq">
+        <id>https://www.vincent.ac.cn//post/Wb4f8UHdq</id>
+        <link href="https://www.vincent.ac.cn//post/Wb4f8UHdq">
         </link>
         <updated>2019-11-07T08:34:06.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路 Migrations]]></title>
-        <id>http://www.vincent.ac.cn//post/xwp3_04xN</id>
-        <link href="http://www.vincent.ac.cn//post/xwp3_04xN">
+        <id>https://www.vincent.ac.cn//post/xwp3_04xN</id>
+        <link href="https://www.vincent.ac.cn//post/xwp3_04xN">
         </link>
         <updated>2019-11-06T11:11:56.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路 配置config]]></title>
-        <id>http://www.vincent.ac.cn//post/laravel5</id>
-        <link href="http://www.vincent.ac.cn//post/laravel5">
+        <id>https://www.vincent.ac.cn//post/laravel5</id>
+        <link href="https://www.vincent.ac.cn//post/laravel5">
         </link>
         <updated>2019-11-05T10:57:29.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路 路由与控制器]]></title>
-        <id>http://www.vincent.ac.cn//post/laravel4</id>
-        <link href="http://www.vincent.ac.cn//post/laravel4">
+        <id>https://www.vincent.ac.cn//post/laravel4</id>
+        <link href="https://www.vincent.ac.cn//post/laravel4">
         </link>
         <updated>2019-11-05T08:15:54.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[译 - 为什么要学习Go？]]></title>
-        <id>http://www.vincent.ac.cn//post/go1</id>
-        <link href="http://www.vincent.ac.cn//post/go1">
+        <id>https://www.vincent.ac.cn//post/go1</id>
+        <link href="https://www.vincent.ac.cn//post/go1">
         </link>
         <updated>2019-11-05T05:25:48.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路 控制器Controller]]></title>
-        <id>http://www.vincent.ac.cn//post/laravel3</id>
-        <link href="http://www.vincent.ac.cn//post/laravel3">
+        <id>https://www.vincent.ac.cn//post/laravel3</id>
+        <link href="https://www.vincent.ac.cn//post/laravel3">
         </link>
         <updated>2019-11-05T04:56:19.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[转载 -《数据结构与算法》Day.1 最大子列和]]></title>
-        <id>http://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he</id>
-        <link href="http://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he">
+        <id>https://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he</id>
+        <link href="https://www.vincent.ac.cn//post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he">
         </link>
         <updated>2019-11-04T08:05:25.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路  路由视图初探]]></title>
-        <id>http://www.vincent.ac.cn//post/laravel2</id>
-        <link href="http://www.vincent.ac.cn//post/laravel2">
+        <id>https://www.vincent.ac.cn//post/laravel2</id>
+        <link href="https://www.vincent.ac.cn//post/laravel2">
         </link>
         <updated>2019-11-01T08:30:43.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路  安装 ]]></title>
-        <id>http://www.vincent.ac.cn//post/laravel1</id>
-        <link href="http://www.vincent.ac.cn//post/laravel1">
+        <id>https://www.vincent.ac.cn//post/laravel1</id>
+        <link href="https://www.vincent.ac.cn//post/laravel1">
         </link>
         <updated>2019-10-31T07:14:48.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[ Centos安装docker 以及 docker基本概念]]></title>
-        <id>http://www.vincent.ac.cn//post/docker2</id>
-        <link href="http://www.vincent.ac.cn//post/docker2">
+        <id>https://www.vincent.ac.cn//post/docker2</id>
+        <link href="https://www.vincent.ac.cn//post/docker2">
         </link>
         <updated>2019-10-01T09:29:08.000Z</updated>
     </entry>

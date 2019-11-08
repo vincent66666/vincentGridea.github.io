@@ -4,14 +4,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>清风醉`s blog</title>
 <meta name="description" content="不愤不启不悱不发" />
-<link rel="shortcut icon" href="http://www.vincent.ac.cn//favicon.ico?v=1573115861454">
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573229214808">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-<link rel="stylesheet" href="http://www.vincent.ac.cn//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="http://www.vincent.ac.cn//atom.xml">
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
@@ -32,8 +32,8 @@
     <div class="sidebar-content">
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="http://www.vincent.ac.cn/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="http://www.vincent.ac.cn//images/avatar.png?v=1573115861454" alt="">
+        <a href="https://www.vincent.ac.cn/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573229214808" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
       </div>
@@ -101,7 +101,7 @@
   </div>
   <div class="site-footer">
     <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
-    <a class="rss" href="http://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
+    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
   </div>
 </div>
 <div class="mask" onclick="closeMenu()">
@@ -112,7 +112,7 @@
           2019-11-07 / 7 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://www.vincent.ac.cn//post-images/Wb4f8UHdq.jpg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/Wb4f8UHdq.jpg" alt="">
         
         <div class="post-content yue">
           <blockquote>
@@ -144,7 +144,7 @@ class DbController extends Controller
 }
 </code></pre>
 <p>这里需要引入个 <code>DB</code> 类，<code>DB</code> 类就是我们操作数据库的关键，<code>Db</code> 类有个 <code>insert</code> 方法，它可以直接传插入内容的  <code>sql</code>  语句，现在我访问一 下 <code>study.laraveltest.com/db/insert</code> 如果没有报错数据就插入成功了。<br>
-<img src="http://www.vincent.ac.cn//post-images/1573115682328.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573115682328.jpg" alt=""><br>
 确实是很简单吧！但是并不提倡这种拼接字符串的方式来添加数据，维护起来麻烦不说还不安全，所以我换种方式，<code>DB</code> 还有个 <code>table</code> 方法可以传表名再调用 <code>insert</code> 方法可以传要插入的数组，于是我改造那么一丢丢下面就是改造后的样子。</p>
 <pre><code>&lt;?php
 
@@ -191,7 +191,7 @@ class DbController extends Controller
 <pre><code>php artisan make:seeder TestTableSeeder
 </code></pre>
 <p>执行上面这个命令如果洗过脸会生成一个 <code>database/seeds/TestTableSeeder.php</code> 文件<br>
-<img src="http://www.vincent.ac.cn//post-images/1573115708578.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573115708578.jpg" alt=""><br>
 可以看到里面有个 <code>run</code> 方法这个方法会在执行 <code>db:seed</code> 这个 <code>Artisan</code> 命令 时被调用，利用 DB 的方法写上要填充的内容，你也可以用 <a href="https://learnku.com/docs/laravel/6.x/queries/5171"><code>查询构造器</code></a> 或 <a href="https://learnku.com/docs/laravel/6.x/database-testing/5185#writing-factories"><code>Eloquent 模型工厂</code></a> 来手动插入数据。</p>
 <blockquote>
 <p>Tip：使用数据填充时会自动禁用 批量赋值保护</p>
@@ -233,7 +233,7 @@ class TestTableSeeder extends Seeder
 <p>填充文件就算创建完成了，和迁移一样创建好文件写好内容就可以运行了，有一点要注意的是在完成 <code>seeder</code> 类的编写之后，你可能需要使用 <code>dump-autoload</code> 命令重新生成 <code>Composer</code> 的自动加载器</p>
 <pre><code>composer dump-autoload
 </code></pre>
-<figure data-type="image" tabindex="1"><img src="http://www.vincent.ac.cn//post-images/1573115734399.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1573115734399.jpg" alt=""></figure>
 <p>现在我来用 <code>Artisan</code> 命令 <code>db:seed</code> 来填充数据库玩一玩</p>
 <pre><code>php artisan  db:seed
 </code></pre>
@@ -257,8 +257,8 @@ class DatabaseSeeder extends Seeder
 }
 </code></pre>
 <p>不过这里需要主要一下填充文件的执行顺序，我们会创建很多填充文件如果有外键的话执行顺序不对是会报错的所以需要严格的自己指定顺序，OK我们在执行一下 <code>php artisan db:seed</code> 命令<br>
-<img src="http://www.vincent.ac.cn//post-images/1573115750999.jpg" alt=""><br>
-<img src="http://www.vincent.ac.cn//post-images/1573115755577.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573115750999.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573115755577.jpg" alt=""><br>
 数据终于写入数据库中了，当然  <a href="https://learnku.com/docs/laravel/6.x/seeding/5174"><code>官方文档</code></a> 也给出了其他的方式运行比如可以使用 <code>--class</code> 选项来指定一个特定的 <code>seeder</code> 类。</p>
 <pre><code>php artisan db:seed --class=TestTableSeeder
 </code></pre>
@@ -273,11 +273,11 @@ class DatabaseSeeder extends Seeder
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/ULKwYDOFh">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh">
             <span class="flex-auto">php</span>
           </a>
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="http://www.vincent.ac.cn//tag/r9lWhqCpR5">
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/r9lWhqCpR5">
             <span class="flex-auto">Laravel</span>
           </a>
         
@@ -288,7 +288,7 @@ class DatabaseSeeder extends Seeder
 
           
             <div class="next-post">
-              <a href="http://www.vincent.ac.cn//post/xwp3_04xN">
+              <a href="https://www.vincent.ac.cn//post/xwp3_04xN">
                 <h3 class="post-title">
                   laravel 学习之路 Migrations
                   <i class="remixicon-arrow-right-line"></i>
@@ -329,7 +329,7 @@ class DatabaseSeeder extends Seeder
       </div>
     </div>
 
-    <script src="http://www.vincent.ac.cn//media/prism.js"></script>  
+    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
 <script>
 
 Prism.highlightAll()
