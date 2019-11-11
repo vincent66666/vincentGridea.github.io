@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.vincent.ac.cn/</id>
     <title>清风醉`s blog</title>
-    <updated>2019-11-11T02:45:35.404Z</updated>
+    <updated>2019-11-11T02:45:58.371Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.vincent.ac.cn/"/>
     <link rel="self" href="https://www.vincent.ac.cn//atom.xml"/>
@@ -18,7 +18,7 @@
         <updated>2019-11-07T08:34:06.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[laravel 学习之路 Migrations]]></title>
+        <title type="html"><![CDATA[laravel 学习之路 数据库操作 Migrations]]></title>
         <id>https://www.vincent.ac.cn//post/xwp3_04xN</id>
         <link href="https://www.vincent.ac.cn//post/xwp3_04xN">
         </link>
