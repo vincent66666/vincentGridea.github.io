@@ -26,7 +26,7 @@
 
   </head>
   <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+    <div class="main px-4 flex flex-col lg:flex-row">
       <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
   <div class="lg:sticky top-0">
     <div class="sidebar-content">
@@ -122,51 +122,42 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-bookmark-2-line"></i> 标签云
+        <h2 class="latest-article text-lg text-gray-700 mb-8">
+          <i class="remixicon-article-line"></i>
+          最新文章
         </h2>
-        <div class="tags-container">
+        
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
+    
+      <a href="https://www.vincent.ac.cn//post/hello-gridea" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
+        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://www.vincent.ac.cn//post-images/hello-gridea.png'">
+        </div>
+      </a>
+    
+    <div class="content">
+      <a href="https://www.vincent.ac.cn//post/hello-gridea">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">Hello Gridea</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+
+      </div>
+      <div class="text-gray-400 text-sm font-light">2018-12-12 / 2 min read</div>
+    </div>
+  </section>
+
+        <div class="read-more">
           
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/MrJ-unZWo" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-              <span class="flex-auto">MySQL</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">2</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh" :style="{ 'animation-delay': `${1 * 0.2}s` }">
-              <span class="flex-auto">php</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">8</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/r9lWhqCpR5" :style="{ 'animation-delay': `${2 * 0.2}s` }">
-              <span class="flex-auto">Laravel</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">8</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/FgKULSk1e" :style="{ 'animation-delay': `${3 * 0.2}s` }">
-              <span class="flex-auto">go</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/HlgLlO25x" :style="{ 'animation-delay': `${4 * 0.2}s` }">
-              <span class="flex-auto">转载</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/fRCCdSmYdr" :style="{ 'animation-delay': `${5 * 0.2}s` }">
-              <span class="flex-auto">算法</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/Wf9dxWbla" :style="{ 'animation-delay': `${6 * 0.2}s` }">
-              <span class="flex-auto">docker</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">2</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/Road5r03o" :style="{ 'animation-delay': `${7 * 0.2}s` }">
-              <span class="flex-auto">Gridea</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
-          
+        </div>
+        <div class="index-page">
+          <div class="pagination-container animated fadeIn">
+  
+    <a href="https://www.vincent.ac.cn//page/2/" class="page-btn"><i class="remixicon-arrow-left-line"></i> 上一页</a>
+  
+  
+</div>
+
         </div>
       </div>
     </div>

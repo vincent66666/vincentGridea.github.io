@@ -1,0 +1,540 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>清风醉`s blog</title>
+<meta name="description" content="不愤不启不悱不发" />
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573454038884">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148326930-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://www.vincent.ac.cn/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573454038884" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%94%9F-sql-%E6%9F%A5%E8%AF%A2">运行原生 SQL 查询</a>
+<ul>
+<li><a href="#%E8%BF%90%E8%A1%8C-select-%E6%9F%A5%E8%AF%A2">运行 Select 查询</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%BB%91%E5%AE%9A">使用命名绑定</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9F%A5%E8%AF%A2%E6%9E%84%E9%80%A0%E5%99%A8">查询构造器</a>
+<ul>
+<li><a href="#%E4%BB%8E%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E8%A1%8C">从一个数据表中获取所有行</a></li>
+<li><a href="#%E4%BB%8E%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%8D%95%E8%A1%8C%E6%88%96%E5%8D%95%E5%88%97">从数据表中获取单行或单列</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E4%B8%80%E5%88%97%E7%9A%84%E5%80%BC">获取一列的值</a></li>
+<li><a href="#%E8%81%9A%E5%90%88">聚合</a></li>
+<li><a href="#%E5%88%A4%E6%96%AD%E8%AE%B0%E5%BD%95%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8">判断记录是否存在</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/link" class="menu" style="animation-delay: 0.8s">
+          友情链接
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
+    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">laravel 学习之路 数据库操作 查询数据</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-11-11 / 9 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/Bh2gcn6S4.jpg" alt="">
+        
+        <div class="post-content yue">
+          <p>到这一步 test 表已经有数据了，我们可以来玩数据查询了</p>
+<h3 id="运行原生-sql-查询">运行原生 SQL 查询</h3>
+<p>一旦配置好数据库连接后，便可以使用 <code>DB facade</code> 运行查询。 <code>DB facade</code> 为每种类型的查询提供了方法： <code>select</code>，<code>update</code>，<code>insert</code>，<code>delete</code> 和 <code>statement</code>。</p>
+<h4 id="运行-select-查询">运行 Select 查询</h4>
+<p>你可以使用 <code>DB Facade</code> 的 <code>select</code> 方法来运行基础的查询语句我们在上面创建的路由里增加个 <code>index</code> 的路由</p>
+<blockquote>
+<p><code>dump</code> 是 <code>laravel</code> 的打印函数可以把它理解为 <code>php</code> 的 <code>var_dump</code> 函数的升级版</p>
+</blockquote>
+<pre><code>Route::prefix('db')-&gt;group(function () {
+    Route::get('insert', 'DbController@insert');
+    Route::get('index', 'DbController@index');
+});
+</code></pre>
+<p>并在控制器增加一个 <code>index</code> 方法</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+class DbController extends Controller
+{
+    //
+    function insert()
+    {
+//        DB::insert('INSERT INTO test (testID,title,email,`describe`) VALUES (1,&quot;这是个title&quot;,&quot;123456@qq.com&quot;,&quot;这是个describe&quot;)');
+
+        $insertData = [
+            [
+                &quot;testID&quot;   =&gt; '2',
+                &quot;title&quot;    =&gt; '这是个title2',
+                &quot;email&quot;    =&gt; '22222@qq.com',
+                &quot;describe&quot; =&gt; '这是个describe2',
+            ],
+            [
+                &quot;testID&quot;   =&gt; '3',
+                &quot;title&quot;    =&gt; '这是个title3',
+                &quot;email&quot;    =&gt; '33333@qq.com',
+                &quot;describe&quot; =&gt; '这是个describe3',
+            ],
+
+        ];
+        DB::table('test')-&gt;insert($insertData);
+    }
+
+    function index()
+    {
+        $data = DB::select('select * from test where testId = ?', [1]);
+        dump($data);
+    }
+
+}
+</code></pre>
+<p>来访问一下 <code>http://study.laraveltest.com/db/index</code><br>
+<img src="https://www.vincent.ac.cn//post-images/1573453714092.jpg" alt=""></p>
+<p>传递给 <code>select</code> 方法的第一个参数就是一个原生的 <code>SQL 查询</code>，而第二个参数则是需要绑定到查询中的参数值。通常，这些值用于约束 <code>where</code> 语句。参数绑定用于防止 <code>SQL 注入</code>。</p>
+<p><code>select</code> 方法将始终返回一个数组，数组中的每个结果都是一个 <code>StdClass</code> 对象，可以像下面这样访问结果值</p>
+<pre><code>    function index()
+    {
+        $data = DB::select('select * from test where testId = ?', [1]);
+        foreach ($data as $datum) {
+            echo $datum-&gt;id;
+        }
+        dump($data);
+    }
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1573453751706.jpg" alt=""></figure>
+<h4 id="使用命名绑定">使用命名绑定</h4>
+<p>除了使用 <code>?</code> 表示参数绑定外，你也可以使用命名绑定来执行一个查询</p>
+<pre><code>    function index()
+    {
+        //使用命名绑定
+        $binding = DB::select('select * from test where testId = :id', ['id' =&gt; 1]);
+        dump($binding);
+    }
+</code></pre>
+<h3 id="查询构造器">查询构造器</h3>
+<p><code>Laravel</code> 的数据库查询构造器为创建和运行数据库查询提供了一个方便的接口。它可用于执行应用程序中大部分数据库操作，且可在所有支持的数据库系统上运行。</p>
+<p><code>Laravel</code> 的查询构造器使用 <code>PDO</code>参数绑定来保护您的应用程序免受 SQL 注入攻击。因此没有必要清理作为绑定传递的字符串</p>
+<blockquote>
+<p>注意：<code>PDO</code> 不支持绑定列名。因此，不能让用户通过输入来指定查询语句所引用的列名，包括 <code>order by</code> 字段等等。 如果必须要允许用户通过选择某些列来进行查询，请始终根据允许列的白名单来校验列名。</p>
+</blockquote>
+<h4 id="从一个数据表中获取所有行">从一个数据表中获取所有行</h4>
+<p>先注册一个 <code>getList</code> 路由</p>
+<pre><code>Route::prefix('db')-&gt;group(function () {
+    Route::get('insert', 'DbController@insert');
+    Route::get('index', 'DbController@index');
+    Route::get('getList', 'DbController@getList');
+});
+</code></pre>
+<p>并且相应的控制器创建 <code>getList</code> 方法</p>
+<pre><code>function getList() {
+        $data = DB::table('test')-&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p><code>DB table</code> 选中表 调用 <code>get</code> 方法就可以获取全部的数，来访问一下 <code>http://study.laraveltest.com/db/getList</code><br>
+<img src="https://www.vincent.ac.cn//post-images/1573453770704.jpg" alt=""></p>
+<p>三角箭头是可以点击收起展开的，按住 <code>command</code> 键点击三角箭头是可以全部展开。</p>
+<p>不过实际业务中大多时候都不会取全部数据并且，一般会有限制语句 <code>where()</code> 方法</p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')-&gt;where('testId', 1)-&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>第一参数就是字段名，第二个参数就是值 <code>where('testId', 1)</code> 表示查询 <code>testId</code> 等于 1 的数据，那如果想取 <code>testId</code> 不为 1 的数据 就需要传三个参数，<code>第一个参数还是字段名，第二个参数是符号，第三个参数是值</code> <code>-&gt;where('testId', '&lt;&gt;', 1)</code>。</p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')-&gt;where('testId', '&lt;&gt;',1)-&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p><code>sql</code> 中还有个 <code>IN</code> 的用法 <code>laravel</code> 中就是 <code>whereIn()</code> 第一个参数还是字段名第二个参数是数组</p>
+<pre><code>  function getList()
+    {
+        $data = DB::table('test')-&gt;whereIn('testId', [1, 2, 3])-&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>那么 <code>NOT IN</code> 就是 <code>whereNotIn()</code>，<code>Between</code> 同理，关联表就是  <code>join</code> 了，可以传3个参数关联表就是 <code>join</code> 了可以传3个参数，第一个参数就是要关联的表名可以使用 <code>as</code> 给表定义别名，当表比较长的时候会比较方便，第二个和第三个分别是关联的字段，谁在前谁在后无所谓哈</p>
+<pre><code>    function getList() {
+        $data = DB::table('test')-&gt;join('users as u', 'u.id', 'test.user_id')-&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>如果使用了 <code>join</code> 那 <code>where</code> 就同样要指明表了</p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')
+            -&gt;join('users as u', 'u.id', 'test.testId')
+            -&gt;whereIn('u.id', [1, 2, 3])
+            -&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>联系到 <code>sql</code> 还会有 <code>left join</code> 和 <code>right join</code> 使用驼峰命名法即可</p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')
+            -&gt;join('users as u', 'u.id', 'test.testId')
+            -&gt;leftJoin('password_resets as pr', 'pr.email', 'test.email')
+            -&gt;whereIn('u.id', [1, 2, 3])
+            -&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>分组和排序的则需要在关键字后面加个 <code>by</code></p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')
+            -&gt;join('users as u', 'u.id', 'test.testId')
+            -&gt;leftJoin('password_resets as pr', 'pr.email', 'test.email')
+            -&gt;whereIn('u.id', [1, 2, 3])
+            -&gt;groupBy('u.id')
+            -&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p><code>orderBy</code> 还可以指定第二个参数用于指定正序还是倒序</p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')
+            -&gt;join('users as u', 'u.id', 'test.testId')
+            -&gt;leftJoin('password_resets as pr', 'pr.email', 'test.email')
+            -&gt;whereIn('u.id', [1, 2, 3])
+            -&gt;groupBy('u.id')
+            -&gt;orderBy('test.created_at', 'desc')
+            -&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>如果只想取指定字段的可以使用 <code>select</code></p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')
+            -&gt;select('u.id', 'u.title', 'u.email')
+            -&gt;join('users as u', 'u.id', 'test.testId')
+            -&gt;leftJoin('password_resets as pr', 'pr.email', 'test.email')
+            -&gt;whereIn('u.id', [1, 2, 3])
+            -&gt;groupBy('u.id')
+            -&gt;orderBy('test.created_at', 'desc')
+            -&gt;get();
+        dump($data);
+    }
+</code></pre>
+<h4 id="从数据表中获取单行或单列">从数据表中获取单行或单列</h4>
+<p>如果你只需要从数据表中获取一行数据，你可以使用 <code>first</code> 方法。该方法返回一个 <code>StdClass</code> 对象，创建个 <code>getRow</code> 方法 路由就不多叙述了</p>
+<pre><code>    function getRow()
+    {
+        $data = DB::table('test')-&gt;where('id', 1)-&gt;first();
+        echo $data-&gt;title;
+        dump($data);
+    }
+</code></pre>
+<p>请求 <code>http://study.laraveltest.com/db/getRow</code> 会得到 <code>StdClass</code> 对象<br>
+<img src="https://www.vincent.ac.cn//post-images/1573453981108.jpg" alt=""></p>
+<p>如果你甚至不需要整行数据，可以使用 <code>value</code> 方法从记录中获取单个值</p>
+<pre><code>    function getRow()
+    {
+        $data = DB::table('test')-&gt;where('id', 1)-&gt;value('title');
+        dump($data);
+    }
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://www.vincent.ac.cn//post-images/1573453968113.jpg" alt=""></figure>
+<h4 id="获取一列的值">获取一列的值</h4>
+<p>当然业务中有时候需要获取 某个字段 哪一列的值的集合，这个时候就用到了 <code>pluck</code> 方法，<code>pluck</code> 接受 2 个参数</p>
+<ul>
+<li>第一个参数是我们要取的字段；</li>
+<li>第二个字段是可以选的用来做 key</li>
+</ul>
+<pre><code>    function getPluck(){
+        $titles = DB::table('test')-&gt;pluck('title');
+        foreach ($titles as $title) {
+            echo $title;echo &quot;&lt;br&gt;&quot;;
+        }
+    }
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1573453993682.jpg" alt=""><br>
+当然 还可以将 <code>test</code> 表里 <code>title</code> 字段作为键名，<code>describe</code> 字段作为键值 返回</p>
+<pre><code>    function getPluck(){
+        $titles = DB::table('test')-&gt;pluck('describe','title');
+        foreach ($titles as $title =&gt; $describe) {
+            echo $title;echo &quot;&lt;br&gt;&quot;;
+            echo $describe;echo &quot;&lt;br&gt;&quot;;echo &quot;===================&quot;;echo &quot;&lt;br&gt;&quot;;
+        }
+        dump($titles);
+    }
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://www.vincent.ac.cn//post-images/1573454005230.jpg" alt=""></figure>
+<h4 id="聚合">聚合</h4>
+<p>查询构造器还提供了各种聚合方法，比如 <code>count</code>, <code>max</code>，<code>min</code>， <code>avg</code>，还有 <code>sum</code> 这些就很简单了</p>
+<pre><code>$users = DB::table('test')-&gt;count();
+
+$price = DB::table('test')-&gt;max('id');
+</code></pre>
+<p>当然也可以将这些聚合方法与其他的查询语句相结合</p>
+<pre><code>$price = DB::table('test')-&gt;where('id', 1)-&gt;avg('price');
+</code></pre>
+<h4 id="判断记录是否存在">判断记录是否存在</h4>
+<p>这个操作除了用 <code>count</code> 方法外 还可以使用 <code>exists</code> 和 <code>doesntExist</code> 方法</p>
+<pre><code>return DB::table('test')-&gt;where('id', 1)-&gt;exists();
+
+return DB::table('test')-&gt;where('id', 1)-&gt;doesntExist();
+</code></pre>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/MrJ-unZWo">
+            <span class="flex-auto">MySQL</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh">
+            <span class="flex-auto">php</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/r9lWhqCpR5">
+            <span class="flex-auto">Laravel</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://www.vincent.ac.cn//post/Wb4f8UHdq">
+                <h3 class="post-title">
+                  laravel 学习之路 数据库操作 数据插入与数据填充
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'a3aaa68a85274f00a280',
+    clientSecret: 'f2e6c91d4e829c5e405890e0f4f8f49187c2616e',
+    repo: 'vincentGridea.github.io',
+    owner: 'vincent66666',
+    admin: ['vincent66666'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
