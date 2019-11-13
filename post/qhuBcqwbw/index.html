@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>清风醉`s blog</title>
 <meta name="description" content="不愤不启不悱不发" />
-<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573655464392">
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573655672110">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -33,7 +33,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://www.vincent.ac.cn/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573655464392" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573655672110" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
       </div>
@@ -63,7 +63,15 @@
 <li><a href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%90%8C%E6%AD%A5%E5%AE%A2%E6%88%B7%E7%AB%AF">新建一个同步客户端</a></li>
 <li><a href="#%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E6%A6%82%E5%BF%B5">同步异步概念</a></li>
 <li><a href="#%E5%BC%82%E6%AD%A5%E5%AE%A2%E6%88%B7%E7%AB%AF">异步客户端</a></li>
-<li><a href="#%E5%BF%83%E8%B7%B3%E6%A3%80%E6%B5%8B">心跳检测</a></li>
+<li><a href="#%E5%BF%83%E8%B7%B3%E6%A3%80%E6%B5%8B">心跳检测</a>
+<ul>
+<li><a href="#%E5%BF%83%E8%B7%B3%E6%98%AF%E4%BB%80%E4%B9%88">心跳是什么？</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BF%83%E8%B7%B3">为什么要心跳？</a></li>
+<li><a href="#%E5%BF%83%E8%B7%B3%E5%9C%A8swoole%E9%87%8C%E7%9A%84%E5%AE%9E%E7%8E%B0">心跳在swoole里的实现?</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E5%BB%BA%E8%AE%AE">配置建议</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%BF%83%E8%B7%B3%E5%8C%85%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%A6%82%E4%BD%95%E7%BB%B4%E6%8C%81%E5%BF%83%E8%B7%B3">为什么需要心跳包？客户端如何维持心跳？</a></li>
+</ul>
+</li>
 <li><a href="#%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B">实战案例</a></li>
 </ul>
 </li>
@@ -229,10 +237,10 @@
 <p>4.3被移除但是可能有其它的设备或者是语言是长连接,并且用来演示心跳检测</p>
 </blockquote>
 <figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1573655433852.png" alt=""></figure>
-<p>####心跳是什么？<br>
-顾名思义，心跳是判断一个事物生还是死的一个标准，在<code>swoole</code>里，心跳是指用来判断一个连接是正常还是断开的<br>
-####为什么要心跳？<br>
-心跳的目的其实是通过判断客户端是否存活，从而回收<code>fd</code>,系统为什么要回收<code>fd</code>，因为<code>fd</code>资源是有限的，所以必需重复利用 心跳作用主要有两个：</p>
+<h4 id="心跳是什么">心跳是什么？</h4>
+<p>顾名思义，心跳是判断一个事物生还是死的一个标准，在<code>swoole</code>里，心跳是指用来判断一个连接是正常还是断开的</p>
+<h4 id="为什么要心跳">为什么要心跳？</h4>
+<p>心跳的目的其实是通过判断客户端是否存活，从而回收<code>fd</code>,系统为什么要回收<code>fd</code>，因为<code>fd</code>资源是有限的，所以必需重复利用 心跳作用主要有两个：</p>
 <ol>
 <li>
 <p>客户端定时给服务端发送点数据，防止连接由于长时间没有通讯而被某些节点的防火墙关闭导致连接断开的情况。</p>
@@ -241,19 +249,19 @@
 <p>服务端可以通过心跳来判断客户端是否在线，如果客户端在规定时间内没有发来任何数据，就认为客户端下线。这样可以检测到客户端由于极端情况(断电、断网等)下线的事件。</p>
 </li>
 </ol>
-<p>####心跳在swoole里的实现?<br>
-<code>swoole</code>会在主进程独立起一个心跳线程，通过定时轮询所有的连接，来判断连接的生死，所以<code>swoole</code>的心跳不会堵塞任何业务逻辑。<br>
+<h4 id="心跳在swoole里的实现">心跳在swoole里的实现?</h4>
+<p><code>swoole</code>会在主进程独立起一个心跳线程，通过定时轮询所有的连接，来判断连接的生死，所以<code>swoole</code>的心跳不会堵塞任何业务逻辑。<br>
 <img src="https://www.vincent.ac.cn//post-images/1573655443089.jpg" alt=""><br>
 设置完成了之后，你会发现设置了定时检测之后，如果客户端没在规定的时间之内发送数据就会关闭。</p>
 <ul>
 <li><code>heartbeat_check_interval</code>： 服务器定时检测在线列表的时间</li>
 <li><code>heartbeat_idle_time</code>：       连接最大的空闲时间 （如果最后一个心跳包的时间与当前时间之差超过这个值，则认为该连接失效）</li>
 </ul>
-<p>####配置建议<br>
-建议 <code>heartbeat_idle_time</code> 为<code>heartbeat_check_interval</code> 的两倍多一点。<br>
+<h4 id="配置建议">配置建议</h4>
+<p>建议 <code>heartbeat_idle_time</code> 为<code>heartbeat_check_interval</code> 的两倍多一点。<br>
 这个两倍是为了进行容错，允许丢一个包而多一点是考虑到网络的延时。</p>
-<p>####为什么需要心跳包？客户端如何维持心跳？<br>
-在从客户端到服务器的一条巨大的链路中会经过无数的路由器，其中每一个路由器都有可能会有检测到多少秒时间内无数据包则自动关闭连接的这种节能机制，为了让这个可能会出现的节能机制失效，客户端可以设置一个定时器，每隔固定的时间都发一个随机字符的一字节的数据包，通常我们把这种数据包就叫做心跳包。</p>
+<h4 id="为什么需要心跳包客户端如何维持心跳">为什么需要心跳包？客户端如何维持心跳？</h4>
+<p>在从客户端到服务器的一条巨大的链路中会经过无数的路由器，其中每一个路由器都有可能会有检测到多少秒时间内无数据包则自动关闭连接的这种节能机制，为了让这个可能会出现的节能机制失效，客户端可以设置一个定时器，每隔固定的时间都发一个随机字符的一字节的数据包，通常我们把这种数据包就叫做心跳包。</p>
 <h3 id="实战案例">实战案例</h3>
 <p>客户端设备发送一个请求，服务端接收，根据业务逻辑的需求服务端A需要发送一个请求到服务端B获取数据，再返回给服务端A，服务端A返回给客户端A。<br>
 服务端A既是客户端也是服务器,服务端A要发送请求到服务端B,然后服务端B返回消息给服务端A<br>
