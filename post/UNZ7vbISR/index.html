@@ -46,10 +46,10 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99"><strong>🏠 关于本站</strong></a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81"><strong>👨‍💻 博主是谁</strong></a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD"><strong>⛹ 兴趣爱好</strong></a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80"><strong>📬 联系我呀</strong></a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD">下载</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93">配置数据库</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E5%B9%B6%E5%AE%89%E8%A3%85%E6%9C%8D%E5%8A%A1">运行并安装服务</a></li>
 </ul>
 </li>
 </ul>
@@ -104,32 +104,101 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">关于</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">Linux 安装 minDoc 接口文档在线管理 </h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-01-25 / 1 min read
+          2019-11-13 / 3 min read
         </div>
         
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/UNZ7vbISR.jpg" alt="">
+        
         <div class="post-content yue">
-          <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝 如果你正在寻找后端工程师，不妨与我联系，相信你总会找的到我</p>
+          <p>昨天被分配给公司安装 <code>minDoc</code> 水文记录一下安装的过程</p>
+<blockquote>
+<p><code>MinDoc</code> 是一款针对IT团队开发的简单好用的文档管理系统。<br>
+<code>MinDoc</code> 的前身是 <code>SmartWiki</code> 文档系统。<code>SmartWiki</code> 是基于 <code>PHP</code> 框架 <code>laravel</code> 开发的一款文档管理系统。因 <code>PHP</code> 的部署对普通用户来说太复杂，所以改用 <code>Golang</code> 开发。可以方便用户部署和实用。<br>
+开发缘起是公司IT部门需要一款简单实用的项目接口文档管理和分享的系统。其功能和界面源于 <code>kancloud</code> 。<br>
+可以用来储存日常接口文档，数据库字典，手册说明等文档。内置项目管理，用户管理，权限管理等功能，能够满足大部分中小团队的文档管理需求。</p>
 </blockquote>
-<h2 id="关于本站"><strong>🏠 关于本站</strong></h2>
-<p>up会把自己在学习中的习题、案例、思路、笔记发布在这里。</p>
-<h2 id="博主是谁"><strong>👨‍💻 博主是谁</strong></h2>
-<p>一个努力不划水的菜鸡</p>
-<h2 id="兴趣爱好"><strong>⛹ 兴趣爱好</strong></h2>
-<p>switch、读书</p>
-<h2 id="联系我呀"><strong>📬 联系我呀</strong></h2>
-<p>1157401530@qq.com</p>
+<h2 id="下载">下载</h2>
+<p>我是从 <a href="https://github.com/lifei6671/mindoc/releases"><code>https://github.com/lifei6671/mindoc/releases</code></a> 下载最新版的可执行文件，一般文件名为 <code>mindoc_linux_amd.tar.gz</code> 或<code>mindoc_linux_amd64.zip</code> 。</p>
+<pre><code>#进入存放项目的根目录
+cd /data/httpd/
+
+#创建存放 `minDoc` 目录  并进入
+mkdir minDoc &amp;&amp; cd minDoc
+
+#下载可执行文件压缩包
+wget https://github.com/lifei6671/mindoc/releases/download/v2.0/mindoc_linux_amd64.zip
+
+# 解压该压缩包
+unzip mindoc_linux_amd64.zip
+
+</code></pre>
+<h2 id="配置数据库">配置数据库</h2>
+<p><code>MinDoc</code> 支持 <code>MySQL</code> 或 <code>Sqlite3</code> 数据库，因为up这个是给公司搭建的是团队使用所以选择了 <code>MySQL</code>，如果是个人用需求量不大的话选择 <code>Sqlite3</code> 就好。</p>
+<p>我用的是 <code>MySQL</code> 数据库，需要创建一个编码为<code>utf8mb4</code> 格式的数据库，也可以用 <code>CREATE DATABASE mindoc_db DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_general_ci;</code> 命令来创建，如果用 <code>sqlite</code> 数据库 直接在 <code>conf/app.conf</code> 中的数据库配置成如下,系统会自动创建 <code>sqlite</code> 数据库文件</p>
+<p>好了接下来修改一下数据库配置，先找到配置文件 <code>conf/app.conf</code></p>
+<pre><code># 进入conf 目录
+cd conf/
+
+# 保险起见我习惯在改配置文件前备个份
+cp app.conf app.conf.example
+
+# 打开app.conf
+vi app.conf
+</code></pre>
+<p>找到数据库配置进行配置，并且注释掉 <code>Sqlite3</code><br>
+<img src="https://www.vincent.ac.cn//post-images/1573615438472.jpg" alt=""></p>
+<h2 id="安装">安装</h2>
+<p>配置完成后变可以安装了</p>
+<pre><code># 需要回到 minDoc 根目录
+cd ../
+
+# 执行如下命令，用于初始化数据库
+./mindoc_linux_amd64 install
+</code></pre>
+<p>等待了大约一分钟，程序会自动初始化数据库，当看到“Install Successfully!”说明安装成功，这时会自动创建一个超级管理员账号：<code>admin</code> 密码：<code>123456</code></p>
+<h2 id="运行并安装服务">运行并安装服务</h2>
+<p>安装完成后需要先授予权限并安装服务</p>
+<pre><code>chmod +x mindoc_linux_amd64 &amp;&amp; ./mindoc_linux_amd64 service install
+</code></pre>
+<p>这样就能注册到系统服务中了,也就是说是以后台运行的方式运行服务</p>
+<p>之后就可以 service 控制minDoc 的启用停用和重启拉 <code>service mindocd start/stop/restart</code></p>
+<p>当然还可以查看 <code>minDoc</code> 的状态<br>
+<code>service mindocd status</code><br>
+<img src="https://www.vincent.ac.cn//post-images/1573615447609.jpg" alt=""><br>
+这样就安装完毕了.直接使用了<br>
+<img src="https://www.vincent.ac.cn//post-images/1573615455260.jpg" alt=""></p>
 
         </div>
 
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/9l7hz-cAk">
+            <span class="flex-auto">Go</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/PGQpqESAIK">
+            <span class="flex-auto">Linux</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/MrJ-unZWo">
+            <span class="flex-auto">MySQL</span>
+          </a>
         
 
 
         <div class="flex justify-between py-8">
           
 
+          
+            <div class="next-post">
+              <a href="https://www.vincent.ac.cn//post/Bh2gcn6S4">
+                <h3 class="post-title">
+                  laravel 学习之路 数据库操作 查询数据
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
