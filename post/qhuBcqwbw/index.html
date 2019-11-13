@@ -1,0 +1,521 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>清风醉`s blog</title>
+<meta name="description" content="不愤不启不悱不发" />
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573655464392">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148326930-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://www.vincent.ac.cn/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573655464392" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%80-server">一、server</a>
+<ul>
+<li><a href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAserver%E5%AF%B9%E8%B1%A1">创建一个server对象</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE">配置</a></li>
+<li><a href="#%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8">事件驱动</a>
+<ul>
+<li><a href="#up%E6%9D%A5%E7%9C%8B%E7%9C%8B%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%9B%9E%E8%B0%83">up来看看几种常见的事件回调。</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C-%E5%90%8C%E6%AD%A5client%E8%B7%9F%E5%BC%82%E6%AD%A5client">二、同步client跟异步client</a>
+<ul>
+<li><a href="#swoole_client-%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><code>swoole_client</code> 的构造函数</a></li>
+<li><a href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%90%8C%E6%AD%A5%E5%AE%A2%E6%88%B7%E7%AB%AF">新建一个同步客户端</a></li>
+<li><a href="#%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E6%A6%82%E5%BF%B5">同步异步概念</a></li>
+<li><a href="#%E5%BC%82%E6%AD%A5%E5%AE%A2%E6%88%B7%E7%AB%AF">异步客户端</a></li>
+<li><a href="#%E5%BF%83%E8%B7%B3%E6%A3%80%E6%B5%8B">心跳检测</a></li>
+<li><a href="#%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B">实战案例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/link" class="menu" style="animation-delay: 0.8s">
+          友情链接
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
+    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">swoole入门 server 跟 client</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-11-13 / 13 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/qhuBcqwbw.png" alt="">
+        
+        <div class="post-content yue">
+          <blockquote>
+<p>刚刚 up 了解了下 <code>swoole</code> 并安装了环境接下来 up 迫不及待的了解下 <code>server</code> 与 <code>client</code></p>
+</blockquote>
+<h2 id="一-server">一、server</h2>
+<p>###那么什么是server呢 ？<br>
+顾名思义就是服务端。up 平时接触比较多的无非就是 <code>nginx</code> 和 <code>apache</code>。作为 <code>webServer</code>，二者都是通过监听某端口对外提供服务,<code>swoole</code> 的 <code>server</code> 也不例外同样需要绑定端口,同时能够提供给客户端相关的服务。</p>
+<h3 id="创建一个server对象">创建一个server对象</h3>
+<p>创建 <code>server</code> 的步骤</p>
+<ol>
+<li>实例化 <code>Server</code> 对象</li>
+<li>设置运行时参数</li>
+<li>注册事件回调函数</li>
+<li>启动服务器</li>
+</ol>
+<p>示例<br>
+<img src="https://www.vincent.ac.cn//post-images/1573655290242.jpg" alt=""></p>
+<p><code>server</code> 的创建，只需要绑定要监听的 <code>ip</code> 和<code>端口</code>，如果ip指定为 <code>127.0.0.1</code>，则表示客户端只能位于本机才能连接，其他计算机无法连接，如果需要所有的客户端都能连接则可以设置 <code>0.0.0.0</code><br>
+<img src="https://www.vincent.ac.cn//post-images/1573655301448.jpg" alt=""><br>
+端口这里指定为 <code>9501</code>，可以通过 <code>netstat</code> 查看下该端口是否被占用。如果该端口被占用，可更改为其他端口，如 <code>9502</code>，<code>9503</code> 等。</p>
+<h3 id="配置">配置</h3>
+<p>在享受 <code>swoole</code> 的 <code>server</code> 之前,同样 up 需要配置一下 <code>server</code>，比如调几个人来提供服务（几个进程），以及是否是后台执行（守护进程）等等一些其它的配置。<br>
+ 这个就需要我们做一些配置了，但是并非像 <code>fpm</code> 直接在文件内配置，我们可以在 <code>server</code> 创建后，通过 <code>set</code> 方法指定配置项。</p>
+<p>同时，这个配置项也有很多，比如说我们可以指定日志文件记录具体的错误信息等等，你都可以在官网的手册上寻找有哪些配置项。<br>
+这里 up 首要说明一下 <code>worker</code> 进程数的配置，因为 <code>swoole</code> 是多进程的异步服务器所以需要设置工作进程数，提升服务器性能。</p>
+<p>我们可以指定配置项 <code>worker_num</code> 等于某个正整数。这个正整数设置多少合适，即我要开多少个<code>worker</code> 进程处理们的业务逻辑才好呢我？官方建议我们设置为 <code>CPU</code> 核数的 <code>1-4倍</code> 。因为我们开的进程越多，内存的占用也就更多，进程间切换也就需要耗费更多的资源。up 这里设置开启两个 <code>worker进程</code>。默认该参数的值等于你机器的CPU核数。 <br>
+<img src="https://www.vincent.ac.cn//post-images/1573655313119.jpg" alt=""></p>
+<h3 id="事件驱动">事件驱动</h3>
+<p><code>swoole</code> 另外一个比较吸引人的地方，就是<code>swoole_server</code> 是事件驱动的。我们在使用的过程中不需要关注底层是怎么实现的，底层是 <code>C</code> 写的<code>php</code> 只是做了个传递的作用，所以只需要对底层相应的动作注册相应的回调，在回调函数中处理业务逻辑即可。<br>
+什么意思呢？up 举个例子：<br>
+你启动了一个<code>server</code>，当客户端连接的时候（触发事件），你不需要关心它是怎么连接的，你就单纯的注册一个<code>connect</code>函数，做一些连接后的业务处理即可(执行业务)。类似于js的事件监听，比如触发了<code>click</code> 事件，就会执行相应的闭包。<br>
+####Swoole监听的事件<br>
+<img src="https://www.vincent.ac.cn//post-images/1573655325276.jpg" alt=""><br>
+<img src="https://www.vincent.ac.cn//post-images/1573655333621.jpg" alt=""></p>
+<h4 id="up来看看几种常见的事件回调">up来看看几种常见的事件回调。</h4>
+<p>参数 <code>$serv</code> 是我们一开始创建的 <code>swoole_server</code> 对象，参数 <code>$fd</code> 是唯一标识，用于区分不同的客户端，同时该参数是 <code>1-1600万之间</code> 可以复用的整数。简单解释下复用：假设现在客户端1、2、3处于连接中，客户端4要连接的话 <code>$fd</code> 就是4，但是不巧的是客户端3连接不稳定，断掉了，客户端4连接到 <code>server</code> 的话，<code>$fd</code> 就是3，这样看的话。<code>1600W</code> 个连接够用吗？单机业务百万连接，已经是很厉害了，不用担心<br>
+监听客户端数据发送，触发回调<br>
+<img src="https://www.vincent.ac.cn//post-images/1573655342653.jpg" alt=""></p>
+<p><code>worker</code> 进程内触发的。第三个参数 <code>$fromId</code> 指的是哪一个 <code>reactor</code> 线程，具体 up 会在学习多进程模型当中详细分析这里先忽略。。直接看第四个参数，这个参数就是服务端接受到的数据，注意是字符串或者二进制内容,注意我们在 <code>Receive</code> 回调内，调用了<code>$serv</code>的<code>send</code>方法，我们可以使用<code>send</code>方法，向<code>client</code>发起通知。<br>
+监听客户端关闭，触发回调<br>
+<img src="https://www.vincent.ac.cn//post-images/1573655352863.jpg" alt=""></p>
+<p>这个很简单，当客户端关闭，或者服务端主动关闭连接的时候会触发。到此呢，up基本上已经搭建到了一个高性能的 <code>server</code>。当然，非常简单，下面 up 只需要调用 <code>start</code> 方法启动 <code>server</code> 即可。<br>
+<img src="https://www.vincent.ac.cn//post-images/1573655361896.jpg" alt=""></p>
+<p>由于<code>swoole_server</code>只能运行在<code>CLI</code>模式下，所以不要试图通过浏览器进行访问，有听说过<code>apache</code>是基于<code>nginx</code>运行的吗，大家地位相同，只能配合，没有上下关系，up在命令行下面执行，自行去连接，这里不补充基础知识，<code>tese.php</code> 就是刚刚服务器的方法<br>
+<img src="https://www.vincent.ac.cn//post-images/1573655371216.jpg" alt=""></p>
+<p>up 平时执行完一个指令，执行完就结束了，但是现在的情况正好相反，当前程序一直处于执行中的状态，并没有退出终端。同时因为<code>swoole</code>的<code>server</code>是常驻内存运行的，所以如果修改了代码，需要<code>ctrl+c</code>中断，重新运行才行。在up在第一步初始化<code>server</code>时填写了ip和端口，就是说 <code>server</code>现在正在监听<code>9501</code>端口提供服务。当前终端暂时不动，up新开一个终端，查看端口发现确实如此。<br>
+<img src="https://www.vincent.ac.cn//post-images/1573655381531.jpg" alt=""><br>
+<code>server</code>启动好了能干什么呢？常见的网络编程模式都是<code>client-server</code>的，也就是说up还需要模拟一个客户端与之交互。</p>
+<h2 id="二-同步client跟异步client">二、同步client跟异步client</h2>
+<p>默认的<code>swoole</code>的<code>server</code>是可以提供<code>tcp/udp</code> <code>socket请求协议</code>，然后根据请求数据，执行相应的逻辑</p>
+<p>在<code>PHP</code>中，我们常用<code>socket函数</code>来创建<code>TCP连接</code>，用<code>CURL库</code>来创建<code>Http连接</code>。同样的，为了简化操作，<code>Swoole</code>也提供了同样的<code>Client类</code>用于实现客户端的功能，并且增加了异步非阻塞的模式，让用户在客户端也能使用事件循环。</p>
+<h3 id="swoole_client-的构造函数"><code>swoole_client</code> 的构造函数</h3>
+<p><img src="https://www.vincent.ac.cn//post-images/1573655402873.jpg" alt=""><br>
+从上图可以看出一共三个参数</p>
+<ul>
+<li>
+<p>第一个参数：<br>
+<code>SWOOLE_SOCK_TCP</code>    创建 <code>tcp socket</code><br>
+<code>SWOOLE_SOCK_TCP6</code>  创建 <code>tcp ipv6 socket</code><br>
+<code>SWOOLE_SOCK_UDP</code>   创建 <code>udp socket</code><br>
+<code>SWOOLE_SOCK_UDP6</code> 创建 <code>udp ipv6 socket</code></p>
+</li>
+<li>
+<p>第二个参数表示是同步还是异步<br>
+<code>SWOOLE_SOCK_SYNC</code> 同步客户端<br>
+<code>SWOOLE_SOCK_ASYNC</code> 异步客户端</p>
+</li>
+<li>
+<p>第三个参数(暂不了解)<br>
+用于长连接的<code>Key</code>，默认使用<code>IP:PORT</code>作为<code>key</code>。相同<code>key</code>的连接会被复用</p>
+</li>
+</ul>
+<h3 id="新建一个同步客户端">新建一个同步客户端</h3>
+<p><img src="https://www.vincent.ac.cn//post-images/1573655413445.jpg" alt=""><br>
+同步<code>client</code>是同步阻塞的。一整套<code>connect-&gt;send()-&gt;rev()-&gt;close()</code>是同步进行的。如果需要大量的数据处理，后台不能在规定的时间内返回数据会导致接收超时，并且因为是同步执行所以需要等待后台数据的返回。</p>
+<h3 id="同步异步概念">同步异步概念</h3>
+<blockquote>
+<p><code>swoole</code>是既支持全异步，也支持同步，同步跟异步的概念，我们需要了解</p>
+</blockquote>
+<p>同步与异步的重点在消息通知的方式上，也就是调用结果通知的方式。</p>
+<ul>
+<li>
+<p>同步: 当一个同步调用发出去后，调用者要一直等待调用结果的通知后，才能进行后续的执行。</p>
+</li>
+<li>
+<p>异步：当一个异步调用发出去后，调用者不能立即得到调用结果的返回。</p>
+</li>
+</ul>
+<p>生活中的例子：</p>
+<ul>
+<li>同步买奶茶：小明点单交钱，然后等着拿奶茶；</li>
+<li>异步买奶茶：小明点单交钱，店员给小明一个小票，等小明奶茶做好了，再来取。</li>
+</ul>
+<h3 id="异步客户端">异步客户端</h3>
+<p>当设定 <code>swoole_client</code>为异步模式后，<code>swoole_client</code>就不能使用<code>recv</code>方法了，而需要通过<code>on</code>方法提供指定的回调函数，然后在回调函数当中处理，也就是小明等待奶茶做好了异步通知,消息发送跟接收并不是同步运行的。<br>
+<img src="https://www.vincent.ac.cn//post-images/1573655424292.jpg" alt=""></p>
+<h3 id="心跳检测">心跳检测</h3>
+<blockquote>
+<p>4.3被移除但是可能有其它的设备或者是语言是长连接,并且用来演示心跳检测</p>
+</blockquote>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1573655433852.png" alt=""></figure>
+<p>####心跳是什么？<br>
+顾名思义，心跳是判断一个事物生还是死的一个标准，在<code>swoole</code>里，心跳是指用来判断一个连接是正常还是断开的<br>
+####为什么要心跳？<br>
+心跳的目的其实是通过判断客户端是否存活，从而回收<code>fd</code>,系统为什么要回收<code>fd</code>，因为<code>fd</code>资源是有限的，所以必需重复利用 心跳作用主要有两个：</p>
+<ol>
+<li>
+<p>客户端定时给服务端发送点数据，防止连接由于长时间没有通讯而被某些节点的防火墙关闭导致连接断开的情况。</p>
+</li>
+<li>
+<p>服务端可以通过心跳来判断客户端是否在线，如果客户端在规定时间内没有发来任何数据，就认为客户端下线。这样可以检测到客户端由于极端情况(断电、断网等)下线的事件。</p>
+</li>
+</ol>
+<p>####心跳在swoole里的实现?<br>
+<code>swoole</code>会在主进程独立起一个心跳线程，通过定时轮询所有的连接，来判断连接的生死，所以<code>swoole</code>的心跳不会堵塞任何业务逻辑。<br>
+<img src="https://www.vincent.ac.cn//post-images/1573655443089.jpg" alt=""><br>
+设置完成了之后，你会发现设置了定时检测之后，如果客户端没在规定的时间之内发送数据就会关闭。</p>
+<ul>
+<li><code>heartbeat_check_interval</code>： 服务器定时检测在线列表的时间</li>
+<li><code>heartbeat_idle_time</code>：       连接最大的空闲时间 （如果最后一个心跳包的时间与当前时间之差超过这个值，则认为该连接失效）</li>
+</ul>
+<p>####配置建议<br>
+建议 <code>heartbeat_idle_time</code> 为<code>heartbeat_check_interval</code> 的两倍多一点。<br>
+这个两倍是为了进行容错，允许丢一个包而多一点是考虑到网络的延时。</p>
+<p>####为什么需要心跳包？客户端如何维持心跳？<br>
+在从客户端到服务器的一条巨大的链路中会经过无数的路由器，其中每一个路由器都有可能会有检测到多少秒时间内无数据包则自动关闭连接的这种节能机制，为了让这个可能会出现的节能机制失效，客户端可以设置一个定时器，每隔固定的时间都发一个随机字符的一字节的数据包，通常我们把这种数据包就叫做心跳包。</p>
+<h3 id="实战案例">实战案例</h3>
+<p>客户端设备发送一个请求，服务端接收，根据业务逻辑的需求服务端A需要发送一个请求到服务端B获取数据，再返回给服务端A，服务端A返回给客户端A。<br>
+服务端A既是客户端也是服务器,服务端A要发送请求到服务端B,然后服务端B返回消息给服务端A<br>
+<img src="https://www.vincent.ac.cn//post-images/1573655454542.jpg" alt=""></p>
+<p>client</p>
+<pre><code>$client = new swoole_client(SWOOLE_SOCK_TCP);
+
+$client-&gt;connect('127.0.0.1',9800) || exit('连接失败');
+
+$client-&gt;send(&quot;我是客户端1&quot;);
+$client-&gt;send(&quot;我是客户端2&quot;);
+sleep(2);
+$client-&gt;send(&quot;我是客户端3&quot;);
+
+$res = $client-&gt;recv();
+$data = json_decode($res,1);
+var_dump($data);//接收消息
+//关闭
+$client-&gt;close();
+</code></pre>
+<p>server1</p>
+<pre><code>echo &quot;运行脚本1&quot;.PHP_EOL;
+$server = new Swoole\Server('0.0.0.0',9800);
+
+$server-&gt;set([
+    'worker_num' =&gt; 1,//设置进程数
+//    'heartbeat_idle_time' =&gt;10,//连接最大的空闲时间
+//    'heartbeat_check_interval' =&gt; 3, //服务器定时检查
+    'open_eof_check' =&gt; true, //开启EOF结束协议
+    'package_eof' =&gt; &quot;\r\n&quot;, //设置结尾字符
+    'open_eof_split' =&gt; true //自动拆分
+]);
+
+//监听事件
+$server-&gt;on('connect',function ($sev,$fd){
+    echo &quot;新的连接进入:&quot;.$fd.PHP_EOL;
+});
+//消息发送过来
+$server-&gt;on('receive',function (swoole_server $server, int $fd,$reactor_id,$data){
+
+    echo &quot;消息发送过来:&quot;.$fd.PHP_EOL;
+    echo &quot;消息内容:&quot;.$data.PHP_EOL;
+
+    echo &quot;请求服务端2:&quot;.PHP_EOL;
+    $client = new swoole_client(SWOOLE_SOCK_TCP);
+    if (!$client-&gt;connect('127.0.0.1', 9900))
+    {
+        exit(&quot;connect failed. Error: {$client-&gt;errCode}\n&quot;);
+    }
+    $client-&gt;send(&quot;我是服务端1&quot;);
+
+
+
+    $data = array(
+        'server1' =&gt; '我是服务端1',
+        'server2' =&gt; $client-&gt;recv(),
+    );
+    $client-&gt;close();
+    $server-&gt;send($fd,json_encode($data));
+
+});
+
+//消息关闭
+$server-&gt;on('close',function (){
+    echo &quot;消息关闭&quot;.PHP_EOL;
+});
+
+//服务开启
+echo &quot;开启服务&quot;.PHP_EOL;
+$server-&gt;start();
+</code></pre>
+<p>server2</p>
+<pre><code>echo &quot;运行脚本2&quot;.PHP_EOL;
+$server = new Swoole\Server('0.0.0.0',9900);
+
+$server-&gt;set([
+    'worker_num' =&gt; 1,//设置进程数
+//    'heartbeat_idle_time' =&gt;10,//连接最大的空闲时间
+//    'heartbeat_check_interval' =&gt; 3, //服务器定时检查
+    'open_eof_check' =&gt; true, //开启EOF结束协议
+    'package_eof' =&gt; &quot;\r\n&quot;, //设置结尾字符
+    'open_eof_split' =&gt; true //自动拆分
+]);
+
+//监听事件
+$server-&gt;on('connect',function ($sev,$fd){
+    echo &quot;新的连接进入:&quot;.$fd.PHP_EOL;
+});
+//消息发送过来
+$server-&gt;on('receive',function (swoole_server $server, int $fd,$reactor_id,$data){
+    echo &quot;消息发送过来:&quot;.$fd.PHP_EOL;
+    echo &quot;消息内容:&quot;.$data.PHP_EOL;
+    $server-&gt;send($fd,'我是服务端2');
+});
+
+//消息关闭
+$server-&gt;on('close',function (){
+    echo &quot;消息关闭&quot;.PHP_EOL;
+});
+
+//服务开启
+echo &quot;开启服务&quot;.PHP_EOL;
+$server-&gt;start();
+</code></pre>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/bXUcw86dH">
+            <span class="flex-auto">swoole</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh">
+            <span class="flex-auto">php</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://www.vincent.ac.cn//post/ZSx6EOX69">
+                <h3 class="post-title">
+                  swoole入门 初识
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'a3aaa68a85274f00a280',
+    clientSecret: 'f2e6c91d4e829c5e405890e0f4f8f49187c2616e',
+    repo: 'vincentGridea.github.io',
+    owner: 'vincent66666',
+    admin: ['vincent66666'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
