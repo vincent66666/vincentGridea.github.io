@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>清风醉`s blog</title>
 <meta name="description" content="不愤不启不悱不发" />
-<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573655672110">
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573656032638">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -33,7 +33,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://www.vincent.ac.cn/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573655672110" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573656032638" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
       </div>
@@ -72,7 +72,13 @@
 <li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%BF%83%E8%B7%B3%E5%8C%85%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%A6%82%E4%BD%95%E7%BB%B4%E6%8C%81%E5%BF%83%E8%B7%B3">为什么需要心跳包？客户端如何维持心跳？</a></li>
 </ul>
 </li>
-<li><a href="#%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B">实战案例</a></li>
+<li><a href="#%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B">实战案例</a>
+<ul>
+<li><a href="#client">client</a></li>
+<li><a href="#server1">server1</a></li>
+<li><a href="#server2">server2</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -266,7 +272,7 @@
 <p>客户端设备发送一个请求，服务端接收，根据业务逻辑的需求服务端A需要发送一个请求到服务端B获取数据，再返回给服务端A，服务端A返回给客户端A。<br>
 服务端A既是客户端也是服务器,服务端A要发送请求到服务端B,然后服务端B返回消息给服务端A<br>
 <img src="https://www.vincent.ac.cn//post-images/1573655454542.jpg" alt=""></p>
-<p>client</p>
+<h4 id="client">client</h4>
 <pre><code>$client = new swoole_client(SWOOLE_SOCK_TCP);
 
 $client-&gt;connect('127.0.0.1',9800) || exit('连接失败');
@@ -282,7 +288,7 @@ var_dump($data);//接收消息
 //关闭
 $client-&gt;close();
 </code></pre>
-<p>server1</p>
+<h4 id="server1">server1</h4>
 <pre><code>echo &quot;运行脚本1&quot;.PHP_EOL;
 $server = new Swoole\Server('0.0.0.0',9800);
 
@@ -333,7 +339,7 @@ $server-&gt;on('close',function (){
 echo &quot;开启服务&quot;.PHP_EOL;
 $server-&gt;start();
 </code></pre>
-<p>server2</p>
+<h4 id="server2">server2</h4>
 <pre><code>echo &quot;运行脚本2&quot;.PHP_EOL;
 $server = new Swoole\Server('0.0.0.0',9900);
 
