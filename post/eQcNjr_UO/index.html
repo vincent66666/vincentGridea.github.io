@@ -1,0 +1,402 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>清风醉`s blog</title>
+<meta name="description" content="不愤不启不悱不发" />
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573714475827">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148326930-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://www.vincent.ac.cn/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573714475827" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%AF%B9%E5%BA%94%E7%9A%84%E9%97%AE%E9%A2%98">对应的问题</a></li>
+<li><a href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">解决办法</a></li>
+</ul>
+</li>
+<li><a href="#redis%E6%9C%89%E5%93%AA%E4%BA%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">Redis有哪些数据结构？</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E8%BF%87redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E4%B9%88%E5%AE%83%E6%98%AF%E4%BB%80%E4%B9%88%E5%9B%9E%E4%BA%8B">使用过Redis分布式锁么，它是什么回事？</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E8%BF%87redis%E5%81%9A%E5%BC%82%E6%AD%A5%E9%98%9F%E5%88%97%E4%B9%88%E4%BD%A0%E6%98%AF%E6%80%8E%E4%B9%88%E7%94%A8%E7%9A%84">使用过Redis做异步队列么，你是怎么用的？</a></li>
+<li><a href="#%E5%A6%82%E6%9E%9C%E6%9C%89%E5%A4%A7%E9%87%8F%E7%9A%84key%E9%9C%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E5%90%8C%E4%B8%80%E6%97%B6%E9%97%B4%E8%BF%87%E6%9C%9F%E4%B8%80%E8%88%AC%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E4%BB%80%E4%B9%88">如果有大量的key需要设置同一时间过期，一般需要注意什么？</a></li>
+<li><a href="#redis%E5%A6%82%E4%BD%95%E5%81%9A%E6%8C%81%E4%B9%85%E5%8C%96%E7%9A%84">Redis如何做持久化的？</a></li>
+<li><a href="#pipeline%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8pipeline">Pipeline有什么好处，为什么要用pipeline？</a></li>
+<li><a href="#redis%E7%9A%84%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6%E4%BA%86%E8%A7%A3%E4%B9%88">Redis的同步机制了解么？</a></li>
+<li><a href="#%E6%98%AF%E5%90%A6%E4%BD%BF%E7%94%A8%E8%BF%87redis%E9%9B%86%E7%BE%A4%E9%9B%86%E7%BE%A4%E7%9A%84%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88">是否使用过Redis集群，集群的原理是什么？</a></li>
+<li><a href="#%E5%A6%82%E6%9E%9C%E8%BF%99%E4%B8%AAredis%E6%AD%A3%E5%9C%A8%E7%BB%99%E7%BA%BF%E4%B8%8A%E7%9A%84%E4%B8%9A%E5%8A%A1%E6%8F%90%E4%BE%9B%E6%9C%8D%E5%8A%A1%E9%82%A3%E4%BD%BF%E7%94%A8keys%E6%8C%87%E4%BB%A4%E4%BC%9A%E6%9C%89%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98">如果这个redis正在给线上的业务提供服务，那使用keys指令会有什么问题？</a></li>
+<li><a href="#redis%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BB%B6%E6%97%B6%E9%98%9F%E5%88%97">redis如何实现延时队列？</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8redis%E6%9C%89%E5%93%AA%E4%BA%9B%E5%A5%BD%E5%A4%84">使用redis有哪些好处？</a></li>
+<li><a href="#redis%E7%9B%B8%E6%AF%94memcached%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E5%8A%BF">redis相比memcached有哪些优势？</a></li>
+<li><a href="#memcache%E4%B8%8Eredis%E7%9A%84%E5%8C%BA%E5%88%AB%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B">Memcache与Redis的区别都有哪些？</a></li>
+<li><a href="#redis%E5%B8%B8%E8%A7%81%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">redis常见性能问题和解决方案：</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88redis%E9%9C%80%E8%A6%81%E6%8A%8A%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E6%94%BE%E5%88%B0%E5%86%85%E5%AD%98%E4%B8%AD">为什么redis需要把所有数据放到内存中?</a></li>
+<li><a href="#redis%E6%98%AF%E5%8D%95%E8%BF%9B%E7%A8%8B%E5%8D%95%E7%BA%BF%E7%A8%8B%E7%9A%84">Redis是单进程单线程的</a></li>
+<li><a href="#redis%E7%9A%84%E5%B9%B6%E5%8F%91%E7%AB%9E%E4%BA%89%E9%97%AE%E9%A2%98%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3">redis的并发竞争问题如何解决?</a></li>
+<li><a href="#redis-%E6%9C%80%E9%80%82%E5%90%88%E7%9A%84%E5%9C%BA%E6%99%AF">redis 最适合的场景</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/link" class="menu" style="animation-delay: 0.8s">
+          友情链接
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
+    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">网络上收集的有关 Redis 方面的面试题 </h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-11-14 / 13 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/eQcNjr_UO.jpeg" alt="">
+        
+        <div class="post-content yue">
+          <p>##假如Redis里面有1亿个key，其中有10w个key是以某个固定的已知的前缀开头的，如何将它们全部找出来</p>
+<p>使用keys指令可以扫出指定模式的key列表</p>
+<h3 id="对应的问题">对应的问题</h3>
+<p>因为redis 是单线程 所以一次性操作大量的数据 可能会导致业务出现卡顿</p>
+<h3 id="解决办法">解决办法</h3>
+<p>这个时候可以使用scan指令，scan指令可以无阻塞的提取出指定模式的key列表，但是会有一定的重复概率，在客户端做一次去重就可以了，但是整体所花费的时间会比直接用keys指令长.</p>
+<h2 id="redis有哪些数据结构">Redis有哪些数据结构？</h2>
+<p>字符串String、字典Hash、列表List、集合Set、有序集合SortedSet。</p>
+<p>如果你是Redis中高级用户，还需要加上下面几种数据结构HyperLogLog、Geo、Pub/Sub。</p>
+<p>如果你说还玩过Redis Module，像BloomFilter，RedisSearch，Redis-ML，面试官得眼睛就开始发亮了。</p>
+<h2 id="使用过redis分布式锁么它是什么回事">使用过Redis分布式锁么，它是什么回事？</h2>
+<p>先拿setnx来争抢锁，抢到之后，再用expire给锁加一个过期时间防止锁忘记了释放。</p>
+<p>这时候对方会告诉你说你回答得不错，然后接着问如果在setnx之后执行expire之前进程意外crash或者要重启维护了，那会怎么样？</p>
+<p>这时候你要给予惊讶的反馈：唉，是喔，这个锁就永远得不到释放了。</p>
+<p>紧接着你需要抓一抓自己得脑袋，故作思考片刻，好像接下来的结果是你主动思考出来的</p>
+<p>然后回答：我记得set指令有非常复杂的参数，这个应该是可以同时把setnx和expire合成一条指令来用的！</p>
+<p>对方这时会显露笑容，心里开始默念：摁，这小子还不错。</p>
+<h2 id="使用过redis做异步队列么你是怎么用的">使用过Redis做异步队列么，你是怎么用的？</h2>
+<p>一般使用list结构作为队列，rpush生产消息，lpop消费消息。当lpop没有消息的时候，要适当sleep一会再重试。</p>
+<p>如果对方追问可不可以不用sleep呢？list还有个指令叫blpop，在没有消息的时候，它会阻塞住直到消息到来。</p>
+<p>如果对方追问能不能生产一次消费多次呢？使用pub/sub主题订阅者模式，可以实现1:N的消息队列。</p>
+<p>如果对方追问pub/sub有什么缺点？在消费者下线的情况下，生产的消息会丢失，得使用专业的消息队列如rabbitmq等。</p>
+<p>如果对方追问redis如何实现延时队列？我估计现在你很想把面试官一棒打死如果你手上有一根棒球棍的话，怎么问的这么详细。</p>
+<p>但是你很克制，然后神态自若的回答道：使用sortedset，拿时间戳作为score，消息内容作为key调用zadd来生产消息，消费者用zrangebyscore指令获取N秒之前的数据轮询进行处理。</p>
+<p>到这里，面试官暗地里已经对你竖起了大拇指。但是他不知道的是此刻你却竖起了中指，在椅子背后。</p>
+<h2 id="如果有大量的key需要设置同一时间过期一般需要注意什么">如果有大量的key需要设置同一时间过期，一般需要注意什么？</h2>
+<p>如果大量的key过期时间设置的过于集中，到过期的那个时间点，redis可能会出现短暂的卡顿现象。一般需要在时间上加一个随机值，使得过期时间分散一些。</p>
+<h2 id="redis如何做持久化的">Redis如何做持久化的？</h2>
+<p>bgsave做镜像全量持久化，aof做增量持久化。</p>
+<p>因为bgsave会耗费较长时间，不够实时，在停机的时候会导致大量丢失数据，所以需要aof来配合使用。</p>
+<p>在redis实例重启时，会使用bgsave持久化文件重新构建内存，再使用aof重放近期的操作指令来实现完整恢复重启之前的状态。</p>
+<p>对方追问那如果突然机器掉电会怎样？取决于aof日志sync属性的配置，如果不要求性能，在每条写指令时都sync一下磁盘，就不会丢失数据。</p>
+<p>但是在高性能的要求下每次都sync是不现实的，一般都使用定时sync，比如1s1次，这个时候最多就会丢失1s的数据。</p>
+<p>对方追问bgsave的原理是什么？你给出两个词汇就可以了，fork和cow。</p>
+<p>fork是指redis通过创建子进程来进行bgsave操作，cow指的是copy on write，子进程创建后，父子进程共享数据段，父进程继续提供读写服务，写脏的页面数据会逐渐和子进程分离开来。</p>
+<h2 id="pipeline有什么好处为什么要用pipeline">Pipeline有什么好处，为什么要用pipeline？</h2>
+<p>可以将多次IO往返的时间缩减为一次，前提是pipeline执行的指令之间没有因果相关性。</p>
+<p>使用redis-benchmark进行压测的时候可以发现影响redis的QPS峰值的一个重要因素是pipeline批次指令的数目。</p>
+<h2 id="redis的同步机制了解么">Redis的同步机制了解么？</h2>
+<p>Redis可以使用主从同步，从从同步。</p>
+<p>第一次同步时，主节点做一次bgsave，并同时将后续修改操作记录到内存buffer，待完成后将rdb文件全量同步到复制节点，复制节点接受完成后将rdb镜像加载到内存。</p>
+<p>加载完成后，再通知主节点将期间修改的操作记录同步到复制节点进行重放就完成了同步过程。、</p>
+<h2 id="是否使用过redis集群集群的原理是什么">是否使用过Redis集群，集群的原理是什么？</h2>
+<p>Redis Sentinal着眼于高可用，在master宕机时会自动将slave提升为master，继续提供服务。</p>
+<p>Redis Cluster着眼于扩展性，在单个redis内存不足时，使用Cluster进行分片存储。</p>
+<h2 id="如果这个redis正在给线上的业务提供服务那使用keys指令会有什么问题">如果这个redis正在给线上的业务提供服务，那使用keys指令会有什么问题？</h2>
+<p>这个时候你要回答redis关键的一个特性：redis的单线程的。keys指令会导致线程阻塞一段时间，线上服务会停顿，直到指令执行完毕，服务才能恢复。<br>这个时候可以使用scan指令，scan指令可以无阻塞的提取出指定模式的key列表，但是会有一定的重复概率，在客户端做一次去重就可以了，但是整体所花费的时间会比直接用keys指令长。</p>
+<h2 id="redis如何实现延时队列">redis如何实现延时队列？</h2>
+<p>我估计现在你很想把面试官一棒打死如果你手上有一根棒球棍的话，怎么问的这么详细。但是你很克制，然后神态自若的回答道：<br>使用有序集合，拿时间戳作为score，消息内容作为key调用zadd来生产消息，消费者用zrangebyscore指令获取N秒之前的数据轮询进行处理。</p>
+<h2 id="使用redis有哪些好处">使用redis有哪些好处？</h2>
+<ul>
+<li>(1) 速度快，因为数据存在内存中，类似于HashMap，HashMap的优势就是查找和操作的时间复杂度都是O(1)</li>
+<li>(2) 支持丰富数据类型，支持string，list，set，sorted set，hash</li>
+<li>(3) 支持事务，操作都是原子性，所谓的原子性就是对数据的更改要么全部执行，要么全部不执行</li>
+<li>(4) 丰富的特性：可用于缓存，消息，按key设置过期时间，过期后将会自动删除</li>
+</ul>
+<h2 id="redis相比memcached有哪些优势">redis相比memcached有哪些优势？</h2>
+<ul>
+<li>(1) memcached所有的值均是简单的字符串，redis作为其替代者，支持更为丰富的数据类型</li>
+<li>(2) redis的速度比memcached快很多</li>
+<li>(3) redis可以持久化其数据</li>
+</ul>
+<h2 id="memcache与redis的区别都有哪些">Memcache与Redis的区别都有哪些？</h2>
+<ul>
+<li>1)、存储方式 Memecache把数据全部存在内存之中，断电后会挂掉，数据不能超过内存大小。 Redis有部份存在硬盘上，这样能保证数据的持久性。</li>
+<li>2)、数据支持类型 Memcache对数据类型支持相对简单。 Redis有复杂的数据类型。</li>
+<li>3)、使用底层模型不同 它们之间底层实现方式 以及与客户端之间通信的应用协议不一样。 Redis直接自己构建了VM 机制 ，因为一般的系统调用系统函数的话，会浪费一定的时间去移动和请求。</li>
+</ul>
+<h2 id="redis常见性能问题和解决方案">redis常见性能问题和解决方案：</h2>
+<ul>
+<li>1).Master写内存快照，save命令调度rdbSave函数，会阻塞主线程的工作，当快照比较大时对性能影响是非常大的，会间断性暂停服务，所以Master最好不要写内存快照。</li>
+<li>2).Master AOF持久化，如果不重写AOF文件，这个持久化方式对性能的影响是最小的，但是AOF文件会不断增大，AOF文件过大会影响Master重启的恢复速度。<br>Master最好不要做任何持久化工作，包括内存快照和AOF日志文件，特别是不要启用内存快照做持久化,如果数据比较关键，某个Slave开启AOF备份数据，策略为每秒同步一次。</li>
+<li>3).Master调用BGREWRITEAOF重写AOF文件，AOF在重写的时候会占大量的CPU和内存资源，导致服务load过高，出现短暂服务暂停现象。</li>
+<li>4). Redis主从复制的性能问题，为了主从复制的速度和连接的稳定性，Slave和Master最好在同一个局域网内</li>
+</ul>
+<h2 id="为什么redis需要把所有数据放到内存中">为什么redis需要把所有数据放到内存中?</h2>
+<p>Redis为了达到最快的读写速度将数据都读到内存中，并通过异步的方式将数据写入磁盘。所以redis具有快速和数据持久化的特征。如果不将数据放在内存中，磁盘I/O速度为严重影响redis的性能。在内存越来越便宜的今天，redis将会越来越受欢迎。如果设置了最大使用的内存，则数据已有记录数达到内存限值后不能继续插入新值。</p>
+<h2 id="redis是单进程单线程的">Redis是单进程单线程的</h2>
+<p>redis利用队列技术将并发访问变为串行访问，消除了传统数据库串行控制的开销。</p>
+<h2 id="redis的并发竞争问题如何解决">redis的并发竞争问题如何解决?</h2>
+<p>Redis为单进程单线程模式，采用队列模式将并发访问变为串行访问。Redis本身没有锁的概念，Redis对于多个客户端连接并不存在竞争，但是在Jedis客户端对Redis进行并发访问时会发生连接超时、数据转换错误、阻塞、客户端关闭连接等问题，这些问题均是由于客户端连接混乱造成。对此有2种解决方法：</p>
+<ul>
+<li>1).客户端角度，为保证每个客户端间正常有序与Redis进行通信，对连接进行池化，同时对客户端读写Redis操作采用内部锁synchronized。</li>
+<li>2).服务器角度，利用setnx实现锁。<br>
+注：对于第一种，需要应用程序自己处理资源的同步，可以使用的方法比较通俗，可以使用synchronized也可以使用lock；第二种需要用到Redis的setnx命令，但是需要注意一些问题。</li>
+</ul>
+<h2 id="redis-最适合的场景">redis 最适合的场景</h2>
+<p>Redis最适合所有数据in-momory的场景，虽然Redis也提供持久化功能，但实际更多的是一个disk-backed的功能，跟传统意义上的持久化有比较大的差别，那么可能大家就会有疑问，<br>似乎Redis更像一个加强版的Memcached，那么何时使用Memcached，何时使用Redis呢?如果简单地比较Redis与Memcached的区别，大多数都会得到以下观点：<br>
+　　1. Redis不仅仅支持简单的k/v类型的数据，同时还提供list，set，zset，hash等数据结构的存储。<br>
+　　2. Redis支持数据的备份，即master-slave模式的数据备份。<br>
+　　3. Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用。</p>
+<ul>
+<li>(1).会话缓存（Session Cache）<br>
+最常用的一种使用Redis的情景是会话缓存（session cache）。用Redis缓存会话比其他存储（如Memcached）的优势在于：Redis提供持久化。</li>
+<li>(2).全页缓存（FPC）<br>
+除基本的会话token之外，Redis还提供很简便的FPC平台。回到一致性问题，即使重启了Redis实例，因为有磁盘的持久化，用户也不会看到页面加载速度的下降，这是一个极大改进，类似PHP本地FPC。<br>
+　　再次以Magento为例，Magento提供一个插件来使用Redis作为全页缓存后端。<br>
+　　此外，对WordPress的用户来说，Pantheon有一个非常好的插件 wp-redis，这个插件能帮助你以最快速度加载你曾浏览过的页面。</li>
+<li>(3).队列<br>
+Reids在内存存储引擎领域的一大优点是提供 list 和 set 操作，这使得Redis能作为一个很好的消息队列平台来使用。Redis作为队列使用的操作，就类似于本地程序语言（如Python）对 list 的 push/pop 操作。如果你快速的<br>在Google中搜索“Redis queues”，你马上就能找到大量的开源项目，这些项目的目的就是利用Redis创建非常好的后端工具，以满足各种队列需求。例如，Celery有一个后台就是使用Redis作为broker，你可以从这里去查看。</li>
+<li>(4).排行榜/计数器<br>
+Redis在内存中对数字进行递增或递减的操作实现的非常好。集合（Set）和有序集合（Sorted Set）也使得我们在执行这些操作的时候变的非常简单，Redis只是正好提供了这两种数据结构。所以，我们要从排序集合中获取到排名<br>最靠前的10个用户–我们称之为“user_scores”，我们只需要像下面一样执行即可：当然，这是假定你是根据你用户的分数做递增的排序。如果你想返回用户及用户的分数，你需要这样执行：<br>
+ZRANGE user_scores 0 10 WITHSCORES<br>
+Agora Games就是一个很好的例子，用Ruby实现的，它的排行榜就是使用Redis来存储数据的，你可以在这里看到。</li>
+<li>(5).发布/订阅<br>
+最后（但肯定不是最不重要的）是Redis的发布/订阅功能。发布/订阅的使用场景确实非常多。我已看见人们在社交网络连接中使用，还可作为基于发布/订阅的脚本触发器，甚至用Redis的发布/订阅功能来建立聊天系统！</li>
+</ul>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ZVVkuihBg">
+            <span class="flex-auto">Redis</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/jGa2EjGaq">
+            <span class="flex-auto">面试</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://www.vincent.ac.cn//post/QUyR68yNI">
+                <h3 class="post-title">
+                  什么是一致性哈希算法？
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'a3aaa68a85274f00a280',
+    clientSecret: 'f2e6c91d4e829c5e405890e0f4f8f49187c2616e',
+    repo: 'vincentGridea.github.io',
+    owner: 'vincent66666',
+    admin: ['vincent66666'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
