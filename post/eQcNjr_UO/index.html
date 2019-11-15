@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>清风醉`s blog</title>
 <meta name="description" content="不愤不启不悱不发" />
-<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573718308392">
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1573784722654">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -33,7 +33,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://www.vincent.ac.cn/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573718308392" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1573784722654" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
       </div>
@@ -46,7 +46,7 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li>
+<li><a href="#%E5%81%87%E5%A6%82redis%E9%87%8C%E9%9D%A2%E6%9C%891%E4%BA%BF%E4%B8%AAkey%E5%85%B6%E4%B8%AD%E6%9C%8910w%E4%B8%AAkey%E6%98%AF%E4%BB%A5%E6%9F%90%E4%B8%AA%E5%9B%BA%E5%AE%9A%E7%9A%84%E5%B7%B2%E7%9F%A5%E7%9A%84%E5%89%8D%E7%BC%80%E5%BC%80%E5%A4%B4%E7%9A%84%E5%A6%82%E4%BD%95%E5%B0%86%E5%AE%83%E4%BB%AC%E5%85%A8%E9%83%A8%E6%89%BE%E5%87%BA%E6%9D%A5">假如Redis里面有1亿个key，其中有10w个key是以某个固定的已知的前缀开头的，如何将它们全部找出来</a>
 <ul>
 <li><a href="#%E5%AF%B9%E5%BA%94%E7%9A%84%E9%97%AE%E9%A2%98">对应的问题</a></li>
 <li><a href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">解决办法</a></li>
@@ -132,7 +132,7 @@
           <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/eQcNjr_UO.jpeg" alt="">
         
         <div class="post-content yue">
-          <p>##假如Redis里面有1亿个key，其中有10w个key是以某个固定的已知的前缀开头的，如何将它们全部找出来</p>
+          <h2 id="假如redis里面有1亿个key其中有10w个key是以某个固定的已知的前缀开头的如何将它们全部找出来">假如Redis里面有1亿个key，其中有10w个key是以某个固定的已知的前缀开头的，如何将它们全部找出来</h2>
 <p>使用keys指令可以扫出指定模式的key列表</p>
 <h3 id="对应的问题">对应的问题</h3>
 <p>因为redis 是单线程 所以一次性操作大量的数据 可能会导致业务出现卡顿</p>
