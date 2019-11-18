@@ -1,0 +1,427 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>清风醉`s blog</title>
+<meta name="description" content="不愤不启不悱不发" />
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1574070372004">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148326930-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://www.vincent.ac.cn/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1574070372004" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%B7%BB%E5%8A%A0">添加</a></li>
+<li><a href="#%E7%BC%96%E8%BE%91">编辑</a></li>
+<li><a href="#%E5%88%A0%E9%99%A4">删除</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/link" class="menu" style="animation-delay: 0.8s">
+          友情链接
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
+    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">laravel 模型Eloquent ORM 添加编辑删除</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-11-18 / 6 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/26UdNhbpe.jpeg" alt="">
+        
+        <div class="post-content yue">
+          <p>既然玩了查询接着来玩玩添加编辑删除 CURD要完整嘛</p>
+<h2 id="添加">添加</h2>
+<p>一般是前端传过来数据存到数据库，模型有一个 create 方法就是用来新增数据的，up 建个 store 方法</p>
+<pre><code>    function store(Test $TestMdl)
+    {
+        $postData = [
+            'testId'   =&gt; '6',
+            'title'    =&gt; '这是个title6',
+            'email'    =&gt; '6666@qq.com',
+            'describe' =&gt; '这是个describe6',
+        ];
+        $TestMdl-&gt;create($postData);
+    }
+</code></pre>
+<p>如果我们直接访问这个方法是会报错的<br>
+<img src="https://www.vincent.ac.cn//post-images/1574070093336.jpg" alt=""><br>
+因为在模型默认不允许进行批量赋值需要先定义允许 <code>create</code> 方法插入到数据库的字段,就是给 <code>$fillable</code> 属性定义允许赋值的字段<br>
+up 先在模型中定义 <code>$fillable</code> 属性</p>
+<pre><code>    /**
+     * 可以被批量赋值的属性。
+     *
+     * @var array
+     */
+    protected $fillable = ['testId', 'title', 'email', 'describe'];
+</code></pre>
+<p>再次访问 <code>store</code> 就可以把数据插入到数据库中了,如果字段很多一个个定义贼慢，这时便需要 <code>$guarded 属性</code> 登场了，这个属性是用来定义不允许复制的字段的，但是up现在不需要保护表里的字段。那么直接给 <code>$guarded</code> 赋值为空数组就等于没有任何限制了</p>
+<pre><code>/**
+ * 不可批量赋值的属性。
+ *
+ * @var array
+ */
+protected $guarded = [];
+</code></pre>
+<p>需要注意的是 <code>$fillable</code> 和 <code>$guarded</code> 只能定义其中的一个,不能同时存在</p>
+<p><img src="https://www.vincent.ac.cn//post-images/1574070106001.jpg" alt=""><br>
+create 方法的返回值就是当前插入到数据库中的内容up可以通过返回值判断成功或者失败而实际开发中up经常需要返回新增数据的id那直接访问返回值的 id 属性即可。</p>
+<pre><code>    function store(Test $TestMdl)
+    {
+        $postData = [
+            'testId'   =&gt; '8',
+            'title'    =&gt; '这是个title8',
+            'email'    =&gt; '6666777888@qq.com',
+            'describe' =&gt; '这是个describe888',
+        ];
+        $res = $TestMdl-&gt;create($postData);
+        dump($res);
+        dump($res-&gt;id);
+    }
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1574070134679.jpg" alt=""></figure>
+<h2 id="编辑">编辑</h2>
+<p>刚刚添加了数据这边在编辑下数据咯，这里就要用到 <code>update</code> 方法了，这个就简单了</p>
+<pre><code>    function update(Test $TestMdl)
+    {
+        $postId = 8;
+        $postData = [
+            'testId'   =&gt; '8',
+            'title'    =&gt; '这是个title8888866666',
+            'email'    =&gt; '6666777888@qq.com',
+            'describe' =&gt; '这是个describe88866666',
+        ];
+        $res = $TestMdl-&gt;where('id',$postId)-&gt;update($postData);
+        dump($res);
+    }
+</code></pre>
+<p>update 方法的返回值是被改动的数据的条数<br>
+<img src="https://www.vincent.ac.cn//post-images/1574070155580.jpg" alt=""><br>
+我们查看下数据<br>
+<img src="https://www.vincent.ac.cn//post-images/1574070166152.jpg" alt=""><br>
+数据中一眼就发现了后三条数据的不同，我们之前用     <code>DB</code> 插入到数据库中的数据 <code>created_at</code> 和 <code>updated_at</code> 字段都是空,而我们用模型插入和修改后 <code>created_at</code> 和 <code>updated_at</code> 自动都变成了插入或者修改的时间了,这就是使用模型的好处一大好处</p>
+<h2 id="删除">删除</h2>
+<p>但是最后的这个 <code>deleted_at</code> 是空的，这个字段应该怎么用呢？接下来 up 来学下模型的删除。</p>
+<blockquote>
+<p>删除数据是一件很危险的行为，up 刚刚入行的时候不小心给生产环境的用户表删除了，当时全靠谷歌用的好给恢复了不然我就跑路了😄，现实版删库跑路😂。当时我希望能有一个恢复删除的功能比如说回收站，<code>laravel</code> 的模型为我们提供了很方便的软删除功能</p>
+</blockquote>
+<p>要启用软删除首先数据表需要有 <code>deleted_at</code> 字段<br>
+之前玩迁移的时候简单的说了下创建迁移的时候调用 <code>softDeletes</code> 即可,模型默认是没有开启软删除功能的开启也很简单就是使用<code>SoftDeletes</code></p>
+<pre><code>&lt;?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Test extends Model
+{
+    use SoftDeletes;
+}
+</code></pre>
+<blockquote>
+<p>Tip： <code>SoftDeletes trait</code> 会自动将 <code>deleted_at</code> 属性转换成 <code>DateTime / Carbon</code> 实例</p>
+</blockquote>
+<p>当然，你需要把 <code>deleted_at</code> 字段添加到数据表中。 <code>Laravel</code> 的 数据库迁移 有创建这个字段的方法</p>
+<p>现在，当你在模型实例上使用 delete 方法， 当前日期时间会写入 deleted_at 字段。同时，查询出来的结果也会自动排除已被软删除的记录。</p>
+<pre><code>    /**
+     * 删除数据
+     */
+    public function delete(Test $TestMdl)
+    {
+        $id = 8;
+        $result = $TestMdl-&gt;where('id', $id)-&gt;delete();
+        dump($result);
+    }
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1574070193505.jpg" alt=""><br>
+让我来查询一下数据<br>
+<img src="https://www.vincent.ac.cn//post-images/1574070242077.jpg" alt=""><br>
+数据并没有真正被删除只是 deleted_at 不是 null 而是删除的时间了</p>
+<p>让我们用代码去查询一下访问一下之前的 <code>index</code> 方法<br>
+<img src="https://www.vincent.ac.cn//post-images/1574070252668.jpg" alt=""><br>
+up发现 id等于8的数据已经查询不到了，如果想查询到这条数据改怎么做呢，可以调用 <code>withTrashed</code> 方法</p>
+<pre><code>    function getWith(Test $testMdl)
+    {
+        $data = $testMdl-&gt;withTrashed()-&gt;get();
+        dump($data-&gt;toArray());
+    }
+</code></pre>
+<p>我们来访问一下<br>
+<img src="https://www.vincent.ac.cn//post-images/1574070263013.jpg" alt=""><br>
+现在刚刚软删除的数据又回来了，如果up只想查询乱删除的数据呢？可以用 <code>onlyTrashed</code> 方法</p>
+<pre><code>    function getOnly(Test $testMdl)
+    {
+        $data = $testMdl-&gt;onlyTrashed()-&gt;get();
+        dump($data-&gt;toArray());
+    }
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://www.vincent.ac.cn//post-images/1574070277128.jpg" alt=""></figure>
+<p>到这一步离实现回收站功能 就差个能恢复删除的方法，很简单调用 <code>restore</code> 方法即可</p>
+<pre><code>    function restoreData(Test $testMdl)
+    {
+        $id = 8;
+        $data = $testMdl-&gt;where('id', $id)-&gt;restore();
+        dump($data);
+    }
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1574070289611.jpg" alt=""><br>
+执行完这个在查询下数据库<br>
+<img src="https://www.vincent.ac.cn//post-images/1574070302948.jpg" alt=""><br>
+up 发现 <code>deleted_at</code> 已经被置空这个时候在请求 <code>index</code> 方法<br>
+<img src="https://www.vincent.ac.cn//post-images/1574070315336.jpg" alt=""><br>
+之前乱删除的数据变恢复回来了</p>
+<p>但是如果要彻底删除改怎么做呢？同样很简单调用 <code>forceDelete</code> 方法即可</p>
+<pre><code>    function completelyDelete(Test $testMdl){
+        $id = 8;
+        $data = $testMdl-&gt;where('id', $id)-&gt;forceDelete();
+        dump($data);
+    }
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1574070325019.jpg" alt=""><br>
+执行完毕后up来查询下数据库<br>
+<img src="https://www.vincent.ac.cn//post-images/1574070333470.jpg" alt=""><br>
+id等于8的数据被彻底删除啦</p>
+<p>到现在增删改查 up 就都了解了</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh">
+            <span class="flex-auto">php</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/r9lWhqCpR5">
+            <span class="flex-auto">Laravel</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://www.vincent.ac.cn//post/-JIl7kxRA">
+                <h3 class="post-title">
+                  laravel 模型Eloquent ORM 查询
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'a3aaa68a85274f00a280',
+    clientSecret: 'f2e6c91d4e829c5e405890e0f4f8f49187c2616e',
+    repo: 'vincentGridea.github.io',
+    owner: 'vincent66666',
+    admin: ['vincent66666'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
