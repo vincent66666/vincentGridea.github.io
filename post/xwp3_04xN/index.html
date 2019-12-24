@@ -1,128 +1,230 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <title>清风醉`s blog</title>
-<meta name="description" content="不愤不启不悱不发" />
-<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico?v=1576133772674">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="description" content="不愤不启不悱不发"/>
+<meta name="keywords" content="不愤不启不悱不发"/>
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="shortcut icon" href="https://www.vincent.ac.cn//favicon.ico">
 
 <link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="清风醉`s blog - Atom Feed" href="https://www.vincent.ac.cn//atom.xml">
+
+<!-- Modernizr JS -->
+<script src="https://www.vincent.ac.cn//media/scripts/_vendors/modernizr-2.6.2.min.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+<scripts src="https://www.vincent.ac.cn//media/scripts/_vendors/respond.min.js"></scripts>
+<![endif]-->
+
+<!-- Comment -->
+
+    
+        <link href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" rel="stylesheet">
+    
+
+    
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-148326930-1');
-</script>
+<!-- katex -->
+<!--<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet">-->
+
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 
 
-  </head>
-  <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://www.vincent.ac.cn/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://www.vincent.ac.cn//images/avatar.png?v=1576133772674" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">清风醉`s blog</h1>
-      </div>
-      
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
-          </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E4%BD%86%E6%98%AF%E6%95%B0%E6%8D%AE%E5%BA%93%E6%80%8E%E4%B9%88%E6%90%9E%E5%91%A2">但是数据库怎么搞呢?</a>
-<ul>
-<li><a href="#%E9%82%A3laravel%E6%80%8E%E6%A0%B7%E6%9D%A5%E5%B8%AE%E5%8A%A9%E6%88%91%E4%BB%AC%E7%9A%84%E5%91%A2">那<code>laravel</code>怎样来帮助我们的呢？</a>
-<ul>
-<li><a href="#%E5%88%9B%E5%BB%BA%E8%BF%81%E7%A7%BB">创建迁移</a></li>
-<li><a href="#%E8%BF%81%E7%A7%BB%E7%BB%93%E6%9E%84">迁移结构</a></li>
-<li><a href="#%E8%BF%90%E8%A1%8C%E8%BF%81%E7%A7%BB">运行迁移</a></li>
-<li><a href="#%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5">修改字段</a></li>
-<li><a href="#%E5%9B%9E%E9%80%80-%E5%9B%9E%E6%BB%9A%E8%BF%81%E7%A7%BB">回退 回滚迁移</a></li>
-<li><a href="#%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B">修改字段类型</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+    <!-- 百度统计 -->
+    5b6fe2ebf3b617cf1fe0244bd09ebd21
 
-          </div>
-        </div>
-      
+
+</head>
+<body>
+    <div id="fh5co-offcanvas">
+    <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
+        <span><i class="icon-cross3"></i> <span>Close</span></span>
+    </a>
+    <div class="fh5co-bio">
+        <figure>
+            <img src="https://www.vincent.ac.cn//media/images/avatar.png" alt="清风醉`s blog"
+                 class="img-responsive">
+        </figure>
+        <a href="https://www.vincent.ac.cn//post/about/"><h3 class="heading">ABOUT ME</h3></a>
+        <h2>清风醉`s blog</h2>
+        <p>不愤不启不悱不发</p>
+        <ul class="fh5co-social">
+            
+                <li>
+                    
+                        <a href="https://github.com/vincent66666" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+        </ul>
     </div>
-  </div>
+
+    <div class="fh5co-menu">
+
+        <!-- 标签 -->
+        <div class="fh5co-box">
+            <a href="https://www.vincent.ac.cn//tags/"><h3 class="heading">👉标签</h3></a>
+            <ul>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/ULKwYDOFh">php</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/r9lWhqCpR5">Laravel</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/meUUKMjqL">网络</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/kEMJHfwHiC">TCP</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/9GCcJqs1bZ">系统</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/ZVVkuihBg">Redis</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/jGa2EjGaq">面试</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/e-1kRyzIcM">分布式</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/FBDXBvNJZT">缓存</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/fRCCdSmYdr">算法</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/bXUcw86dH">swoole</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/9l7hz-cAk">Go</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/PGQpqESAIK">Linux</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/MrJ-unZWo">MySQL</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/HlgLlO25x">转载</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/Wf9dxWbla">docker</a></li>
+                
+                    <li><a href="https://www.vincent.ac.cn//tag/Road5r03o">Gridea</a></li>
+                
+            </ul>
+        </div>
+    </div>
 </div>
 
-<div class="menu-container">
-  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
-    
-      
-        <a href="/" class="menu" style="animation-delay: 0s">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
-          关于
-        </a>
-      
-    
-      
-        <a href="/post/link" class="menu" style="animation-delay: 0.8s">
-          友情链接
-        </a>
-      
-    
-  </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></div>
-    <a class="rss" href="https://www.vincent.ac.cn//atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">laravel 学习之路 数据库操作 Migrations</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2019-11-06 / 10 min read
+<header id="fh5co-header">
+    <div class="container-fluid">
+        <div class="row">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <ul class="fh5co-social">
+                
+                    <li>
+                        <a href="/"
+                        
+                        >
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives"
+                        
+                        >
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags"
+                        
+                        >
+                            标签
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/post/about"
+                        
+                        >
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/post/link"
+                        
+                        >
+                            友情链接
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="col-lg-12 col-md-12 text-center">
+                <h1 id="fh5co-logo">
+                    <a href="https://www.vincent.ac.cn/">清风醉`s blog </a>
+                </h1>
+            </div>
         </div>
-        
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.vincent.ac.cn//post-images/xwp3_04xN.jpeg" alt="">
-        
-        <div class="post-content yue">
-          <blockquote>
+    </div>
+</header>
+
+
+    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
+    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
+
+    <!-- 等gridea出自定义页面功能再优化一下 -->
+    
+        <div class="container-fluid">
+    <div class="row fh5co-post-entry single-entry">
+        <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+            <figure class="animate-box">
+                
+                    <img src="https://www.vincent.ac.cn//post-images/xwp3_04xN.jpeg" alt="laravel 学习之路 数据库操作 Migrations" class="img-responsive">
+                
+            </figure>
+            <span class="fh5co-meta animate-box">
+                
+                    <div class="tag-container">
+                        
+                            <a href="https://www.vincent.ac.cn//tag/MrJ-unZWo" class="tag">MySQL, </a>
+                        
+                            <a href="https://www.vincent.ac.cn//tag/ULKwYDOFh" class="tag">php, </a>
+                        
+                            <a href="https://www.vincent.ac.cn//tag/r9lWhqCpR5" class="tag">Laravel, </a>
+                        
+                    </div>
+                
+            </span>
+            <h2 class="fh5co-article-title animate-box">laravel 学习之路 数据库操作 Migrations</h2>
+            <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
+                <li>2019-11-06</li>
+                <li>2619字</li>
+                <li>10 min read</li>
+            </ol>
+
+            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
+                <div class="row">
+                    <div class="col-md-12 animate-box post-content">
+                        <p> <blockquote>
 <p>前面我们设置好了数据库，可以开始对数据库操作了但是前提是我们得有表啊，说到数据库做开发的肯定能知道其中的辛酸苦与泪。</p>
 </blockquote>
 <p>团队合作的时候为了避免代码冲突，以及方便记录修改历史和回退我们有版本控制比如说  <code>git</code> <code>svn</code></p>
@@ -258,177 +360,162 @@ Schema::dropIfExists('users');
 <img src="https://www.vincent.ac.cn//post-images/1573039104279.jpg" alt=""><br>
 那 <code>down</code> 里面就是相反的内容了</p>
 <p>总结下就是 <code>up</code> 中写需要迁移的内容 <code>down</code> 中写回退的内容。</p>
+ </p>
+                    </div>
+                </div>
 
-        </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        
+                            <div class="next-post">
+                                <div class="next">下一篇</div>
+                                <a href="https://www.vincent.ac.cn//post/laravel5">
+                                    <h3 class="post-title">
+                                        laravel 学习之路 配置config
+                                    </h3>
+                                </a>
+                            </div>
+                        
+                    </div>
+                </div>
 
+                <div class="row">
+    <div class="col-md-12 animate-box">
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/MrJ-unZWo">
-            <span class="flex-auto">MySQL</span>
-          </a>
+            
+                <div id="gitalk-container"></div>
+            
+
+            
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/ULKwYDOFh">
-            <span class="flex-auto">php</span>
-          </a>
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://www.vincent.ac.cn//tag/r9lWhqCpR5">
-            <span class="flex-auto">Laravel</span>
-          </a>
-        
-
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://www.vincent.ac.cn//post/Wb4f8UHdq">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  laravel 学习之路 数据库操作 数据插入与数据填充
-                </h3>
-              </a>
-            </div>
-          
-
-          
-            <div class="next-post">
-              <a href="https://www.vincent.ac.cn//post/laravel5">
-                <h3 class="post-title">
-                  laravel 学习之路 配置config
-                  <i class="remixicon-arrow-right-line"></i>
-                </h3>
-              </a>
-            </div>
-          
-        </div>
-
-        
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: 'a3aaa68a85274f00a280',
-    clientSecret: 'f2e6c91d4e829c5e405890e0f4f8f49187c2616e',
-    repo: 'vincentGridea.github.io',
-    owner: 'vincent66666',
-    admin: ['vincent66666'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
-          
-
-          
-        
-
-      </div>
     </div>
+</div>
 
-    <script src="https://www.vincent.ac.cn//media/prism.js"></script>  
-<script>
+            </div>
 
-Prism.highlightAll()
+        </article>
+    </div>
+</div>
 
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+    
 
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
+    <!-- 返回顶部 -->
+    <div class="back-to-top">
+    
+        <a href="#!" id="tool-toc" class="hidden-xs hidden-sm">
+            <i class="fa fa-map"></i>
+        </a>
+        <br>
+    
+    <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
+</div>
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+<div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%BD%86%E6%98%AF%E6%95%B0%E6%8D%AE%E5%BA%93%E6%80%8E%E4%B9%88%E6%90%9E%E5%91%A2">但是数据库怎么搞呢?</a>
+<ul>
+<li><a href="#%E9%82%A3laravel%E6%80%8E%E6%A0%B7%E6%9D%A5%E5%B8%AE%E5%8A%A9%E6%88%91%E4%BB%AC%E7%9A%84%E5%91%A2">那<code>laravel</code>怎样来帮助我们的呢？</a>
+<ul>
+<li><a href="#%E5%88%9B%E5%BB%BA%E8%BF%81%E7%A7%BB">创建迁移</a></li>
+<li><a href="#%E8%BF%81%E7%A7%BB%E7%BB%93%E6%9E%84">迁移结构</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E8%BF%81%E7%A7%BB">运行迁移</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5">修改字段</a></li>
+<li><a href="#%E5%9B%9E%E9%80%80-%E5%9B%9E%E6%BB%9A%E8%BF%81%E7%A7%BB">回退 回滚迁移</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B">修改字段类型</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-    }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
-        } else {
-          link.classList.remove("current");    
-        }
-      } else {
-        link.classList.add("current");
-      }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
+</div>
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+    
+<footer id="fh5co-footer">
+  <p>Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></p>
+</footer>
 
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
+
+    <!-- jQuery -->
+<script src="https://www.vincent.ac.cn//media/scripts/_vendors/jquery.min.js"></script>
+<!-- img lazy load -->
+<script src="https://www.vincent.ac.cn//media/scripts/_vendors/jquery.lazyload.min.js"></script>
+<!-- jQuery Easing -->
+<script src="https://www.vincent.ac.cn//media/scripts/_vendors/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="https://www.vincent.ac.cn//media/scripts/_vendors/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="https://www.vincent.ac.cn//media/scripts/_vendors/jquery.waypoints.min.js"></script>
+<!-- Main JS -->
+<script src="https://www.vincent.ac.cn//media/scripts/_vendors/main.js"></script>
+<!-- Md5 Min JS -->
+<script src="https://www.vincent.ac.cn//media/scripts/_vendors/md5.min.js"></script>
+<!-- katex -->
+<!--<script src="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.js"></script>-->
+<!-- highlight -->
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+
+
+<script type="application/javascript">
+    // 代码高亮
+    hljs.initHighlightingOnLoad();
+
+    // img 懒加载
+    $(function () {
+        $("img.lazy").lazyload({
+            effect: "fadeIn",  // 懒加载动画
+            threshold: 180  // 在图片距离屏幕180px时提前载入
+        });
+        // tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // 目录
+        $('#tool-toc').click(function () {
+            $('.post-toc').toggle();
+        });
     });
 
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
+    
+        var allImg = $("img");
+        allImg.on("contextmenu", function () {
+            return false;
+        });
+        allImg.on("dragstart", function () {
+            return false;
+        });
+    
 </script>
-  
-  </body>
+
+
+
+    
+        <script src="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+        <script>
+
+            var gitalk = new Gitalk({
+                clientID: 'a3aaa68a85274f00a280',
+                clientSecret: 'f2e6c91d4e829c5e405890e0f4f8f49187c2616e',
+                repo: 'vincentGridea.github.io',
+                owner: 'vincent66666',
+                admin: ['vincent66666'],
+                id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+                distractionFreeMode: false  // Facebook-like distraction free mode
+            })
+
+            gitalk.render('gitalk-container')
+
+        </script>
+    
+
+    
+
+
+
+
+</body>
 </html>
