@@ -495,6 +495,14 @@ id等于8的数据被彻底删除啦</p>
     });
 
     
+        var allImg = $("img");
+        allImg.on("contextmenu", function () {
+            return false;
+        });
+        allImg.on("dragstart", function () {
+            return false;
+        });
+    
 </script>
 
 

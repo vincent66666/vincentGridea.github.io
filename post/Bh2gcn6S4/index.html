@@ -605,6 +605,14 @@ return DB::table('test')-&gt;where('id', 1)-&gt;doesntExist();
     });
 
     
+        var allImg = $("img");
+        allImg.on("contextmenu", function () {
+            return false;
+        });
+        allImg.on("dragstart", function () {
+            return false;
+        });
+    
 </script>
 
 

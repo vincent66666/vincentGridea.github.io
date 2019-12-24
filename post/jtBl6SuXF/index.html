@@ -747,6 +747,14 @@ console.log('5') // 宏任务 同步
     });
 
     
+        var allImg = $("img");
+        allImg.on("contextmenu", function () {
+            return false;
+        });
+        allImg.on("dragstart", function () {
+            return false;
+        });
+    
 </script>
 
 
