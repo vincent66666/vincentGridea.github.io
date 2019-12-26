@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>清风醉`s blog</title>
@@ -23,6 +23,12 @@
 <![endif]-->
 
 <!-- Comment -->
+
+    
+        <link href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" rel="stylesheet">
+    
+
+    
 
 
 
@@ -47,7 +53,7 @@ var _hmt = _hmt || [];
 
 </head>
 <body>
-<div id="fh5co-offcanvas">
+    <div id="fh5co-offcanvas">
     <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
         <span><i class="icon-cross3"></i> <span>Close</span></span>
     </a>
@@ -193,113 +199,130 @@ var _hmt = _hmt || [];
 </header>
 
 
-<div class="container-fluid">
+    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
+    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
 
-  <div class="col-lg-12 col-md-12 text-center tag-title">
-      <i class="fa fa-tag"></i> 标签: <h3>MySQL</h3>
-  </div>
-
-  <div class="row fh5co-post-entry">
-
+    <!-- 等gridea出自定义页面功能再优化一下 -->
     
-      <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box article-box" style="height: 25em;">
-        <figure class="img-box">
-          <a href="https://www.vincent.ac.cn//post/UNZ7vbISR">
+        <div class="container-fluid">
+    <div class="row fh5co-post-entry single-entry">
+        <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+            <figure class="animate-box">
+                
+                    <img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/tencent/20191226113031.png" alt="Mac小技巧 增强快速预览功能" class="img-responsive">
+                
+            </figure>
+            <span class="fh5co-meta animate-box">
+                
+                    <div class="tag-container">
+                        
+                            <a href="https://www.vincent.ac.cn//tag/Gq3AguIDW" class="tag">Mac, </a>
+                        
+                    </div>
+                
+            </span>
+            <h2 class="fh5co-article-title animate-box">Mac小技巧 增强快速预览功能</h2>
+            <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
+                <li>2019-12-26</li>
+                <li>279字</li>
+                <li>2 min read</li>
+            </ol>
+
+            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
+                <div class="row">
+                    <div class="col-md-12 animate-box post-content">
+                        <p> <p>开个新篇记录下Mac的使用小技巧</p>
+<p>默认在 mac 上是在文件上按空格键预览，但是这个预览的功能特别的简陋，预览个 php 这类文件没有高亮，json 之类的文件更惨直接就没法预览</p>
+<p>这时候就需要 <code>Quick Look plugins</code> 了</p>
+<p>它主要有以下功能：</p>
+<ul>
+<li>高亮预览代码文件</li>
+<li>预览没有后缀的文本文件</li>
+<li>预览 markdown 文件</li>
+<li>预览 json 文件</li>
+<li>预览压缩文件</li>
+<li>预览时显示图片的像素尺寸和文件大小</li>
+<li>预览 webp 文件</li>
+<li>预览 pkg 文件</li>
+<li>预览 ase 文件</li>
+<li>预览视频文件</li>
+</ul>
+<p>安装</p>
+<pre><code class="language-bash">brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook suspicious-package quicklookase qlvideo
+</code></pre>
+<p>MacOS 10.14 Mojave 以上版本不能通过 brew 安装预览图片像素尺寸和文件大小的 qlImageSize ；<br>
+这里需要手动编译安装<br>
+先下载xcode<br>
+安装完成后运行如下命令</p>
+<pre><code class="language-bash">sudo xcode-select -switch /Applications/Xcode.app
+</code></pre>
+<p>使用 git clone 代码</p>
+<pre><code class="language-bash">cd ~ &amp;&amp; git clone git@github.com:Nyx0uf/qlImageSize.git
+</code></pre>
+<p>xcodebuild</p>
+<pre><code class="language-bash">cd ~/qlImageSize &amp;&amp; xcodebuild
+</code></pre>
+<p>将 qlImageSize.qlgenerator 移动到 QuickLook 目录</p>
+<pre><code class="language-bash">mv ~/qlImageSize/build/Release/qlImageSize.qlgenerator ~/Library/QuickLook/
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/tencent/20191226111506.png" alt=""></figure>
+ </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        
+                            <div class="next-post">
+                                <div class="next">下一篇</div>
+                                <a href="https://www.vincent.ac.cn//post/26UdNhbpe">
+                                    <h3 class="post-title">
+                                        laravel 模型Eloquent ORM 添加编辑删除
+                                    </h3>
+                                </a>
+                            </div>
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+    <div class="col-md-12 animate-box">
+        
             
-              <img data-original="https://www.vincent.ac.cn//post-images/UNZ7vbISR.jpg" alt="Linux 安装 minDoc 接口文档在线管理 " class="img-responsive img-rounded lazy">
+                <div id="gitalk-container"></div>
             
-          </a>
-        </figure>
-        <span class="fh5co-meta">
-          
-            <div class="tag-container">
-              
-                <a href="https://www.vincent.ac.cn//tag/9l7hz-cAk" class="tag">Go, </a>
-              
-                <a href="https://www.vincent.ac.cn//tag/PGQpqESAIK" class="tag">Linux, </a>
-              
-                <a href="https://www.vincent.ac.cn//tag/MrJ-unZWo" class="tag">MySQL, </a>
-              
+
+            
+        
+    </div>
+</div>
+
             </div>
-          
-        </span>
-        <h3 class="fh5co-article-title">
-          <a href="https://www.vincent.ac.cn//post/UNZ7vbISR">Linux 安装 minDoc 接口文档在线管理 </a>
-        </h3>
-        <span class="fh5co-meta fh5co-date">2019-11-13</span>
-      </article>
-    
-      <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box article-box" style="height: 25em;">
-        <figure class="img-box">
-          <a href="https://www.vincent.ac.cn//post/Bh2gcn6S4">
-            
-              <img data-original="https://www.vincent.ac.cn//post-images/Bh2gcn6S4.jpg" alt="laravel 学习之路 数据库操作 查询数据" class="img-responsive img-rounded lazy">
-            
-          </a>
-        </figure>
-        <span class="fh5co-meta">
-          
-            <div class="tag-container">
-              
-                <a href="https://www.vincent.ac.cn//tag/MrJ-unZWo" class="tag">MySQL, </a>
-              
-                <a href="https://www.vincent.ac.cn//tag/ULKwYDOFh" class="tag">php, </a>
-              
-                <a href="https://www.vincent.ac.cn//tag/r9lWhqCpR5" class="tag">Laravel, </a>
-              
-            </div>
-          
-        </span>
-        <h3 class="fh5co-article-title">
-          <a href="https://www.vincent.ac.cn//post/Bh2gcn6S4">laravel 学习之路 数据库操作 查询数据</a>
-        </h3>
-        <span class="fh5co-meta fh5co-date">2019-11-11</span>
-      </article>
-    
-      <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box article-box" style="height: 25em;">
-        <figure class="img-box">
-          <a href="https://www.vincent.ac.cn//post/xwp3_04xN">
-            
-              <img data-original="https://www.vincent.ac.cn//post-images/xwp3_04xN.jpeg" alt="laravel 学习之路 数据库操作 Migrations" class="img-responsive img-rounded lazy">
-            
-          </a>
-        </figure>
-        <span class="fh5co-meta">
-          
-            <div class="tag-container">
-              
-                <a href="https://www.vincent.ac.cn//tag/MrJ-unZWo" class="tag">MySQL, </a>
-              
-                <a href="https://www.vincent.ac.cn//tag/ULKwYDOFh" class="tag">php, </a>
-              
-                <a href="https://www.vincent.ac.cn//tag/r9lWhqCpR5" class="tag">Laravel, </a>
-              
-            </div>
-          
-        </span>
-        <h3 class="fh5co-article-title">
-          <a href="https://www.vincent.ac.cn//post/xwp3_04xN">laravel 学习之路 数据库操作 Migrations</a>
-        </h3>
-        <span class="fh5co-meta fh5co-date">2019-11-06</span>
-      </article>
-    
-    <div class="clearfix visible-lg-block visible-md-block visible-sm-block visible-xs-block"></div>
 
-  </div>
+        </article>
+    </div>
+</div>
 
-  <div class="pagination-box animate-box">
     
+
+    <!-- 返回顶部 -->
+    <div class="back-to-top">
     
-  </div>
+    <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
+</div>
+
+<div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
+    
 </div>
 
 
+    
 <footer id="fh5co-footer">
   <p>Powered by <a href="https://github.com/vincent66666/" target="_blank">清风醉`s blog</a></p>
 </footer>
 
 
-<!-- jQuery -->
+    <!-- jQuery -->
 <script src="https://www.vincent.ac.cn//media/scripts/_vendors/jquery.min.js"></script>
 <!-- img lazy load -->
 <script src="https://www.vincent.ac.cn//media/scripts/_vendors/jquery.lazyload.min.js"></script>
@@ -348,6 +371,29 @@ var _hmt = _hmt || [];
         });
     
 </script>
+
+
+
+    
+        <script src="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+        <script>
+
+            var gitalk = new Gitalk({
+                clientID: 'a3aaa68a85274f00a280',
+                clientSecret: 'f2e6c91d4e829c5e405890e0f4f8f49187c2616e',
+                repo: 'vincentGridea.github.io',
+                owner: 'vincent66666',
+                admin: ['vincent66666'],
+                id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+                distractionFreeMode: false  // Facebook-like distraction free mode
+            })
+
+            gitalk.render('gitalk-container')
+
+        </script>
+    
+
+    
 
 
 
