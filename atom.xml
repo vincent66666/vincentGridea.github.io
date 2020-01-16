@@ -2,81 +2,81 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.vincent.ac.cn/</id>
     <title>清风醉`s blog</title>
-    <updated>2019-12-26T03:31:00.862Z</updated>
+    <updated>2020-01-16T11:21:12.766Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.vincent.ac.cn/"/>
-    <link rel="self" href="https://www.vincent.ac.cn//atom.xml"/>
+    <link rel="self" href="https://www.vincent.ac.cn/atom.xml"/>
     <subtitle>不愤不启不悱不发</subtitle>
-    <logo>https://www.vincent.ac.cn//images/avatar.png</logo>
-    <icon>https://www.vincent.ac.cn//favicon.ico</icon>
-    <rights>All rights reserved 2019, 清风醉`s blog</rights>
+    <logo>https://www.vincent.ac.cn/images/avatar.png</logo>
+    <icon>https://www.vincent.ac.cn/favicon.ico</icon>
+    <rights>All rights reserved 2020, 清风醉`s blog</rights>
     <entry>
         <title type="html"><![CDATA[Mac小技巧 增强快速预览功能]]></title>
-        <id>https://www.vincent.ac.cn//post/MRSx8I4Yg</id>
-        <link href="https://www.vincent.ac.cn//post/MRSx8I4Yg">
+        <id>https://www.vincent.ac.cn/post/MRSx8I4Yg</id>
+        <link href="https://www.vincent.ac.cn/post/MRSx8I4Yg">
         </link>
         <updated>2019-12-26T03:22:12.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[laravel 模型Eloquent ORM 添加编辑删除]]></title>
-        <id>https://www.vincent.ac.cn//post/26UdNhbpe</id>
-        <link href="https://www.vincent.ac.cn//post/26UdNhbpe">
+        <id>https://www.vincent.ac.cn/post/26UdNhbpe</id>
+        <link href="https://www.vincent.ac.cn/post/26UdNhbpe">
         </link>
         <updated>2019-11-18T09:40:54.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[laravel 模型Eloquent ORM 查询]]></title>
-        <id>https://www.vincent.ac.cn//post/-JIl7kxRA</id>
-        <link href="https://www.vincent.ac.cn//post/-JIl7kxRA">
+        <id>https://www.vincent.ac.cn/post/-JIl7kxRA</id>
+        <link href="https://www.vincent.ac.cn/post/-JIl7kxRA">
         </link>
         <updated>2019-11-18T07:07:52.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[在浏览器输入 URL 回车之后发生了什么（超详细版）]]></title>
-        <id>https://www.vincent.ac.cn//post/jtBl6SuXF</id>
-        <link href="https://www.vincent.ac.cn//post/jtBl6SuXF">
+        <id>https://www.vincent.ac.cn/post/jtBl6SuXF</id>
+        <link href="https://www.vincent.ac.cn/post/jtBl6SuXF">
         </link>
         <updated>2019-11-14T07:54:09.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[网络上收集的有关 Redis 方面的面试题 ]]></title>
-        <id>https://www.vincent.ac.cn//post/eQcNjr_UO</id>
-        <link href="https://www.vincent.ac.cn//post/eQcNjr_UO">
+        <id>https://www.vincent.ac.cn/post/eQcNjr_UO</id>
+        <link href="https://www.vincent.ac.cn/post/eQcNjr_UO">
         </link>
         <updated>2019-11-14T06:53:37.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[什么是一致性哈希算法？]]></title>
-        <id>https://www.vincent.ac.cn//post/QUyR68yNI</id>
-        <link href="https://www.vincent.ac.cn//post/QUyR68yNI">
+        <id>https://www.vincent.ac.cn/post/QUyR68yNI</id>
+        <link href="https://www.vincent.ac.cn/post/QUyR68yNI">
         </link>
         <updated>2019-11-14T03:12:16.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[swoole入门 server 跟 client]]></title>
-        <id>https://www.vincent.ac.cn//post/qhuBcqwbw</id>
-        <link href="https://www.vincent.ac.cn//post/qhuBcqwbw">
+        <id>https://www.vincent.ac.cn/post/qhuBcqwbw</id>
+        <link href="https://www.vincent.ac.cn/post/qhuBcqwbw">
         </link>
         <updated>2019-11-13T14:00:41.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[swoole入门 初识]]></title>
-        <id>https://www.vincent.ac.cn//post/ZSx6EOX69</id>
-        <link href="https://www.vincent.ac.cn//post/ZSx6EOX69">
+        <id>https://www.vincent.ac.cn/post/ZSx6EOX69</id>
+        <link href="https://www.vincent.ac.cn/post/ZSx6EOX69">
         </link>
         <updated>2019-11-13T13:23:20.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[laravel 学习之路  Collections]]></title>
-        <id>https://www.vincent.ac.cn//post/JIjj0QEOH</id>
-        <link href="https://www.vincent.ac.cn//post/JIjj0QEOH">
+        <id>https://www.vincent.ac.cn/post/JIjj0QEOH</id>
+        <link href="https://www.vincent.ac.cn/post/JIjj0QEOH">
         </link>
         <updated>2019-11-13T12:27:56.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux 安装 minDoc 接口文档在线管理 ]]></title>
-        <id>https://www.vincent.ac.cn//post/UNZ7vbISR</id>
-        <link href="https://www.vincent.ac.cn//post/UNZ7vbISR">
+        <id>https://www.vincent.ac.cn/post/UNZ7vbISR</id>
+        <link href="https://www.vincent.ac.cn/post/UNZ7vbISR">
         </link>
         <updated>2019-11-13T03:22:09.000Z</updated>
     </entry>
