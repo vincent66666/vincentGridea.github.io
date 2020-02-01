@@ -103,7 +103,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1580527836554" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1580531133047" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -122,7 +122,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1580527836554" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1580531133047" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -202,8 +202,8 @@
                                             清风醉`s blog
                                         </a>
                                         <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-02-01</a></span>
-                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">1.7 &#x5206;&#x949F;</a></span>
-                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">436</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">3.2 &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">847</a></span>
                                         
                                             <span class="post-category">&#x5206;&#x7C7B;:
                                 
@@ -237,7 +237,7 @@
 </li>
 <li>
 <p>输入下列内容</p>
-<pre><code>export GOROOT=/usr/local/Cellar/go/1.13.1/libexec
+<pre><code>export GOROOT=/usr/local/Cellar/go/1.13.1/libexecGOROOT=/usr/local/Cellar/go/1.13.1/libexec
 export GOPATH=/Users/vincent/GoProject
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN:$GOROOT/bin
@@ -267,8 +267,26 @@ export PATH=$PATH:$GOBIN:$GOROOT/bin
 <p>注意：千万不要把GOPATH设置成go的安装路径。</p>
 </blockquote>
 <h2 id="go语言项目结构">GO语言项目结构</h2>
-<p>在 GOPATH/src 目录下创建一个文件夹来存放自己的项目代码<br>
-<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/tencent/20200201110244.png" alt="" loading="lazy"></p>
+<p>在进行<code>Go</code>语言开发的时候，我们的代码总是会保存在<code>$GOPATH/src</code>目录下。在工程经过<code>go build</code>、<code>go install</code>或<code>go get</code>等指令后，会将下载的第三方包源代码文件放在<code>$GOPATH/src</code>目录下， 产生的二进制可执行文件放在 <code>$GOPATH/bin</code>目录下，生成的中间缓存文件会被保存在 <code>$GOPATH/pkg</code> 下。</p>
+<p>如果我们使用版本管理工具（<code>Version Control System</code>，<code>VCS</code>。常用如<code>Git</code>）来管理我们的项目代码时，我们只需要添加<code>$GOPATH/src</code>目录的源代码即可。<code>bin</code> 和 <code>pkg</code> 目录的内容无需版本控制。</p>
+<figure data-type="image" tabindex="2"><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/tencent/20200201110244.png" alt="" loading="lazy"></figure>
+<h3 id="适合个人开发者">适合个人开发者</h3>
+<p>我们知道源代码都是存放在<code>GOPATH</code>的<code>src</code>目录下，那我们可以按照下图来组织我们的代码。<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/tencent/20200201115358.png" alt="" loading="lazy"></p>
+<h3 id="目前流行的项目结构">目前流行的项目结构</h3>
+<p><code>Go</code>语言中也是通过包来组织代码文件，我们可以引用别人的包也可以发布自己的包，但是为了防止不同包的项目名冲突，我们通常使用顶级域名来作为包名的前缀，这样就不担心项目名冲突的问题了。</p>
+<p>因为不是每个个人开发者都拥有自己的顶级域名，所以目前流行的方式是使用个人的github用户名来区分不同的包。<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/tencent/20200201115909.png" alt="" loading="lazy"></p>
+<p>举个例子：A和B都有一个名叫<code>test</code>的项目，那么这两个包的路径就会是：</p>
+<pre><code>import &quot;github.com/A/test&quot;
+</code></pre>
+<p>和</p>
+<pre><code>import &quot;github.com/B/test&quot;
+</code></pre>
+<p>以后我们从github上下载别人包的时候，如：</p>
+<pre><code>go get github.com/A/test
+</code></pre>
+<p>那么，这个包会下载到我们本地GOPATH目录下的<code>src/github.com/A/test</code></p>
 <h2 id="使用goland-来编写-go">使用GoLand 来编写 Go</h2>
 <p>其实也不用配置啥，新建项目时你需要填写 <code>Location</code> 和 <code>GOPATH</code> 就OK了<br>
 <img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/tencent/20200201111727.png" alt="" loading="lazy"></p>
@@ -297,7 +315,12 @@ export PATH=$PATH:$GOBIN:$GOROOT/bin
 </ul>
 </li>
 <li><a href="#%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E">配置说明</a></li>
-<li><a href="#go%E8%AF%AD%E8%A8%80%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">GO语言项目结构</a></li>
+<li><a href="#go%E8%AF%AD%E8%A8%80%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">GO语言项目结构</a>
+<ul>
+<li><a href="#%E9%80%82%E5%90%88%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E8%80%85">适合个人开发者</a></li>
+<li><a href="#%E7%9B%AE%E5%89%8D%E6%B5%81%E8%A1%8C%E7%9A%84%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">目前流行的项目结构</a></li>
+</ul>
+</li>
 <li><a href="#%E4%BD%BF%E7%94%A8goland-%E6%9D%A5%E7%BC%96%E5%86%99-go">使用GoLand 来编写 Go</a></li>
 </ul>
 </li>
