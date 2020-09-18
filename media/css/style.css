@@ -513,8 +513,6 @@ header label {
 }
 
 .intro .avatar img {
-    width: 128px;
-    height: auto;
     display: inline-block;
     -webkit-border-radius: 100%;
     border-radius: 100%;
@@ -748,7 +746,7 @@ header label {
 }
 
 .post-content h3::before {
-    content: "|";
+    content: "";
     margin-right: 5px;
     color: #2d96bd;
 }
@@ -758,7 +756,7 @@ header label {
 }
 
 .post-content h4::before {
-    content: "*";
+    content: "";
     margin-right: 5px;
     color: #2d96bd;
 }
