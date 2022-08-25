@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                laravel 学习之路  路由视图初探
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-11-01</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">4.5
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1224</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                                <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">Laravel</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://www.vincent.ac.cn//post-images/laravel2.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <p>我大致了解了 laravel 下，在开始一个 Http 程序需要先定义路由。之前的例子中，我们的业务逻辑都是在路由里实现，这对于简单的网站或 web 应用没什么问题，当我们需要扩大规模，程序变得复杂，分层的业务逻辑更为适合。这时候，我们就应该使用控制器。<br>
+了解 MVC 的都对控制器的作用有所了解，控制器是实现主要业务逻辑的。在其他框架，控制器一般就是一个类，laravel 也不例外，laravel 的控制其结构并没有什么特殊。</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\User;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * @return string
+     */
+    public function index($id)
+    {
+        return 'hello world!';
+    }
+}
+</code></pre>
+<h2 id="route路由是什么">Route（路由）是什么？</h2>
+<p>路由就是网络请求的 url 与 laravel 应用层的逻辑处理地址的对应关系。<br>
+通俗的说：路由就是把url的请求优雅的对应到你想要执行的操作方法，路由的作用是简化URL访问地址，并根据定义的路由类型做出正确的解析。</p>
+<p>laravel 中的路由 跟路由器很像好比你家里只有一根网线网线上接着 wifi 路由器，多部手机和电脑就可以通过 wifi 上网了，路由器起到了一个分发的作用，大致是这样实现的<br>
+<img src="https://www.vincent.ac.cn//post-images/1572597112430.jpg" alt="" loading="lazy"></p>
+<p>我们访问项目的时候最先请求到的是<strong>index.php</strong>这个入口文件这个<br>
+<strong>public/index.php</strong> 这个时候我们把<strong>public/index.php</strong> 比作网线，<strong>route/web.php</strong> 类比成路由器设备，<strong>controller</strong>控制器比作多部手机设备变很好理解</p>
+<h2 id="配置路由">配置路由</h2>
+<p><strong>laravel</strong> 的每一个路由是需要手动定义的，<strong>Laravel</strong> 的控制器非常的干净，与其他类的耦合度相当的低。得益于 <strong>laravel</strong> 的 <strong>IoC</strong> 容器，我们很容易实现相当丰富的功能，且不会产生紧密耦合。那么如何才能访问到这个控制器里的逻辑呢？</p>
+<blockquote>
+<ol>
+<li>我们所知道的许多框架，通常有着既定的路由规则，我个人比较熟悉 TP，TP 的默认路由规则是 <strong>http://xxxx/Module/Controller/Action</strong>，假如我们访问<strong>http://xxxx/Content/Home/index</strong>，默认会将请求派发至 <strong>Content</strong> 模块下的<strong>HomeController</strong>类的 <strong>index</strong> 方法。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>ThinkPHP 这种默认路由规则使得框架开箱即用，十分便捷。但是这样并不灵活，假如我想通过访问 http://xxxx/user/1 就访问到 UserController 控制器下的 show 方法并包含一个值为 1 的参数，ThinkPHP 你需要修改配置（并且那个配置非常不优雅），亦或者我想要通过向 http://xxxx/topic POST 一个数据以添加一篇文章，处理这个过程的实际是 Admin\TopicController 类的 create 方法，且该方法只接受 POST 请求，这时候似乎大多数框架就要通过写更多的代码实现了。</li>
+<li>说到这里，似乎大家是不是想起了 laravel 那种路由定义方式的好处了？虽然 laravel 没有强加给你既定的路由规则，但你拥有了更多定制的权利，并且 laravel 定义路由的方式非常优雅，带给你的体验非常丰富。另一个好消息是，定义控制器路由和普通路由有所差别，这个差别是在便利性上的，你将很快感受到这种便利带给你的好处！<br>
+打开 <strong>routes/web.php</strong>  我们直接看代码<br>
+<img src="https://www.vincent.ac.cn//post-images/1572597133893.jpg" alt="" loading="lazy"></li>
+</ol>
+</blockquote>
+<p>其中 <em>Route</em>  是一个静态类 ，<em>get</em>是<em>Route</em>类的静态方法，<em>get</em>方法传递了2个参数，第一个是 / 、第二个是一个闭包并且在闭包函数中return返回的东西就是我们请求到的内容，从中可以看出</p>
+<ol>
+<li>
+<p><em>Route::</em> 后面可以跟一个请求方法代码中就是 <em>get</em> 请求，那么很容易就联想到如果写成 <em>post</em> 哪就表示是接受一个post请求</p>
+</li>
+<li>
+<p>斜杠 <em>/</em> 表示首页 在 url 中就是域名后面的那个斜杠 <strong>study.laraveltest.com/</strong> 只不过后面如果没有其他内容的话一般是被省略了于是我们就很容易的模仿一下</p>
+<pre><code>Route::get('test1', function () {
+    return view('welcome');
+});
+</code></pre>
+<p>这样的写的话那 url 就应该是 http://study.laraveltest.com/article</p>
+</li>
+<li>
+<p><em>view</em> 函数可以直接定位到 <em>resources/views</em> 目录，它可以接受一个参数这个参数就是 <em>resources/views</em> 目录下的文件名去掉 <em>blade.php</em> 后缀，这样我们创建一个<em>hello.blade.php</em>文件 里面写个hello world吧，<br>
+<img src="https://www.vincent.ac.cn//post-images/1572597143938.jpg" alt="" loading="lazy"></p>
+<p>在注册下路由</p>
+<pre><code>Route::get('hello', function () {
+    return view('hello');
+});
+</code></pre>
+<p>我们访问 <em>http://study.laraveltest.com/hello</em> 看到这样的内容就表示成功了；<br>
+<img src="https://www.vincent.ac.cn//post-images/1572597152425.jpg" alt="" loading="lazy"><br>
+如果访问 <em>http://study.laraveltest.com/hello</em> 报错可以试一下<em>http://study.laraveltest.com/index.php/hello</em> 加了 index.php 就正常了的话说明是没有成功开启 rewrite ；</p>
+</li>
+</ol>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/laravel2/">https://www.vincent.ac.cn/post/laravel2/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/laravel2/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/laravel2/&sharesource=qzone&title=laravel 学习之路  路由视图初探&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/laravel2/&sharesource=weibo&title=laravel 学习之路  路由视图初探 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">#
+                    Laravel
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he/">
+                                                                                            《数据结构与算法》Day.1 最大子列和
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/laravel1/">
+                                                                                                    laravel 学习之路  安装 
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

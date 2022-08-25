@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Mac 安装 Jenkins
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-12-16</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">2.8
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">526</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/H_d_fXKMN/">Jenkins</a>
+                                
+                                <a href="https://www.vincent.ac.cn/Gq3AguIDW/">Mac</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_16/Wclryo.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <h2 id="安装jenkins">安装<code>Jenkins</code></h2>
+<ol>
+<li>这里使用 <code>brew</code> 命令安装</li>
+</ol>
+<pre><code>brew install jenkins
+
+Updating Homebrew...
+==&gt; Processing wxmac formula rename to wxwidgets
+==&gt; Unlinking wxmac
+==&gt; Moving wxmac versions to /usr/local/Cellar/wxwidgets
+==&gt; Relinking wxwidgets
+Warning: wxwidgets is outdated!
+To avoid broken installations, as soon as possible please run:
+  brew upgrade
+Or, if you're OK with a less reliable fix:
+  brew upgrade wxwidgets
+
+==&gt; Downloading https://mirrors.aliyun.com/homebrew/homebrew-bottles/openjdk%401
+######################################################################## 100.0%
+==&gt; Downloading https://mirrors.aliyun.com/homebrew/homebrew-bottles/jenkins-2.3
+curl: (22) The requested URL returned error: 404
+
+Warning: Bottle missing, falling back to the default domain...
+==&gt; Downloading https://ghcr.io/v2/homebrew/core/jenkins/manifests/2.325
+######################################################################## 100.0%
+==&gt; Downloading https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:21be7ef923
+==&gt; Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==&gt; Installing dependencies for jenkins: openjdk@11
+==&gt; Installing jenkins dependency: openjdk@11
+==&gt; Pouring openjdk@11-11.0.12.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/openjdk@11/11.0.12: 679 files, 297.9MB
+==&gt; Installing jenkins
+==&gt; Pouring jenkins--2.325.all.bottle.tar.gz
+==&gt; Caveats
+Note: When using launchctl the port will be 8080.
+
+To restart jenkins after an upgrade:
+  brew services restart jenkins
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/openjdk@11/bin/java -Dmail.smtp.starttls.enable=true -jar /usr/local/opt/jenkins/libexec/jenkins.war --httpListenAddress=127.0.0.1 --httpPort=8080
+==&gt; Summary
+🍺  /usr/local/Cellar/jenkins/2.325: 8 files, 73.6MB
+==&gt; Caveats
+==&gt; jenkins
+Note: When using launchctl the port will be 8080.
+
+To restart jenkins after an upgrade:
+  brew services restart jenkins
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/openjdk@11/bin/java -Dmail.smtp.starttls.enable=true -jar /usr/local/opt/jenkins/libexec/jenkins.war --httpListenAddress=127.0.0.1 --httpPort=8080
+</code></pre>
+<ol start="2">
+<li>按照提示 执行命令 <code>brew services restart jenkins</code> 来启动 <code>Jenkins</code></li>
+</ol>
+<pre><code>brew services restart jenkins
+==&gt; Successfully started `jenkins` (label: homebrew.mxcl.jenkins)
+</code></pre>
+<p>相关启动、停止、重启命令</p>
+<pre><code>brew services restart jenkins // 重启
+brew services start jenkins // 启动
+brew services stop jenkins // 停止
+</code></pre>
+<h2 id="初始化">初始化</h2>
+<ol>
+<li>
+<p>在浏览器打开 <code>localhost:8080</code> 进入解锁页面<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_16/BnHVhN.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>密钥这里用命令行的方式获取</p>
+</li>
+</ol>
+<pre><code>cat /Users/vincent/.jenkins/secrets/initialAdminPassword
+fxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+</code></pre>
+<ol start="3">
+<li>
+<p>填写密钥继续 进入插件安装界面<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_16/SqQnJj.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>选择安装推荐的插件，等待插件安装完成<br>
+如果失败了 就 重试一下，确定网络连接正常就能继续自动安装插件了。<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_16/MaUDvL.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>进入管理员账户设定页面<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_16/ZRMMei.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>设置完成 点击 【保存并完成】 进入 实例配置页面 到此初始化 <code>jenkins</code> 成功<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_16/24ZNgf.png" alt="" loading="lazy"><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_16/hkP417.png" alt="" loading="lazy"></p>
+</li>
+</ol>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/6DJtUGYm5/">https://www.vincent.ac.cn/post/6DJtUGYm5/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/6DJtUGYm5/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/6DJtUGYm5/&sharesource=qzone&title=Mac 安装 Jenkins&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/6DJtUGYm5/&sharesource=weibo&title=Mac 安装 Jenkins + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/H_d_fXKMN/">#
+                    Jenkins
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/Gq3AguIDW/">#
+                    Mac
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/rAOhONMqv/">
+                                                                                            安利 Slidev - 用Markdown的方式来做PPT
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/wlSst96pj/">
+                                                                                                    PHP组合模式构建决策树排它网关模式 (三) 
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

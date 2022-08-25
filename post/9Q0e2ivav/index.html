@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                初学 Spring Boot 使用hibernate validation 对参数校验
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2022-01-04</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">11.5
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">2449</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/0nRM6rsJ7/">Spring Boot</a>
+                                
+                                <a href="https://www.vincent.ac.cn/F9L3Hp040r/">Java</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_01_04/QWsvgq.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <blockquote>
+<p><code>Hibernate Validator</code>是<code>Java Validation API(JSR 303)标准</code>的一个具体实现，用于对参数进行合法性校验。校验数据在任何应用中都是一个很常见的任务，所以<code>JCP</code>组织定义了一个标准来规范化这个任务操作，那就是<code>Java Validation API</code>。</p>
+</blockquote>
+<p>在不使用<code>Java Validation API</code>之前，做校验时有人是这样写的：</p>
+<pre><code class="language-java">@Controller
+@RequestMapping(&quot;/order&quot;)
+public class OrderController {
+    @ResponseBody
+	@RequestMapping(value = &quot;/getOrderDetails&quot;, method = RequestMethod.POST)
+	public OrderDetailsVo getOrderDetails(@RequestBody JSONObject json) {
+		String token = json.optString(&quot;token&quot;);
+		Assert.hasLength(token,1101,&quot;非法请求参数&quot;); 
+                String orderCode = json.optString(&quot;orderCode&quot;);
+		Assert.hasLength(orderCode,1101,&quot;非法请求参数&quot;);
+                // .......
+        }
+}
+</code></pre>
+<p>这种写法我认为有三个弊端：</p>
+<ul>
+<li>用JSONObject来接收入参，取值非常麻烦，很容易就弄错字段名</li>
+<li>如果入参非常复杂，用JSONObject的话，下一个接手的人就很难搞错清整个方法入参的JSON结构，可维护性极差</li>
+<li>方法里校验逻辑啰嗦重复</li>
+</ul>
+<p>下面我们来使用<code>Java Validation API</code> 实现简单的验证 在默认情况下，<code>Spring Boot</code>会引入<code>Hibernate Validator</code>机制来支持<code>JSR-303</code>验证规范。</p>
+<h2 id="特性">特性</h2>
+<p><code>Spring Boot</code>的<code>validator</code>校验框架有3个特性：</p>
+<ul>
+<li><code>JSR-303</code>特性： <code>JSR-303</code>是一项标准,只提供规范不提供实现，规定一些校验规范即校验注解，如<code>@Null</code>，<code>@NotNull</code>，<code>@Pattern</code>，位于<code>javax.validation.constraints</code>包下。</li>
+<li><code>hibernate validation</code>特性：<code>hibernate validation</code>是对<code>JSR-303</code>规范的实现，并增加了一些其他校验注解，如<code>@Email，@Length，@Range</code>等等。</li>
+<li><code>Spring validation</code>：<code>spring validation</code>对<code>hibernate validation</code>进行了二次封装，在<code>springmvc</code>模块中添加了自动校验，并将校验信息封装进了特定的类中。</li>
+</ul>
+<h2 id="引入依赖">引入依赖</h2>
+<p>只需要<code>spring-boot-starter-validation</code>和<code>web</code>即可</p>
+<pre><code class="language-xml">        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- validation  --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-validation&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<h2 id="创建一个注册用的dto对象">创建一个注册用的DTO对象</h2>
+<pre><code class="language-java">package com.example.blog.request;
+
+import lombok.Data;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+
+/**
+ * @author vincent
+ */
+@Data
+public class UserCreateRequest {
+    @NotNull(message = &quot;登录用户名不能为空&quot;)
+    @Length(max = 10, message = &quot;登录用户名最长为10位&quot;)
+    private String username;
+
+    @NotNull(message = &quot;登录密码不能为空&quot;)
+    @Length(min=6, max = 16,message=&quot;密码长度不能小于6位&quot;)
+    private String password;
+
+    @NotNull(message = &quot;确认登录密码不能为空&quot;)
+    @Length(min=6, max = 16,message=&quot;密码长度不能小于6位&quot;)
+    private String password2;
+
+    @Email(message=&quot;请输入正确的邮箱&quot;)
+    private String email;
+}
+</code></pre>
+<h2 id="统一异常处理">统一异常处理</h2>
+<p>一般项目来说抛出异常都会有约定好的格式返回错误码和错误信息，如果不处理就无法按照约定格式返回。这里我们可以通过声明全局异常处理类来拦截异常并将异常处理成前端能操作的数据格式。（这里只需要关注<code>MethodArgumentNotValidException</code>异常）<br>
+当传入参数不满足校验规则时，程序就会抛出<code>MethodArgumentNotValidException异常</code>。我们通过之前封装的<code>Spring Boot</code>统一异常处理，将该异常封装成规范响应格式。</p>
+<pre><code class="language-java">package com.example.blog.exception.handler;
+
+import com.example.common.Result;
+import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+/**
+ * @author vincent
+ */
+@RestControllerAdvice
+public class GlobalExceptionAdvice {
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseBody
+    public Result&lt;Object&gt; handleBeanValidation(MethodArgumentNotValidException e) {
+        ObjectError errors = e.getBindingResult().getAllErrors().get(0);
+        return Result.fail(errors.getDefaultMessage());
+    }
+}
+</code></pre>
+<h2 id="编写一个简单接口">编写一个简单接口</h2>
+<pre><code class="language-java">package com.example.blog.controller;
+
+import com.example.blog.request.UserCreateRequest;
+import com.example.common.Result;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author vincent
+ */
+@RestController
+@RequestMapping(&quot;/blog/auth&quot;)
+public class AuthController {
+    
+    @PostMapping(&quot;/create&quot;)
+    public Result&lt;String&gt; create(@Validated @RequestBody UserCreateRequest userCreateRequest) {
+        System.out.println(userCreateRequest.getPassword());
+        System.out.println(userCreateRequest.getUsername());
+
+        return Result.success(&quot;14124&quot;);
+    }
+
+}
+</code></pre>
+<p>运行测试一下</p>
+<pre><code class="language-http">POST http://localhost:8000/blog/auth/create
+Content-Type: application/json
+
+{
+  &quot;password&quot;: &quot;&quot;,
+  &quot;username&quot;: &quot;content&quot;
+}
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_01_04/BckYgU.png" alt="" loading="lazy"></figure>
+<h2 id="validation常用注解">Validation常用注解</h2>
+<ul>
+<li>@Null 限制只能为null</li>
+<li>@NotNull 限制必须不为null</li>
+<li>@AssertFalse 限制必须为false</li>
+<li>@AssertTrue 限制必须为true</li>
+<li>@DecimalMax(value) 限制必须为一个不大于指定值的数字</li>
+<li>@DecimalMin(value) 限制必须为一个不小于指定值的数字</li>
+<li>@Digits(integer,fraction) 限制必须为一个小数，且整数部分的位数不能超过integer，小数部分的位数不能超过fraction</li>
+<li>@Future 限制必须是一个将来的日期</li>
+<li>@Max(value) 限制必须为一个不大于指定值的数字</li>
+<li>@Min(value) 限制必须为一个不小于指定值的数字</li>
+<li>@Past 限制必须是一个过去的日期</li>
+<li>@Pattern(value) 限制必须符合指定的正则表达式</li>
+<li>@Size(max,min) 限制字符长度必须在min到max之间</li>
+<li>@Past 验证注解的元素值（日期类型）比当前时间早</li>
+<li>@NotEmpty 验证注解的元素值不为null且不为空（字符串长度不为0、集合大小不为0）</li>
+<li>@NotBlank 验证注解的元素值不为空（不为null、去除首位空格后长度为0），不同于@NotEmpty，@NotBlank只应用于字符串且在比较时会去除字符串的空格</li>
+<li>@Email 验证注解的元素值是Email，也可以通过正则表达式和flag指定自定义的email格式</li>
+</ul>
+<h2 id="自定义validator注解">自定义validator注解</h2>
+<p>因为validator框架支持的注解有限，不可能方方面面都支持，故需要我们自定义注解。</p>
+<ul>
+<li>比如检查用户注册时使用的密码跟确认密码是否一致。</li>
+<li>比如手机号验证。<br>
+......</li>
+</ul>
+<p>哪我们就先写一个手机号的<code>validator</code>注解。</p>
+<h3 id="创建一个的手机校验注解类">创建一个的手机校验注解类</h3>
+<pre><code class="language-java">package com.example.blog.request.custom;
+
+import com.example.blog.request.custom.validator.PhoneValidator;
+
+import javax.validation.Constraint;
+import javax.validation.Payload;
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import static java.lang.annotation.ElementType.*;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+
+/**
+ * @author vincent
+ */
+@Documented
+// 指定注解的实现类
+@Constraint(validatedBy = PhoneValidator.class)
+@Target( { METHOD, FIELD })
+@Retention(RUNTIME)
+public @interface Phone {
+    String message() default &quot;请输入正确的手机号码&quot;;
+
+    Class&lt;?&gt;[] groups() default { };
+
+    Class&lt;? extends Payload&gt;[] payload() default { };
+
+    @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER })
+    @Retention(RUNTIME)
+    @Documented
+    @interface List {
+        Phone[] value();
+    }
+}
+</code></pre>
+<h3 id="手机号码校验注解实现类">手机号码校验注解实现类</h3>
+<pre><code class="language-java">package com.example.blog.request.custom.validator;
+
+import com.example.blog.request.custom.Phone;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * @author vincent
+ */
+public class PhoneValidator implements ConstraintValidator&lt;Phone, String&gt; {
+    private static final Pattern PHONE_PATTERN = Pattern.compile(
+            &quot;^((13[0-9])|(15[^4])|(18[0,2,3,5-9])|(17[0-8])|(147))\\d{8}$&quot;
+    );
+
+    @Override
+    public void initialize(Phone constraintAnnotation) {
+
+    }
+
+    /**
+     * 校验的实现逻辑
+     */
+    @Override
+    public boolean isValid(String value, ConstraintValidatorContext context) {
+        if (value == null || value.length() == 0) {
+            return true;
+        }
+        Matcher m = PHONE_PATTERN.matcher(value);
+        return m.matches();
+    }
+}
+</code></pre>
+<h3 id="注册用的dto对象加上手机号码校验注解">注册用的DTO对象，加上手机号码校验注解</h3>
+<pre><code class="language-java">package com.example.blog.request;
+
+import com.example.blog.request.custom.Phone;
+// ......
+
+/**
+ * @author vincent
+ */
+@Data
+public class UserCreateRequest {
+    // ......
+    @Phone
+    private String phone;
+}
+</code></pre>
+<p>测试一下<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_01_04/y5e7PC.png" alt="" loading="lazy"></p>
+<h2 id="类层次校验注解">类层次校验注解</h2>
+<p>回到我们的主题上，我们最终需要编写一个验证注解，实现功能：检查用户注册时使用的密码跟确认密码是否一致。在前面，我们使用和编写的都是 <code>Filed</code> 层次的验证注解，然而却很难实现跨字段验证。一个最高效的解决方法是：实现一个 <code>Class</code> 层次的注解，并且依靠反射获得对应的两个字段的值。依照这个思路，我们编写的代码如下：</p>
+<h3 id="创建注解类-fieldsame">创建注解类 <code>@FieldSame</code></h3>
+<pre><code class="language-java">package com.example.blog.request.custom;
+
+import com.example.blog.request.custom.validator.FieldSameValidator;
+
+import javax.validation.Constraint;
+import javax.validation.Payload;
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+/**
+ * @author vincent
+ */
+@Target({TYPE, ANNOTATION_TYPE})
+@Retention(RUNTIME)
+@Constraint(validatedBy = FieldSameValidator.class)
+@Documented
+public @interface FieldSame {
+
+    String message() default &quot;{constraints.field same.message}&quot;;
+
+    Class&lt;?&gt;[] groups() default {};
+
+    Class&lt;? extends Payload&gt;[] payload() default {};
+
+    /**
+     * 需要验证的第一字段的字段名&lt;code&gt;String password&lt;/code&gt;  中的 &lt;code&gt;password&lt;/code&gt;
+     *
+     * @return 第一字段的字段名
+     */
+    String first();
+
+    /**
+     * 需要验证的第二字段的字段名&lt;code&gt;String confirmPassword&lt;/code&gt;  中的 &lt;code&gt;confirmPassword&lt;/code&gt;
+     *
+     * @return 第一字段的字段名
+     */
+    String second();
+
+
+    @Target({TYPE, ANNOTATION_TYPE})
+    @Retention(RUNTIME)
+    @Documented
+    @interface List {
+        FieldSame[] value();
+    }
+}
+</code></pre>
+<h3 id="验证器-fieldsamevalidator">验证器 FieldSameValidator</h3>
+<pre><code class="language-java">package com.example.blog.request.custom.validator;
+
+import com.example.blog.request.custom.FieldSame;
+import org.springframework.beans.BeanWrapperImpl;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+/**
+ * @author vincent
+ */
+public class FieldSameValidator implements ConstraintValidator&lt;FieldSame, Object&gt; {
+    private String firstFieldName;
+    private String secondFieldName;
+
+    @Override
+    public void initialize(final FieldSame constraintAnnotation) {
+        firstFieldName = constraintAnnotation.first();
+        secondFieldName = constraintAnnotation.second();
+    }
+
+    @Override
+    public boolean isValid(final Object src, final ConstraintValidatorContext context) {
+        BeanWrapperImpl wrapper = new BeanWrapperImpl(src);
+        Object firstObj = wrapper.getPropertyValue(firstFieldName);
+        System.out.println(&quot;firstObj = &quot; + firstObj);
+        Object secondObj = wrapper.getPropertyValue(secondFieldName);
+        System.out.println(&quot;secondObj = &quot; + secondObj);
+
+        return firstObj != null &amp;&amp; firstObj.equals(secondObj);
+    }
+}
+</code></pre>
+<h3 id="修改dto">修改DTO</h3>
+<pre><code class="language-java">package com.example.blog.request;
+
+import com.example.blog.request.custom.FieldSame;
+import com.example.blog.request.custom.Phone;
+import lombok.Data;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+
+/**
+ * @author vincent
+ */
+@Data
+@FieldSame(first = &quot;password&quot;, second = &quot;password2&quot;, message = &quot;两次密码输入的不一致&quot;)
+public class UserCreateRequest {
+
+
+    @NotNull(message = &quot;登录用户名不能为空&quot;)
+    @Length(max = 10, message = &quot;登录用户名最长为10位&quot;)
+    private String username;
+
+    @NotNull(message = &quot;登录密码不能为空&quot;)
+    @Length(min = 6, max = 16, message = &quot;密码长度不能小于6位&quot;)
+    private String password;
+
+    @NotNull(message = &quot;确认登录密码不能为空&quot;)
+    @Length(min = 6, max = 16, message = &quot;密码长度不能小于6位&quot;)
+    private String password2;
+
+    @Email(message = &quot;请输入正确的邮箱&quot;)
+    private String email;
+
+    @Phone
+    private String phone;
+}
+</code></pre>
+<h3 id="注意我们的globalexceptionadvice异常处理需要进行亿点点改进来捕获fielderror错误">注意我们的<code>GlobalExceptionAdvice</code>异常处理需要进行🤏亿点点改进来捕获<code>FieldError</code>错误</h3>
+<pre><code class="language-java">package com.example.blog.exception.handler;
+
+import com.example.common.Result;
+import org.springframework.validation.FieldError;
+import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+/**
+ * @author vincent
+ */
+@RestControllerAdvice
+public class GlobalExceptionAdvice {
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseBody
+    public Result&lt;Object&gt; handleBeanValidation(MethodArgumentNotValidException e) {
+        ObjectError errors = e.getBindingResult().getAllErrors().get(0);
+        if (errors instanceof FieldError) {
+            //Field 上的 FieldError 类型错误
+            FieldError fieldError = ((FieldError) errors);
+            return Result.fail(fieldError.getDefaultMessage());
+        }
+        return Result.fail(errors.getDefaultMessage());
+    }
+}
+</code></pre>
+<p>让我们来测试一下<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_01_04/BcIEnK.png" alt="" loading="lazy"></p>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/9Q0e2ivav/">https://www.vincent.ac.cn/post/9Q0e2ivav/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/9Q0e2ivav/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/9Q0e2ivav/&sharesource=qzone&title=初学 Spring Boot 使用hibernate validation 对参数校验&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/9Q0e2ivav/&sharesource=weibo&title=初学 Spring Boot 使用hibernate validation 对参数校验 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/0nRM6rsJ7/">#
+                    Spring Boot
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/F9L3Hp040r/">#
+                    Java
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/ZlxZ8D1K-/">
+                                                                                            初学 Spring Boot 注解类 @FieldSame 优化
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/O5fXCJqaC/">
+                                                                                                    IDEA 使用@Autowired 出现警告
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

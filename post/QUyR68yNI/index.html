@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                什么是一致性哈希算法？
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-11-14</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">9.1
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">2543</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/jGa2EjGaq/">面试</a>
+                                
+                                <a href="https://www.vincent.ac.cn/e-1kRyzIcM/">分布式</a>
+                                
+                                <a href="https://www.vincent.ac.cn/FBDXBvNJZT/">缓存</a>
+                                
+                                <a href="https://www.vincent.ac.cn/fRCCdSmYdr/">算法</a>
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://www.vincent.ac.cn//post-images/QUyR68yNI.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <h1 id="一致性哈希算法">一致性哈希算法</h1>
+<h2 id="什么是一致性哈希算法">什么是一致性哈希算法</h2>
+<p>一致性hash就是 计算每个分布式服务器落点的算法<br>
+假设，服务器都在一个线上或则环上，缓存请求落点顺时针寻找最近的服务器，这样的好处就是，如果一台服务器down了，只会影响一段缓存，其他的不受影响，加减服务器成本降到最低，如果是余数散列算法，只要down掉一台缓存失败率上升至少80%，所以memcache分布式，都是用一致性hash算法来计算服务器散列位置的，你用php的<code>memcached</code>扩展，add服务器，可以选择散列算法，默认是一致性hash，也可以选择余数。</p>
+<p>一致性hash的使用在PHP中有三种选择分别是原生的<code>memcache</code>扩展，<code>memcached</code>扩展，还有一个是网上比较流行的 <code>Flexihash</code>类。前两者都适用于<code>memcache</code> 但不适合<code>Redis</code></p>
+<p><a href="https://github.com/pda/flexihash"><code>Flexihash</code></a> 是一个小型PHP库，实现了一致的哈希，这在分布式缓存中最有用。</p>
+<h2 id="一致性哈希算法简介">一致性哈希算法简介</h2>
+<p>一致性哈希算法在1997年由麻省理工学院提出的一种分布式哈希（DHT）实现算法，设计目标是为了解决因特网中的热点(Hot spot)问题，初衷和CARP十分类似。一致性哈希修正了CARP使用的简 单哈希算法带来的问题，使得分布式哈希（DHT）可以在P2P环境中真正得到应用</p>
+<p>目前主要应用于分布式缓存当中，一致性哈希可以有效地解决分布式存储结构下动态增加和删除节点</p>
+<p>一致性hash算法提出了在动态变化的Cache环境中，判定哈希算法好坏的四个定义</p>
+<blockquote>
+<ol>
+<li>平衡性(Balance)：平衡性是指哈希的结果能够尽可能分布到所有的缓冲中去，这样可以使得所有的缓冲空间都得到利用。很多哈希算法都能够满足这一条件。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>单调性(Monotonicity)：单调性是指如果已经有一些内容通过哈希分派到了相应的缓冲中，又有新的缓冲加入到系统中。哈希的结果应能够保证原有已分配的内容可以被映射到原有的或者新的缓冲中去，而不会被映射到旧的缓冲集合中的其他缓冲区。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>分散性(Spread)：在分布式环境中，终端有可能看不到所有的缓冲，而是只能看到其中的一部分。当终端希望通过哈希过程将内容映射到缓冲上时，由于不同终端所见的缓冲范围有可能不同，从而导致哈希的结果不一致，最终的结果是相同的内容被不同的终端映射到不同的缓冲区中。这种情况显然是应该避免的，因为它导致相同内容被存储到不同缓冲中去，降低了系统存储的效率。分散性的定义就是上述情况发生的严重程度。好的哈希算法应能够尽量避免不一致的情况发生，也就是尽量降低分散性。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>负载(Load)：负载问题实际上是从另一个角度看待分散性问题。既然不同的终端可能将相同的内容映射到不同的缓冲区中，那么对于一个特定的缓冲区而言，也可能被不同的用户映射为不同 的内容。与分散性一样，这种情况也是应当避免的，因此好的哈希算法应能够尽量降低缓冲的负荷。</li>
+</ol>
+</blockquote>
+<p>在分布式集群中，对机器的添加删除，或者机器故障后自动脱离集群这些操作是分布式集群管理最基本的功能。如果采用常用的hash(object)%N算法，那么在有机器添加或者删除后，很多原有的数据就无法找到了，这样严重的违反了单调性原则。</p>
+<h2 id="传统哈希方式">传统哈希方式</h2>
+<p><img src="https://www.vincent.ac.cn//post-images/1573701751511.jpg" alt="" loading="lazy"><br>
+在分布式缓存系统中吗，需要将数据均匀的分布到缓存服务器集群的不同机器上。</p>
+<p>需要对缓存的key做hash值计算，将hash值除以服务器节点的数量取模计算出数据需要落在哪台服务器节点上。</p>
+<p>缓存策略的潜在问题是如果增加或删除机器时（N变化）代价会很高，所有的数据都不得不根据id重新计算一遍哈希值，并将哈希值对新的机器数进行取模操作，然后进行大规模的数据迁移为了解决这些问题，引入一致性哈希算法。假设数据的id通过哈希函数转换成的哈希值范围是2<sup>32，也就是（0~2</sup>32-1）的数字空间中。</p>
+<p>我们将这些数字头尾相连，想象成一个闭合的环形，那么一个数字id在计算出哈希值之后认为对应到环中的一个位置上接下来，想象有三台机器也处于这样一个环中，这三台机器在环中的位置根据机器id计算出的哈希值来决定。那么一条数据如何确定归属哪台机器呢？首先把该数据的id用哈希值算出哈希值，并映射到环中的相应位置，然后顺时针找寻离这个位置最近的机器，那台机器就是该数据的归属。例如，下图有一个数据m，计算其hash值后映射到环上，那么他的归属就是2号机器<br>
+<img src="https://www.vincent.ac.cn//post-images/1573701762913.jpg" alt="" loading="lazy"></p>
+<p>这种算法很简单，也可以实现数据的均匀分布。但是增加或者减少数据节点的时候会导致所有缓存数据失效。</p>
+<h3 id="举个栗子">举个栗子：</h3>
+<p>例如10条数据，3个节点，如果按照传统hash结构对3进行取模：</p>
+<ul>
+<li>node a：0，3，6，9</li>
+<li>node b：1，4，7</li>
+<li>node c：2，5，8</li>
+</ul>
+<p>当增加一个节点的时候，数据分布变更为对4进行取模：</p>
+<ul>
+<li>node a：0，4，8</li>
+<li>node b：1，5，9</li>
+<li>node c：2，6</li>
+<li>node d：3，7</li>
+</ul>
+<p>然后，我们就可以看到，我们需要迁移的节点：3，4，5，6，7，8，9成本是不是很高</p>
+<h2 id="一致性哈希方式">一致性哈希方式</h2>
+<blockquote>
+<p>一致性Hash算法最关键的区别就是：对节点和数据，都做一次哈希运算，然后比较节点和数据的哈希值，数据存放在下一个的节点中，这样就会保证节点增加或者减少的时候，影响的数据最少。</p>
+</blockquote>
+<h3 id="例子">例子</h3>
+<p>还是刚才的例子（使用简单的字符串 <code>ascii码</code> 做哈希key）</p>
+<ol>
+<li>
+<p>求出数据的hash值</p>
+<ul>
+<li>0：192</li>
+<li>1：196</li>
+<li>2：200</li>
+<li>3：204</li>
+<li>4：208</li>
+<li>5：212</li>
+<li>6：216</li>
+<li>7 ：220</li>
+<li>8：224</li>
+<li>9：228</li>
+</ul>
+</li>
+<li>
+<p>求出节点的hash值</p>
+<ul>
+<li>node a：203</li>
+<li>node g：209</li>
+<li>node z：228</li>
+</ul>
+</li>
+</ol>
+<p>这时候，我们就可以将整个Hash值看做一个环，比较数据和节点的hash值，如果大于228，那么就归到前面的203上<br>
+<img src="https://www.vincent.ac.cn//post-images/1573701773390.jpg" alt="" loading="lazy"></p>
+<ol>
+<li>
+<p>求出节点的hash值</p>
+<ul>
+<li>node a：0，1，2</li>
+<li>node g：3，4</li>
+<li>node z：5，6，7，8，9</li>
+</ul>
+</li>
+<li>
+<p>加入了node：n节点之后</p>
+<ul>
+<li>node n：216</li>
+</ul>
+</li>
+<li>
+<p>这个时候对应的数据就会做迁移<br>
+<img src="https://www.vincent.ac.cn//post-images/1573701783141.jpg" alt="" loading="lazy"></p>
+<ul>
+<li>node a： 0，1，2</li>
+<li>node g：3，4，</li>
+<li>node n：5，6</li>
+<li>node z：7，8，9</li>
+</ul>
+</li>
+</ol>
+<p>于是我们可以看到：只有5，6节点需要迁移。</p>
+<p>这个算法是厉害，但是若是服务节点过少的情况下，是不是会导致节点分配不均匀可能会导致数据倾斜的问题呢？<br>
+<img src="https://www.vincent.ac.cn//post-images/1573701793681.jpg" alt="" loading="lazy"><br>
+为了解决数据倾斜的问题，一致性哈希算法引入了虚拟节点机制：即对每一个服务节点计算多个哈希，每个计算得到的Hash位置都放置一个此服务节点，称虚拟节点。具体可以在服务器ip或主机名的后面增加编号来实现。</p>
+<h3 id="结点机器删除">结点（机器）删除</h3>
+<p>以上面的分布为例，如果Node2（机器2）出现故障被删除了，那么按照顺时针迁移的方法，Hash值属于图中红色片段的所有数据将会被迁移到Node3（机器）中，这样仅仅是红色的一段映射位置发生了变化，其它的对象没有任何的改动。如下图：<br>
+<img src="https://www.vincent.ac.cn//post-images/1573701806823.jpg" alt="" loading="lazy"></p>
+<h3 id="结点机器添加">结点（机器）添加</h3>
+<p>如果往集群中添加一个新的节点NODE4，通过对应的哈希算法得到KEY4，并映射到环中，如下图：<br>
+<img src="https://www.vincent.ac.cn//post-images/1573701815891.jpg" alt="" loading="lazy"></p>
+<p>按照顺时针迁移的规则，数据Hash值处于红色段的数据被迁移到了Node4中，其它对象还保持这原有的存储位置。通过对节点的添加和删除的分析，一致性哈希算法在保持了单调性的同时，数据的迁移时间达到了最小，这样的算法对分布式集群来说是非常合适的，避免了大量数据迁移，减小了服务器的的压力</p>
+<h3 id="一致性哈希算法优化">一致性哈希算法优化</h3>
+<p>其实上面的一致性哈希函数还存在一个很大的问题，我们说Hash函数是输入的样本量很大的时候，其输出结果在输出域上是均匀分布的，但是这里假如只有三个输入，就很难保证分布是均匀的，有可能产生下图所示的分布，就导致负载极其不均衡<br>
+<img src="https://www.vincent.ac.cn//post-images/1573701822876.jpg" alt="" loading="lazy"><br>
+更加优化的一致性哈希算法引入了虚拟节点机制，即对每一台机器产生多个结点，称为虚拟节点。具体做法可以在机器ip或主机名的后面增加编号或端口号来实现。假设一台机器有1000个虚拟节点，3台机器就有3000个结点，3000个结点映射到哈希域上就相对比较均匀了</p>
+<p>由于水平原因，本文参考了多篇文章<br>
+https://www.cnblogs.com/clarencezzh/p/11703747.html<br>
+https://www.jianshu.com/p/8469954d3b45</p>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/QUyR68yNI/">https://www.vincent.ac.cn/post/QUyR68yNI/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/QUyR68yNI/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/QUyR68yNI/&sharesource=qzone&title=什么是一致性哈希算法？&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/QUyR68yNI/&sharesource=weibo&title=什么是一致性哈希算法？ + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/jGa2EjGaq/">#
+                    面试
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/e-1kRyzIcM/">#
+                    分布式
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/FBDXBvNJZT/">#
+                    缓存
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/fRCCdSmYdr/">#
+                    算法
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/eQcNjr_UO/">
+                                                                                            网络上收集的有关 Redis 方面的面试题 
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/qhuBcqwbw/">
+                                                                                                    swoole入门 server 跟 client
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

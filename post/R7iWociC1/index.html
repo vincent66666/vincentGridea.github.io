@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                使用CODING 自动构建部署 Hyperf项目
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2022-03-29</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">8.1
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1554</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/W9jfq_kp_/">Devops</a>
+                                
+                                <a href="https://www.vincent.ac.cn/H_d_fXKMN/">Jenkins</a>
+                                
+                                <a href="https://www.vincent.ac.cn/91wqjjox8/">Hyperf</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <blockquote>
+<p>不是集群部署，适合个人或小公司项目使用</p>
+</blockquote>
+<h1 id="创建基础项目">创建基础项目</h1>
+<p>1、先创建一个项目<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_03_29/fcbWuM.png" alt="" loading="lazy"><br>
+2、关联代码仓库<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_03_29/1Unpb6.png" alt="" loading="lazy"></p>
+<h1 id="构建计划">构建计划</h1>
+<h2 id="整体的jenkins流程">整体的Jenkins流程</h2>
+<ol>
+<li>检出分支</li>
+<li>载入配置信息</li>
+<li>根据分支下的 <code>Dockerfile</code> 生成镜像</li>
+<li>推送镜像到 <code>coding</code> 的制品仓库</li>
+<li>最后登录服务器拉取镜像进行部署<br>
+那么我们就开始编写构建计划吧</li>
+</ol>
+<h2 id="编写构建计划">编写构建计划</h2>
+<h3 id="创建构建计划">创建构建计划</h3>
+<p>首先先创建一个构建计划<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_03_29/e7Fajk.png" alt="" loading="lazy"><br>
+我们选择自定义构建过程<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_03_29/Dbhahe.png" alt="" loading="lazy"><br>
+选择关联的代码仓库，配置来源选择使用静态配置的 <code>Jenkinsfile</code><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_03_29/Ofcp8Z.png" alt="" loading="lazy"><br>
+然后点击确认进来配置详情选择文本编辑器<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_03_29/zmXzQW.png" alt="" loading="lazy"></p>
+<h3 id="载入配置信息并生成镜像并推送到制品仓库">载入配置信息并生成镜像并推送到制品仓库</h3>
+<pre><code>pipeline {
+  agent any
+  stages {
+    stage('检出') {
+      steps {
+        checkout([
+          $class: 'GitSCM',
+          branches: [[name: GIT_BUILD_REF]],
+          userRemoteConfigs: [[
+            url: GIT_REPO_URL,
+            credentialsId: CREDENTIALS_ID
+          ]]])
+        }
+      }
+
+    stage('载入配置信息') {
+      steps {
+        sh &quot;cp ${HYPERF_ENV_NAME} .env&quot;
+      }
+    }
+    stage('构建镜像并推送到 CODING Docker 制品库') {
+      steps {
+        sh &quot;docker build -t ${CODING_DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION} -f ${DOCKERFILE_PATH} ${DOCKER_BUILD_CONTEXT}&quot;
+        useCustomStepPlugin(key: 'coding-public:artifact_docker_push', version: 'latest', params: [image:&quot;${CODING_DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}&quot;,repo:'hyperf',properties:'[]',project:'xuexi',username:'${PROJECT_TOKEN_GK}',password:'${PROJECT_TOKEN}'])
+      }
+    }
+  }
+}
+</code></pre>
+<h3 id="自动部署">自动部署</h3>
+<pre><code>pipeline {
+  agent any
+  stages {
+    stage('检出') {
+      steps {
+        checkout([$class: 'GitSCM',
+        branches: [[name: GIT_BUILD_REF]],
+        userRemoteConfigs: [[
+          url: GIT_REPO_URL,
+          credentialsId: CREDENTIALS_ID
+        ]]])
+      }
+    }
+    stage('代码检测') {
+      steps {
+        sh 'php -v'
+      }
+    }
+    stage('载入配置信息') {
+      steps {
+        sh &quot;cp ${HYPERF_ENV_NAME} .env&quot;
+      }
+    }
+    stage('构建镜像并推送到 CODING Docker 制品库') {
+      steps {
+        sh 'pwd &amp;&amp; ls -l'
+        useCustomStepPlugin(key: 'coding-public:magic-version', version: 'latest')
+        script {
+          readProperties(file: env.CI_ENV_FILE).each {key, value -&gt; env[key] = value }
+        }
+        echo &quot;${env.MAGIC_VERSION}&quot;
+        sh &quot;docker build -t ${CODING_DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION} -f ${DOCKERFILE_PATH} ${DOCKER_BUILD_CONTEXT}&quot;
+        useCustomStepPlugin(key: 'coding-public:artifact_docker_push', version: 'latest', params: [image:&quot;${CODING_DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}&quot;,repo:'hyperf',properties:'[]',project:'xuexi',username:'${PROJECT_TOKEN_GK}',password:'${PROJECT_TOKEN}'])
+      }
+    }
+    stage('部署到远端服务') {
+      steps {
+        sh 'pwd &amp;&amp; ls -l'
+        script {
+          def remoteConfig = [:]
+          remoteConfig.name = &quot;my-remote-server&quot;
+          remoteConfig.host = &quot;${REMOTE_HOST}&quot;
+          remoteConfig.allowAnyHosts = true
+
+          node {
+            // 使用当前项目下的凭据管理中的 用户名 + 密码 凭据
+            withCredentials([usernamePassword(
+              credentialsId: &quot;${REMOTE_CRED}&quot;,
+              passwordVariable: 'password',
+              usernameVariable: 'userName'
+            )]) {
+
+              // SSH 登陆用户名
+              remoteConfig.user = userName
+              // SSH 登陆密码
+              remoteConfig.password = password
+
+              // 请确保远端环境中有 Docker 环境
+              sshCommand(
+                remote: remoteConfig,
+                command: &quot;docker login -u ${CODING_DOCKER_REG_USERNAME} -p ${CODING_DOCKER_REG_PASSWORD} ${CODING_DOCKER_REG_HOST}&quot;,
+                sudo: true,
+              )
+
+              // 生成devops目录
+              sshCommand(
+                remote: remoteConfig,
+                command: &quot;mkdir -p  /mnt/devops/${CODING_DOCKER_IMAGE_NAME}/&quot;,
+                sudo: false,
+              )
+
+              sshPut(
+                remote: remoteConfig,
+                // 本地文件或文件夹
+                from: '/root/workspace/deploy-devops.sh',
+                // 远端文件或文件夹
+                into: &quot;/mnt/devops/${CODING_DOCKER_IMAGE_NAME}/&quot;
+              )
+
+              // DOCKER_IMAGE_VERSION 中涉及到 GIT_LOCAL_BRANCH / GIT_TAG / GIT_COMMIT 的环境变量的使用
+              // 需要在本地完成拼接后，再传入到远端服务器中使用
+              DOCKER_IMAGE_URL = sh(
+                script: &quot;echo ${CODING_DOCKER_REG_HOST}/${CODING_DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}&quot;,
+                returnStdout: true
+              )
+
+              sh(
+                script:&quot;echo ${SERVER_PREFIX_NAME}&quot;
+              )
+
+              sshCommand(
+                remote: remoteConfig,
+                command: &quot;/bin/bash /mnt/devops/${CODING_DOCKER_IMAGE_NAME}/deploy-devops.sh ${DOCKER_IMAGE_URL} ${SERVER_PREFIX_NAME} http&quot;,
+                sudo: false,
+              )
+
+
+              echo &quot;部署成功&quot;
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+  environment {
+    CODING_DOCKER_REG_HOST = &quot;${CCI_CURRENT_TEAM}-docker.pkg.${CCI_CURRENT_DOMAIN}&quot;
+    CODING_DOCKER_IMAGE_NAME = &quot;${PROJECT_NAME.toLowerCase()}/${DOCKER_REPO_NAME}/${DOCKER_IMAGE_NAME}&quot;
+    CODING_DOCKER_REG_USERNAME = '制品仓库账号'
+    CODING_DOCKER_REG_PASSWORD = '制品仓库密码'
+  }
+}
+</code></pre>
+<h3 id="deploy-devopssh-脚本">deploy-devops.sh 脚本</h3>
+<pre><code class="language-bash">#!/bin/bash
+
+DOCKER_IMAGE_URL=${1}
+SERVER_PREFIX_NAME=${2}
+TASK=${3}
+
+if [ &quot;${SERVER_PREFIX_NAME}&quot; = &quot;&quot; ]; then
+    SERVER_PREFIX_NAME=&quot;server_app&quot;
+fi
+
+if [ &quot;${TASK}&quot; = &quot;&quot; ]; then
+    TASK=&quot;http&quot;
+fi
+
+echo &quot;DOCKER_IMAGE_URL: ${DOCKER_IMAGE_URL}&quot;
+echo &quot;SERVER_PREFIX_NAME: ${SERVER_PREFIX_NAME}&quot;
+echo &quot;TASK: ${TASK}&quot;
+
+
+# 检查 http服务端口
+check_port() {
+    # shellcheck disable=SC1083
+    code=$(curl -I -m 10 -o /dev/null -s -w %{http_code}  127.0.0.1:&quot;$1&quot;/check_port)
+    echo &quot;$code&quot;
+}
+
+# 检查 socket服务端口
+socket_io_check_port() {
+    port=$1
+    # shellcheck disable=SC2196
+    TCP=$(netstat -an | egrep &quot;:${port}&quot; | awk '$1 == &quot;tcp&quot; &amp;&amp; $NF == &quot;LISTEN&quot; ' |wc -l)
+    # shellcheck disable=SC2196
+    UDP=$(netstat -an | egrep &quot;:${port}&quot; | awk '$1 == &quot;udp&quot; &amp;&amp; $NF == &quot;0.0.0.0:*&quot;' |wc -l)
+
+    ((Total = TCP + UDP ))
+
+    if [ &quot;${Total}&quot; == 0 ];
+      then
+        echo 400
+      else
+        echo 200
+    fi
+}
+
+#TODO HTTP服务 随机可用端口
+ports=(9791 9792)
+#TODO 随机API可用端口
+online_port=0
+reload_port=0
+
+for i in &quot;${!ports[@]}&quot;;
+do
+    code=$(check_port &quot;${ports[$i]}&quot;)
+    # shellcheck disable=SC2053
+    if [[ '200' == $code ]]; then
+        online_port=${ports[$i]}
+    else
+        reload_port=${ports[$i]}
+    fi
+done
+
+if [[ $online_port == 0 ]]; then
+    echo '服务未启动'
+    reload_port=${ports[0]}
+    echo &quot;自动分配端口 $reload_port&quot;
+else
+    echo &quot;当前端口 $online_port&quot;
+    echo &quot;重启端口 $reload_port&quot;
+fi
+
+if [[ $reload_port == 0 ]]; then
+	echo '部署失败, 未获取到可用端口'
+	exit 1;
+fi
+
+
+if [[ ${TASK} == &quot;socket&quot; ]]; then
+    #TODO 随机socket.io可用端口
+    socket_io_ports=(9990 9991)
+    socket_io_online_port=0
+    socket_io_reload_port=0
+    for i in &quot;${!socket_io_ports[@]}&quot;;
+    do
+        code=$(socket_io_check_port &quot;${socket_io_ports[$i]}&quot;)
+        # shellcheck disable=SC2053
+        if [[ '200' == $code ]]; then
+            socket_io_online_port=${socket_io_ports[$i]}
+        else
+            socket_io_reload_port=${socket_io_ports[$i]}
+        fi
+    done
+    if [[ $socket_io_online_port == 0 ]]; then
+        echo '服务未启动'
+        socket_io_reload_port=${socket_io_ports[0]}
+        echo &quot;socket.io自动分配端口 $socket_io_reload_port&quot;
+    else
+        echo &quot;socket.io当前端口 $socket_io_online_port&quot;
+        echo &quot;socket.io重启端口 $socket_io_reload_port&quot;
+    fi
+
+    if [[ $socket_io_reload_port == 0 ]]; then
+      echo '部署失败, 未获取到可用socket.io端口'
+      exit 1;
+    fi
+fi
+# nginx配置文件路径
+nginx_upstream='/www/server/panel/vhost/upstream/'&quot;${SERVER_PREFIX_NAME}&quot;'_upstream.conf'
+# 创建文件
+if [ ! -f &quot;$nginx_upstream&quot; ]; then
+    touch $nginx_upstream
+    upstream_default='
+            upstream '&quot;${SERVER_PREFIX_NAME}&quot;'_upstream {
+                server 127.0.0.1:'&quot;$reload_port&quot;';
+            }
+            upstream '&quot;${SERVER_PREFIX_NAME}&quot;'_upstream_socket_io {
+                server 127.0.0.1:'&quot;$socket_io_reload_port&quot;';
+            }
+        '
+    echo &quot;$upstream_default&quot; &gt; $nginx_upstream
+fi
+# shellcheck disable=SC2016
+if [[ ${TASK} == &quot;socket&quot; ]]; then
+    upstream='
+        upstream '&quot;${SERVER_PREFIX_NAME}&quot;'_upstream {
+            server 127.0.0.1:'&quot;$reload_port&quot;';
+        }
+        upstream '&quot;${SERVER_PREFIX_NAME}&quot;'_upstream_socket_io {
+            server 127.0.0.1:'&quot;$socket_io_reload_port&quot;';
+        }
+    '
+else
+    upstream='
+        upstream '&quot;${SERVER_PREFIX_NAME}&quot;'_upstream {
+            server 127.0.0.1:'&quot;$reload_port&quot;';
+        }
+    '
+fi
+
+docker pull $DOCKER_IMAGE_URL
+
+if [[ ${TASK} == &quot;socket&quot; ]]; then
+    echo &quot;docker run -p $reload_port:9501 -p $socket_io_reload_port:9510 --name &quot;${SERVER_PREFIX_NAME}&quot;_$reload_port_$socket_io_reload_port   -dit $DOCKER_IMAGE_URL&quot;
+    docker run -p &quot;$reload_port&quot;:9501 -p $socket_io_reload_port:9510 --name &quot;${SERVER_PREFIX_NAME}&quot;_&quot;$reload_port&quot;_&quot;$socket_io_reload_port&quot;   -dit $DOCKER_IMAGE_URL
+    docker_container_name=&quot;${SERVER_PREFIX_NAME}&quot;_&quot;$reload_port&quot;_&quot;$socket_io_reload_port&quot;
+
+    old_docker_container_name=&quot;${SERVER_PREFIX_NAME}&quot;_&quot;$online_port&quot;_&quot;$socket_io_online_port&quot;
+else
+    echo &quot;docker run -p $reload_port:9501  --name &quot;${SERVER_PREFIX_NAME}&quot;_$reload_port   -dit $DOCKER_IMAGE_URL&quot;
+    docker run -p &quot;$reload_port&quot;:9501  --name &quot;${SERVER_PREFIX_NAME}&quot;_&quot;$reload_port&quot;   -dit $DOCKER_IMAGE_URL
+    docker_container_name=&quot;${SERVER_PREFIX_NAME}&quot;_&quot;$reload_port&quot;
+
+    old_docker_container_name=&quot;${SERVER_PREFIX_NAME}&quot;_&quot;$online_port&quot;
+fi
+echo &quot;新容器名称: &quot;$docker_container_name
+echo &quot;旧容器名称: &quot;$old_docker_container_name
+
+while :
+do
+    reload=$(check_port &quot;$reload_port&quot;)
+    echo &quot;check ${SERVER_PREFIX_NAME}_$reload_port 服务 reload $reload&quot;
+
+    reloadCode=0
+    if [[ '200' == $reload ]]; then
+        reloadCode=200
+    fi
+
+    if [[ ${TASK} == &quot;socket&quot; ]]; then
+        reloadCode=0
+        socket_io_reload=$(socket_io_check_port &quot;$socket_io_reload_port&quot;)
+        echo &quot;check socket.io—port $socket_io_reload_port 服务 reload $socket_io_reload&quot;
+        if [[ '200' == $reload &amp;&amp; '200' == $socket_io_reload ]]; then
+            reloadCode=200
+        fi
+    fi
+    echo &quot;reloadCode: &quot;$reloadCode
+    echo &quot;新容器名称: &quot;$docker_container_name
+    echo &quot;旧容器名称: &quot;$old_docker_container_name
+    # shellcheck disable=SC2053
+    if [[ '200' == $reloadCode ]]; then
+        echo &quot;新服务重启成功 &quot;&quot;$docker_container_name&quot;
+        echo &quot;$upstream&quot; &gt; $nginx_upstream
+        nginx -s reload
+        if [[ $online_port != 0 ]]; then
+            # 无法探知老服务持有链接响应完成时间
+            sleep 5
+            echo &quot;停止旧服务 &quot;&quot;$old_docker_container_name&quot;
+            # shellcheck disable=SC2027
+            docker stop &quot;$old_docker_container_name&quot;
+            docker rm -f &quot;$old_docker_container_name&quot;
+        fi
+        echo &quot;清除docker无用镜像&quot;
+        docker rmi -f $(docker images | grep &quot;&lt;none&gt;&quot; | awk &quot;{print \$3}&quot;)
+        break
+    fi
+    sleep 2
+done
+</code></pre>
+<h3 id="配置环境变量">配置环境变量</h3>
+<figure data-type="image" tabindex="1"><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_03_29/u5zr87.png" alt="" loading="lazy"></figure>
+<p>配置完成后就可以构建部署项目了<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_03_29/94BK0q.png" alt="" loading="lazy"></p>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/R7iWociC1/">https://www.vincent.ac.cn/post/R7iWociC1/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/R7iWociC1/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/R7iWociC1/&sharesource=qzone&title=使用CODING 自动构建部署 Hyperf项目&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/R7iWociC1/&sharesource=weibo&title=使用CODING 自动构建部署 Hyperf项目 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/W9jfq_kp_/">#
+                    Devops
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/H_d_fXKMN/">#
+                    Jenkins
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/91wqjjox8/">#
+                    Hyperf
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/DY4viH_Fi/">
+                                                                                            使用kubeadm安装kubernetes
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/1Xnpj3nCM/">
+                                                                                                    Goal - 快速开始
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

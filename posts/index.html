@@ -1,0 +1,3697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    
+        <meta charset="utf-8" />
+<title>
+    文章 | 我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="post-main">
+                <div class="post-list">
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+        
+                
+                    
+    
+                    
+    
+        
+                
+                    
+                        
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/NyBeI-EwM/">
+                                                <h2 class="post-title">
+                                                    jenkins参数化构建:条件触发构建
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-04-21</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/5-TfXto0L/">
+          k8s
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/W9jfq_kp_/">
+          Devops
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/Prix7QUh-/">
+                                                <h2 class="post-title">
+                                                    jenkins+kubernetes(k8s)+docker持续集成与部署(CI/CD) 
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-04-12</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/5-TfXto0L/">
+          k8s
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/W9jfq_kp_/">
+          Devops
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/DY4viH_Fi/">
+                                                <h2 class="post-title">
+                                                    使用kubeadm安装kubernetes
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-04-03</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/5-TfXto0L/">
+          k8s
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/R7iWociC1/">
+                                                <h2 class="post-title">
+                                                    使用CODING 自动构建部署 Hyperf项目
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-03-29</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/W9jfq_kp_/">
+          Devops
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/H_d_fXKMN/">
+          Jenkins
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/91wqjjox8/">
+          Hyperf
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/1Xnpj3nCM/">
+                                                <h2 class="post-title">
+                                                    Goal - 快速开始
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-03-11</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/cdMZz1WVj/">
+          GOAL
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/zP5jJNUgi/">
+          开源项目
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/KiNHX9G7r/">
+                                                <h2 class="post-title">
+                                                    Goal-Web框架 用户认证（Auth）模块
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-03-08</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/cdMZz1WVj/">
+          GOAL
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/zP5jJNUgi/">
+          开源项目
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/4F-DbyJRx/">
+                                                <h2 class="post-title">
+                                                    Goal-Web框架 洋葱模型的管道实现，你还在愁 go 没有好用的中间件吗？
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-02-23</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/cdMZz1WVj/">
+          GOAL
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/zP5jJNUgi/">
+          开源项目
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/harkE6PNG/">
+                                                <h2 class="post-title">
+                                                    Goal-Web框架 数据库组件
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-02-17</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/cdMZz1WVj/">
+          GOAL
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/zP5jJNUgi/">
+          开源项目
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/LGhYKiytt/">
+                                                <h2 class="post-title">
+                                                    docker运行hyperf 出现  Access denied for user &#39;root&#39;@&#39;172.16.10.3&#39; (using password: YES)报错
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-02-16</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/91wqjjox8/">
+          Hyperf
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/MrJ-unZWo/">
+          MySQL
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/Wf9dxWbla/">
+          docker
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/6tEe2m3il/">
+                                                <h2 class="post-title">
+                                                    Goal-Web框架 collection 库
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-02-08</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/cdMZz1WVj/">
+          GOAL
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/zP5jJNUgi/">
+          开源项目
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/ngpbCpPO-/">
+                                                <h2 class="post-title">
+                                                    Goal-Web框架 QueryBuilder组件
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-01-25</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/zP5jJNUgi/">
+          开源项目
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/rZ7udBP47/">
+                                                <h2 class="post-title">
+                                                    Linux  RabbitMQ 安装与配置
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-01-11</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ygnEG2Zk-/">
+          AMQP
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/PGQpqESAIK/">
+          Linux
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/ZlxZ8D1K-/">
+                                                <h2 class="post-title">
+                                                    初学 Spring Boot 注解类 @FieldSame 优化
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-01-04</span>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/9Q0e2ivav/">
+                                                <h2 class="post-title">
+                                                    初学 Spring Boot 使用hibernate validation 对参数校验
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2022-01-04</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/0nRM6rsJ7/">
+          Spring Boot
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/F9L3Hp040r/">
+          Java
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/9Q0e2ivav/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2022_01_04/QWsvgq.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/O5fXCJqaC/">
+                                                <h2 class="post-title">
+                                                    IDEA 使用@Autowired 出现警告
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-31</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/hhOcAZmbr/">
+          DI
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/0nRM6rsJ7/">
+          Spring Boot
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/F9L3Hp040r/">
+          Java
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/O5fXCJqaC/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_31/Rek9nk.png')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/UQkhpWrWQ/">
+                                                <h2 class="post-title">
+                                                    初学 Spring Boot 封装接口统一响应结果并运行
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-30</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/1yAyn8xlB/">
+          Mybatis Plus
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/0nRM6rsJ7/">
+          Spring Boot
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/F9L3Hp040r/">
+          Java
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/UQkhpWrWQ/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_30/VpnJ8U.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/rqke6QAba/">
+                                                <h2 class="post-title">
+                                                    初学 Spring Boot 创建项目并整合Mybatis Plus 
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-30</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/1yAyn8xlB/">
+          Mybatis Plus
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/0nRM6rsJ7/">
+          Spring Boot
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/F9L3Hp040r/">
+          Java
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/rqke6QAba/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_30/VpnJ8U.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/Owh8LqeOM/">
+                                                <h2 class="post-title">
+                                                    swoole学习笔记 进程 二
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-28</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/2TN23WcQi/">
+          c
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/bXUcw86dH/">
+          swoole
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/DpMO3vgV-/">
+                                                <h2 class="post-title">
+                                                    swoole学习笔记 进程
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-25</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/2TN23WcQi/">
+          c
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/_CtrRW4Q1p/">
+          c++
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/bXUcw86dH/">
+          swoole
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/c1-aEdImo/">
+                                                <h2 class="post-title">
+                                                    转载 - 你心中最高大上最牛X的技术到底是什么
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-20</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/soY4UqPlb/">
+          Python
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/_CtrRW4Q1p/">
+          c++
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/F9L3Hp040r/">
+          Java
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/WKbkebv18/">
+                                                <h2 class="post-title">
+                                                    Redis击穿、 穿透、 雪崩是什么？
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-20</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/MeCN-SWPK/">
+          面试题
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ZVVkuihBg/">
+          Redis
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/PJQuX6IBZ/">
+                                                <h2 class="post-title">
+                                                    PHP 并发场景的几种解决方案
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-17</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ZVVkuihBg/">
+          Redis
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/znewu8Toy/">
+                                                <h2 class="post-title">
+                                                    php二分查找的定义
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-17</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/rAOhONMqv/">
+                                                <h2 class="post-title">
+                                                    安利 Slidev - 用Markdown的方式来做PPT
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-16</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/DT2QS2B8N/">
+          Markdown
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/N2qkjUd5Bu/">
+          PPT
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/yafM5shAu7/">
+          Slidev
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/rAOhONMqv/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_16/b93GRs.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/6DJtUGYm5/">
+                                                <h2 class="post-title">
+                                                    Mac 安装 Jenkins
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-16</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/H_d_fXKMN/">
+          Jenkins
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/Gq3AguIDW/">
+          Mac
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/6DJtUGYm5/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_16/Wclryo.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/wlSst96pj/">
+                                                <h2 class="post-title">
+                                                    PHP组合模式构建决策树排它网关模式 (三) 
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-10</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/L-BnD1xJh/">
+          设计模式
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/wSuWfVfjK/">
+          决策树
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/-Jm04jY55/">
+                                                <h2 class="post-title">
+                                                    PHP组合模式构建决策树排它网关模式 (二) 
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-10</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/L-BnD1xJh/">
+          设计模式
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/wSuWfVfjK/">
+          决策树
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/_eJBJ5mzo/">
+                                                <h2 class="post-title">
+                                                    PHP组合模式构建决策树排它网关模式 (一) 
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-09</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/L-BnD1xJh/">
+          设计模式
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/wSuWfVfjK/">
+          决策树
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/_eJBJ5mzo/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_09/Jwzhv6.png')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/jzJBFNAM1/">
+                                                <h2 class="post-title">
+                                                    决策引擎系统 (二) 决策流
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-08</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/wSuWfVfjK/">
+          决策树
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/6mFbp1Nd7/">
+          业务
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/jzJBFNAM1/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_09/f3rq1N.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/epFYXk4ee/">
+                                                <h2 class="post-title">
+                                                    nacos 部署和使用
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-07</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/tDF1kQakq/">
+          nacos
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/F9L3Hp040r/">
+          Java
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/e-1kRyzIcM/">
+          分布式
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/epFYXk4ee/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_07/aJ3TJY.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/BHt_pJVse/">
+                                                <h2 class="post-title">
+                                                    决策引擎系统 (一) 简单了解
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-06</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/wSuWfVfjK/">
+          决策树
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/6mFbp1Nd7/">
+          业务
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/BHt_pJVse/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_08/lQBize.png')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/uSukP0SN4/">
+                                                <h2 class="post-title">
+                                                    php ftp 上传遇到报错
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-02</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/35L9IpPe2/">
+          FTP
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/-ADPQWJUC/">
+                                                <h2 class="post-title">
+                                                    Redis中bitmap的妙用 
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-01</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/6mFbp1Nd7/">
+          业务
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ZVVkuihBg/">
+          Redis
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/afmQoP66O/">
+                                                <h2 class="post-title">
+                                                    IO 多路复用
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-12-01</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/9GCcJqs1bZ/">
+          系统
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/jGa2EjGaq/">
+          面试
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/G3An0gaU4/">
+                                                <h2 class="post-title">
+                                                    PHP 安装 grpc 扩展报错
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-11-30</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/PGQpqESAIK/">
+          Linux
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/G3An0gaU4/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_01/xYdkcH.png')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/2vh0CdvfU/">
+                                                <h2 class="post-title">
+                                                    Mac下docker访问主机服务
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-11-30</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/Gq3AguIDW/">
+          Mac
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/Wf9dxWbla/">
+          docker
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/2vh0CdvfU/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_01/dockerLogo.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/Q7yzCjxGh/">
+                                                <h2 class="post-title">
+                                                    解决 【git checkout -b dev origin/dev】报错的问题
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-10-28</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/NT5kNoycN/">
+          git
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/2A1QfTR-0/">
+                                                <h2 class="post-title">
+                                                    多路复用一样会阻塞用户线程那它和同步阻塞有什么区别
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-09-08</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/jGa2EjGaq/">
+          面试
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/FPQG4z3uM/">
+                                                <h2 class="post-title">
+                                                    用户签到的数据库设计方案
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-09-02</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/6mFbp1Nd7/">
+          业务
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/jGa2EjGaq/">
+          面试
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/MrJ-unZWo/">
+          MySQL
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/jCQSdFjqv/">
+                                                <h2 class="post-title">
+                                                    随机数
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-08-19</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/bw_q2WfZA/">
+                                                <h2 class="post-title">
+                                                    1000万个数字怎么快速取出最小5个数或者最大5个数
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-07-23</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/fRCCdSmYdr/">
+          算法
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/yxXTxkQ86/">
+                                                <h2 class="post-title">
+                                                    hyperf使用nginx转发服务出现静态资源访问404问题的原因与解决方法
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-05-06</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/_lxV0va4s/">
+          nginx
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/91wqjjox8/">
+          Hyperf
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/yxXTxkQ86/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_01/GwfiLb.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/eIg09332U/">
+                                                <h2 class="post-title">
+                                                    hyperf 框架 单台服务器部署进行滚动更新
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-05-05</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/91wqjjox8/">
+          Hyperf
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/eIg09332U/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_01/GwfiLb.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/eMo2wCY1r/">
+                                                <h2 class="post-title">
+                                                    docker 容器 无法访问宿主机服务
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-05-04</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/Wf9dxWbla/">
+          docker
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/eMo2wCY1r/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_01/dockerLogo.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/nBfESCKq-/">
+                                                <h2 class="post-title">
+                                                    清除docker无用镜像和容器
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-05-03</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/Wf9dxWbla/">
+          docker
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/nBfESCKq-/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_01/dockerLogo.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/isu6EwADe/">
+                                                <h2 class="post-title">
+                                                    设置Docker容器日志文件大小限制
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-05-03</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/Wf9dxWbla/">
+          docker
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/isu6EwADe/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_01/dockerLogo.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/zSdzi_lTD/">
+                                                <h2 class="post-title">
+                                                    linux查看nginx、apache、php、php-fpm、mysql及配置项所在目录
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2021-03-03</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/Gq3AguIDW/">
+          Mac
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/PGQpqESAIK/">
+          Linux
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/zSdzi_lTD/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_11_30/3J7Mu1.png')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/wfH7LDssy/">
+                                                <h2 class="post-title">
+                                                    Go 学习笔记 第二弹 初识编写第一个Go程序与package
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2020-02-18</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/wfH7LDssy/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/wfH7LDssy.gif')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/8iwfLXyXo/">
+                                                <h2 class="post-title">
+                                                    Go 学习笔记 第一弹 mac 开发环境搭建
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2020-02-01</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/Gq3AguIDW/">
+          Mac
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/8iwfLXyXo/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/tencent/20200201112427.png')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/MRSx8I4Yg/">
+                                                <h2 class="post-title">
+                                                    Mac小技巧 增强快速预览功能
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-12-26</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/Gq3AguIDW/">
+          Mac
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/MRSx8I4Yg/">
+    <div class="feature-container" style="background-image: url('https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/tencent/20191226113031.png')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/26UdNhbpe/">
+                                                <h2 class="post-title">
+                                                    laravel 模型Eloquent ORM 添加编辑删除
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-18</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/26UdNhbpe/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/26UdNhbpe.jpeg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/-JIl7kxRA/">
+                                                <h2 class="post-title">
+                                                    laravel 模型Eloquent ORM 查询
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-18</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/-JIl7kxRA/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/-JIl7kxRA.jpeg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/jtBl6SuXF/">
+                                                <h2 class="post-title">
+                                                    在浏览器输入 URL 回车之后发生了什么（超详细版）
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-14</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/meUUKMjqL/">
+          网络
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/kEMJHfwHiC/">
+          TCP
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/9GCcJqs1bZ/">
+          系统
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/jtBl6SuXF/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/jtBl6SuXF.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/eQcNjr_UO/">
+                                                <h2 class="post-title">
+                                                    网络上收集的有关 Redis 方面的面试题 
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-14</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ZVVkuihBg/">
+          Redis
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/jGa2EjGaq/">
+          面试
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/eQcNjr_UO/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/eQcNjr_UO.jpeg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/QUyR68yNI/">
+                                                <h2 class="post-title">
+                                                    什么是一致性哈希算法？
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-14</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/jGa2EjGaq/">
+          面试
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/e-1kRyzIcM/">
+          分布式
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/FBDXBvNJZT/">
+          缓存
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/fRCCdSmYdr/">
+          算法
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/QUyR68yNI/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/QUyR68yNI.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/qhuBcqwbw/">
+                                                <h2 class="post-title">
+                                                    swoole入门 server 跟 client
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-13</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/bXUcw86dH/">
+          swoole
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/qhuBcqwbw/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/qhuBcqwbw.png')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/ZSx6EOX69/">
+                                                <h2 class="post-title">
+                                                    swoole入门 初识
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-13</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/bXUcw86dH/">
+          swoole
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/ZSx6EOX69/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/ZSx6EOX69.svg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/JIjj0QEOH/">
+                                                <h2 class="post-title">
+                                                    laravel 学习之路  Collections
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-13</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/JIjj0QEOH/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/JIjj0QEOH.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/UNZ7vbISR/">
+                                                <h2 class="post-title">
+                                                    Linux 安装 minDoc 接口文档在线管理 
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-13</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/PGQpqESAIK/">
+          Linux
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/MrJ-unZWo/">
+          MySQL
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/UNZ7vbISR/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/UNZ7vbISR.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/Bh2gcn6S4/">
+                                                <h2 class="post-title">
+                                                    laravel 学习之路 数据库操作 查询数据
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-11</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/MrJ-unZWo/">
+          MySQL
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/Bh2gcn6S4/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/Bh2gcn6S4.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/Wb4f8UHdq/">
+                                                <h2 class="post-title">
+                                                    laravel 学习之路 数据库操作 数据插入与数据填充
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-07</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/Wb4f8UHdq/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/Wb4f8UHdq.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/xwp3_04xN/">
+                                                <h2 class="post-title">
+                                                    laravel 学习之路 数据库操作 Migrations
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-06</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/MrJ-unZWo/">
+          MySQL
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/xwp3_04xN/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/xwp3_04xN.jpeg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/laravel5/">
+                                                <h2 class="post-title">
+                                                    laravel 学习之路 配置config
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-05</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/laravel5/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/laravel5.jpeg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/laravel4/">
+                                                <h2 class="post-title">
+                                                    laravel 学习之路 路由与控制器
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-05</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/laravel4/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/laravel4.jpeg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/go1/">
+                                                <h2 class="post-title">
+                                                    译 - 为什么要学习Go？
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-05</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">
+          Go
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/go1/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/go1.gif')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/laravel3/">
+                                                <h2 class="post-title">
+                                                    laravel 学习之路 控制器Controller
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-05</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/laravel3/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/laravel3.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he/">
+                                                <h2 class="post-title">
+                                                    《数据结构与算法》Day.1 最大子列和
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-04</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/HlgLlO25x/">
+          转载
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/fRCCdSmYdr/">
+          算法
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/zhuan-zai-lesslessshu-ju-jie-gou-yu-suan-fa-greatergreater-day1-zui-da-zi-lie-he.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/laravel2/">
+                                                <h2 class="post-title">
+                                                    laravel 学习之路  路由视图初探
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-01</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/laravel2/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/laravel2.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/laravel1/">
+                                                <h2 class="post-title">
+                                                    laravel 学习之路  安装 
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-10-31</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">
+          php
+          
+          ,
+          
+        </a>
+        
+        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">
+          Laravel
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/laravel1/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/laravel1.jpeg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/docker2/">
+                                                <h2 class="post-title">
+                                                     Centos安装docker 以及 docker基本概念
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-10-01</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/Wf9dxWbla/">
+          docker
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/docker2/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/docker2.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/docker1/">
+                                                <h2 class="post-title">
+                                                    Docker是什么？
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-19</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/Wf9dxWbla/">
+          docker
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/docker1/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/docker1.jpg')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                            
+                                            
+                            
+                                
+                                    <section class="post-item">
+                                        <div class="content">
+                                            <a href="https://www.vincent.ac.cn/post/hello-gridea/">
+                                                <h2 class="post-title">
+                                                    Hello Gridea
+                                                </h2>
+                                            </a>
+                                            <div class="post-abstract">
+                                                <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+
+                                            </div>
+                                            <div class="post-info">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2018-12-12</span>
+                                                
+                                                    <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        
+        <a href="https://www.vincent.ac.cn/Road5r03o/">
+          Gridea
+          
+        </a>
+        
+      </span>
+                                                    
+                                            </div>
+                                        </div>
+                                        
+                                            <a href="https://www.vincent.ac.cn/post/hello-gridea/">
+    <div class="feature-container" style="background-image: url('https://www.vincent.ac.cn//post-images/hello-gridea.png')">
+    </div>
+  </a>
+                                            
+                                    </section>
+                                    
+                                        
+                                            
+                </div>
+            </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+</body>
+
+</html>

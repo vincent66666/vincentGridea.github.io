@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                PHP 并发场景的几种解决方案
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-12-17</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">5.8
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1235</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/ZVVkuihBg/">Redis</a>
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <blockquote>
+<p>在秒杀，抢购等并发场景下，可能会出现超卖的现象，在 PHP 语言中并没有原生提供并发的解决方案，因此就需要借助其他方式来实现并发控制。</p>
+</blockquote>
+<p>列出常见的解决方案有：<br>
+使用队列，额外起一个进程处理队列，并发请求都放到队列中，由额外进程串行处理，并发问题就不存在了，但是要额外进程支持以及处理延迟严重，本文不先不讨论这种方法。<br>
+利用数据库事务特征，做原子更新，此方法需要依赖数据库的事务特性。<br>
+借助文件排他锁，在处理下单请求的时候，用 <code>flock</code> 锁定一个文件，成功拿到锁的才能处理订单。</p>
+<h2 id="利用-redis-事务特征">利用 <code>Redis</code> 事务特征</h2>
+<p>redis 事务是原子操作，可以保证订单处理的过程中数据没有被其它并发的进程修改。<br>
+示例代码：</p>
+<pre><code>&lt;?php
+$http = new swoole_http_server(&quot;0.0.0.0&quot;, 9509);   // 监听 9509
+
+$http-&gt;set(array(
+    'reactor_num' =&gt; 2,  //reactor thread num
+    'worker_num' =&gt; 4    //worker process num
+));
+
+$http-&gt;on('request', function (swoole_http_request $request, swoole_http_response $response) {
+    $uniqid = uniqid('uid-', TRUE);    // 模拟唯一用户ID
+    $redis = new Redis();
+    $redis-&gt;connect('127.0.0.1', 6379);    // 连接 redis
+
+    $redis-&gt;watch('rest_count');  // 监测 rest_count 是否被其它的进程更改
+
+    $rest_count = intval($redis-&gt;get(&quot;rest_count&quot;));  // 模拟唯一订单ID
+    if ($rest_count &gt; 0){
+        $value = &quot;{$rest_count}-{$uniqid}&quot;;  // 表示当前订单，被当前用户抢到了
+
+        // do something ... 主要是模拟用户抢到单后可能要进行的一些密集运算
+        $rand  = rand(100, 1000000);
+        $sum = 0;
+        for ($i = 0; $i &lt; $rand; $i++) {$sum += $i;}
+
+      // redis 事务
+        $redis-&gt;multi();
+        $redis-&gt;lPush('uniqids', $value);
+        $redis-&gt;decr('rest_count');
+        $replies = $redis-&gt;exec();  // 执行以上 redis 事务
+
+      // 如果 rest_count 的值被其它的并发进程更改了，以上事务将回滚
+        if (!$replies) {
+            echo &quot;订单 {$value} 回滚&quot; . PHP_EOL;
+        }
+    }
+    $redis-&gt;unwatch();
+});
+
+$http-&gt;start();
+</code></pre>
+<p>使用 ab 测试</p>
+<pre><code>ab -t 20 -c 10 http://127.0.0.1:9509/
+......
+Concurrency Level:      10
+Time taken for tests:   20.005 seconds
+Complete requests:      17537
+Failed requests:        0
+Total transferred:      2578380 bytes
+HTML transferred:       0 bytes
+Requests per second:    876.62 [#/sec] (mean)
+Time per request:       11.407 [ms] (mean)
+Time per request:       1.141 [ms] (mean, across all concurrent requests)
+Transfer rate:          125.86 [Kbytes/sec] received
+......
+</code></pre>
+<h2 id="利用文件排他锁-阻塞模式">利用文件排他锁 (阻塞模式)</h2>
+<p>阻塞模式下，如果进程在获取文件排他锁时，其它进程正在占用锁的话，此进程会挂起等待其它进程释放锁后，并自己获取到锁后，再往下执行。<br>
+示例代码：</p>
+<pre><code>&lt;?php
+$http = new swoole_http_server(&quot;0.0.0.0&quot;, 9510);
+
+$http-&gt;set(array(
+    'reactor_num' =&gt; 2,  //reactor thread num
+    'worker_num' =&gt; 4    //worker process num
+));
+
+$http-&gt;on('request', function (swoole_http_request $request, swoole_http_response $response) {
+
+    $uniqid = uniqid('uid-', TRUE);
+    $redis = new Redis();
+    $redis-&gt;connect('127.0.0.1', 6379);
+
+    $fp = fopen(&quot;lock.txt&quot;, &quot;w+&quot;);
+
+    // 阻塞(等待)模式， 要取得独占锁定（写入的程序）
+    if (flock($fp,LOCK_EX)) {  //锁定当前指针
+
+      // 成功取得锁后，放心处理订单
+        $rest_count = intval($redis-&gt;get(&quot;rest_count&quot;));
+        $value = &quot;{$rest_count}-{$uniqid}&quot;;
+        if ($rest_count &gt; 0) {
+            // do something ...
+            $rand = rand(100, 1000000);
+            $sum = 0;
+            for ($i = 0; $i &lt; $rand; $i++) {$sum += $i;}
+
+            $redis-&gt;lPush('uniqids', $value);
+            $redis-&gt;decr('rest_count');
+        }
+
+      // 订单处理完成后，再释放锁
+        flock($fp, LOCK_UN);
+    }
+    fclose($fp);
+
+});
+
+$http-&gt;start();
+</code></pre>
+<p>使用 ab 测试</p>
+<pre><code>ab -t 20 -c 10 http://127.0.0.1:9510/ 
+......
+Concurrency Level:      10
+Time taken for tests:   20.003 seconds
+Complete requests:      8205
+Failed requests:        0
+Total transferred:      1206282 bytes
+HTML transferred:       0 bytes
+Requests per second:    410.19 [#/sec] (mean)
+Time per request:       24.379 [ms] (mean)
+Time per request:       2.438 [ms] (mean, across all concurrent requests)
+Transfer rate:          58.89 [Kbytes/sec] received
+......
+</code></pre>
+<h2 id="利用文件排他锁-非阻塞模式">利用文件排他锁 (非阻塞模式)</h2>
+<p>非阻塞模式下，如果进程在获取文件排他锁时，其它进程正在占用锁的话，此进程会马上判断获取锁失败，并且继续往下执行。<br>
+示例代码：</p>
+<pre><code>&lt;?php
+$http = new swoole_http_server(&quot;0.0.0.0&quot;, 9511);
+
+$http-&gt;set(array(
+    'reactor_num' =&gt; 2,  //reactor thread num
+    'worker_num' =&gt; 4    //worker process num
+));
+
+$http-&gt;on('request', function (swoole_http_request $request, swoole_http_response $response) {
+
+    $uniqid = uniqid('uid-', TRUE);
+    $redis = new Redis();
+    $redis-&gt;connect('127.0.0.1', 6379);
+
+    $fp = fopen(&quot;lock.txt&quot;, &quot;w+&quot;);
+
+    // 非阻塞模式， 如果不希望 flock() 在锁定时堵塞，则给 lock 加上 LOCK_NB
+    if(flock($fp,LOCK_EX | LOCK_NB))   //锁定当前指针
+    {
+      // 成功取得锁后，放心处理订单
+        $rest_count = intval($redis-&gt;get(&quot;rest_count&quot;));
+        $value = &quot;{$rest_count}-{$uniqid}&quot;;
+        if($rest_count &gt; 0){
+            // do something ...
+            $rand  = rand(100, 1000000);
+            $sum=0;
+            for ($i=0;$i&lt;$rand;$i++){ $sum+=$i; }
+
+            $redis-&gt;lPush('uniqids', $value);
+            $redis-&gt;decr('rest_count');
+        }
+
+      // 订单处理完成后，再释放锁
+        flock($fp,LOCK_UN);
+    } else {
+      // 如果获取锁失败，马上进入这里执行
+        echo &quot;{$uniqid} - 系统繁忙，请稍后再试&quot;.PHP_EOL;
+    }
+    fclose($fp);
+
+});
+
+$http-&gt;start();
+</code></pre>
+<p>使用 ab 测试</p>
+<pre><code>ab -t 20 -c 10 http://127.0.0.1:9511/
+......
+Concurrency Level:      10
+Time taken for tests:   20.002 seconds
+Complete requests:      8616
+Failed requests:        0
+Total transferred:      1266846 bytes
+HTML transferred:       0 bytes
+Requests per second:    430.77 [#/sec] (mean)
+Time per request:       23.214 [ms] (mean)
+Time per request:       2.321 [ms] (mean, across all concurrent requests)
+Transfer rate:          61.85 [Kbytes/sec] received
+......
+</code></pre>
+<p>经测试结果对比，<code>redis 事务</code>方式优于文件排他锁方式，而文件排他锁方式中，非阻塞模式优于阻塞模式。</p>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/PJQuX6IBZ/">https://www.vincent.ac.cn/post/PJQuX6IBZ/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/PJQuX6IBZ/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/PJQuX6IBZ/&sharesource=qzone&title=PHP 并发场景的几种解决方案&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/PJQuX6IBZ/&sharesource=weibo&title=PHP 并发场景的几种解决方案 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/ZVVkuihBg/">#
+                    Redis
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/WKbkebv18/">
+                                                                                            Redis击穿、 穿透、 雪崩是什么？
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/znewu8Toy/">
+                                                                                                    php二分查找的定义
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

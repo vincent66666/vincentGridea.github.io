@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                laravel 学习之路 数据库操作 Migrations
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-11-06</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">9.6
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">2619</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/MrJ-unZWo/">MySQL</a>
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                                <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">Laravel</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://www.vincent.ac.cn//post-images/xwp3_04xN.jpeg" alt="">
+                          
+                        <div class="post-content">
+                            <blockquote>
+<p>前面我们设置好了数据库，可以开始对数据库操作了但是前提是我们得有表啊，说到数据库做开发的肯定能知道其中的辛酸苦与泪。</p>
+</blockquote>
+<p>团队合作的时候为了避免代码冲突，以及方便记录修改历史和回退我们有版本控制比如说  <code>git</code> <code>svn</code></p>
+<h2 id="但是数据库怎么搞呢">但是数据库怎么搞呢?</h2>
+<blockquote>
+<p>在远古时代在中小公司中在没有一套比较好用的管理表变动的方案的时候相信童鞋们多少都经历过改数据库的痛苦,每次自己在本地增加了表或者字段都要记录下来告知其他同事，其他同事也得在自己本地修改，还要胆战心惊的改生产跟测试环境的数据库这种经历贼痛苦，但是自从接触了 <code>laravel</code>，一口气搞定所有的环境的表结构。</p>
+</blockquote>
+<h3 id="那laravel怎样来帮助我们的呢">那<code>laravel</code>怎样来帮助我们的呢？</h3>
+<p>这就要说 <code> laravel</code> 内置了表迁移的功能，迁移就像是数据库的版本控制器，让你的团队更容易修改和共享程序的数据库结构。迁移通常配合 <code>Laravel</code> 的结构生成器，能更容易的生成应用程序的数据库结构。如果你曾经让一个团队成员在他本地的数据库结构中手动的添加了字段，那么你将面对解决数据库迁移的问题。</p>
+<p><code>Laravel</code> 的 <code>Schema</code> 门面 提供数据库无关的支持，用于在所有 <code>Laravel</code> 支持的数据库系统中创建和操作表</p>
+<h4 id="创建迁移">创建迁移</h4>
+<p>使用 <code>make:migration Artisan </code>命令来创建迁移</p>
+<pre><code>php artisan make:migration create_test_table
+</code></pre>
+<p>新创建的迁移会放在你的 <code>database/migrations</code> 目录。<br>
+<img src="https://www.vincent.ac.cn//post-images/1573039486488.jpg" alt="" loading="lazy"><br>
+<img src="https://www.vincent.ac.cn//post-images/1573038791409.jpg" alt="" loading="lazy"><br>
+你运行的时候肯定不会跟我这个文件名一样,因为我们很容易就发现这个文件加了时间前缀,也就是说我是在 2019-11-06 16:08:05 创建的这个文件。</p>
+<p><code>--table</code> 和 <code>--create</code> 选项也可用于确定表的名称以及是否在迁移中创建新的数据表。这些选项用指定的迁移模板预先填充指定的数据表，这里就不做过多演示了</p>
+<pre><code>php artisan make:migration create_test_table --create=test
+
+php artisan make:migration add_votes_to_test_table --table=test
+</code></pre>
+<h4 id="迁移结构">迁移结构</h4>
+<p>除了我们创建的 <code>test</code> 表迁移文件，我们还发现了 <code>laravel </code>框架自带的 2014 年的 <code>users</code> 表和 <code>password_resets</code> 表，直接打开<code>2014_10_12_000000_create_users_table.php</code><br>
+我们来参考下它的内容<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038813009.jpg" alt="" loading="lazy"><br>
+一共有两个方法 <code>up</code> 和 <code>down</code> ，<code>up</code> 方法是用于新增数据库的数据表、字段或者索引的，而 <code>down</code> 方法与 <code>up</code> 方法执行操作相反是用来删除表的。</p>
+<p>在这两种方法中，你可以使用 <code>Laravel</code> 的结构生成器以表达式方式创建和修改表。 <code>Schema</code> 生成器上可用的所有方法 请查阅 <a href="https://learnku.com/docs/laravel/6.x/migrations/5173#creating-tables">官方文档</a></p>
+<p>我们直接来读上图的代码，大致意思是</p>
+<ul>
+<li>要创建一个 <code>user</code> 表</li>
+<li>指定这个表的主键为 <code>id</code></li>
+<li>指定 <code>name</code> 字段为字符串类型</li>
+<li>指定 <code>email</code> 字段为为字符串类型且<strong>限制唯一性</strong></li>
+<li>指定 <code>email_verified_at</code> 字段为TIMESTAMP类型并且此字段允许写入 <code>NULL</code> 值</li>
+<li>指定 <code>password</code> 字段为字符串</li>
+<li><code>rememberToken</code> 这个字段不通用就不多讲具体看手册</li>
+<li>重点要说下 <code>timestamps </code> ，<code>$table-&gt;timestamps()</code> 的作用是给表增加 <code>created_at</code> 和 <code>updated_at</code> 它们的类型是 <code>timestamps</code> <code>laravel</code> 插入和编辑数据的时候会自动通过这两个字段记录操作的日期时间</li>
+</ul>
+<p>这我们就发现了 laravel 的又一特点，整个项目对于各种命名的斟酌，很多时候我们即便不看文档甚至不看源代码注释只看方法名就能猜到作用了，她不只是一个框架还是我们编程的一个范本。<br>
+参考了 <code>users</code> 表我们回到 <code>2019_11_06_160805_create_test_table.php</code> 通过命令行生成文件的同时自动已经生成了下面这样的代码<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038851479.jpg" alt="" loading="lazy"><br>
+很明显 <code>laravel</code> 默认表的主键字段名为 <code>id</code>  然后默认表有 <code>created_at</code> 和 <code>updated_at</code> 字段，增删改查不分家，增和改都默认有了个字段记录操作日期了，那删怎么能没有呢？没错 <code>laravel</code> 又为我们设计好了。</p>
+<pre><code>$table-&gt;softDeletes();
+</code></pre>
+<p>这个方法就是为表增加一个 <code>deleted_at</code> ，<code>laravel </code> 会在删除数据的时候记录操作日期，具体到功能比如 <code>回收站</code> 的功能了，我们可能会删除某些数据，但是我们还希望能恢复删除的数据，当某条数据的 <code>deleted_at</code> 为 <code>null</code> 的时候表示正常，当有日期的时候就表示这条数据是在这个日期被删掉了。</p>
+<h4 id="运行迁移">运行迁移</h4>
+<p>现在回到 <code>2019_11_06_160805_create_test_table.php</code>  我们简单编辑下这个文件<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038877436.jpg" alt="" loading="lazy"><br>
+我们在之前学习 <a href="http://www.vincent.ac.cn/post/laravel4/"><code>artisan</code></a> 的时候说过 <code>artisan</code>  主要2个作用  一个是<code>创建迁移文件</code>、一个是<code>执行迁移任务</code>，我们已经用 <code>artisan</code> 创建控制器和迁移了现在终于到了执行任务的时候了，我们上面的迁移文件定义了表的结构，执行迁移才会真正生成表</p>
+<pre><code>php artisan migrate
+</code></pre>
+<p>执行上面的命令的时候up遇到了这样的报错<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038889735.jpg" alt="" loading="lazy"><br>
+<code>SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client</code><br>
+这是因为  up  本地 使用的是 <code>MySQL 8</code><br>
+是由于 <code>MySQL 8</code> 默认使用了新的密码验证插件：<code>caching_sha2_password</code>，而之前的<code>PHP版本</code>中所带的 <code>mysqlnd</code> 无法支持这种验证。解决这个问题可以在MySQL 8中创建（或修改）使用<code>caching_sha2_password</code> 插件的账户，让其使用<code>mysql_native_password</code> 插件</p>
+<pre><code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'R9s33P8,,8&amp;BH;2';
+</code></pre>
+<p>修改后我们重新执行 <code>php artisan migrate</code> 我们可以看到这样的提示<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038905199.jpg" alt="" loading="lazy"><br>
+这意思就是我们的迁移已经完成了,那我们再执行一遍命令呢？我们会看到这样的的提示<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038921282.jpg" alt="" loading="lazy"></p>
+<pre><code>Nothing to migrate.
+</code></pre>
+<p>嗯哼？也就是说已经成功的迁移并不会重复执行，这是在哪控制的呢？让我们 连接上 <code>mysql</code>  <code>show tables</code> 一下<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038933845.jpg" alt="" loading="lazy"></p>
+<p>除了 <code>laravel</code> 自带的 <code>users</code> 表和 <code>password_resets</code> 表，除了我们创建的 <code>test</code> 表，我们还发现了个 <code>migrations</code> 表，我们看下这个表的内容<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038946011.jpg" alt="" loading="lazy"><br>
+我们的3个迁移文件名都在里面记录着了,说明这个表里面存的是已经执行过的迁移的文件名,再查看下 <code>test</code> 表的结构.<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038954817.jpg" alt="" loading="lazy"><br>
+完美跟我们迁移文件中写的是一样的表就这么轻松的创建了，但是再认真看会发现并没有 <code>string 类型</code>，肯定的喽，因为 <code>mysql</code> 压根就没 <code>string</code>，<code>string</code> 就是 <code>varchar</code> 了，再但是再认真看还会发现除了 <code>timestamp</code> ，其他的字段都多了个 <code>NOT NULL</code> ，这个我们并没有在迁移中指定，这里就需要解释下了，这个 <code>NOT NULL</code> 是 <code>laravel</code> 为我们默认添加的，那如果确实有字段想让它允许为 <code>NULL</code> 怎么办呢？别担心 <code>laravel</code> 还有个 <code>-&gt;nullable()</code> 我们这里学习了最常用的 <code>int 、 varchar 、 text</code> 那更多的类型呢？这时候就是 <code>laravel</code> 官方手册真正的作用了，<code>laravel</code> 官方手册更适合作为一本工具书，我们去像查字典一样去查工具书就可以了。</p>
+<h4 id="修改字段">修改字段</h4>
+<p>创建表的方式我们已经学会了，除了创建表，我们还经常需要改变表结构，默认的 <code>users</code> 并没有 <code>deleted_at</code> 字段，我们如果想为 用户 也增加一个类似回收站的字段怎么办呢？</p>
+<p>我们再来创建一个表迁移文件</p>
+<pre><code>php artisan make:migration add_deleted_at_to_users_table
+</code></pre>
+<p>在 add_deleted_at_to_users_table 文件中添加如下代码</p>
+<pre><code>    Schema::table('users', function (Blueprint $table) {
+        $table-&gt;softDeletes();
+    });
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1573038966907.jpg" alt="" loading="lazy"></figure>
+<p>up 中就是我们迁移的内容，创建表的时候我们使用的是 <code>Schema::create</code> ，编辑表的时候我们使用的是 <code>Schema::table</code>，然后回调函数中的内容跟创建表的时候的格式是一样的，现在我们执行 <code>php artisan migrate</code> 迁移命令。<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038978600.jpg" alt="" loading="lazy"><br>
+我们在来看看 <code>users</code> 表的结构 <code>deleted_at</code> 就这么加上了<br>
+<img src="https://www.vincent.ac.cn//post-images/1573038987325.jpg" alt="" loading="lazy"></p>
+<h4 id="回退-回滚迁移">回退 回滚迁移</h4>
+<blockquote>
+<p><code>down</code> 方法中就是回退的内容了，创建表的时候 <code>down</code> 中是 <code>drop</code> 表，添加字段的时候 <code>down</code> 中的自然就是 <code>drop</code> 字段了</p>
+</blockquote>
+<figure data-type="image" tabindex="2"><img src="https://www.vincent.ac.cn//post-images/1573039001454.jpg" alt="" loading="lazy"></figure>
+<pre><code>    Schema::table('users', function (Blueprint $table) {
+        $table-&gt;dropColumn('deleted_at');
+    });
+</code></pre>
+<p>我们一直在说回退说 <code>laravel</code> 的迁移功能可以让我们回退到某个状态，那到底是怎么回退呢？其实也很简单同样是运行命令，为了更深刻的理解 <code>migrations</code> 表的作用，在运行回退命令前我们先看下 <code>migrations</code> 表的内容<br>
+<img src="https://www.vincent.ac.cn//post-images/1573039011971.jpg" alt="" loading="lazy"><br>
+一共有5条记录 4条创建表的，1条添加字段的好我们来运行回退命令</p>
+<pre><code>php artisan migrate:rollback
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1573039027785.jpg" alt="" loading="lazy"><br>
+然后再来看 migrations 表和 users 表<br>
+<img src="https://www.vincent.ac.cn//post-images/1573039041501.jpg" alt="" loading="lazy"><br>
+<img src="https://www.vincent.ac.cn//post-images/1573039054814.jpg" alt="" loading="lazy"><br>
+<code>migrations</code> 表的第4条添加字段的记录没有了，<code>users</code> 表的 <code>deleted_at</code> 字段也没了，再回退一次就把第一次运行迁移的时候的3张表就全删了，如果再运行迁移命令一切就又有了。</p>
+<p>重命名一个存在的数据库表，请使用 rename 方法：</p>
+<pre><code>Schema::rename($from, $to);
+</code></pre>
+<p>删除一个存在的数据表，你可以使用 drop 或者 dropIfExists 方法：</p>
+<pre><code>Schema::drop('users');
+
+Schema::dropIfExists('users');
+</code></pre>
+<h4 id="修改字段类型">修改字段类型</h4>
+<p>到这里创建表、删除表、添加字段、删除字段我们都学习了，最后再来学习下修改字段的，修改字段需要借助 <code>dbal扩展包</code> ，先来执行下列命令安装扩展包</p>
+<pre><code>composer require doctrine/dbal
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://www.vincent.ac.cn//post-images/1573039066817.jpg" alt="" loading="lazy"></figure>
+<p>剩下的工作也很简单我这里举个栗子，比如 <code>test</code>表没有几条数据，用 <code>int</code> 类型太奢侈了，我们改成 <code>tinyint</code> 就足够了。<br>
+那么我们先创建一个迁移文件</p>
+<pre><code>php artisan make:migration change_category_id_in_test_table
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1573039083421.jpg" alt="" loading="lazy"><br>
+然后在 up 中写上修改的内容即可<br>
+<img src="https://www.vincent.ac.cn//post-images/1573039095478.jpg" alt="" loading="lazy"></p>
+<pre><code>    Schema::table('test', function (Blueprint $table) {
+        $table-&gt;tinyInteger('testId')-&gt;unsigned()-&gt;default(0)-&gt;comment('测试id')-&gt;change();
+    });
+</code></pre>
+<p>但是这里要讲一个坑，如果直接运行上面这个迁移文件是会报错的因为 <code>dbal</code> 并不支持修改成 <code>tinyInteger</code> ，为了兼容更多类型的数据库需要使用替代方案使用 <code>boolean</code> 类型<br>
+<img src="https://www.vincent.ac.cn//post-images/1573039104279.jpg" alt="" loading="lazy"><br>
+那 <code>down</code> 里面就是相反的内容了</p>
+<p>总结下就是 <code>up</code> 中写需要迁移的内容 <code>down</code> 中写回退的内容。</p>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/xwp3_04xN/">https://www.vincent.ac.cn/post/xwp3_04xN/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/xwp3_04xN/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/xwp3_04xN/&sharesource=qzone&title=laravel 学习之路 数据库操作 Migrations&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/xwp3_04xN/&sharesource=weibo&title=laravel 学习之路 数据库操作 Migrations + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/MrJ-unZWo/">#
+                    MySQL
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">#
+                    Laravel
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/Wb4f8UHdq/">
+                                                                                            laravel 学习之路 数据库操作 数据插入与数据填充
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/laravel5/">
+                                                                                                    laravel 学习之路 配置config
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

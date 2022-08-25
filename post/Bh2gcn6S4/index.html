@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                laravel 学习之路 数据库操作 查询数据
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-11-11</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">8.2
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1837</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/MrJ-unZWo/">MySQL</a>
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                                <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">Laravel</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://www.vincent.ac.cn//post-images/Bh2gcn6S4.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <p>到这一步 test 表已经有数据了，我们可以来玩数据查询了</p>
+<h3 id="运行原生-sql-查询">运行原生 SQL 查询</h3>
+<p>一旦配置好数据库连接后，便可以使用 <code>DB facade</code> 运行查询。 <code>DB facade</code> 为每种类型的查询提供了方法： <code>select</code>，<code>update</code>，<code>insert</code>，<code>delete</code> 和 <code>statement</code>。</p>
+<h4 id="运行-select-查询">运行 Select 查询</h4>
+<p>你可以使用 <code>DB Facade</code> 的 <code>select</code> 方法来运行基础的查询语句我们在上面创建的路由里增加个 <code>index</code> 的路由</p>
+<blockquote>
+<p><code>dump</code> 是 <code>laravel</code> 的打印函数可以把它理解为 <code>php</code> 的 <code>var_dump</code> 函数的升级版</p>
+</blockquote>
+<pre><code>Route::prefix('db')-&gt;group(function () {
+    Route::get('insert', 'DbController@insert');
+    Route::get('index', 'DbController@index');
+});
+</code></pre>
+<p>并在控制器增加一个 <code>index</code> 方法</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+class DbController extends Controller
+{
+    //
+    function insert()
+    {
+//        DB::insert('INSERT INTO test (testID,title,email,`describe`) VALUES (1,&quot;这是个title&quot;,&quot;123456@qq.com&quot;,&quot;这是个describe&quot;)');
+
+        $insertData = [
+            [
+                &quot;testID&quot;   =&gt; '2',
+                &quot;title&quot;    =&gt; '这是个title2',
+                &quot;email&quot;    =&gt; '22222@qq.com',
+                &quot;describe&quot; =&gt; '这是个describe2',
+            ],
+            [
+                &quot;testID&quot;   =&gt; '3',
+                &quot;title&quot;    =&gt; '这是个title3',
+                &quot;email&quot;    =&gt; '33333@qq.com',
+                &quot;describe&quot; =&gt; '这是个describe3',
+            ],
+
+        ];
+        DB::table('test')-&gt;insert($insertData);
+    }
+
+    function index()
+    {
+        $data = DB::select('select * from test where testId = ?', [1]);
+        dump($data);
+    }
+
+}
+</code></pre>
+<p>来访问一下 <code>http://study.laraveltest.com/db/index</code><br>
+<img src="https://www.vincent.ac.cn//post-images/1573453714092.jpg" alt="" loading="lazy"></p>
+<p>传递给 <code>select</code> 方法的第一个参数就是一个原生的 <code>SQL 查询</code>，而第二个参数则是需要绑定到查询中的参数值。通常，这些值用于约束 <code>where</code> 语句。参数绑定用于防止 <code>SQL 注入</code>。</p>
+<p><code>select</code> 方法将始终返回一个数组，数组中的每个结果都是一个 <code>StdClass</code> 对象，可以像下面这样访问结果值</p>
+<pre><code>    function index()
+    {
+        $data = DB::select('select * from test where testId = ?', [1]);
+        foreach ($data as $datum) {
+            echo $datum-&gt;id;
+        }
+        dump($data);
+    }
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1573453751706.jpg" alt="" loading="lazy"></figure>
+<h4 id="使用命名绑定">使用命名绑定</h4>
+<p>除了使用 <code>?</code> 表示参数绑定外，你也可以使用命名绑定来执行一个查询</p>
+<pre><code>    function index()
+    {
+        //使用命名绑定
+        $binding = DB::select('select * from test where testId = :id', ['id' =&gt; 1]);
+        dump($binding);
+    }
+</code></pre>
+<h3 id="查询构造器">查询构造器</h3>
+<p><code>Laravel</code> 的数据库查询构造器为创建和运行数据库查询提供了一个方便的接口。它可用于执行应用程序中大部分数据库操作，且可在所有支持的数据库系统上运行。</p>
+<p><code>Laravel</code> 的查询构造器使用 <code>PDO </code>参数绑定来保护您的应用程序免受 SQL 注入攻击。因此没有必要清理作为绑定传递的字符串</p>
+<blockquote>
+<p>注意：<code>PDO</code> 不支持绑定列名。因此，不能让用户通过输入来指定查询语句所引用的列名，包括 <code>order by</code> 字段等等。 如果必须要允许用户通过选择某些列来进行查询，请始终根据允许列的白名单来校验列名。</p>
+</blockquote>
+<h4 id="从一个数据表中获取所有行">从一个数据表中获取所有行</h4>
+<p>先注册一个 <code>getList</code> 路由</p>
+<pre><code>Route::prefix('db')-&gt;group(function () {
+    Route::get('insert', 'DbController@insert');
+    Route::get('index', 'DbController@index');
+    Route::get('getList', 'DbController@getList');
+});
+</code></pre>
+<p>并且相应的控制器创建 <code>getList</code> 方法</p>
+<pre><code>function getList() {
+        $data = DB::table('test')-&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p><code>DB table</code> 选中表 调用 <code>get</code> 方法就可以获取全部的数，来访问一下 <code>http://study.laraveltest.com/db/getList</code><br>
+<img src="https://www.vincent.ac.cn//post-images/1573453770704.jpg" alt="" loading="lazy"></p>
+<p>三角箭头是可以点击收起展开的，按住 <code>command</code> 键点击三角箭头是可以全部展开。</p>
+<p>不过实际业务中大多时候都不会取全部数据并且，一般会有限制语句 <code>where()</code> 方法</p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')-&gt;where('testId', 1)-&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>第一参数就是字段名，第二个参数就是值 <code>where('testId', 1)</code> 表示查询 <code>testId</code> 等于 1 的数据，那如果想取 <code>testId</code> 不为 1 的数据 就需要传三个参数，<code>第一个参数还是字段名，第二个参数是符号，第三个参数是值</code> <code> -&gt;where('testId', '&lt;&gt;', 1)</code>。</p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')-&gt;where('testId', '&lt;&gt;',1)-&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p><code>sql</code> 中还有个 <code>IN</code> 的用法 <code>laravel</code> 中就是 <code>whereIn()</code> 第一个参数还是字段名第二个参数是数组</p>
+<pre><code>  function getList()
+    {
+        $data = DB::table('test')-&gt;whereIn('testId', [1, 2, 3])-&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>那么 <code>NOT IN</code> 就是 <code>whereNotIn()</code>，<code>Between</code> 同理，关联表就是  <code>join</code> 了，可以传3个参数关联表就是 <code>join</code> 了可以传3个参数，第一个参数就是要关联的表名可以使用 <code>as</code> 给表定义别名，当表比较长的时候会比较方便，第二个和第三个分别是关联的字段，谁在前谁在后无所谓哈</p>
+<pre><code>    function getList() {
+        $data = DB::table('test')-&gt;join('users as u', 'u.id', 'test.user_id')-&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>如果使用了 <code>join</code> 那 <code>where</code> 就同样要指明表了</p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')
+            -&gt;join('users as u', 'u.id', 'test.testId')
+            -&gt;whereIn('u.id', [1, 2, 3])
+            -&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>联系到 <code>sql</code> 还会有 <code>left join</code> 和 <code>right join</code> 使用驼峰命名法即可</p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')
+            -&gt;join('users as u', 'u.id', 'test.testId')
+            -&gt;leftJoin('password_resets as pr', 'pr.email', 'test.email')
+            -&gt;whereIn('u.id', [1, 2, 3])
+            -&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>分组和排序的则需要在关键字后面加个 <code>by</code></p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')
+            -&gt;join('users as u', 'u.id', 'test.testId')
+            -&gt;leftJoin('password_resets as pr', 'pr.email', 'test.email')
+            -&gt;whereIn('u.id', [1, 2, 3])
+            -&gt;groupBy('u.id')
+            -&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p><code>orderBy</code> 还可以指定第二个参数用于指定正序还是倒序</p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')
+            -&gt;join('users as u', 'u.id', 'test.testId')
+            -&gt;leftJoin('password_resets as pr', 'pr.email', 'test.email')
+            -&gt;whereIn('u.id', [1, 2, 3])
+            -&gt;groupBy('u.id')
+            -&gt;orderBy('test.created_at', 'desc')
+            -&gt;get();
+        dump($data);
+    }
+</code></pre>
+<p>如果只想取指定字段的可以使用 <code>select </code></p>
+<pre><code>    function getList()
+    {
+        $data = DB::table('test')
+            -&gt;select('u.id', 'u.title', 'u.email')
+            -&gt;join('users as u', 'u.id', 'test.testId')
+            -&gt;leftJoin('password_resets as pr', 'pr.email', 'test.email')
+            -&gt;whereIn('u.id', [1, 2, 3])
+            -&gt;groupBy('u.id')
+            -&gt;orderBy('test.created_at', 'desc')
+            -&gt;get();
+        dump($data);
+    }
+</code></pre>
+<h4 id="从数据表中获取单行或单列">从数据表中获取单行或单列</h4>
+<p>如果你只需要从数据表中获取一行数据，你可以使用 <code>first</code> 方法。该方法返回一个 <code>StdClass</code> 对象，创建个 <code>getRow</code> 方法 路由就不多叙述了</p>
+<pre><code>    function getRow()
+    {
+        $data = DB::table('test')-&gt;where('id', 1)-&gt;first();
+        echo $data-&gt;title;
+        dump($data);
+    }
+</code></pre>
+<p>请求 <code>http://study.laraveltest.com/db/getRow</code> 会得到 <code>StdClass</code> 对象<br>
+<img src="https://www.vincent.ac.cn//post-images/1573453981108.jpg" alt="" loading="lazy"></p>
+<p>如果你甚至不需要整行数据，可以使用 <code>value</code> 方法从记录中获取单个值</p>
+<pre><code>    function getRow()
+    {
+        $data = DB::table('test')-&gt;where('id', 1)-&gt;value('title');
+        dump($data);
+    }
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://www.vincent.ac.cn//post-images/1573453968113.jpg" alt="" loading="lazy"></figure>
+<h4 id="获取一列的值">获取一列的值</h4>
+<p>当然业务中有时候需要获取 某个字段 哪一列的值的集合，这个时候就用到了 <code>pluck</code> 方法，<code>pluck</code> 接受 2 个参数</p>
+<ul>
+<li>第一个参数是我们要取的字段；</li>
+<li>第二个字段是可以选的用来做 key</li>
+</ul>
+<pre><code>    function getPluck(){
+        $titles = DB::table('test')-&gt;pluck('title');
+        foreach ($titles as $title) {
+            echo $title;echo &quot;&lt;br&gt;&quot;;
+        }
+    }
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1573453993682.jpg" alt="" loading="lazy"><br>
+当然 还可以将 <code>test</code> 表里 <code>title</code> 字段作为键名，<code>describe</code> 字段作为键值 返回</p>
+<pre><code>    function getPluck(){
+        $titles = DB::table('test')-&gt;pluck('describe','title');
+        foreach ($titles as $title =&gt; $describe) {
+            echo $title;echo &quot;&lt;br&gt;&quot;;
+            echo $describe;echo &quot;&lt;br&gt;&quot;;echo &quot;===================&quot;;echo &quot;&lt;br&gt;&quot;;
+        }
+        dump($titles);
+    }
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://www.vincent.ac.cn//post-images/1573454005230.jpg" alt="" loading="lazy"></figure>
+<h4 id="聚合">聚合</h4>
+<p>查询构造器还提供了各种聚合方法，比如 <code>count</code>, <code>max</code>，<code>min</code>， <code>avg</code>，还有 <code>sum</code> 这些就很简单了</p>
+<pre><code>$users = DB::table('test')-&gt;count();
+
+$price = DB::table('test')-&gt;max('id');
+</code></pre>
+<p>当然也可以将这些聚合方法与其他的查询语句相结合</p>
+<pre><code>$price = DB::table('test')-&gt;where('id', 1)-&gt;avg('price');
+</code></pre>
+<h4 id="判断记录是否存在">判断记录是否存在</h4>
+<p>这个操作除了用 <code>count</code> 方法外 还可以使用 <code>exists</code> 和 <code>doesntExist</code> 方法</p>
+<pre><code>return DB::table('test')-&gt;where('id', 1)-&gt;exists();
+
+return DB::table('test')-&gt;where('id', 1)-&gt;doesntExist();
+</code></pre>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/Bh2gcn6S4/">https://www.vincent.ac.cn/post/Bh2gcn6S4/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/Bh2gcn6S4/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/Bh2gcn6S4/&sharesource=qzone&title=laravel 学习之路 数据库操作 查询数据&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/Bh2gcn6S4/&sharesource=weibo&title=laravel 学习之路 数据库操作 查询数据 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/MrJ-unZWo/">#
+                    MySQL
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">#
+                    Laravel
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/UNZ7vbISR/">
+                                                                                            Linux 安装 minDoc 接口文档在线管理 
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/Wb4f8UHdq/">
+                                                                                                    laravel 学习之路 数据库操作 数据插入与数据填充
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

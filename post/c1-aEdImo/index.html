@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                转载 - 你心中最高大上最牛X的技术到底是什么
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-12-20</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">8.2
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1964</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/soY4UqPlb/">Python</a>
+                                
+                                <a href="https://www.vincent.ac.cn/_CtrRW4Q1p/">c++</a>
+                                
+                                <a href="https://www.vincent.ac.cn/F9L3Hp040r/">Java</a>
+                                
+                                <a href="https://www.vincent.ac.cn/9l7hz-cAk/">Go</a>
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <p><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/vKwbs7.jpg" alt="" loading="lazy"><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/nKcbf7.jpg" alt="" loading="lazy"></p>
+<h3 id="高以下为基贵以贱为本">高以下为基，贵以贱为本</h3>
+<p>互联网技术的核心根基就是TCP/IP,TCP/IP的实现依赖于Linux socket API【我们的项目大部分运行在上面】<br>
+没有它们各种高大上牛逼的技术就无从建立起来。而这根基对大家所用的java,go,py,php,c,c++,nodejs...都是一样的，只不过是基于Linux api做了各种各样的封装百家争鸣，百花齐放，跟易经里的阴阳构成64卦一样，当你刚开始撸程序时，可能并不会觉得基础的重要性，甚至可能几年内一直是框架crud boy,你并不会察觉到基础核心Linux socket api【一般来说linux内核的api很少变动，比较稳定，国内linux内核开发工程师估计也不会天天没事干，天天修改linux内核api】!<br>
+每天被各种新技术词汇遮蔽双眼，而基础知识你一直的错失和鄙视低估，就想一步飞龙在天，达到九五爻之位，并没有“以下为基” “以贱为本”<br>
+甚至对于其它知识点你都持“下贱之态”只想与天齐名，从不脚踏实地从坤做起。</p>
+<p>先给总结图 你再看下面的内容<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/Z8D62Y.jpg" alt="" loading="lazy"></p>
+<p>下面就是要告诉你所谓的牛逼技术到底是什么回事！！！<br>
+我们测试一下数据库，java,python,go,c/c++,php,redis,docker进行测试【测完你会发现点东西】<br>
+然后你再看图比较好</p>
+<h3 id="mysql">mysql</h3>
+<p>先测试数据库接收数据时是不是用了Linux网络 socket API<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/MmyA1e.jpg" alt="" loading="lazy"><br>
+好启动了，没有什么可说的，ELF文件启动。<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/K0MhJh.jpg" alt="" loading="lazy"><br>
+.ibd是创建数据表时生成的文件，没啥可说的，DBA专业都知道<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/AjE7wM.jpg" alt="" loading="lazy"><br>
+我画线的地方调用了ACCEPT SOCKET API函数<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/b8VMKF.jpg" alt="" loading="lazy"><br>
+调用了SENDTO,RECVFROM SOCKET API 函数</p>
+<p>mysql怎么实现我们管不着，但是数据来回的传输依赖于LINUX SOCKET API，这些都是网络接口API<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/459d75.jpg" alt="" loading="lazy"><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/MJRNcX.jpg" alt="" loading="lazy"><br>
+调用了系统其它API函数库，我们看一下accept,sendto,recvfrom,setsockopt,getsockopt read,write,epoll相关函数<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/mZ6jzz.jpg" alt="" loading="lazy"><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/kGEUIT.jpg" alt="" loading="lazy"><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/xHWyrH.jpg" alt="" loading="lazy"><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/4BH2G2.jpg" alt="" loading="lazy"><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/Jcyb9W.jpg" alt="" loading="lazy"><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/8F3Zku.jpg" alt="" loading="lazy"><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/RcCpQM.jpg" alt="" loading="lazy"></p>
+<h3 id="redis-数据库">redis 数据库</h3>
+<p><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/ZY0T3a.jpg" alt="" loading="lazy"><br>
+启动redis<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/eHYqZw.jpg" alt="" loading="lazy"><br>
+测试<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_20/OnKjDB.jpg" alt="" loading="lazy"></p>
+<blockquote>
+<p>epoll_wait 得到就绪的文件描述符读事件返回，然后调用read，其实跟RECVFROM功能一样它的数据是：3rn$3rnsetrn4rnbfzsrn5rn10000rn 这一堆数据被各种大佬称为 redis的二进制通信请求协议！！！返回是+OKrn<br>
+<img src="https://segmentfault.com/img/bVcMSVK" alt="" loading="lazy"><br>
+它们的数据来回传输大部分用read,write函数来实现<br>
+<img src="https://segmentfault.com/img/bVcMSWB" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMSWS" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMSW3" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMSW4" alt="" loading="lazy"></p>
+</blockquote>
+<h3 id="docker">docker</h3>
+<p><img src="https://segmentfault.com/img/bVcMSXS" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMSXQ" alt="" loading="lazy"><br>
+dockerd服务ELF文件调用的linux api相关函数库<br>
+<img src="https://segmentfault.com/img/bVcMSX7" alt="" loading="lazy"><br>
+启动docker服务，跟mysql一样默认启动一堆进程和线程<br>
+<img src="https://segmentfault.com/img/bVcMSYo" alt="" loading="lazy"><br>
+相关命令运行【对不起，我不喜欢背东西，你要是面试我时，问我docker有哪些命令选项，对不起我回家种地放牛了】<br>
+<img src="https://segmentfault.com/img/bVcMSYE" alt="" loading="lazy"><br>
+来用下测试<br>
+<img src="https://segmentfault.com/img/bVcMSZa" alt="" loading="lazy"><br>
+运行过程<br>
+<img src="https://segmentfault.com/img/bVcMSZe" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMSZj" alt="" loading="lazy"><br>
+都在调用connect,socket,getpeerame,setsockopt,getsockopt,accept,sendto等LINUX SOCKET API函数<br>
+docker调用的LINUX API 函数库<br>
+<img src="https://segmentfault.com/img/bVcMS0E" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS0H" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS0J" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS0Q" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS0S" alt="" loading="lazy"></p>
+<h3 id="go语言写个网络程序">go语言写个网络程序</h3>
+<p>我直接复制粘粘给你运行对不起我背不了函数,要用就直接复制粘粘就好了<br>
+<img src="https://segmentfault.com/img/bVcMS1d" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS1f" alt="" loading="lazy"><br>
+go ELF 文件<br>
+<img src="https://segmentfault.com/img/bVcMS1K" alt="" loading="lazy"><br>
+来运行那个大家认为的源码文件<br>
+<img src="https://segmentfault.com/img/bVcMS1V" alt="" loading="lazy"><br>
+先运行哪个函数，你自己看着办哦<br>
+<img src="https://segmentfault.com/img/bVcMS1W" alt="" loading="lazy"><br>
+重点<br>
+<img src="https://segmentfault.com/img/bVcMS2s" alt="" loading="lazy"><br>
+熟悉的一批，socket 创建socket文件描述符，然后命名【把ip,端口绑定到此文件上】，然后监听，并阻塞在accept函数上<br>
+<img src="https://segmentfault.com/img/bVcMS3j" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS3l" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS3m" alt="" loading="lazy"><br>
+好了，go就这样子，它封装的比较骚，go elf编译器封装的牛逼，语法换了一套就称为编译型语言了。</p>
+<h3 id="python语言也写个网络程序测试下">python语言也写个网络程序测试下</h3>
+<p><img src="https://segmentfault.com/img/bVcMS3z" alt="" loading="lazy"><br>
+py的语法就是好，随便一撸就可以了，简直是粗暴又骚，语法嘛就这样，长得跟少妇一样<br>
+来先认识一下python elf文件 毕竟好多爬虫大佬可能没有见过<br>
+<img src="https://segmentfault.com/img/bVcMS3S" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS3U" alt="" loading="lazy"><br>
+.php .py .go .java里的东西只是个文本内容，你们嘛叫源码，我没有文化，只能叫ascii text <sup>_</sup><br>
+<img src="https://segmentfault.com/img/bVcMS35" alt="" loading="lazy"><br>
+启动测试<br>
+<img src="https://segmentfault.com/img/bVcMS36" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS37" alt="" loading="lazy"><br>
+有没有发现，熟悉的一批<br>
+<img src="https://segmentfault.com/img/bVcMS4c" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS4h" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS4r" alt="" loading="lazy"><br>
+好了，到这里够意思了。</p>
+<p>这么简单的语言，你去学语法就行了，简单又粗暴谁不喜欢呢。我都喜欢。 <sup>_</sup></p>
+<h3 id="java-语言网络程序测试">java 语言网络程序测试</h3>
+<p>测试源码</p>
+<pre><code>cat GreetingServer.java
+import java.net.*;
+import java.io.*;
+
+public class GreetingServer extends Thread
+{
+   private ServerSocket serverSocket;
+
+   public GreetingServer(int port) throws IOException
+   {
+      serverSocket = new ServerSocket(port);
+      serverSocket.setSoTimeout(100000000);
+   }
+
+   public void run()
+   {
+      while(true)
+      {
+         try
+         {
+            System.out.println(&quot;等待远程连接，端口号为：&quot; + serverSocket.getLocalPort() + &quot;...&quot;);
+            Socket server = serverSocket.accept();
+            System.out.println(&quot;远程主机地址：&quot; + server.getRemoteSocketAddress());
+            DataInputStream in = new DataInputStream(server.getInputStream());
+            System.out.println(in.readUTF());
+            DataOutputStream out = new DataOutputStream(server.getOutputStream());
+            out.writeUTF(&quot;谢谢连接我：&quot; + server.getLocalSocketAddress() + &quot;\nGoodbye!&quot;);
+            server.close();
+         }catch(SocketTimeoutException s)
+         {
+            System.out.println(&quot;Socket timed out!&quot;);
+            break;
+         }catch(IOException e)
+         {
+            e.printStackTrace();
+            break;
+         }
+      }
+   }
+   public static void main(String [] args)
+   {
+      int port = Integer.parseInt(args[0]);
+      try
+      {
+         Thread t = new GreetingServer(port);
+         t.run();
+      }catch(IOException e)
+      {
+         e.printStackTrace();
+      }
+   }
+}
+</code></pre>
+<p>看一下java elf文件，我相信java大佬肯定知道我就不费话了<br>
+<img src="https://segmentfault.com/img/bVcMS5D" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS5M" alt="" loading="lazy"><br>
+编译一下<br>
+<img src="https://segmentfault.com/img/bVcMS5O" alt="" loading="lazy"><br>
+我没有学过java,但是看一下报错就知道了，对不对，这么明显的提示，我phper都晓得 <sup>_</sup><br>
+<img src="https://segmentfault.com/img/bVcMS5Z" alt="" loading="lazy"><br>
+编译ok<br>
+<img src="https://segmentfault.com/img/bVcMS51" alt="" loading="lazy"><br>
+编译好是啥文件<br>
+<img src="https://segmentfault.com/img/bVcMS58" alt="" loading="lazy"><br>
+启动java程序开始测试<br>
+<img src="https://segmentfault.com/img/bVcMS6x" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS6M" alt="" loading="lazy"><br>
+有没有发现，熟悉的一批<br>
+<img src="https://segmentfault.com/img/bVcMS6R" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS7d" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS7h" alt="" loading="lazy"><br>
+好了，就这么多就行了，没有必要再截图了。</p>
+<p>看接下，我们撸c[c++一样]</p>
+<pre><code>你们应该看出点熟悉的地方了
+int main(int argc,char *argv[])
+{
+
+        if(argc&lt;=2){
+
+                printf(&quot;useage:%s ip_address port_number\n&quot;,basename(argv[0]));
+                return 1;
+        }
+
+        const char *ip = argv[1];
+        int port = atoi(argv[2]);
+
+        int ret = 0;
+        struct sockaddr_in address;
+        bzero(&amp;address,sizeof(address));
+        address.sin_family = AF_INET;
+        inet_pton(AF_INET,ip,&amp;address.sin_addr);
+        address.sin_port = htons(port);
+
+        int listenfd = socket(PF_INET,SOCK_STREAM,0);
+        assert(listenfd&gt;=0);
+
+        ret = bind(listenfd,(struct sockaddr*)&amp;address,sizeof(address));
+
+        assert(ret!=-1);
+
+        ret = listen(listenfd,5);
+        assert(ret!=-1);
+
+        bzero(&amp;address,sizeof(address));
+        address.sin_family = AF_INET;
+        inet_pton(AF_INET,ip,&amp;address.sin_addr);
+        address.sin_port = htons(port);
+
+        int udpfd = socket(PF_INET,SOCK_DGRAM,0);
+        assert(udpfd&gt;=0);
+
+        ret = bind(udpfd,(struct sockaddr*)&amp;address,sizeof(address));
+        assert(ret!=-1);
+
+        struct epoll_event events[MAX_EVENT_NUMBER];
+        int epollfd = epoll_create(5);
+        assert(epollfd!=-1);
+
+        addfd(epollfd,listenfd);
+        addfd(epollfd,udpfd);
+
+        while(1){
+
+                int number = epoll_wait(epollfd,events,MAX_EVENT_NUMBER,-1);
+                if(number&lt;0){
+
+                        printf(&quot;epoll failre\n&quot;);
+                        break;
+                }
+
+                for(int i=0;i&lt;number;i++){
+
+                        int sockfd = events[i].data.fd;
+                        if(sockfd ==listenfd){
+
+                                struct sockaddr_in client_address;
+                                socklen_t client_addrlength = sizeof(client_address);
+                                int connfd = accept(listenfd,(struct sockaddr*)&amp;client_address,&amp;client_addrlength);
+                                addfd(epollfd,connfd);
+                        }
+                        else if(sockfd == udpfd){
+
+                                char buf[UDP_BUFFER_SIZE];
+                                memset(buf,0,UDP_BUFFER_SIZE);
+                                struct sockaddr_in client_address;
+                                socklen_t client_addrlength = sizeof(client_address);
+
+                                ret = recvfrom(udpfd,buf,UDP_BUFFER_SIZE-1,0,(struct sockaddr*)&amp;client_address,&amp;client_addrlength);
+                                if(ret&gt;0){
+
+                                        sendto(udpfd,buf,UDP_BUFFER_SIZE-1,0,(struct sockaddr*)&amp;client_address,client_addrlength);
+                                }
+                        }
+                        else if(events[i].events &amp; EPOLLIN){
+
+                                char buf[TCP_BUFFER_SIZE];
+                                while(1){
+
+                                        memset(buf,0,TCP_BUFFER_SIZE);
+                                        ret = recv(sockfd,buf,TCP_BUFFER_SIZE-1,0);
+                                        if(ret&lt;0){
+
+                                                if((errno==EAGAIN)||(errno=EWOULDBLOCK)){
+
+                                                        break;
+                                                }
+                                                close(sockfd);
+                                                break;
+                                        }
+                                        else if(ret==0){
+
+                                                close(sockfd);
+                                        }
+                                        else{
+
+                                                send(sockfd,buf,ret,0);
+                                        }
+                                }
+                        }else{
+
+                                printf(&quot;something else happened\n&quot;);
+                        }
+                }
+        }
+
+        close(listenfd);
+        return 0;
+}
+</code></pre>
+<p>然后编译，编译好就这样<br>
+<img src="https://segmentfault.com/img/bVcMS7Y" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS79" alt="" loading="lazy"><br>
+测试<br>
+<img src="https://segmentfault.com/img/bVcMS8b" alt="" loading="lazy"><br>
+<img src="https://segmentfault.com/img/bVcMS8c" alt="" loading="lazy"><br>
+好了，都不用我废话了，接下来还是测试下php吧，我觉得，虽然有的朋友觉得php咋样咋样，拍黄片嘛，在打黄打非的压力之下当然没啥好名声了。</p>
+<h3 id="php-网络程序测试">php 网络程序测试</h3>
+<p><img src="https://segmentfault.com/img/bVcMS8r" alt="" loading="lazy"><br>
+看下php elf文件<br>
+<img src="https://segmentfault.com/img/bVcMS8s" alt="" loading="lazy"><br>
+启动并测试跟踪<br>
+<img src="https://segmentfault.com/img/bVcMS8t" alt="" loading="lazy"><br>
+好了，不用我废话，大家也知道是怎么回事了。<br>
+<img src="https://segmentfault.com/img/bVcMS8W" alt="" loading="lazy"><br>
+这些api函数怎么用呢？<br>
+man socket<br>
+<img src="https://segmentfault.com/img/bVcMS8Y" alt="" loading="lazy"><br>
+linux socket api 是所有语言，数据库等应用的核心低层技术知识，你框架掌握的再6，没有多少意义，语言掌握得再6也只是工具<br>
+分布式，集群，高大上的技术都要TCP/IP支持，而它的实现就是网络编程，各语言写法不同，但是核心基础知识没有变化，正所谓天下大事必作于细天下难事必作于易，一上来撸c/c++,java如果不合适你，那么上来就撸PHP掌握了共通的知识再换语言又何妨呢？</p>
+<p>————————————————<br>
+版权声明：本文为博主「北风之神」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>
+原文链接：<a href="https://segmentfault.com/a/1190000038782113">https://segmentfault.com/a/1190000038782113</a></p>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/c1-aEdImo/">https://www.vincent.ac.cn/post/c1-aEdImo/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/c1-aEdImo/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/c1-aEdImo/&sharesource=qzone&title=转载 - 你心中最高大上最牛X的技术到底是什么&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/c1-aEdImo/&sharesource=weibo&title=转载 - 你心中最高大上最牛X的技术到底是什么 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/soY4UqPlb/">#
+                    Python
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/_CtrRW4Q1p/">#
+                    c++
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/F9L3Hp040r/">#
+                    Java
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">#
+                    Go
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/DpMO3vgV-/">
+                                                                                            swoole学习笔记 进程
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/WKbkebv18/">
+                                                                                                    Redis击穿、 穿透、 雪崩是什么？
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

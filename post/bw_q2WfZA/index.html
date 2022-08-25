@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                1000万个数字怎么快速取出最小5个数或者最大5个数
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-07-23</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">5.3
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1164</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/fRCCdSmYdr/">算法</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <p>TopN问题</p>
+<p>最优解：小顶堆 不需要排序，排序效率太差了<br>
+如果大家对堆排序的原理不清除，可以查阅相关资料，我推荐大家参考《算法导论》第六章堆排序，讲解很详细。如果大家需要堆排序的源码，可以参考笔者这篇堆排序文章，本文对堆排序不在赘述。<br>
+首先，我们需要构建一个大小为N的小顶堆，小顶堆的性质如下：每一个父节点的值都小于左右孩子节点，然后依次从文件中读取10亿个整数，如果元素比堆顶小，则跳过不进行任何操作，如果比堆顶大，则把堆顶元素替换掉，并重新构建小顶堆。当10亿个整数遍历完成后，堆内元素就是TopN的结果。</p>
+<pre><code>public class TopN {
+    public static int N = 10;           //Top10
+    public static int LEN = 100000000; //1亿个整数
+    public static int arrs[] =  new int[LEN];
+    public static int arr[] = new int[N];
+    //数组长度
+    public static int len = arr.length;
+    //堆中元素的有效元素 heapSize&lt;=len
+    public static int heapSize = len;
+    public static void main(String[] args) {
+        //生成随机数组
+       for(int i = 0;i&lt;LEN;i++){
+           arrs[i] = new  Random().nextInt(999999999);
+       }
+ 
+       //构建初始堆
+       for(int i =  0;i&lt;N;i++){
+           arr[i] = arrs[i];
+       }
+       //构建小顶堆
+        long start =System.currentTimeMillis();
+       buildMinHeap();
+       for(int i = N;i&lt;LEN;i++){
+           if(arrs[i] &gt; arr[0]){
+               arr[0] = arrs[i];
+               minHeap(0);
+           }
+       }
+        System.out.println(LEN+&quot;个数，求Top&quot;+N+&quot;，耗时&quot;+(System.currentTimeMillis()-start)+&quot;毫秒&quot;);
+       print();
+    }
+ 
+ 
+    /**
+     * 自底向上构建小堆
+     */
+    public static void buildMinHeap(){
+        int size = len / 2;
+        for(int i = size;i&gt;=0;i--){
+            minHeap(i);
+        }
+    }
+ 
+    /**
+     * i节点为根及子树是一个小堆
+     * @param i
+     */
+    public static void minHeap(int i){
+        int l = left(i);
+        int r = right(i);
+        int index = i;
+        if(l&lt;heapSize &amp;&amp; arr[l]&lt;arr[index]){
+            index = l;
+        }
+        if(r&lt;heapSize &amp;&amp; arr[r]&lt;arr[index]){
+            index = r;
+        }
+        if(index != i){
+            int t = arr[index];
+            arr[index] = arr[i];
+            arr[i] = t;
+            //递归向下构建堆
+            minHeap(index);
+        }
+    }
+ 
+    /**
+     * 返回i节点的左孩子
+     * @param i
+     * @return
+     */
+    public static int left(int i){
+        return 2*i;
+    }
+ 
+    /**
+     * 返回i节点的右孩子
+     * @param i
+     * @return
+     */
+    public static int right(int i){
+        return 2*i+1;
+    }
+    /**
+     * 打印
+     */
+    public  static void print(){
+        for(int a:arr){
+            System.out.print(a+&quot;,&quot;);
+        }
+        System.out.println();
+    }
+</code></pre>
+<p>与TopN类似的题目并且应用堆原理的问题有很多，再给大家举个例子哈：<br>
+记得上周，小编和同事聚餐，期间有个同事提出了一个问题：<br>
+给一个无序数组，元素个数亿级，要求写一个算法，要求最后数组左边的任何一个数都比数组右边任何一个数小，但左右数组中元素是否有序不要求。于是，热闹的饭局一下子安静下来，其他同事们都陷入了深深的思考。<br>
+了解完堆和TopN的原理后，这样的题也很容易，解法如下：<br>
+数组长度为len，构建一个大小为n=len/2的大顶堆，从n处遍历数组<br>
+如果元素小于堆顶元素，将该元素与堆顶元素交换，并重新构建大顶堆<br>
+若该元素大于堆顶元素，则不操作，继续遍历<br>
+直到遍历完成，此时堆中的数据就是左半部分小的数组，与原数组合并后就是需要的结果</p>
+<pre><code>public class TopN {
+ 
+    public static int LEN = 20;     //数组大小
+    public static int N = LEN/2;    //堆大小
+    public static int arrs[] = new int[LEN];
+    public static int arr[] =  new int[N];   //堆
+    //数组长度
+    public static int len = arr.length;
+    //堆中元素的有效元素 heapSize&lt;=len
+    public static int heapSize = len;
+    public static void main(String[] args) {
+        //初始化数组
+        for(int i = 0;i&lt;LEN;i++){
+            arrs[i] = new Random().nextInt(1000);
+        }
+        for(int i = 0;i&lt;N;i++){
+            arr[i] = arrs[i];
+        }
+        //构建大顶堆
+        buildMaxHeap();
+        for(int i = N;i &lt; LEN;i++){
+            //如果比堆顶元素小，交换两个数的位置，并重新调整堆结构
+            if(arrs[i] &lt; arr[0]){
+                int t = arrs[i];
+                arrs[i] = arr[0];
+                arr[0] = t;
+                maxHeap(0);
+            }
+        }
+        //修改原数组
+        for(int i = 0;i&lt;N;i++){
+            arrs[i] = arr[i];
+        }
+ 
+        print();
+    }
+ 
+ 
+    /**
+     * 自底向上构建大堆
+     */
+    public static void buildMaxHeap(){
+        int size = len / 2;
+        for(int i = size;i&gt;=0;i--){
+            maxHeap(i);
+        }
+    }
+ 
+    /**
+     * i节点为根及子树是一个大堆
+     * @param i
+     */
+    public static void maxHeap(int i){
+        int l = left(i);
+        int r = right(i);
+        int index = i;
+        if(l&lt;heapSize &amp;&amp; arr[l]&gt;arr[index]){
+            index = l;
+        }
+        if(r&lt;heapSize &amp;&amp; arr[r]&gt;arr[index]){
+            index = r;
+        }
+        if(index != i){
+            int t = arr[index];
+            arr[index] = arr[i];
+            arr[i] = t;
+            //递归向下构建堆
+            maxHeap(index);
+        }
+    }
+ 
+    /**
+     * 返回i节点的左孩子
+     * @param i
+     * @return
+     */
+    public static int left(int i){
+        return 2*i;
+    }
+ 
+    /**
+     * 返回i节点的右孩子
+     * @param i
+     * @return
+     */
+    public static int right(int i){
+        return 2*i+1;
+    }
+    /**
+     * 打印
+     */
+    public  static void print(){
+        for(int a:arrs){
+            System.out.print(a+&quot;,&quot;);
+        }
+        System.out.println();
+    }
+</code></pre>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/bw_q2WfZA/">https://www.vincent.ac.cn/post/bw_q2WfZA/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/bw_q2WfZA/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/bw_q2WfZA/&sharesource=qzone&title=1000万个数字怎么快速取出最小5个数或者最大5个数&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/bw_q2WfZA/&sharesource=weibo&title=1000万个数字怎么快速取出最小5个数或者最大5个数 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/fRCCdSmYdr/">#
+                    算法
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/jCQSdFjqv/">
+                                                                                            随机数
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/yxXTxkQ86/">
+                                                                                                    hyperf使用nginx转发服务出现静态资源访问404问题的原因与解决方法
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

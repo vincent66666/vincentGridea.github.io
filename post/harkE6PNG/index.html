@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Goal-Web框架 数据库组件
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2022-02-17</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">6.8
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1271</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/cdMZz1WVj/">GOAL</a>
+                                
+                                <a href="https://www.vincent.ac.cn/zP5jJNUgi/">开源项目</a>
+                                
+                                <a href="https://www.vincent.ac.cn/9l7hz-cAk/">Go</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <h2 id="goal-webcollection">Goal-web/collection</h2>
+<p><a href="https://github.com/goal-web/database">goal-web/database</a><br>
+goal 框架的数据库组件，当然你也可以在 goal 之外的框架使用他。</p>
+<blockquote>
+<p>目前数据库组件暂时不能使用关联关系，你可以用 WhereExists 来代替</p>
+</blockquote>
+<h2 id="安装-install">安装 - install</h2>
+<pre><code class="language-bash">go get github.com/goal-web/database
+</code></pre>
+<h2 id="使用-usage">使用 - usage</h2>
+<p><code>goal</code> 的脚手架自带了绝大多数开发一个 <code>web</code> 应用的所需要的功能和组件，当然包括了数据库组件。一般情况下，我们只需要在 <code>.env</code> 修改自己的数据库配置即可，添加数据库连接可以 <code>config/database.go</code> 修改 <code>Connections</code> 属性。</p>
+<h2 id="配置-config">配置 - config</h2>
+<p>默认情况下，<code>config/database.go</code> 配置文件像下面那样，默认添加了 <code>sqlite、MySQL、postgresSql</code> 三个数据库连接的配置</p>
+<blockquote>
+<p>和 <code>Laravel</code> 不同的是，<code>goal</code> 把 <code>redis</code> 配置独立出去了，因为 <code>redis</code> 也是一个独立的模块，不想让 <code>redis</code> 依赖 <code>database</code></p>
+</blockquote>
+<pre><code class="language-go">package config
+import (
+    &quot;github.com/goal-web/contracts&quot;
+    &quot;github.com/goal-web/database&quot;
+)
+func init() {
+    configs[&quot;database&quot;] = func(env contracts.Env) interface{} {
+        return database.Config{
+            Default: env.StringOption(&quot;db.connection&quot;, &quot;mysql&quot;),
+            Connections: map[string]contracts.Fields{
+                &quot;sqlite&quot;: {
+                    &quot;driver&quot;:   &quot;sqlite&quot;,
+                    &quot;database&quot;: env.GetString(&quot;sqlite.database&quot;),
+                },
+                &quot;mysql&quot;: {
+                    &quot;driver&quot;:          &quot;mysql&quot;,
+                    &quot;host&quot;:            env.GetString(&quot;db.host&quot;),
+                    &quot;port&quot;:            env.GetString(&quot;db.port&quot;),
+                    &quot;database&quot;:        env.GetString(&quot;db.database&quot;),
+                    &quot;username&quot;:        env.GetString(&quot;db.username&quot;),
+                    &quot;password&quot;:        env.GetString(&quot;db.password&quot;),
+                    &quot;unix_socket&quot;:     env.GetString(&quot;db.unix_socket&quot;),
+                    &quot;charset&quot;:         env.StringOption(&quot;db.charset&quot;, &quot;utf8mb4&quot;),
+                    &quot;collation&quot;:       env.StringOption(&quot;db.collation&quot;, &quot;utf8mb4_unicode_ci&quot;),
+                    &quot;prefix&quot;:          env.GetString(&quot;db.prefix&quot;),
+                    &quot;strict&quot;:          env.GetBool(&quot;db.struct&quot;),
+                    &quot;max_connections&quot;: env.GetInt(&quot;db.max_connections&quot;),
+                    &quot;max_idles&quot;:       env.GetInt(&quot;db.max_idles&quot;),
+                },
+                &quot;pgsql&quot;: {
+                    &quot;driver&quot;:          &quot;postgres&quot;,
+                    &quot;host&quot;:            env.GetString(&quot;db.pgsql.host&quot;),
+                    &quot;port&quot;:            env.GetString(&quot;db.pgsql.port&quot;),
+                    &quot;database&quot;:        env.GetString(&quot;db.pgsql.database&quot;),
+                    &quot;username&quot;:        env.GetString(&quot;db.pgsql.username&quot;),
+                    &quot;password&quot;:        env.GetString(&quot;db.pgsql.password&quot;),
+                    &quot;charset&quot;:         env.StringOption(&quot;db.pgsql.charset&quot;, &quot;utf8mb4&quot;),
+                    &quot;prefix&quot;:          env.GetString(&quot;db.pgsql.prefix&quot;),
+                    &quot;schema&quot;:          env.StringOption(&quot;db.pgsql.schema&quot;, &quot;public&quot;),
+                    &quot;sslmode&quot;:         env.StringOption(&quot;db.pgsql.sslmode&quot;, &quot;disable&quot;),
+                    &quot;max_connections&quot;: env.GetInt(&quot;db.pgsql.max_connections&quot;),
+                    &quot;max_idles&quot;:       env.GetInt(&quot;db.pgsql.max_idles&quot;),
+                },
+            },
+        }
+    }
+}
+</code></pre>
+<h3 id="env-的数据库相关配置"><code>.env</code> 的数据库相关配置</h3>
+<pre><code># 默认连接
+db.connection=sqlite
+
+sqlite.database=/Users/qbhy/project/go/goal-web/goal/example/database/db.sqlite
+
+db.host=localhost
+db.port=3306
+db.database=goal
+db.username=root
+db.password=password
+
+db.pgsql.host=localhost
+db.pgsql.port=55433
+db.pgsql.database=postgres
+db.pgsql.username=postgres
+db.pgsql.password=123456
+</code></pre>
+<h3 id="定义模型-define-a-model">定义模型 - define a model</h3>
+<p><code>app/models/user.go</code> 文件</p>
+<pre><code class="language-go">package models
+
+import (
+    &quot;github.com/goal-web/database/table&quot;
+    &quot;github.com/goal-web/supports/class&quot;
+)
+
+// UserClass 这个类变量，以后大有用处
+var UserClass = class.Make(new(User))
+
+// UserModel 返回 table 实例，继承自查询构造器并且实现了所有 future
+func UserModel() *table.Table {
+    return table.Model(UserClass, &quot;users&quot;)
+}
+
+// User 模型结构体
+type User struct {
+    Id       int64  `json:&quot;id&quot;`
+    NickName string `json:&quot;name&quot;`
+}
+</code></pre>
+<h2 id="用法-method-of-use">用法 - method of use</h2>
+<pre><code class="language-go">package tests
+
+import (
+    &quot;fmt&quot;
+    &quot;github.com/goal-web/contracts&quot;
+    &quot;github.com/goal-web/database/table&quot;
+    &quot;github.com/goal-web/example/models&quot;
+    &quot;github.com/stretchr/testify/assert&quot;
+    &quot;testing&quot;
+)
+
+func getQuery(name string) contracts.QueryBuilder {
+    // 测试用例环境下的简易 goal 应用启动
+    app := initApp(&quot;/Users/qbhy/project/go/goal-web/goal/tests&quot;)
+
+    //return  table.Query(&quot;users&quot;) 返回 table 实例，使用默认连接
+    //tx, _ := app.Get(&quot;db&quot;).(contracts.DBConnection).Begin()
+    //return table.WithTX(&quot;users&quot;, tx) // 事物环境下执行
+
+    //return table.WithConnection(name, &quot;sqlite&quot;) // 返回指定连接的 table 实例，使用连接名
+    return table.WithConnection(name, app.Get(&quot;db&quot;).(contracts.DBConnection)) // 也可以指定连接实例
+}
+
+// TestTableQuery 测试不带模型的 table 查询，类似 laravel 的 DB::table()
+func TestTableQuery(t *testing.T) {
+
+    getQuery(&quot;users&quot;).Delete()
+
+    // 不设置模型的情况下，返回 contracts.Fields
+    user := getQuery(&quot;users&quot;).Create(contracts.Fields{
+        &quot;name&quot;: &quot;qbhy&quot;,
+    }).(contracts.Fields)
+
+    fmt.Println(user)
+    userId := user[&quot;id&quot;].(int64)
+    // 判断插入是否成功
+    assert.True(t, userId &gt; 0)
+
+    // 获取数据总量
+    assert.True(t, getQuery(&quot;users&quot;).Count() == 1)
+
+    // 修改数据
+    num := getQuery(&quot;users&quot;).Where(&quot;name&quot;, &quot;qbhy&quot;).Update(contracts.Fields{
+        &quot;name&quot;: &quot;goal&quot;,
+    })
+    assert.True(t, num == 1)
+    // 判断修改后的数据
+    user = getQuery(&quot;users&quot;).Where(&quot;name&quot;, &quot;goal&quot;).First().(contracts.Fields)
+
+    err := getQuery(&quot;users&quot;).Chunk(10, func(collection contracts.Collection, page int) error {
+        assert.True(t, collection.Len() == 1)
+        fmt.Println(collection.ToJson())
+        return nil
+    })
+
+    assert.Nil(t, err)
+
+    assert.True(t, user[&quot;id&quot;] == userId)
+    assert.True(t, user[&quot;name&quot;] == &quot;goal&quot;)
+    assert.True(t, getQuery(&quot;users&quot;).Find(userId).(contracts.Fields)[&quot;id&quot;] == userId)
+    assert.True(t, getQuery(&quot;users&quot;).Where(&quot;id&quot;, userId).Delete() == 1)
+    assert.Nil(t, getQuery(&quot;users&quot;).Find(userId))
+}
+
+func TestModel(t *testing.T) {
+    initApp(&quot;/Users/qbhy/project/go/goal-web/goal/tests&quot;)
+
+    fmt.Println(&quot;用table查询：&quot;,
+        getQuery(&quot;users&quot;).Get().Map(func(user contracts.Fields) {
+            fmt.Println(&quot;用table查询&quot;, user)
+        }).ToJson()) // query 返回 Collection&lt;contracts.Fields&gt;
+
+    user := models.UserModel().Create(contracts.Fields{
+        &quot;name&quot;: &quot;qbhy&quot;,
+    }).(models.User)
+
+    fmt.Println(&quot;创建后返回模型&quot;, user)
+
+    fmt.Println(&quot;用table查询：&quot;,
+        getQuery(&quot;users&quot;).Get().Map(func(user contracts.Fields) {
+            fmt.Println(&quot;用table查询&quot;, user)
+        }).ToJson()) // query 返回 Collection&lt;contracts.Fields&gt;
+
+        // 用模型查询
+    fmt.Println(models.UserModel(). // model 返回 Collection&lt;models.User&gt;
+                    Get().
+                    Map(func(user models.User) {
+            fmt.Println(&quot;id:&quot;, user.Id)
+        }).ToJson())
+
+    fmt.Println(models.UserModel().Where(&quot;id&quot;, &quot;&gt;&quot;, 0).Delete())
+}
+</code></pre>
+<blockquote>
+<p>更多查询构造器用法请移步 <a href="https://github.com/goal-web/querybuilder">goal-web/querybuilder</a></p>
+</blockquote>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/harkE6PNG/">https://www.vincent.ac.cn/post/harkE6PNG/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/harkE6PNG/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/harkE6PNG/&sharesource=qzone&title=Goal-Web框架 数据库组件&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/harkE6PNG/&sharesource=weibo&title=Goal-Web框架 数据库组件 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/cdMZz1WVj/">#
+                    GOAL
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/zP5jJNUgi/">#
+                    开源项目
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">#
+                    Go
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/4F-DbyJRx/">
+                                                                                            Goal-Web框架 洋葱模型的管道实现，你还在愁 go 没有好用的中间件吗？
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/LGhYKiytt/">
+                                                                                                    docker运行hyperf 出现  Access denied for user &#39;root&#39;@&#39;172.16.10.3&#39; (using password: YES)报错
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

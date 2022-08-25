@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                laravel 学习之路 路由与控制器
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-11-05</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">8.6
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">2155</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                                <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">Laravel</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://www.vincent.ac.cn//post-images/laravel4.jpeg" alt="">
+                          
+                        <div class="post-content">
+                            <blockquote>
+<p>前面学习的路由与控制器，接下来学习如何把路由与控制器关联起来</p>
+</blockquote>
+<h2 id="配置路由关联控制器">配置路由关联控制器</h2>
+<ul>
+<li>
+<p><code>Route</code> 的 <code>get</code> 或者 <code>post</code> 方法，第一个参数就是我们要定义的路由，就是我们在地址栏请求的那段<code>url</code>， 第二个参数可以是一个闭包函数里面写请求定义的路由时执行的内容但是如果把代码都放这个闭包函数中是臃肿且难以维护的所以就需要使用控制器了。</p>
+</li>
+<li>
+<p>很显然控制器就是来替代这第二个参数的闭包函数的写起来也非常简单直接写控制器名即可,然后用 @ 符号分割控制器和控制器的方法<code>Route::get('test/index','TestController@index'); Route::get('test/create','TestController@create'); Route::get('test/store','TestController@store');</code></p>
+</li>
+<li>
+<p>接着在控制器中写点东西<br>
+<img src="https://www.vincent.ac.cn//post-images/1572941780025.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>这样我们在浏览器访问就可以看到返回的响应<br>
+<img src="https://www.vincent.ac.cn//post-images/1572941791533.jpg" alt="" loading="lazy"></p>
+</li>
+</ul>
+<h2 id="路由分组">路由分组</h2>
+<blockquote>
+<p>多么完美但是如果你和我一样帅，一样懒，你回发现三条路由都是 <code>test/</code> 未前缀，在路由中应该减少这样的重复但是怎么做呢？接下来我们来了解了路由分组的概念</p>
+</blockquote>
+<h3 id="路由分组有啥好处">路由分组有啥好处？</h3>
+<p>有时候啊 一大堆路由它们都有共同的地方，比如都使用一个中间件(过两天写)或是前缀都一样，避免代码重复 我们可以将他们分到一组中。</p>
+<p>路由组允许你在大量路由之间共享路由属性，例如中间件或命名空间，而不需要为每个路由单独定义这些属性。共享属性应该以数组的形式传入 <code>Route::group</code> 方法的第一个参数中。</p>
+<p>嵌套的组尝试智能地「合并」其属性及其父组。中间件和 <code>where</code> 条件语句在附加名称、命名空间和前缀时被合并。在适当的情况下，命名空间的分隔符和斜线会被自动添加到 URI 前缀中</p>
+<p>我们先来定义一个前缀路由组,上面这3条路由就可以改造成这个样子了</p>
+<pre><code>Route::prefix('test2')-&gt;group(function () {
+    Route::get('index', 'TestController@index');
+    Route::get('create', 'TestController@create');
+    Route::post('store', 'TestController@store');
+});
+</code></pre>
+<p>随着项目的扩大如果控制器都直接放在 <code>app/Http/Controllers</code> 目录下的话,那维护起来也开始也很<code>头疼</code>了于是就可以为控制器分目录存放.</p>
+<p>比方说说建个 <code>app/Http/Controllers/Admin/StoreController.php</code>,再建一个 <code>app/Http/Controllers/Home/IndexController.php </code>命令行也是可以加目录的</p>
+<pre><code>1. php artisan make:controller Admin/StoreController --resource
+
+2. php artisan make:controller Home/IndexController --resource
+</code></pre>
+<p>再在新建的控制器中写点内容加以区分<br>
+<img src="https://www.vincent.ac.cn//post-images/1572941819096.jpg" alt="" loading="lazy"><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941843149.jpg" alt="" loading="lazy"></p>
+<p>这种多级目录是不需要指明目录的只需要指明相对于app/Http/Controllers 目录的 namespace 即可</p>
+<pre><code>Route::prefix('admin/store')-&gt;namespace('Admin')-&gt;group(function () {
+    Route::get('index', 'StoreController@index');
+    Route::get('create', 'StoreController@create');
+    Route::post('store', 'StoreController@store');
+});
+</code></pre>
+<p>group 是可以嵌套的那么上面这样的路由还可以改造下</p>
+<pre><code>Route::prefix('home')-&gt;namespace('Home')-&gt;group(function () {
+    Route::prefix('index')-&gt;group(function () {
+        Route::get('index', 'IndexController@index');
+        Route::get('create', 'IndexController@create');
+        Route::post('store', 'IndexController@store');
+    });
+});
+</code></pre>
+<p>访问<code>http://study.laraveltest.com/home/index/index</code> 与 <code>http://study.laraveltest.com/admin/store/index</code> 会得到这样的响应<br>
+<img src="https://www.vincent.ac.cn//post-images/1572941855899.jpg" alt="" loading="lazy"><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941870129.jpg" alt="" loading="lazy"></p>
+<p>因为创建的目录下我们还会创建更多的路由器所以，我们应该使用 group 嵌套的这种方式，比如说我们再有一个 <code>app/Http/Controllers/Home/TagController.php</code>  执行创建控制器命令 <code>php artisan make:controller Home/TagController --resource</code> 那么路由就是这样的</p>
+<pre><code>Route::prefix('home')-&gt;namespace('Home')-&gt;group(function () {
+    Route::prefix('index')-&gt;group(function () {
+        Route::get('index', 'IndexController@index');
+        Route::get('create', 'IndexController@create');
+        Route::post('store', 'IndexController@store');
+    });
+    Route::prefix('tag')-&gt;group(function () {
+        Route::get('index', 'TagController@index');
+        Route::get('create', 'TagController@create');
+        Route::post('store', 'TagController@store');
+    });
+});
+</code></pre>
+<h2 id="路由参数">路由参数</h2>
+<p>到这里我们已经学会了如何组织多级目录了，让我们回到 <code>app/Http/Controllers/TestController.php</code> 控制器上<br>
+<img src="https://www.vincent.ac.cn//post-images/1572941881607.jpg" alt="" loading="lazy"><br>
+会发现命令行创建的控制器里面有个 <code>edit</code> 方法，<code>edit</code> 方法有个 <code>$id</code> 参数,通过名字我们很容易就明白这是用来修改数据的，<code>id</code> 一般又是数据库的自增字段,但是这个 id 是哪传来的呢？下面就到了了解路由参数的时候了。</p>
+<p>定义路由的时候我们是可以定义路由参数，我们接着上面的路由加一个 edit ,我们在定义路由的时候用花括号包一个变量名那这个变量就可以直接传到控制器方法中然后在地址栏传什么控制器中就可以接到什么为了方便测试我们在这个方法中返回 id</p>
+<pre><code>Route::prefix('test2')-&gt;group(function () {
+    Route::get('index', 'TestController@index');
+    Route::get('create', 'TestController@create');
+    Route::post('store', 'TestController@store');
+    Route::get('edit/{id}', 'TestController@edit');
+});
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1572941893855.jpg" alt="" loading="lazy"><br>
+接下来我们访问<code>http://study.laraveltest.com/test2/edit/2344</code><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941903516.jpg" alt="" loading="lazy"><br>
+这里面有个值得注意的地方，就是控制器中的参数名跟路由参数名不是必须相同的，一个路由参数的时候这倒不会觉得什么，一旦定义多个路由参数的时候，这就有点坑了<br>
+重新写一个方法<code>edit1</code></p>
+<pre><code>    /**
+     * @param $name
+     * @param $id
+     *
+     * @return string
+     */
+    public function edit1($name,$id)
+    {
+        return '吾乃 Test 控制器的 edit 方法,地址栏的传参id为: &quot;'. $id .'&quot;,name为: &quot;'.$name.'&quot;';
+    }
+</code></pre>
+<p>配置路由</p>
+<pre><code>Route::prefix('test2')-&gt;group(function () {
+            ...
+    Route::get('edit1/{id}/{name}', 'TestController@edit1');
+});
+</code></pre>
+<p>访问 <code>http://study.laraveltest.com/test2/edit1/2344/风清醉</code><br>
+<img src="https://www.vincent.ac.cn//post-images/1572941915585.jpg" alt="" loading="lazy"><br>
+你会发现 id 和 name 没对上，这边画个重点 <strong>路由参数中的第一个参数对应控制器中的第一个路由参数以此类推在控制器中路由参数跟参数名是没关系的只跟顺序有关。</strong></p>
+<p>再个 id 一般都是纯数字，这里却传了字母 ，我们应该怎么约束下 id 呢？laravel 方方面面都为我们考虑到了，我们加个 where 就行了。</p>
+<pre><code>Route::prefix('test2')-&gt;group(function () {
+    ...
+    Route::get('edit1/{id}/{name}', 'TestController@edit1')-&gt;where('id', '[0-9]+');;
+});
+</code></pre>
+<p>这样就只能传数字了其实大多的表都是用 id 做主键的如果每个路由都手动定义一遍约束那也是挺麻烦的laravel 又一次方方面面都为我们考虑到了。</p>
+<p>找到 <code> app/Providers/RouteServiceProvider.php</code> 这个文件在 boot 方法中可以定义全局约束  <code>Route::pattern('id', '[0-9]+');</code><br>
+这样就不需要为每条带 id 参数的路由定义约束了,以后所有带 id 参数的路由就只能传数字了。<br>
+<img src="https://www.vincent.ac.cn//post-images/1572941928086.jpg" alt="" loading="lazy"></p>
+<h2 id="请求参数">请求参数</h2>
+<blockquote>
+<p>路由参数容易搞混的是请求参数路由参数？请求参数？傻傻分不清楚</p>
+</blockquote>
+<p>我们请求 <code>http://study.laraveltest.com/test2/edit1/2344/清风醉?code=12345&amp;status=succ</code> <code>id</code> 和 <code>name</code> 就是路由参数 <code>code</code> 和 <code>status</code>就是请求参数，路由参数上文已经介绍了，那么请求参数怎么获取呢？</p>
+<p>现在让我们回到控制器里去找 <code>update</code> 方法</p>
+<pre><code>   /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+</code></pre>
+<p>这个 <code>Request $request</code> 就是我们用来获取请求参数的关键,它的意思是向控制器的方法传一个 <code>$request</code> 它是一个 <code>Request</code> 类,我们可以把我们的 <code>edit</code> 方法也加个 <code>$request</code></p>
+<pre><code>    /**
+     * @param Request $request
+     * @param         $name
+     * @param         $id
+     *
+     * @return string
+     */
+    public function edit1(Request $request, $id, $name )
+    {
+
+        $code   = $request-&gt;input('code');
+        $status = request()-&gt;input('status');
+
+        return '吾乃 Test 控制器的 edit 方法,地址栏的传参id为: &quot;' .
+            $id . '&quot;,name为: &quot;' .
+            $name . '&quot;,code为: &quot;'.
+            $code.'&quot;,status为: &quot;'.
+            $status.'&quot;';
+    }
+</code></pre>
+<p><strong>这个 Request $request 是不会影响路由参数的顺序的</strong> 它放前放后都是可以的,我们访问这个方法并携带请求参数<br>
+<img src="https://www.vincent.ac.cn//post-images/1572941940654.jpg" alt="" loading="lazy"><br>
+<code>Request 类</code>有一个 <code>input 方法</code>,把要获取的参数名传给它就可以了,我上面示例中还用了个 <code>request()</code> 函数它跟 <code>Request $request</code> 效果是一样的,<code>$request</code> 可以方便复用,所以在控制器中更推荐使用<code>$request</code>,如果传的请求参数比较多的时候这样一个一个取贼麻烦，<code>Request</code> 还有个 <code>all</code> 方法就可以获取全部的请求参数</p>
+<pre><code>public function edit(Request $request, $id, $name)
+{
+    dump($request-&gt;all());
+}
+</code></pre>
+<p>dump 是 laravel 自带的一个打印函数,就是 php 自带的 var_dump 函数的升级版,打印的效果如下<br>
+<img src="https://www.vincent.ac.cn//post-images/1572941950048.jpg" alt="" loading="lazy"><br>
+<code>Request</code> 还有个 <code>only</code> 方法作用是从一大堆请求参数中获取指定的请求参数</p>
+<pre><code>public function edit(Request $request, $id, $name)
+{
+    dump($request-&gt;only('music', 'book'));
+}
+</code></pre>
+<p><code>Request</code> 还有个 <code>except</code> 方法作用是排除某个参数剩下的全要</p>
+<pre><code>public function edit(Request $request, $id, $name)
+{
+    dump($request-&gt;except('music'));
+}
+</code></pre>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/laravel4/">https://www.vincent.ac.cn/post/laravel4/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/laravel4/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/laravel4/&sharesource=qzone&title=laravel 学习之路 路由与控制器&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/laravel4/&sharesource=weibo&title=laravel 学习之路 路由与控制器 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">#
+                    Laravel
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/laravel5/">
+                                                                                            laravel 学习之路 配置config
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/go1/">
+                                                                                                    译 - 为什么要学习Go？
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

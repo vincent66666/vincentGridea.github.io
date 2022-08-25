@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                swoole学习笔记 进程 二
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-12-28</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">26.2
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">4998</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/2TN23WcQi/">c</a>
+                                
+                                <a href="https://www.vincent.ac.cn/bXUcw86dH/">swoole</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <p>并发编程 【php多进程编程 linux】全手动实习 一点区别没有<br>
+多进程开发方面的比较全面的资料<br>
+c++ 并发编程 用的多线程方案是最多的<br>
+服务器通信领域【socket 网络编程，多线程性能最高，并发最好】<br>
+1 php pcntl 扩展<br>
+2 swoole process<br>
+fork/clone exec / exit/ 中断信号的函数  kill/alarm ... 信号集  信号屏蔽字 阻塞信号集，信号递达，阻塞</p>
+<h2 id="进程">进程</h2>
+<p>swoole封装的进程模块  [没有回收机制wait]</p>
+<p>2434 bin/bash  /bin/sh 控制进程 bash进程 sh进程</p>
+<p>sh进程2434进程：php process1.php  sh读取字符串【php process1.php】然后创建一个子进程[docker容器51]  [3763宿主机],sh进程调用wait4阻塞</p>
+<h3 id="2434-具体-来说就是linux终端">2434 具体 来说就是Linux终端</h3>
+<pre><code class="language-c">2434  [00007f57b1823885] open(&quot;/root/.ash_history&quot;, O_WRONLY|O_CREAT|O_APPEND, 0600) = 3 &lt;0.000039&gt;
+2434  [00007f57b1826911] lseek(3, 0, SEEK_END) = 516 &lt;0.000015&gt;
+2434  [00007f57b1823885] write(3, &quot;php process1.php \n&quot;, 18) = 18 &lt;0.000024&gt;
+2434  [00007f57b1823885] close(3)       = 0 &lt;0.000019&gt;
+    
+2434  [00007f57b180d4ec] fork()         = 51 &lt;0.000917&gt;
+2434  [00007f57b1826bf0] setpgid(51, 51) = 0 &lt;0.000015&gt;  51=3763  [docker容器]  [3763宿主机]
+2434  [00007f57b1823885] wait4(-1,  &lt;unfinished ...&gt;
+3763  [00007f57b1826bf0] setpgid(0, 51) = 0 &lt;0.000014&gt;  
+/usr/bin/php ELF 文件                                
+3763  [00007f57b180d2a7] execve(&quot;/usr/bin/php&quot;, [&quot;php&quot;, &quot;process1.php&quot;], 0x55699530ac98 /* 10 vars */) = 0 &lt;0.000661&gt;           3763  [00007f58245aff84] open(&quot;process1.php&quot;, O_RDONLY) = 4 &lt;0.000427&gt;
+3763  [00007f58245aeed6] readv(4, [{iov_base=&quot;&lt;?php\r\n/**\r\n * Created by PhpStorm.\r\n * User: Administrator\r\n * Date: 2021/6/7 0007\r\n * Time: \344\270\213\345\215\210 9:57\r\n */\r\n\r\nuse Swoole\\Process;\r\n\r\nfunction showPId()\r\n{\r\n    echo \&quot;pid=\&quot;.posix_getpid().\&quot;\\r\\n\&quot;;\r\n\r\n\r\n}\r\n\r\nshowPId();\r\n\r\n\r\n$prcoess = new Process(function(){\r\n\r\n    showPId();\r\n});\r\n\r\n$prcoess-&gt;start()&quot;, iov_len=303}, {iov_base=&quot;;&quot;, iov_len=1024}], 2) = 304 &lt;0.000130&gt;
+3763  [00007f58245aedeb] close(4)       = 0 &lt;0.000074&gt;
+3763  [00007f58245bc885] write(1, &quot;pid=51\r\n&quot;, 8) = 8 &lt;0.000079&gt;
+unix socket 双向通信文件  双工通信 unix 匿名 socket 文件 有名     [4,5]是一个数组，可以对4，5进行读写实现进程间通信
+有血缘的进程间通信  【父子进程，兄弟进程】多进程编程                               
+3763  [00007f58245a3f68] socketpair(AF_UNIX, SOCK_DGRAM, 0, [4, 5]) = 0 &lt;0.000467&gt; 网络编程[go/rust/java] linux 
+3763  [00007f5824585af7] fcntl(4, F_GETFL) = 0x2 (flags O_RDWR) &lt;0.000068&gt;
+3763  [00007f5824585af7] fcntl(4, F_SETFL, O_RDWR) = 0 &lt;0.000074&gt;
+3763  [00007f5824585af7] fcntl(5, F_GETFL) = 0x2 (flags O_RDWR) &lt;0.000065&gt;
+3763  [00007f5824585af7] fcntl(5, F_SETFL, O_RDWR) = 0 &lt;0.000065&gt;
+3763  [00007f58245a64ec] fork( &lt;unfinished ...&gt;  3763 进程在执行系统调用fork，执行了一半
+3764  [00007f58245a6503] gettid( &lt;unfinished ...&gt;
+3763  [00007f58245a64ec] &lt;... fork resumed&gt;) = 52 &lt;0.000874&gt;  [docker 容器里的进程52] [宿主机的进程是3764]
+3764  [00007f58245a6503] &lt;... gettid resumed&gt;) = 52 &lt;0.000132&gt;
+3763  [00007f5824585710] exit_group(0)  = ?  3763 进程退出
+2434  [00007f57b1823885] &lt;... wait4 resumed&gt;[{WIFEXITED(s) &amp;&amp; WEXITSTATUS(s) == 0}], WSTOPPED, NULL) = 51 &lt;0.309871&gt;   sh进程回收 
+    
+当子进程退出时【3763】会向父进程发送中断信号，SIGCHLD     
+2434  [00007f57b1823885] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=51, si_uid=0, si_status=0, si_utime=4, si_stime=9}                               
+                               
+2434  [00007f57b1823885] wait4(-1, 0x7ffdd8ada64c, WNOHANG|WSTOPPED, NULL) = -1 ECHILD (No child processes) &lt;0.000014&gt; 
+    
+3764  [00007f58245bf852] getpid()       = 52 &lt;0.000016&gt;
+3764  [00007f58245bf852] getpid()       = 52 &lt;0.000014&gt;
+3764  [00007f58245bc885] write(1, &quot;pid=52\r\n&quot;, 8) = 8 &lt;0.000054&gt;
+3764  [00007f58245aedeb] close(0)       = 0 &lt;0.000018&gt;
+3764  [00007f5824585710] exit_group(0)  = ?
+3764  [????????????????] +++ exited with 0 +++
+这个3764死了没人收尸 服务器内存资源被占用大堆，然后你就说swoole不行啊，各种问题，各种bug 
+
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_28/image-20210607221911429.png" alt="" loading="lazy"></figure>
+<p>fork会复制父进程当前的内存空间<br>
+此时，子进程就可以读取父进程所有的内容，但是如果子进程写【写内存，比如定义变量】它就会创建一块新内存给当前进程使用，不会影响父进程，并且</p>
+<p>父进程不能读取子进程的新内容</p>
+<h3 id="进程组-原生的写法">进程组   原生的写法</h3>
+<pre><code class="language-c">2434  [00007f57b180d4ec] fork()         = 83 &lt;0.000164&gt;  创建一个新进程 16922
+2434  [00007f57b1826bf0] setpgid(83, 83) = 0 &lt;0.000758&gt;
+16922 [00007f57b180d503] gettid()       = 83 &lt;0.000091&gt;
+2434  [00007f57b1823885] wait4(-1,  &lt;unfinished ...&gt; 
+                               
+16922 [00007f57b180d2a7] execve(&quot;/usr/bin/php&quot;, [&quot;php&quot;, &quot;pcntl.php&quot;], 0x55699530ac98 /* 10 vars */) = 0 &lt;0.000622&gt;
+16922 [00007efcd247ef84] open(&quot;pcntl.php&quot;, O_RDONLY) = 4 &lt;0.000061&gt;   
+16922 [00007efcd247ded6] readv(4, [{iov_base=&quot;&lt;?php\r\n/**\r\n * Created by PhpStorm.\r\n * User: Administrator\r\n * Date: 2021/6/7 0007\r\n * Time: \344\270\213\345\215\210 10:00\r\n */\r\n\r\nfunction showPId()\r\n{\r\n    echo \&quot;pid=\&quot;.posix_getpid().\&quot;\\r\\n\&quot;;\r\n\r\n\r\n}\r\n\r\n\r\n\r\n$pid = pcntl_fork();\r\n\r\nif($pid==0){\r\n\r\n    showPId();\r\n    exit(0);\r\n}\r\n\r\nshowPId()&quot;, iov_len=275}, {iov_base=&quot;;&quot;, iov_len=1024}], 2) = 276 &lt;0.000019&gt;
+16922 [00007efcd248b885] fcntl(3, F_SETLKW, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=0, l_len=1}) = 0 &lt;0.000016&gt;
+16922 [00007efcd2454af7] fcntl(3, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=1}) = 0 &lt;0.000016&gt;
+16922 [00007efcd247ddeb] close(4)       = 0 &lt;0.000019&gt;
+16922 [00007efcd247c9c1] rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0 &lt;0.000014&gt;
+                               
+16922 [00007efcd24754ec] fork()         = 84 &lt;0.000535&gt;  创建一个新进程 16923
+16923 [00007efcd248b885] write(1, &quot;pid=84\r\n&quot;, 8 &lt;unfinished ...&gt;  新进程做的第一件事情
+16922 [00007efcd248e852] getpid( &lt;unfinished ...&gt;
+16923 [00007efcd248b885] &lt;... write resumed&gt;) = 8 &lt;0.000095&gt;
+16922 [00007efcd248e852] &lt;... getpid resumed&gt;) = 83 &lt;0.000502&gt;
+16923 [00007efcd247ddeb] close(0 &lt;unfinished ...&gt;
+16922 [00007efcd248b885] write(1, &quot;pid=83\r\n&quot;, 8) = 8 &lt;0.000030&gt;
+16923 [00007efcd2454710] exit_group(0)  = ?
+16922 [00007efcd2454710] exit_group(0)  = ?
+2434  [00007f57b1823885] &lt;... wait4 resumed&gt;[{WIFEXITED(s) &amp;&amp; WEXITSTATUS(s) == 0}], WSTOPPED, NULL) = 83 &lt;0.261776&gt;
+2434  [00007f57b1823885] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=83, si_uid=0, si_status=0, si_utime=5, si_stime=4}                               
+                               
+</code></pre>
+<h3 id="swoole封装的进程模块-有wait函数">swoole封装的进程模块  [有wait函数]</h3>
+<pre><code class="language-c">第一步 bin/sh控制进程创建一个子进程 【docker 89==宿主机进程17057】
+2434  [00007f57b180d4ec] fork()         = 89 &lt;0.000333&gt;  
+2434  [00007f57b1826bf0] setpgid(89, 89) = 0 &lt;0.000019&gt;
+第二步 调用 wait4函数阻塞在此     
+2434  [00007f57b1823885] wait4(-1,  &lt;unfinished ...&gt;
+                               
+第三步 17057新进程执行process1.php程序                               
+17057 [00007f57b180d2a7] execve(&quot;/usr/bin/php&quot;, [&quot;php&quot;, &quot;process1.php&quot;], 0x55699530ac98 /* 10 vars */) = 0 &lt;0.000756&gt;
+17057 [00007fbb0c0fcf84] open(&quot;process1.php&quot;, O_RDONLY) = 4 &lt;0.000080&gt;
+17057 [00007fbb0c0fbed6] readv(4, [{iov_base=&quot;&lt;?php\r\n/**\r\n * Created by PhpStorm.\r\n * User: Administrator\r\n * Date: 2021/6/7 0007\r\n * Time: \344\270\213\345\215\210 9:57\r\n */\r\n\r\nuse Swoole\\Process;\r\n\r\nfunction showPId()\r\n{\r\n    echo \&quot;pid=\&quot;.posix_getpid().\&quot;\\r\\n\&quot;;\r\n\r\n\r\n}\r\n\r\nshowPId();\r\n\r\n\r\n$prcoess = new Process(function(){\r\n\r\n    showPId();\r\n});\r\n\r\n$prcoess-&gt;start();\r\n\r\n$status = Process::wait();\r\n\r\nprint_r($status)&quot;, iov_len=354}, {iov_base=&quot;;&quot;, iov_len=1024}], 2) = 355 &lt;0.000071&gt;
+17057 [00007fbb0c109885] fcntl(3, F_SETLKW, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=0, l_len=1}) = 0 &lt;0.000071&gt;
+17057 [00007fbb0c0d2af7] fcntl(3, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=1}) = 0 &lt;0.000069&gt;
+17057 [00007fbb0c0fbdeb] close(4)       = 0 &lt;0.000385&gt;
+17057 [00007fbb0c10c852] getpid()       = 89 &lt;0.000102&gt;
+第四步  17057进程向终端打印pid=89 同时创建unix socket 数组文件
+                               
+17057 [00007fbb0c109885] write(1, &quot;pid=89\r\n&quot;, 8) = 8 &lt;0.000159&gt;
+17057 [00007fbb0c0f0f68] socketpair(AF_UNIX, SOCK_DGRAM, 0, [4, 5]) = 0 &lt;0.000191&gt;
+17057 [00007fbb0c0d2af7] fcntl(4, F_GETFL) = 0x2 (flags O_RDWR) &lt;0.000067&gt;
+17057 [00007fbb0c0d2af7] fcntl(4, F_SETFL, O_RDWR) = 0 &lt;0.000100&gt;
+17057 [00007fbb0c0d2af7] fcntl(5, F_GETFL) = 0x2 (flags O_RDWR) &lt;0.000081&gt;
+17057 [00007fbb0c0d2af7] fcntl(5, F_SETFL, O_RDWR) = 0 &lt;0.000076&gt;
+17057 [00007fbb0c0f0e1e] setsockopt(5, SOL_SOCKET, SO_SNDBUF, [8388608], 4) = 0 &lt;0.000069&gt;
+17057 [00007fbb0c0f0e1e] setsockopt(5, SOL_SOCKET, SO_RCVBUF, [8388608], 4) = 0 &lt;0.000067&gt;
+17057 [00007fbb0c0f0e1e] setsockopt(4, SOL_SOCKET, SO_SNDBUF, [8388608], 4) = 0 &lt;0.000093&gt;
+17057 [00007fbb0c0f0e1e] setsockopt(4, SOL_SOCKET, SO_RCVBUF, [8388608], 4) = 0 &lt;0.000081&gt;
+ 
+第五步  17057 调用 fork函数调用 子进程 17058                               
+17057 [00007fbb0c0f34ec] fork( &lt;unfinished ...&gt;
+17057 [00007fbb0c0f34ec] &lt;... fork resumed&gt;) = 90 &lt;0.000859&gt; 
+                               
+第六步  17057调用wait4阻塞                               
+17057 [00007fbb0c109885] wait4(-1,  &lt;unfinished ...&gt;    four wait for wait4
+                               
+17058 [00007fbb0c10c852] getpid()       = 90 &lt;0.000109&gt;
+第七步  17058进程执行write                               
+17058 [00007fbb0c109885] write(1, &quot;pid=90\r\n&quot;, 8) = 8 &lt;0.000190&gt;
+第八步  17058子进程退出 退出状态码=0                               
+17058 [00007fbb0c0d2710] exit_group(0)  = ?
+17058 [????????????????] +++ exited with 0 +++
+                               
+第九步 17057 【17058和17057是父子进程】  已经回收退出的子进程为17058                             
+17057 [00007fbb0c109885] &lt;... wait4 resumed&gt;[{WIFEXITED(s) &amp;&amp; WEXITSTATUS(s) == 0}], 0, NULL) = 90 &lt;0.013855&gt;
+17057 [00007fbb0c109885] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=90, si_uid=0, si_status=0, si_utime=0, si_stime=0} 
+ 
+第十步  17057 打印数据                               
+17057 [00007fbb0c109885] write(1, &quot;Array\n(\n    [pid] =&gt; 90\n    [code] =&gt; 0\n    [signal] =&gt; 0\n)\n&quot;, 60) = 60 &lt;0.000285&gt;
+                               
+第十一步  17057退出                               
+17057 [00007fbb0c0d2710] exit_group(0)  = ?
+                               
+17057 [????????????????] +++ exited with 0 +++
+最后一步  2434 bin/sh进程回收17057进程                               
+2434  [00007f57b1823885] &lt;... wait4 resumed&gt;[{WIFEXITED(s) &amp;&amp; WEXITSTATUS(s) == 0}], WSTOPPED, NULL) = 89 &lt;0.448712&gt;
+2434  [00007f57b1823885] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=89, si_uid=0, si_status=0, si_utime=4, si_stime=11} ---
+                               
+</code></pre>
+<p>fd目录 从小到大 shell编程<br>
+<code>exportSocket[socketpair(AF_UNIX, SOCK_DGRAM, 0, [4, 5]) = 0 &lt;0.000191&gt;]方法存在的原因</code></p>
+<pre><code class="language-c">第一步：bin/sh控制进程收到php process2.php 数据字符串  【linux终端如何启动一个程序详细过程】【crud 3,4混过来的，摸鱼混的】
+2434  [00007f57b1823885] write(3, &quot;php process2.php\n&quot;, 17) = 17 &lt;0.000090&gt;
+第二步：bin/sh进程调用fork系统调用创建一个新进程 【在docker容器里是92，在宿主机上是17338】  
+2434  [00007f57b180d4ec] fork()         = 92 &lt;0.000234&gt;
+2434  [00007f57b1826bf0] setpgid(92, 92 &lt;unfinished ...&gt;
+第三步：bin/sh进程调用wait4阻塞在此                                   
+2434  [00007f57b1823885] wait4(-1,  &lt;unfinished ...&gt;
+                               
+第四步：cpu切换到17338进程干活 
+1 调用execve系统函数加载ELF文件  【linux系统如何加载一个程序】  后面的是参数是命令行参数 和环境参数 
+$argv / main(int argc,char *argv[])  go 
+2 调用open函数打开process2.php并读取此文件的内容【其实是text文件，并不是什么源码，只不过有些所谓的大佬称为PHP源码】                               3 调用socketpair/fcntl/setsockopt 创建unix socket 双向通信的文件 【4，5】 unix socket file 它的类型是SOCK_STREAM 字节流 
+4 调用fork函数创建一个子进程 【93 17339】
+5 调用epoll_create 创建epoll file 文件，文件标识是6                               
+17338 [00007f57b180d2a7] execve(&quot;/usr/bin/php&quot;, [&quot;php&quot;, &quot;process2.php&quot;], 0x55699530ac98 /* 10 vars */) = 0 &lt;0.000328&gt;
+17338 [00007f81f84e6f84] open(&quot;process2.php&quot;, O_RDONLY) = 4 &lt;0.000062&gt;
+17338 [00007f81f84e5ed6] readv(4, [{iov_base=&quot;&lt;?php\r\n/**\r\n * Created by PhpStorm.\r\n * User: Administrator\r\n * Date: 2021/6/8 0008\r\n * Time: \344\270\213\345\215\210 9:17\r\n */\r\nuse Swoole\\Process;\r\nuse function Swoole\\Coroutine\\run;\r\n\r\n$proc1 = new Process(function (Process $proc) {\r\n    $socket = $proc-&gt;exportSocket();\r\n    echo $socket-&gt;recv();\r\n    $socket-&gt;send(\&quot;hello master\\n\&quot;);\r\n    echo \&quot;proc1 stop\\n\&quot;;\r\n}, false, 1, true);\r\n\r\n$proc1-&gt;start();\r\n\r\n\r\nrun(function() use ($proc1) {\r\n    $socket = $proc1-&gt;exportSocket();\r\n    $socket-&gt;send(\&quot;hello pro1\\n\&quot;);\r\n    var_dump($socket-&gt;recv());\r\n});\r\n\r\n\r\nProcess::wait(true);\r&quot;, iov_len=562}, {iov_base=&quot;\n&quot;, iov_len=1024}], 2) = 563 &lt;0.000019&gt;
+unix 匿名 socket 文件命名                               
+17338 [00007f81f84daf68] socketpair(AF_UNIX, SOCK_STREAM, 0, [4, 5]) = 0 &lt;0.000626&gt;
+17338 [00007f81f84bcaf7] fcntl(4, F_GETFL) = 0x2 (flags O_RDWR) &lt;0.000016&gt;
+17338 [00007f81f84bcaf7] fcntl(4, F_SETFL, O_RDWR) = 0 &lt;0.000015&gt;
+17338 [00007f81f84bcaf7] fcntl(5, F_GETFL) = 0x2 (flags O_RDWR) &lt;0.000015&gt;
+17338 [00007f81f84bcaf7] fcntl(5, F_SETFL, O_RDWR) = 0 &lt;0.000059&gt;
+17338 [00007f81f84dae1e] setsockopt(5, SOL_SOCKET, SO_SNDBUF, [8388608], 4) = 0 &lt;0.000018&gt;
+17338 [00007f81f84dae1e] setsockopt(5, SOL_SOCKET, SO_RCVBUF, [8388608], 4) = 0 &lt;0.000016&gt;
+17338 [00007f81f84dae1e] setsockopt(4, SOL_SOCKET, SO_SNDBUF, [8388608], 4) = 0 &lt;0.000017&gt;
+17338 [00007f81f84dae1e] setsockopt(4, SOL_SOCKET, SO_RCVBUF, [8388608], 4) = 0 &lt;0.000016&gt;
+17338 [00007f81f84dd4ec] fork( &lt;unfinished ...&gt;
+17338 [00007f81f84dd4ec] &lt;... fork resumed&gt;) = 93 &lt;0.000852&gt;
+17338 [00007f81f84bf4ce] epoll_create1(0) = 6 &lt;0.000021&gt;
+ 
+第五步：17338进程调用系统函数dup 复制创建一个新的文件为7  【5==7】  指针  引用【php,go,c++,java 】                             
+17338 [00007f81f84f631a] dup(5)         = 7 &lt;0.000047&gt;
+17338 [00007f81f84bcaf7] fcntl(7, F_GETFL) = 0x2 (flags O_RDWR) &lt;0.000024&gt;
+第六步：把7文件设置为非阻塞 【非阻塞IO]                               
+17338 [00007f81f84bcaf7] fcntl(7, F_SETFL, O_RDWR|O_NONBLOCK) = 0 &lt;0.000019&gt;
+第七步：向unix socket 7写入 &quot;hello pro1&quot;                               
+17338 [00007f81f84f3885] sendto(7, &quot;hello pro1\n&quot;, 11, 0, NULL, 0) = 11 &lt;0.000046&gt;  [实质是向5发送数据 的]
+1 因为这个unix socket 7已经是非阻塞IO，执行操作的时候不会发生进程挂起的问题，不管有没有返回数据，执行的系统函数会立马返回                           你看下我的网络编程     
+17338 [00007f81f84f3885] recvfrom(7, 0x7f81f817a018, 65536, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable) &lt;0.000012&gt;
+2 把7添加到epoll内核事件表中，监听的事件是EPOLLIN 读事件 【IO事件，中断信号事件，定时事件】                               
+17338 [00007f81f84bf50b] epoll_ctl(6, EPOLL_CTL_ADD, 7, {EPOLLIN, {u32=147362272, u64=94669816500704}}) = 0 &lt;0.000016&gt;
+3 17338在此阻塞在epoll_wait系统函数                               
+17338 [00007f81f84bf52d] epoll_pwait(6,  &lt;unfinished ...&gt;
+17339 [00007f81f84f6852] getpid()       = 93 &lt;0.000017&gt;
+第八步：17339进程调用epoll_create = 6                                     
+17339 [00007f81f84bf4ce] epoll_create1(0) = 6 &lt;0.000020&gt;
+第九步：复制一个新的unix socket 文件为7                                     
+17339 [00007f81f84f631a] dup(4)         = 7 &lt;0.000014&gt;
+17339 [00007f81f84bcaf7] fcntl(7, F_GETFL) = 0x2 (flags O_RDWR) &lt;0.000014&gt;
+17339 [00007f81f84bcaf7] fcntl(7, F_SETFL, O_RDWR|O_NONBLOCK) = 0 &lt;0.000014&gt;
+第十步：从7接收数据 【从4接收】                                     
+17339 [00007f81f84f3885] recvfrom(7, &quot;hello pro1\n&quot;, 65536, 0, NULL, NULL) = 11 &lt;0.000023&gt;
+1 把接收到的数据向终端打印输出                                      
+17339 [00007f81f84f3885] write(1, &quot;hello pro1\n&quot;, 11) = 11 &lt;0.000049&gt;
+2 向 7 【4】 写入 &quot;hello master&quot;字符串数据                                    
+17339 [00007f81f84f3885] sendto(7, &quot;hello master\n&quot;, 13, 0, NULL, 0) = 13 &lt;0.000060&gt;
+
+3 17338进程调用的epoll_wait产生了可读事件                                     
+17338 [00007f81f84bf52d] &lt;... epoll_pwait resumed&gt;[{EPOLLIN, {u32=147362272, u64=94669816500704}}], 4096, 60000, NULL, 8) = 1 &lt;0.028337&gt;
+4 cpu切换到17339进程 向终端输出proc1 stop字符串，并且关闭 epoll 文件                              
+17339 [00007f81f84f3885] write(1, &quot;proc1 stop\n&quot;, 11) = 11 &lt;0.000025&gt;
+17339 [00007f81f84f3885] close(6)       = 0 &lt;0.000019&gt;
+17339 [00007f81f84e5deb] close(0)       = 0 &lt;0.000015&gt;
+5 进程17339调用close(7==4) 执行了一半【实际上这个函数内部的指令可能很多条】                               
+17339 [00007f81f84f3885] close(7 &lt;unfinished ...&gt;
+                               
+6 将7 ==5 移除epoll内核事件表                               
+17338 [00007f81f84bf50b] epoll_ctl(6, EPOLL_CTL_DEL, 7, NULL &lt;unfinished ...&gt;
+17339 [00007f81f84f3885] &lt;... close resumed&gt;) = 0 &lt;0.000074&gt;
+17339 [00007f81f84bcaf7] fcntl(3, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} &lt;unfinished ...&gt;
+17338 [00007f81f84bf50b] &lt;... epoll_ctl resumed&gt;) = 0 &lt;0.000228&gt;
+17339 [00007f81f84bcaf7] &lt;... fcntl resumed&gt;) = 0 &lt;0.000053&gt;
+7 17338进程调用recvfrom 7==5                               
+17338 [00007f81f84f3885] recvfrom(7, &quot;hello master\n&quot;, 65536, 0, NULL, NULL) = 13 &lt;0.000021&gt;
+17338 [00007f81f84f3885] write(1, &quot;string(13) \&quot;&quot;, 12) = 12 &lt;0.000051&gt;
+17338 [00007f81f84f3885] write(1, &quot;hello master\n&quot;, 13) = 13 &lt;0.000054&gt;
+17338 [00007f81f84f3885] write(1, &quot;\&quot;\n&quot;, 2) = 2 &lt;0.000244&gt;
+17338 [00007f81f84f3885] close(6)       = 0 &lt;0.000057&gt;
+
+17338调用wait4阻塞                               
+17338 [00007f81f84f3885] wait4(-1,  &lt;unfinished ...&gt;
+17339 [00007f81f84bc710] exit_group(0)  = ?
+                               
+17339 [????????????????] +++ exited with 0 +++
+17338 [00007f81f84f3885] &lt;... wait4 resumed&gt;[{WIFEXITED(s) &amp;&amp; WEXITSTATUS(s) == 0}], 0, NULL) = 93 &lt;0.013920&gt;
+17338 [00007f81f84f3885] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=93, si_uid=0, si_status=0, si_utime=0, si_stime=2} ---
+17338 [00007f81f84f3885] close(7)       = 0 &lt;0.000074&gt;
+17338 [00007f81f84bc710] exit_group(0)  = ?
+17338 [????????????????] +++ exited with 0 +++
+2434  [00007f57b1823885] &lt;... wait4 resumed&gt;[{WIFEXITED(s) &amp;&amp; WEXITSTATUS(s) == 0}], WSTOPPED, NULL) = 92 &lt;0.297692&gt;
+2434  [00007f57b1823885] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=92, si_uid=0, si_status=0, si_utime=7, si_stime=5} ---  
+</code></pre>
+<h3 id="进程执行流程图">进程执行流程图</h3>
+<figure data-type="image" tabindex="2"><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_28/image-20210608203611686.png" alt="" loading="lazy"></figure>
+<h3 id="swoole-进程exportsocket通信流程图">swoole 进程exportSocket通信流程图</h3>
+<figure data-type="image" tabindex="3"><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_28/image-20210609210807617.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_28/image-20210609210821778.png" alt="" loading="lazy"></figure>
+<h2 id="swoole-进程池多进程">swoole 进程池【多进程】</h2>
+<pre><code class="language-php">$pool = new Swoole\Process\Pool(2, SWOOLE_IPC_SOCKET);
+
+$pool-&gt;on(&quot;Message&quot;, function ($pool, $message) {
+    echo &quot;Message: {$message}\n&quot;;
+    $pool-&gt;write(&quot;hello &quot;);
+    $pool-&gt;write(&quot;world &quot;);
+    $pool-&gt;write(&quot;\n&quot;);
+});
+
+$pool-&gt;listen('0.0.0.0', 9501);
+$pool-&gt;start();
+
+</code></pre>
+<ol>
+<li>单核的时候，多进程的并发是模拟执行的【是cpu进行多次切换模拟并发执行】</li>
+<li>linux 操作系统是把进程，线程当作 任务的 一个进程启动以后，操作系统会默默的启动一个主线程并执行代码</li>
+<li>操作系统导论这本书</li>
+</ol>
+<p>单击鼠标  1秒做了10万次调用</p>
+<pre><code class="language-c">第一步：bin/sh进程调用fork()系统函数创建了新进程 [1242==32984],同时调用wait4阻塞等待子进程退出
+2434  [00007f57b180d4ec] fork()         = 1242 &lt;0.000119&gt;  [1242==32984]
+2434  [00007f57b1823885] wait4(-1,  &lt;unfinished ...&gt; 产生进程切换
+                               
+32984 [00007f57b180d2a7] execve(&quot;/usr/bin/php&quot;, [&quot;php&quot;, &quot;process3.php&quot;], 0x55699530ac98 /* 10 vars */) = 0 &lt;0.000639&gt;
+32984 [00007fc619831f84] open(&quot;process3.php&quot;, O_RDONLY) = 4 &lt;0.000087&gt;
+32984 [00007fc619830ed6] readv(4, [{iov_base=&quot;&lt;?php\r\n/**\r\n * Created by PhpStorm.\r\n * User: Administrator\r\n * Date: 2021/6/9 0009\r\n * Time: \344\270\213\345\215\210 9:20\r\n */\r\n$pool = new Swoole\\Process\\Pool(2, SWOOLE_IPC_SOCKET);\r\n\r\n$pool-&gt;on(\&quot;Message\&quot;, function ($pool, $message) {\r\n    echo \&quot;Message: {$message}\\n\&quot;;\r\n    $pool-&gt;write(\&quot;hello \&quot;);\r\n    $pool-&gt;write(\&quot;world \&quot;);\r\n    $pool-&gt;write(\&quot;\\n\&quot;);\r\n});\r\n\r\n$pool-&gt;listen('0.0.0.0', 9501);\r\n$pool-&gt;start();\r\n\r&quot;, iov_len=397}, {iov_base=&quot;\n&quot;, iov_len=1024}], 2) = 398 &lt;0.000159&gt;
+
+第二步  32984 调用socket 系统函数创建IPV4 的TCP 套接字 设置相关选项并绑定【命名】并监听服务                            
+32984 [00007fc619825e9d] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 4 &lt;0.000129&gt;
+32984 [00007fc619825e1e] setsockopt(4, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0 &lt;0.000105&gt;
+32984 [00007fc619820e8d] bind(4, {sa_family=AF_INET, sin_port=htons(9501), sin_addr=inet_addr(&quot;0.0.0.0&quot;)}, 16) = 0 &lt;0.000071&gt;
+32984 [00007fc619823870] listen(4, 2048) = 0 &lt;0.000075&gt;
+第三步  调用wait4阻塞当前进程，并                               
+32984 [00007fc61983e885] wait4(-1,  &lt;unfinished ...&gt;    
+                               
+32984 [00007fc61983e885] &lt;... wait4 resumed&gt;0x7ffc1355cf58, 0, NULL) = ? ERESTARTSYS (To be restarted if SA_RESTART is set) &lt;7.812490&gt;
+                               
+第四步：创建新进程 [1243=32985] [1244=32986]   
+32985,32986 [fork系统函数]     proc/PID/fd                          
+32984 [00007fc6198284ec] fork()         = 1243 &lt;0.000620&gt;  [1243=32985]
+32984 [00007fc6198284ec] fork( &lt;unfinished ...&gt;                               
+32984 [00007fc6198284ec] &lt;... fork resumed&gt;) = 1244 &lt;0.000494&gt;   [1244=32986]
+                               
+ //  32985,32986 两主进程【主线程】 同时在执行accept4接收函数      
+ // 一台机器，网卡可能多张，也有可能只有一张网卡  当网卡收到数据时，它会把数据写入内存，同时发起中断请求cpu，这个时候cpu去执行中断处理程序
+ //它会拿到数据  【网络帧】  【源物理地址mac|目的物理地址mac|数据|其它】 【网络编程】数据链路层，网络层【IP协议 】，传输层【TCP,UDP】，应用层  
+ // 到达上层解析时，会得到IP+PORT【程序会通过端口号找到对应的进程，最终会找到对应的socket文件，会把数据写入socket文件的接收缓冲区，同时唤醒当前进程】                               
+32985 [00007fc61983e885] accept4(4,  &lt;unfinished ...&gt;  [processor 3]   
+32985 [00007fc61983e885] &lt;... accept4 resumed&gt;{sa_family=AF_INET, sin_port=htons(42200), sin_addr=inet_addr(&quot;172.17.0.1&quot;)}, [120-&gt;16], SOCK_CLOEXEC) = 5 &lt;4.985028&gt;
+1 首先先取4个字节，得到数据5  在此处执行Message事件回调函数                             
+32985 [00007fc61983e885] recvfrom(5, &quot;\0\0\0\5&quot;, 4, MSG_WAITALL, NULL, NULL) = 4 &lt;0.000050&gt;
+2 再取后面的5个字节拿到数据hello                               
+32985 [00007fc61983e885] recvfrom(5, &quot;hello&quot;, 5, MSG_WAITALL, NULL, NULL) = 5 &lt;0.000021&gt;
+32985 [00007fc61983e885] write(1, &quot;Message: hello\n&quot;, 15) = 15 &lt;0.000052&gt;                               
+32985 [00007fc61983e885] sendto(5, &quot;\0\0\0\r&quot;, 4, 0, NULL, 0) = 4 &lt;0.000141&gt;
+32985 [00007fc61983e885] sendto(5, &quot;hello world \n&quot;, 13, 0, NULL, 0) = 13 &lt;0.000037&gt;
+3 打印接收到的数据并关闭客户端连接                               
+32985 [00007fc61983e885] close(5)       = 0 &lt;0.000051&gt;
+
+// 中断信号系统 【中断系统调用|可重入函数】 php多进程编程                              
+32986 [00007fc61983e885] &lt;... accept4 resumed&gt;0x5578fe93b594, [120], SOCK_CLOEXEC) = ? ERESTARTSYS (To be restarted if SA_RESTART is set) &lt;7.812289&gt;
+32985 [00007fc61983e885] &lt;... accept4 resumed&gt;0x5578fe93b554, [120], SOCK_CLOEXEC) = ? ERESTARTSYS (To be restarted if SA_RESTART is set) &lt;2.824239&gt;
+
+    
+//32986 确实是进程 【但是该进程会有一个主线程的】    socket 惊群效应 【】
+type a struct{
+    Name int
+    Test int
+}    
+内存|指针了解一些
+32986 [00007fc61983e885] accept4(4,  &lt;unfinished ...&gt;   [processor 2]   
+                                 
+                                 
+32986 [00007fc61982fa17] &lt;... kill resumed&gt;) = 0 &lt;0.000035&gt;
+//当在终端 bin/sh 进程中按ctrl+c 此时产生中断信号  这个信号的名字是SIGINT，此时系统会给32985，32986两个子进程发送此信号 
+   //这个中断信号的默认动作是终止进程 每个中断信号都有自己的动作【默认，DEF,忽略IGN  信号捕捉函数=信号处理函数=中断信号处理程序】
+32985 [00007fc61982fa17] kill(1243, SIGINT &lt;unfinished ...&gt;
+32984 [00007fc61982fa17] kill(1242, SIGINT &lt;unfinished ...&gt;
+你的多进程编程知识为0，你就得好好补充一下基础知识                              
+32986 [00007fc61982fa17] --- SIGINT {si_signo=SIGINT, si_code=SI_USER, si_pid=1244, si_uid=0} ---
+32985 [00007fc61982fa17] &lt;... kill resumed&gt;) = 0 &lt;0.000034&gt;
+32984 [00007fc61982fa17] &lt;... kill resumed&gt;) = 0 &lt;0.000035&gt;
+32985 [00007fc61982fa17] --- SIGINT {si_signo=SIGINT, si_code=SI_USER, si_pid=1243, si_uid=0} ---
+32984 [00007fc61982fa17] --- SIGINT {si_signo=SIGINT, si_code=SI_USER, si_pid=1242, si_uid=0} ---
+32986 [????????????????] +++ killed by SIGINT +++
+32984 [????????????????] +++ killed by SIGINT +++
+32985 [????????????????] +++ killed by SIGINT +++
+这3个进程被 中断信号 SIGINT 给终止    
+2434  [00007f57b1823885] &lt;... wait4 resumed&gt;[{WIFSIGNALED(s) &amp;&amp; WTERMSIG(s) == SIGINT}], WSTOPPED, NULL) = 1242 &lt;8.210335&gt;
+2434  [00007f57b1823885] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_KILLED, si_pid=1242, si_uid=0, si_status=SIGINT, si_utime=3, si_stime=12} ---       
+</code></pre>
+<h3 id="进程池带listen的工作流程图">进程池带listen的工作流程图</h3>
+<p><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_28/image-20210610222124539.png" alt="" loading="lazy"><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_28/image-20210610222351525.png" alt="" loading="lazy"></p>
+<h3 id="当前进程是被-哪个cpu核-4核执行的">当前进程是被 哪个cpu【核  4核】执行的</h3>
+<p>ps -eF  processor 核心</p>
+<p>top</p>
+<p>taskset<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_28/image-20210610224634228.png" alt="" loading="lazy"></p>
+<p>c 源码多进程测试示例</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ #include &lt;sys/wait.h&gt;
+int main(){
+        pid_t pid = fork();
+        if (pid==0){
+                while(1){
+                        printf(&quot;pid=%d doing\r\n&quot;,getpid());
+                }
+                exit(0);
+        }
+        pid = fork();
+        if (pid==0){
+                while(1){
+                        printf(&quot;pid=%d doing\r\n&quot;,getpid());
+                }
+                exit(0);
+        }
+        int status=0;
+        int exitSum=0;
+        while(1){
+                pid = wait(&amp;status);
+                if (pid&gt;0){
+                        exitSum+=1;
+                        printf(&quot;pid=%d exit\r\n&quot;,pid);
+                }
+                if(exitSum&gt;=2){
+                        break;
+                }
+        }
+        exit(0);
+}
+
+</code></pre>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/Owh8LqeOM/">https://www.vincent.ac.cn/post/Owh8LqeOM/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/Owh8LqeOM/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/Owh8LqeOM/&sharesource=qzone&title=swoole学习笔记 进程 二&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/Owh8LqeOM/&sharesource=weibo&title=swoole学习笔记 进程 二 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/2TN23WcQi/">#
+                    c
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/bXUcw86dH/">#
+                    swoole
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/rqke6QAba/">
+                                                                                            初学 Spring Boot 创建项目并整合Mybatis Plus 
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/DpMO3vgV-/">
+                                                                                                    swoole学习笔记 进程
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

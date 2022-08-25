@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                PHP组合模式构建决策树排它网关模式 (三) 
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-12-10</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">8.0
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1512</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/L-BnD1xJh/">设计模式</a>
+                                
+                                <a href="https://www.vincent.ac.cn/wSuWfVfjK/">决策树</a>
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <h2 id="构建决策树">构建决策树</h2>
+<h3 id="构建年龄与性别的决策器-decisiondata">构建年龄与性别的决策器 DecisionData</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Tree;
+
+use DecisionTree\Model\Tree\NodeDecision;
+
+class DecisionData
+{
+    public function age_0_12(): NodeDecision
+    {
+        return new NodeDecision(1, '0-12', 'age', 'between', [0, 12]);
+    }
+
+    public function age_13_18(): NodeDecision
+    {
+        return new NodeDecision(2, '13-18', 'age', 'between', [13, 18]);
+    }
+
+    public function age_19_33(): NodeDecision
+    {
+        return new NodeDecision(3, '19-33', 'age', 'between', [19, 33]);
+    }
+
+    public function age_34_99(): NodeDecision
+    {
+        return new NodeDecision(4, '34-99', 'age', 'between', [34, 99]);
+    }
+
+    public function gender_man(): NodeDecision
+    {
+        return new NodeDecision(5, '性别男', 'gender', 'eq', 'man');
+    }
+
+    public function gender_woman(): NodeDecision
+    {
+        return new NodeDecision(6, '性别女', 'gender', 'eq', 'woman');
+    }
+}
+</code></pre>
+<h3 id="构建决策树-leaftree">构建决策树 LeafTree</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Tree;
+
+use DecisionTree\Tree\DecisionData;
+use DecisionTree\Model\Tree\NextNode;
+use DecisionTree\Model\Tree\Node;
+
+class LeafTree
+{
+    /**
+     * @var DecisionData|mixed
+     */
+    private $decisionObj;
+
+    public function __construct()
+    {
+        $this-&gt;decisionObj = new DecisionData();
+    }
+
+    public function get(?Node $parentTreeNode = null): Node
+    {
+        //根节点
+        $rootNode = new Node(1, 'branch', '根节点');
+        if ($parentTreeNode) {
+            $rootNode-&gt;setParentId($parentTreeNode-&gt;getId());
+        }
+
+        $rootChildOne = new Node(11, 'branch', '男', '男');
+        $rootChildOne-&gt;setParentId($rootNode-&gt;getId());
+        $rootChildOne-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;gender_man());
+        $rootNode-&gt;setChildMap($rootChildOne);
+        // 根节点绑定指向决策1
+        $rootNextNode1 =new NextNode($rootNode-&gt;getId(), $rootChildOne-&gt;getId());
+        $rootNextNode1-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;gender_man());
+        $rootNode-&gt;setNextNodeMap($rootNextNode1);
+
+        $rootChildOne1 = new Node(111, 'leaf', '男-0-12', '二次元');
+        $rootChildOne1-&gt;setParentId($rootChildOne-&gt;getId());
+        $rootChildOne1-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_0_12());
+        $rootChildOne-&gt;setChildMap($rootChildOne1);
+        // 子节点1绑定指向决策
+        $rootChildNextNode1 = new NextNode($rootChildOne-&gt;getId(), $rootChildOne1-&gt;getId());
+        $rootChildNextNode1-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_0_12());
+        $rootChildOne-&gt;setNextNodeMap($rootChildNextNode1);
+
+        $rootChildOne2 = new Node(112, 'leaf', '男-13-18', '学习文具');
+        $rootChildOne2-&gt;setParentId($rootChildOne-&gt;getId());
+        $rootChildOne2-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_13_18());
+        $rootChildOne-&gt;setChildMap($rootChildOne2);
+        // 子节点1绑定指向决策
+        $rootChildNextNode2 = new NextNode($rootChildOne-&gt;getId(), $rootChildOne2-&gt;getId());
+        $rootChildNextNode2-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_13_18());
+        $rootChildOne-&gt;setNextNodeMap($rootChildNextNode2);
+
+        $rootChildOne3 = new Node(113, 'leaf', '男-19-33', '金融杂志');
+        $rootChildOne3-&gt;setParentId($rootChildOne-&gt;getId());
+        $rootChildOne3-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_19_33());
+        $rootChildOne-&gt;setChildMap($rootChildOne3);
+        // 子节点1绑定指向决策
+        $rootChildNextNode3 = new NextNode($rootChildOne-&gt;getId(), $rootChildOne3-&gt;getId());
+        $rootChildNextNode3-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_19_33());
+        $rootChildOne-&gt;setNextNodeMap($rootChildNextNode3);
+
+        $rootChildOne4 = new Node(114, 'leaf', '男-34-99', '秃头救星');
+        $rootChildOne4-&gt;setParentId($rootChildOne-&gt;getId());
+        $rootChildOne4-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_34_99());
+        $rootChildOne-&gt;setChildMap($rootChildOne4);
+        // 子节点1绑定指向决策
+        $rootChildNextNode4 = new NextNode($rootChildOne-&gt;getId(), $rootChildOne4-&gt;getId());
+        $rootChildNextNode4-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_34_99());
+        $rootChildOne-&gt;setNextNodeMap($rootChildNextNode4);
+
+        $rootChildTwo = new Node(12, 'branch', '女', '女');
+        $rootChildTwo-&gt;setParentId($rootNode-&gt;getId());
+        $rootChildTwo-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;gender_woman());
+        $rootNode-&gt;setChildMap($rootChildTwo);
+        // 根节点绑定指向决策2
+       $rootNextNode2 =new NextNode($rootNode-&gt;getId(), $rootChildTwo-&gt;getId());
+       $rootNextNode2-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;gender_woman());
+       $rootNode-&gt;setNextNodeMap($rootNextNode2);
+
+        $rootChildTwo1 = new Node(121, 'branch', '女-0-12', '芭比娃娃');
+        $rootChildTwo1-&gt;setParentId($rootChildTwo-&gt;getId());
+        $rootChildTwo1-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_0_12());
+        $rootChildTwo-&gt;setChildMap($rootChildTwo1);
+        // 子节点2绑定指向决策
+        $rootChildNextNode21 = new NextNode($rootChildTwo-&gt;getId(), $rootChildTwo1-&gt;getId());
+        $rootChildNextNode21-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_0_12());
+        $rootChildTwo-&gt;setNextNodeMap($rootChildNextNode1);
+
+        $rootChildTwo2 = new Node(122, 'branch', '女-13-18', '学习用品');
+        $rootChildTwo2-&gt;setParentId($rootChildTwo-&gt;getId());
+        $rootChildTwo2-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_13_18());
+        $rootChildTwo-&gt;setChildMap($rootChildTwo2);
+        // 子节点2绑定指向决策
+        $rootChildNextNode22 = new NextNode($rootChildTwo-&gt;getId(), $rootChildTwo2-&gt;getId());
+        $rootChildNextNode22-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_13_18());
+        $rootChildTwo-&gt;setNextNodeMap($rootChildNextNode22);
+
+        $rootChildTwo3 = new Node(123, 'branch', '女-19-33', '美妆');
+        $rootChildTwo3-&gt;setParentId($rootChildTwo-&gt;getId());
+        $rootChildTwo3-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_19_33());
+        $rootChildTwo-&gt;setChildMap($rootChildTwo3);
+        // 子节点2绑定指向决策
+        $rootChildNextNode23 = new NextNode($rootChildTwo-&gt;getId(), $rootChildTwo3-&gt;getId());
+        $rootChildNextNode23-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_19_33());
+        $rootChildTwo-&gt;setNextNodeMap($rootChildNextNode23);
+
+        $rootChildTwo4 = new Node(124, 'branch', '女-34-99', '母婴');
+        $rootChildTwo4-&gt;setParentId($rootChildTwo-&gt;getId());
+        $rootChildTwo4-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_34_99());
+        $rootChildTwo-&gt;setChildMap($rootChildTwo4);
+        // 子节点2绑定指向决策
+        $rootChildNextNode24 = new NextNode($rootChildTwo-&gt;getId(), $rootChildTwo4-&gt;getId());
+        $rootChildNextNode24-&gt;setNodeDecisionMap($this-&gt;decisionObj-&gt;age_34_99());
+        $rootChildTwo-&gt;setNextNodeMap($rootChildNextNode24);
+
+        return $rootNode;
+    }
+}
+</code></pre>
+<h3 id="topsdk">TopSdk</h3>
+<pre><code>&lt;?php
+date_default_timezone_set('Asia/Shanghai');
+
+if (!defined(&quot;TOP_AUTOLOADER_PATH&quot;))
+{
+	define(&quot;TOP_AUTOLOADER_PATH&quot;, dirname(__FILE__));
+}
+
+/**
+* 注册autoLoader,此注册autoLoader只加载top文件
+* 不要删除，除非你自己加载文件。
+**/
+require(&quot;Autoloader.php&quot;);
+</code></pre>
+<h2 id="测试-testphp">测试 test.php</h2>
+<pre><code>&lt;?php
+
+
+include &quot;./src/TopSdk.php&quot;;
+
+
+
+use DecisionTree\Service\ExclusiveService;
+use DecisionTree\Tree\LeafTree;
+
+
+
+$run = new ExclusiveService();
+
+
+$node = (new LeafTree())-&gt;get();
+
+$userData = [
+    'id'     =&gt; 1,
+    'age'    =&gt; &quot;33&quot;,
+    &quot;gender&quot; =&gt; &quot;man&quot; 
+];
+$result = $run-&gt;process($node, $userData);
+
+$userData = [
+    'id'     =&gt; 2,
+    'age'    =&gt; &quot;33&quot;,
+    &quot;gender&quot; =&gt; &quot;woman&quot; 
+];
+$result = $run-&gt;process($node, $userData);
+
+$userData = [
+    'id'     =&gt; 3,
+    'age'    =&gt; &quot;11&quot;,
+    &quot;gender&quot; =&gt; &quot;woman&quot; 
+];
+$result = $run-&gt;process($node, $userData);
+
+
+$userData = [
+    'id'     =&gt; 4,
+    'age'    =&gt; &quot;11&quot;,
+    &quot;gender&quot; =&gt; &quot;man&quot; 
+];
+$result = $run-&gt;process($node, $userData);
+
+$userData = [
+    'id'     =&gt; 5,
+    'age'    =&gt; &quot;13&quot;,
+    &quot;gender&quot; =&gt; &quot;woman&quot; 
+];
+$result = $run-&gt;process($node, $userData);
+
+
+$userData = [
+    'id'     =&gt; 6,
+    'age'    =&gt; &quot;13&quot;,
+    &quot;gender&quot; =&gt; &quot;man&quot; 
+];
+$result = $run-&gt;process($node, $userData);
+
+
+
+
+$userData = [
+    'id'     =&gt; 7,
+    'age'    =&gt; &quot;66&quot;,
+    &quot;gender&quot; =&gt; &quot;woman&quot; 
+];
+$result = $run-&gt;process($node, $userData);
+
+
+$userData = [
+    'id'     =&gt; 8,
+    'age'    =&gt; &quot;66&quot;,
+    &quot;gender&quot; =&gt; &quot;man&quot; 
+];
+$result = $run-&gt;process($node, $userData);
+</code></pre>
+<h2 id="测试结果">测试结果</h2>
+<pre><code>[Running] php &quot;/Users/vincent/LocalProject/DecisionTreeDemo/test.php&quot;
+string(91) &quot;用户id：1，当前节点id：1，下一节点id：11，决策名：男，决策值：男&quot;
+string(108) &quot;用户id：1，当前节点id：11，下一节点id：113，决策名：男-19-33，决策值：金融杂志&quot;
+string(91) &quot;用户id：2，当前节点id：1，下一节点id：12，决策名：女，决策值：女&quot;
+string(102) &quot;用户id：2，当前节点id：12，下一节点id：123，决策名：女-19-33，决策值：美妆&quot;
+string(91) &quot;用户id：3，当前节点id：1，下一节点id：12，决策名：女，决策值：女&quot;
+string(91) &quot;用户id：4，当前节点id：1，下一节点id：11，决策名：男，决策值：男&quot;
+string(104) &quot;用户id：4，当前节点id：11，下一节点id：111，决策名：男-0-12，决策值：二次元&quot;
+string(91) &quot;用户id：5，当前节点id：1，下一节点id：12，决策名：女，决策值：女&quot;
+string(108) &quot;用户id：5，当前节点id：12，下一节点id：122，决策名：女-13-18，决策值：学习用品&quot;
+string(91) &quot;用户id：6，当前节点id：1，下一节点id：11，决策名：男，决策值：男&quot;
+string(108) &quot;用户id：6，当前节点id：11，下一节点id：112，决策名：男-13-18，决策值：学习文具&quot;
+string(91) &quot;用户id：7，当前节点id：1，下一节点id：12，决策名：女，决策值：女&quot;
+string(102) &quot;用户id：7，当前节点id：12，下一节点id：124，决策名：女-34-99，决策值：母婴&quot;
+string(91) &quot;用户id：8，当前节点id：1，下一节点id：11，决策名：男，决策值：男&quot;
+string(108) &quot;用户id：8，当前节点id：11，下一节点id：114，决策名：男-34-99，决策值：秃头救星&quot;
+
+[Done] exited with code=0 in 0.149 seconds
+</code></pre>
+<h2 id="组合模式结构">组合模式结构</h2>
+<figure data-type="image" tabindex="1"><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_10/ngQCxR.png" alt="" loading="lazy"></figure>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/wlSst96pj/">https://www.vincent.ac.cn/post/wlSst96pj/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/wlSst96pj/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/wlSst96pj/&sharesource=qzone&title=PHP组合模式构建决策树排它网关模式 (三) &pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/wlSst96pj/&sharesource=weibo&title=PHP组合模式构建决策树排它网关模式 (三)  + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/L-BnD1xJh/">#
+                    设计模式
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/wSuWfVfjK/">#
+                    决策树
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/6DJtUGYm5/">
+                                                                                            Mac 安装 Jenkins
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/-Jm04jY55/">
+                                                                                                    PHP组合模式构建决策树排它网关模式 (二) 
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Goal - 快速开始
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2022-03-11</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">3.1
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">779</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/cdMZz1WVj/">GOAL</a>
+                                
+                                <a href="https://www.vincent.ac.cn/zP5jJNUgi/">开源项目</a>
+                                
+                                <a href="https://www.vincent.ac.cn/9l7hz-cAk/">Go</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <h2 id="要求-requirements">要求 - requirements</h2>
+<ul>
+<li>go 1.17+</li>
+<li>make (可选)</li>
+</ul>
+<h3 id="下载-download">下载 - download</h3>
+<pre><code class="language-bash">git clone https://github.com/goal-web/goal &amp;&amp; cd goal
+</code></pre>
+<h3 id="启动-start">启动 - start</h3>
+<pre><code class="language-bash">make run
+# or
+go mod tidy &amp;&amp; go run main.go run
+</code></pre>
+<blockquote>
+<p>goal 程序编译后运行方式是 ./goal run ，run 只是一个定义好的 goal cli 命令</p>
+</blockquote>
+<h3 id="访问-visit">访问 - visit</h3>
+<pre><code class="language-bash">curl localhost:8008
+</code></pre>
+<h2 id="目录结构">目录结构</h2>
+<h3 id="app-应用代码">app 应用代码</h3>
+<ul>
+<li><code>console</code> 控制台相关代码
+<ul>
+<li><code>commands</code> 定义命令行</li>
+<li><code>kernel.go</code> 默认 <code>console</code> 内核实现，可以在这里定义计划任务</li>
+</ul>
+</li>
+<li><code>dao</code> 数据操作代码</li>
+<li><code>events</code> 事件定义</li>
+<li><code>listeners</code> 事件监听者</li>
+<li><code>jobs</code> 任务代码，用于投递到 <code>queue</code></li>
+<li><code>http web</code>相关代码
+<ul>
+<li><code>controllers</code> 控制器目录</li>
+<li><code>middlewares</code> 中间件目录</li>
+<li><code>requests</code> 自定义请求目录</li>
+<li><code>sse</code> 服务端事件推送相关代码及示例</li>
+</ul>
+</li>
+<li><code>models</code> 数据模型定义</li>
+<li><code>policies</code> <code>gate</code>策略定义</li>
+<li><code>services</code> 微服务相关代码</li>
+<li><code>providers</code> 一些应用内的服务提供者
+<ul>
+<li><code>app.go</code> 一些基本的应用初始化代码</li>
+<li><code>gate.go</code> 用于注册<code>gate</code>策略</li>
+<li><code>micro.go</code> 用于注册微服务</li>
+</ul>
+</li>
+<li><code>websocket</code> <code>ws</code>相关代码和示例</li>
+</ul>
+<h3 id="config-配置文件">config 配置文件</h3>
+<ul>
+<li><code>app.go</code> 应用配置</li>
+<li><code>auth.go</code> 用户认证配置</li>
+<li><code>database.go</code> 数据库配置</li>
+<li><code>bloomfilter.go</code> 布隆过滤器配置</li>
+<li><code>cache.go</code> 缓存配置</li>
+<li><code>http.go</code> <code>http</code>配置</li>
+<li><code>mail.go</code> 邮件配置</li>
+<li><code>queue.go</code> 队列配置</li>
+<li><code>session.go</code> 会话配置</li>
+<li><code>micro.go</code> 微服务配置</li>
+<li><code>filesystem.go</code> 文件系统配置</li>
+<li><code>redis.go</code> <code>redis</code>配置</li>
+<li><code>serialization.go</code> 序列化器配置(<code>job</code>需要在此文件配置)</li>
+<li><code>websocket.go</code> <code>ws</code> 配置</li>
+</ul>
+<h3 id="routes-路由文件">routes 路由文件</h3>
+<ul>
+<li><code>api.go</code> <code>http</code>路由</li>
+<li><code>websocket.go</code> <code>ws</code> 路由</li>
+<li><code>sse.go</code> 服务端事件推送路由</li>
+</ul>
+<h3 id="database-数据库相关">database 数据库相关</h3>
+<h3 id="tests-测试代码">tests 测试代码</h3>
+<h3 id="storage-存储目录">storage 存储目录</h3>
+<h2 id="核心组件">核心组件</h2>
+<p>鉴于部分朋友看到 <code>goal</code> 长长的组件列表后，认为 <code>goal</code> 是个重型框架，许多场景不适合使用。我认为有必要说明一下，<code>goal</code> 的组件搭配相当灵活，除了核心组件之外的其他组件都是可选的，包括除支持库外的所有主要组件。<code>goal</code> 允许你自由组装你的 <code>goal</code> 应用，例如 <code>console + database</code> 可以写一个数据库迁移应用，<code>console + email</code> 可以写一个邮件发送工具，<code>http + database</code> 可以写一个 <code>CURD</code> 应用，以此类推，你可以通过各种组合来完善你的应用，同时 <code>goal</code> 也提供了一个默认的 <a href="https://github.com/goal-web/goal"><code>goal 应用模板</code></a></p>
+<ul>
+<li><a href="https://github.com/goal-web/contracts"><code>contracts - 契约</code></a></li>
+<li><a href="https://github.com/goal-web/container"><code>container - 容器</code></a></li>
+<li><a href="https://github.com/goal-web/application"><code>application - 应用</code></a></li>
+<li><a href="https://github.com/goal-web/application"><code>config - 配置</code></a></li>
+</ul>
+<h3 id="主要组件">主要组件</h3>
+<ul>
+<li><a href="https://github.com/goal-web/supports"><code>supports - 各种支持库和工具库</code></a></li>
+<li><a href="https://github.com/goal-web/pipeline"><code>pipeline - 洋葱模型管道</code></a></li>
+<li><a href="https://github.com/goal-web/collection"><code>collection - 集合操作</code></a></li>
+<li><a href="https://github.com/goal-web/hashing"><code>hashing - 哈希库</code></a></li>
+<li><a href="https://github.com/goal-web/ratelimiter"><code>ratelimiter - 限流器</code></a></li>
+<li><a href="https://github.com/goal-web/bloomfilter"><code>bloomfilter - 布隆过滤器，支持文件和redis</code></a></li>
+<li><a href="https://github.com/goal-web/encryption"><code>encryption - 加密库</code></a></li>
+<li><a href="https://github.com/goal-web/serialization"><code>serialization - 序列化库</code></a></li>
+<li><a href="https://github.com/goal-web/console"><code>console - 控制台库，支持计划任务、自定义命令</code></a></li>
+<li><a href="https://github.com/goal-web/redis"><code>redis - redis组件</code></a></li>
+<li><a href="https://github.com/goal-web/cache"><code>cache - 缓存</code></a></li>
+<li><a href="https://github.com/goal-web/querybuilder"><code>querybuilder - sql查询构造器</code></a></li>
+<li><a href="https://github.com/goal-web/database"><code>database - 数据库组件</code></a></li>
+<li><a href="https://github.com/goal-web/auth"><code>auth - 用户认证</code></a></li>
+<li><a href="https://github.com/goal-web/http"><code>http - http服务，含路由、sse</code></a></li>
+<li><a href="https://github.com/goal-web/session"><code>session - 会话服务</code></a></li>
+<li><a href="https://github.com/goal-web/websocket"><code>websocket - websocket库，依赖http库</code></a></li>
+<li><a href="https://github.com/goal-web/queue"><code>queue - 消息队列，支持kafka、nsq驱动</code></a></li>
+<li><a href="https://github.com/goal-web/email"><code>email - 邮件</code></a></li>
+<li><a href="https://github.com/goal-web/filesystem"><code>filesystem - 文件系统</code></a></li>
+<li><a href="https://github.com/goal-web/events"><code>events - 事件系统</code></a></li>
+<li><a href="https://github.com/goal-web/micro"><code>micro - 微服务封装，基于 go-micro</code></a></li>
+</ul>
+<h3 id="第三方-sdk">第三方 SDK</h3>
+<ul>
+<li><a href="https://github.com/qbhy/goal-alipay"><code>支付宝sdk</code></a></li>
+<li><a href="https://github.com/qbhy/goal-wechat"><code>微信sdk</code></a></li>
+<li><a href="https://github.com/qbhy/goal-aliyun"><code>阿里云sdk</code></a></li>
+<li>极光推送 sdk</li>
+<li>字节跳动 sdk</li>
+<li>QQ sdk</li>
+<li>更多 SDK 。。。</li>
+</ul>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/1Xnpj3nCM/">https://www.vincent.ac.cn/post/1Xnpj3nCM/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/1Xnpj3nCM/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/1Xnpj3nCM/&sharesource=qzone&title=Goal - 快速开始&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/1Xnpj3nCM/&sharesource=weibo&title=Goal - 快速开始 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/cdMZz1WVj/">#
+                    GOAL
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/zP5jJNUgi/">#
+                    开源项目
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">#
+                    Go
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/R7iWociC1/">
+                                                                                            使用CODING 自动构建部署 Hyperf项目
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/KiNHX9G7r/">
+                                                                                                    Goal-Web框架 用户认证（Auth）模块
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

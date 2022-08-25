@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                laravel 模型Eloquent ORM 查询
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-11-18</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">5.7
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1423</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                                <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">Laravel</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://www.vincent.ac.cn//post-images/-JIl7kxRA.jpeg" alt="">
+                          
+                        <div class="post-content">
+                            <p>up前面玩了 <code>DB</code> 查询，但是laravel开发基本不怎么使用db方式查询，应该有更强大的 <code>模型</code> Model</p>
+<h2 id="介绍">介绍</h2>
+<p>Laravel 的 Eloquent ORM 提供了一个漂亮、简洁的 ActiveRecord 实现来和数据库交互。每个数据库表都有一个对应的「模型」用来与该表交互。你可以通过模型查询数据表中的数据，以及在数据表中插入新记录。</p>
+<p>在开始之前，请确保在 <code>config/database.php</code> 中配置数据库连接。更多关于数据库配置的信息，请查看 <a href="https://learnku.com/docs/laravel/6.x/database#configuration">文档</a>。</p>
+<p><code>模型 </code> 就是把数据库的表映射到模型类，用面向对象的方式来操作数据库，既然是面向对象自然就可以继承了可以方便的复用。</p>
+<p><code>laravel</code> 的 <code>Model</code> 使用先进的 <code>Eloquent ORM</code> 但也有优缺点</p>
+<ul>
+<li>优点是数据库的操作变的简单安全</li>
+<li>缺点也明显数据库的操作变的缓慢笨重</li>
+</ul>
+<p><code>Eloquent ORM</code> 作为 laravel 中亮点，Taylor 可是耗费了相当大的精力，用起来当真是没的说</p>
+<h2 id="操作-创建个-model">操作-创建个 <code>Model</code></h2>
+<p>up这里先创建个 Model，其他就是个类文件。使用的是<code>单数形式帕斯卡命名法</code> ，也就是<code>首字母大写的驼峰命名法</code> 比如 up之前创建的 <code>test</code>表 Model 命名就是 Test.php</p>
+<p>但是呢， laravel 都能 用命令创建控制器生成表跟数据填充了，自然也能生成 模型咯！<br>
+直接运行 <code>artisan</code> 命令就行</p>
+<pre><code>php artisan make:model Test
+</code></pre>
+<p>运行命令后看到 <code>Model created successfully.</code> 提示就表示model 创建成功了<br>
+<img src="https://www.vincent.ac.cn//post-images/1574060962682.jpg" alt="" loading="lazy"></p>
+<p>但是up发现这个文件是建在跟目录下的 app 目录下的<br>
+<img src="https://www.vincent.ac.cn//post-images/1574060980849.jpg" alt="" loading="lazy"><br>
+这就坑爹了，表很多的话都生成在这个目录强迫症处女座的up怎么能忍，分分掀桌子的节奏。最后度娘告诉我命令行也是支持目录的,命令改一改就好了。未来方便找up统一就放app目录下的Models目录里</p>
+<pre><code>php artisan make:model Models/Test
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1574060993229.jpg" alt="" loading="lazy"><br>
+执行完命令会自动创建 Models 目录<br>
+<img src="https://www.vincent.ac.cn//post-images/1574061003801.jpg" alt="" loading="lazy"></p>
+<p>现在有了Model 接下来就是 调用他咯</p>
+<h2 id="调用-model">调用 <code>Model</code></h2>
+<p>up 先创建一个新的控制器 <code>TestMdlController </code>在里面写个index方法</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Test;
+use Illuminate\Http\Request;
+
+class TestMdlController extends Controller
+{
+    //
+    function index(Test $testMdl)
+    {
+        dump($testMdl-&gt;get());
+    }
+}
+</code></pre>
+<p>建好路由访问下 <code>index</code><br>
+<img src="https://www.vincent.ac.cn//post-images/1574061017014.jpg" alt="" loading="lazy"><br>
+但是却报错了我们看到model生成的sql 莫名其妙拼接了一个 <code>s</code>  这里我百度了一下<br>
+artisan 生成的model 若没有特别指定，laravel系统会默认自动对应名称为「<code>Eloquent类名称的小写复数形态</code>」的数据库表<br>
+两种方式解决<br>
+第一种Eloquent中自定义$table，缺点：如果是重构的项目，表名每个Eloquent都要重新定义可就有的哭了</p>
+<pre><code>```   
+ protected $table = 'test';
+```
+</code></pre>
+<p>第二种添加自定义的Eloquent基类 BaseModel 黑科技可以永绝后患</p>
+<pre><code>&lt;?php
+    
+namespace App\Models;
+    
+use Illuminate\Database\Eloquent\Model;
+    
+class BaseModel extends Model
+{
+    
+    //根据model class获取表名 表名中包含_，用驼峰自动转换
+    public function getTable()
+    {
+        return $this-&gt;table ? $this-&gt;table : class_basename($this);
+    }
+    
+}
+</code></pre>
+<pre><code>&lt;?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Test extends BaseModel
+{
+    //
+}
+</code></pre>
+<p>以后的模型不要直接由 Eloquent 派生，改为由 BaseModel 派生，就不用特殊指定表名，表名与模型名称直接一致，也不再驼峰呀什么的了。毕竟是黑科技<br>
+改造完成后我们在来访问 index 可以看到能正常访问了，这时候我们就通过模型把数据全取出来了<br>
+<img src="https://www.vincent.ac.cn//post-images/1574061032326.jpg" alt="" loading="lazy"><br>
+和使用了 DB 取出来的数据一样的是都是一个 <code>Collection</code> 集合，不一样的是 DB 取出来的是数组，Model 取出来的是一个类，需要一层一层的剥开点到 <code>attributes</code> 我们才能看到数据<br>
+如果想更直观点查看的话就使用 <code>toArray</code> 方法转成数据</p>
+<pre><code>dump($data-&gt;toArray());
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1574061045554.jpg" alt="" loading="lazy"></figure>
+<p>但是有点写法可能不太明白这种类名跟一个变量直接当参数传给方法的 <code> function index(Test $testMdl)</code> laravel 中大量使用了这种方法，百度了下才知道这个东西叫做 <code>依赖注入</code> 。<br>
+当然除了依赖注入的方式我们还可以用传统的方式来玩比如 new 的方式来玩</p>
+<pre><code>    function index(Test $testMdl)
+    {
+        // 依赖注入
+        $data = $testMdl-&gt;get();
+        dump($data-&gt;toArray());
+
+        // new 的方式
+        $TestMdlNew = new Test();
+        dump($TestMdlNew-&gt;get()-&gt;toArray());
+    }
+</code></pre>
+<p>当然也可以直接像调用静态方法</p>
+<pre><code>    function index(Test $testMdl)
+    {
+        // 依赖注入
+        $data = $testMdl-&gt;get();
+        dump($data-&gt;toArray());
+
+        // new 的方式
+        $TestMdlNew = new Test();
+        dump($TestMdlNew-&gt;get()-&gt;toArray());
+
+        //直接调用静态方法
+        dump(Test::get()-&gt;toArray());
+    }
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1574061058279.jpg" alt="" loading="lazy"><br>
+而且模型可以像 DB 那样链式调用，DB 有的那些方法模型也都有都是可以的 （拖篇幅别介意）</p>
+<pre><code>    function get(Test $TestMdl)
+    {
+        $data = $TestMdl-&gt;select('id', 'title', 'describe')
+            -&gt;where('title', '&lt;&gt;', '文章1')
+            -&gt;whereIn('id', [1, 2, 3])
+            -&gt;groupBy('id')
+            -&gt;orderBy('id', 'desc')
+            -&gt;get()
+            -&gt;toArray();
+        dump($data);
+    }
+</code></pre>
+<p><img src="https://www.vincent.ac.cn//post-images/1574061070793.jpg" alt="" loading="lazy"><br>
+像 get 里面这一长串方法一样,我们在查询数据的时候经常会有略微复杂的查询把它们写成一个模型方法<br>
+比如说在 <code>app/Models/Test.php</code> 文件中写一个 <code>getList</code> 方法</p>
+<pre><code>&lt;?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Test extends BaseModel
+{
+    /*
+     * 获取 test 表指定数据
+     */
+    function getList(){
+        $data = $this-&gt;select('id', 'title', 'describe')
+            -&gt;where('title', '&lt;&gt;', '文章1')
+            -&gt;whereIn('id', [1, 2, 3])
+            -&gt;groupBy('id')
+            -&gt;orderBy('id', 'desc')
+            -&gt;get()
+            -&gt;toArray();
+        return $data;
+    }
+}
+</code></pre>
+<p>然后我们就可以在各个地方方便的复用了</p>
+<pre><code>    function get(Test $TestMdl)
+    {
+        $data = $TestMdl-&gt;select('id', 'title', 'describe')
+            -&gt;where('title', '&lt;&gt;', '文章1')
+            -&gt;whereIn('id', [1, 2, 3])
+            -&gt;groupBy('id')
+            -&gt;orderBy('id', 'desc')
+            -&gt;get()
+            -&gt;toArray();
+        dump($data);
+
+        $data1 = $TestMdl-&gt;getList();
+        dump($data1);
+    }
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://www.vincent.ac.cn//post-images/1574061084146.jpg" alt="" loading="lazy"></figure>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/-JIl7kxRA/">https://www.vincent.ac.cn/post/-JIl7kxRA/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/-JIl7kxRA/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/-JIl7kxRA/&sharesource=qzone&title=laravel 模型Eloquent ORM 查询&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/-JIl7kxRA/&sharesource=weibo&title=laravel 模型Eloquent ORM 查询 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">#
+                    Laravel
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/26UdNhbpe/">
+                                                                                            laravel 模型Eloquent ORM 添加编辑删除
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/jtBl6SuXF/">
+                                                                                                    在浏览器输入 URL 回车之后发生了什么（超详细版）
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

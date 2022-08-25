@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                PHP组合模式构建决策树排它网关模式 (二) 
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-12-10</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">4.8
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">847</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/L-BnD1xJh/">设计模式</a>
+                                
+                                <a href="https://www.vincent.ac.cn/wSuWfVfjK/">决策树</a>
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <blockquote>
+<p>上篇文章简单介绍了组合模式、原理、定义了模型接下来就开始写 决策逻辑吧</p>
+</blockquote>
+<h2 id="决策器">决策器</h2>
+<h3 id="决策器接口">决策器接口</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Interfaces;
+
+use DecisionTree\Model\Tree\NodeDecision;
+
+interface LogicDecisionInterface
+{
+    /**
+     * 获取决策值
+     *
+     * @param array $data 用户数据
+     *
+     * @return string
+     */
+    public function getDecisionValue(array $data): string;
+
+    /**
+     * 过滤出节点决策.
+     *
+     * @param string $decisionValue
+     * @param NodeDecision $treeNodeDecision
+     *
+     * @return bool
+     */
+    public function filterDecisionNode(string $decisionValue, NodeDecision $treeNodeDecision): bool;
+}
+</code></pre>
+<h3 id="基础决策器">基础决策器</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Model\Logic;
+
+use DecisionTree\Interfaces\LogicDecisionInterface;
+use DecisionTree\Model\Tree\NodeDecision;
+
+abstract class AbstractLogic implements LogicDecisionInterface
+{
+    
+
+    protected string $key;
+
+    public function __construct(string $key)
+    {
+        
+        $this-&gt;key  = $key;
+    }
+
+    /**
+     * 过滤出节点决策.
+     *
+     * @param string $decisionValue
+     * @param NodeDecision $treeNodeDecision
+     *
+     * @return bool
+     */
+    public function filterDecisionNode(
+        string $decisionValue,
+        NodeDecision $treeNodeDecision
+    ): bool {
+        return $this-&gt;filterDecisionByType($decisionValue, $treeNodeDecision);
+    }
+
+    /**
+     * @param string $decisionValue 决策值
+     * @param NodeDecision $treeNodeDecision 节点决策
+     *
+     * @return bool
+     */
+    public function filterDecisionByType(
+        string $decisionValue,
+        NodeDecision $treeNodeDecision
+    ): bool {
+        switch ($treeNodeDecision-&gt;getType()) {
+            case 'eq':
+                $decision = $decisionValue == $treeNodeDecision-&gt;getValue();
+                break;
+            case 'gt':
+                $decision = $decisionValue &gt; $treeNodeDecision-&gt;getValue();
+                break;
+            case 'gte':
+                $decision = $decisionValue &gt;= $treeNodeDecision-&gt;getValue();
+                break;
+            case 'lt':
+                $decision = $decisionValue &lt; $treeNodeDecision-&gt;getValue();
+                break;
+            case 'lte':
+                $decision = $decisionValue &lt;= $treeNodeDecision-&gt;getValue();
+                break;
+            case 'between':
+                $decision = $decisionValue &gt;= $treeNodeDecision-&gt;getValue()[0]
+                    &amp;&amp; $decisionValue &lt;= $treeNodeDecision-&gt;getValue()[1];
+                break;
+            default:
+                $decision = false;
+                break;
+        }
+        return $decision;
+    }
+}
+</code></pre>
+<h3 id="性别决策器">性别决策器</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+
+namespace DecisionTree\Model\Logic;
+
+class AgeLogic extends AbstractLogic
+{
+    public function getDecisionValue(array $data): string
+    {
+        return $data['age'];
+    }
+}
+</code></pre>
+<h3 id="年龄决策器">年龄决策器</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Model\Logic;
+
+class GenderLogic extends AbstractLogic
+{
+    public function getDecisionValue(array $data): string
+    {
+        return $data['gender'];
+    }
+}
+</code></pre>
+<h3 id=""></h3>
+<h2 id="决策验证器">决策验证器</h2>
+<h3 id="决策验证器服务接口-implementinterface">决策验证器服务接口 ImplementInterface</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Interfaces;
+
+interface ImplementInterface
+{
+    public function process(array $treeNodeDecisionList, $data): bool;
+
+    public function getLogicDecision(?string $decisionKey = null): LogicDecisionInterface;
+}
+</code></pre>
+<h3 id="决策验证器基础服务-abstractimplementservice">决策验证器基础服务 AbstractImplementService</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Service\Implement;
+
+
+use DecisionTree\Interfaces\ImplementInterface;
+use DecisionTree\Interfaces\LogicDecisionInterface;
+use Exception;
+
+abstract class AbstractImplementService implements ImplementInterface
+{
+    protected array $logicDecisionMap;
+
+
+    protected string $decisionKey = 'default';
+
+    protected array $logicDecisions;
+
+    public function __construct(array $logic)
+    {
+        $this-&gt;logicDecisionMap = $logic;
+    }
+
+    public function getLogicDecision(?string $decisionKey = null): LogicDecisionInterface
+    {
+        $decisionKey = $decisionKey ?? $this-&gt;defaultDecisionKey();
+        if (empty($this-&gt;logicDecisionMap[$decisionKey])) {
+            throw new Exception(&quot;Does not support this LogicDecision driver&quot;, 500);    
+        }
+        return $this-&gt;logicDecisions[$decisionKey] ?? 
+        $this-&gt;logicDecisions[$decisionKey] = new $this-&gt;logicDecisionMap[$decisionKey]($decisionKey);
+    }
+
+    protected function defaultDecisionKey(): string
+    {
+        return $this-&gt;decisionKey;
+    }
+}
+</code></pre>
+<h3 id="默认决策验证器-defaultservice">默认决策验证器 DefaultService</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Service\Implement;
+
+use DecisionTree\Model\Tree\NodeDecision;
+
+class DefaultService extends AbstractImplementService
+{
+    public function process(array $treeNodeDecisionList, $data): bool
+    {
+        /** @var NodeDecision $treeNodeDecision */
+        foreach ($treeNodeDecisionList as $treeNodeDecision) {
+            $logicDecision = $this-&gt;getLogicDecision($treeNodeDecision-&gt;getKey());
+            //获取需要决策的值
+            $decisionValue = $logicDecision-&gt;getDecisionValue($data);
+            if ($logicDecision-&gt;filterDecisionNode($decisionValue, $treeNodeDecision)) {
+                continue;
+            }
+            return false;
+        }
+        return true;
+    }
+}
+</code></pre>
+<h2 id="决策树">决策树</h2>
+<h3 id="决策树服务接口">决策树服务接口</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Interfaces;
+
+use DecisionTree\Model\Tree\Node;
+use DecisionTree\Model\Tree\Result;
+
+/**
+ * 决策树服务接口.
+ */
+interface DecisionTreeInterface
+{
+    public function process($node, $data): Result;
+
+    public function runNode($node, $data, &amp;$resultNode): bool;
+
+    public function findNextNode(Node $node, $data): ?Node;
+}
+</code></pre>
+<h3 id="决策树基础服务">决策树基础服务</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Service;
+
+use DecisionTree\Interfaces\DecisionTreeInterface;
+use DecisionTree\Interfaces\ImplementInterface;
+use DecisionTree\Model\Tree\Node;
+
+abstract class AbstractDecisionService implements DecisionTreeInterface
+{
+
+    protected ImplementInterface $implement;
+
+    /**
+     * AbstractBiGuard constructor.
+     */
+    public function __construct(
+        ImplementInterface $implement
+    ) {
+        $this-&gt;implement = $implement;
+    }
+
+      /**
+     * 执行节点.
+     *
+     * @param Node $node
+     * @param array $data
+     * @param array $resultNode
+     *
+     * @return bool
+     */
+    public function runNode($node, $data, &amp;$resultNode): bool
+    {
+        while ($node !== null) {
+            if (! empty($node-&gt;getNodeDecisionMap())
+                &amp;&amp; ! $this-&gt;getImplement()-&gt;process($node-&gt;getNodeDecisionMap(), $data)
+            ) {
+                break;
+            }
+            if (! empty($node-&gt;getLabelId())) {
+                $resultNode[$node-&gt;getLabelId()] = $node-&gt;getLabelId();
+            }
+            $node = $this-&gt;findNextNode($node, $data);
+        }
+        return true;
+    }
+
+    public function findNextNode(?Node $node = null, $data = []): ?Node
+    {
+        $i        = 0;
+        $treeNode = null;
+        $nextNode = $node ? $node-&gt;getNextNode($i) : null;
+        while ($treeNode == null &amp;&amp; $nextNode != null) {
+            ++$i;
+            if (! empty($nextNode-&gt;getNodeDecisionMap())
+                &amp;&amp; ! $this-&gt;getImplement()-&gt;process($nextNode-&gt;getNodeDecisionMap(), $data)
+            ) {
+                $nextNode = $node-&gt;getNextNode($i);
+                continue;
+            }
+            $treeNode = $node-&gt;getChild($nextNode-&gt;getNextNodeId());
+            $nextNode = $node-&gt;getNextNode($i);
+        }
+        return $treeNode;
+    }
+
+    /**
+     * @return ImplementInterface
+     */
+    public function getImplement(): ImplementInterface
+    {
+        return $this-&gt;implement;
+    }
+}
+</code></pre>
+<h3 id="决策树服务">决策树服务</h3>
+<pre><code>&lt;?php
+
+declare(strict_types=1);
+
+namespace DecisionTree\Service;
+
+
+use DecisionTree\Model\Tree\Result;
+use DecisionTree\Service\Implement\DefaultService;
+
+class ExclusiveService extends AbstractDecisionService
+{
+
+    /**
+     * AbstractBiGuard constructor.
+     */
+    public function __construct() {
+        $implement = new DefaultService([
+            'gender' =&gt; \DecisionTree\Model\Logic\GenderLogic::class,
+            'age'    =&gt; \DecisionTree\Model\Logic\AgeLogic::class,
+        ]);
+        parent::__construct($implement);
+    }
+
+    public function process($node, $data): Result
+    {
+        $resultNode = [];
+        $this-&gt;runNode($node, $data, $resultNode);
+        return new Result($data['id'], $node-&gt;getId(), $resultNode);
+    }
+}
+</code></pre>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/-Jm04jY55/">https://www.vincent.ac.cn/post/-Jm04jY55/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/-Jm04jY55/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/-Jm04jY55/&sharesource=qzone&title=PHP组合模式构建决策树排它网关模式 (二) &pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/-Jm04jY55/&sharesource=weibo&title=PHP组合模式构建决策树排它网关模式 (二)  + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/L-BnD1xJh/">#
+                    设计模式
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/wSuWfVfjK/">#
+                    决策树
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/wlSst96pj/">
+                                                                                            PHP组合模式构建决策树排它网关模式 (三) 
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/_eJBJ5mzo/">
+                                                                                                    PHP组合模式构建决策树排它网关模式 (一) 
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

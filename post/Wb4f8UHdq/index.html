@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                laravel 学习之路 数据库操作 数据插入与数据填充
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-11-07</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">6.3
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1557</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/ULKwYDOFh/">php</a>
+                                
+                                <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">Laravel</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://www.vincent.ac.cn//post-images/Wb4f8UHdq.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <blockquote>
+<p>前面学了 <code>Migrations</code> 迁移建了数据表，现在可以学习数据库操作了。</p>
+</blockquote>
+<h2 id="数据插入">数据插入</h2>
+<p>先搞个控制器</p>
+<pre><code>php artisan make:controller DbController
+</code></pre>
+<p>当然路由也不能忘记</p>
+<pre><code>Route::prefix('db')-&gt;group(function () {
+    Route::get('insert', 'DbController@insert');
+});
+</code></pre>
+<p>接下来给控制器写个 <code>insert</code> 方法</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+class DbController extends Controller
+{
+    //
+    function insert(){
+        DB::insert('INSERT INTO test (testID,title,email,`describe`) VALUES (1,&quot;这是个title&quot;,&quot;123456@qq.com&quot;,&quot;这是个describe&quot;)');
+    }
+}
+</code></pre>
+<p>这里需要引入个 <code>DB</code> 类，<code>DB</code> 类就是我们操作数据库的关键，<code>Db</code> 类有个 <code>insert</code> 方法，它可以直接传插入内容的  <code>sql</code>  语句，现在我访问一 下 <code>study.laraveltest.com/db/insert</code> 如果没有报错数据就插入成功了。<br>
+<img src="https://www.vincent.ac.cn//post-images/1573115682328.jpg" alt="" loading="lazy"><br>
+确实是很简单吧！但是并不提倡这种拼接字符串的方式来添加数据，维护起来麻烦不说还不安全，所以我换种方式，<code>DB</code> 还有个 <code>table</code> 方法可以传表名再调用 <code>insert</code> 方法可以传要插入的数组，于是我改造那么一丢丢下面就是改造后的样子。</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+class DbController extends Controller
+{
+    //
+    function insert()
+    {
+//        DB::insert('INSERT INTO test (testID,title,email,`describe`) VALUES (1,&quot;这是个title&quot;,&quot;123456@qq.com&quot;,&quot;这是个describe&quot;)');
+
+        $insertData = [
+            [
+                &quot;testID&quot;   =&gt; '2',
+                &quot;title&quot;    =&gt; '这是个title2',
+                &quot;email&quot;    =&gt; '22222@qq.com',
+                &quot;describe&quot; =&gt; '这是个describe2',
+            ],
+            [
+                &quot;testID&quot;   =&gt; '3',
+                &quot;title&quot;    =&gt; '这是个title3',
+                &quot;email&quot;    =&gt; '33333@qq.com',
+                &quot;describe&quot; =&gt; '这是个describe3',
+            ],
+
+        ];
+        DB::table('test')-&gt;insert($insertData);
+    }
+}
+</code></pre>
+<p>我在访问一 下 <code>study.laraveltest.com/db/insert</code> 然后查看数据库</p>
+<h2 id="数据填充">数据填充</h2>
+<p>使用 <code>DB</code> 插入数据的方式学会后我们就可以讲点填充了，以前下载开源项目如果没有给出安装步骤，哪一般都先找 <code>sql</code> 文件，但是 <code>sql</code> 文件中一般不只是表结构一般还有一些初始化的数据昨天学习了表结构今天来玩玩数据，刚刚学习了插入数据的方式，但那是在控制器里的这种创建路由创建控制器写填充的方式不太优雅，<code>laravel</code> 是优雅的框架这么做跟 <code>laravel</code> 的优雅不符，所有 <code>laravel</code> 必定准备了其他方法，下面学下的填充就是向数据库批量添加数据的，简单概述下就是 <code>数据库迁移+数据填充 = SQL</code></p>
+<p>我们先来看看<a href="https://learnku.com/docs/laravel/6.x/seeding/5174">官网的介绍</a></p>
+<blockquote>
+<p><code>Laravel</code> 包含一个填充类可以为你的数据库填充测试数据，所有的填充类都放在 <code>database/seeds</code> 目录下。你可以随意为填充类命名，但是更建议您遵守类似 <code>UsersTableSeeder</code> 的命名规范。通常， <code>Laravel</code> 默认定义了一个 <code>DatabaseSeeder</code> 类。通过这个类，你可以用 call 方法来运行其它的 <code>seed</code> 类从而控制数据填充的顺序。</p>
+</blockquote>
+<h3 id="编写-seeders">编写 Seeders</h3>
+<p>那么就先搞个 <code>Seeders</code> 类玩玩 ，运行 <a href="https://learnku.com/docs/laravel/6.x/artisan/5158"><code>Artisan 命令</code></a> <code>make:seeder</code> 生成 <code>Seeder</code>.</p>
+<pre><code>php artisan make:seeder TestTableSeeder
+</code></pre>
+<p>执行上面这个命令如果洗过脸会生成一个 <code>database/seeds/TestTableSeeder.php</code> 文件<br>
+<img src="https://www.vincent.ac.cn//post-images/1573115708578.jpg" alt="" loading="lazy"><br>
+可以看到里面有个 <code>run</code> 方法这个方法会在执行 <code>db:seed</code> 这个 <code>Artisan</code> 命令 时被调用，利用 DB 的方法写上要填充的内容，你也可以用 <a href="https://learnku.com/docs/laravel/6.x/queries/5171"><code>查询构造器</code></a> 或 <a href="https://learnku.com/docs/laravel/6.x/database-testing/5185#writing-factories"><code>Eloquent 模型工厂</code></a> 来手动插入数据。</p>
+<blockquote>
+<p>Tip：使用数据填充时会自动禁用 批量赋值保护</p>
+</blockquote>
+<pre><code>&lt;?php
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class TestTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $insertData = [
+            [
+                &quot;testID&quot;   =&gt; '4',
+                &quot;title&quot;    =&gt; '这是个title4',
+                &quot;email&quot;    =&gt; '4444444@qq.com',
+                &quot;describe&quot; =&gt; '这是个describe4',
+            ],
+            [
+                &quot;testID&quot;   =&gt; '5',
+                &quot;title&quot;    =&gt; '这是个title5',
+                &quot;email&quot;    =&gt; '55555@qq.com',
+                &quot;describe&quot; =&gt; '这是个describe5',
+            ],
+
+        ];
+        DB::table('test')-&gt;insert($insertData);
+    }
+}
+</code></pre>
+<h3 id="运行-seeders">运行 Seeders</h3>
+<p>填充文件就算创建完成了，和迁移一样创建好文件写好内容就可以运行了，有一点要注意的是在完成 <code>seeder</code> 类的编写之后，你可能需要使用 <code>dump-autoload</code> 命令重新生成 <code>Composer</code> 的自动加载器</p>
+<pre><code>composer dump-autoload
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1573115734399.jpg" alt="" loading="lazy"></figure>
+<p>现在我来用 <code>Artisan</code> 命令 <code>db:seed</code> 来填充数据库玩一玩</p>
+<pre><code>php artisan  db:seed
+</code></pre>
+<p>执行完 <code>php artisan  db:seed</code> 我发现数据库里毛的没有后来发现 这是因为填充比迁移多一个步骤，我发现 <code>database/seeds</code> 目录下还有个 <code>DatabaseSeeder.php</code> 文件，他默认就存在不是我创建的打开它里面也有个 <code>run</code> 方法并且里面有一行代码注释掉了 <code>// $this-&gt;call(UsersTableSeeder::class);</code> 翻看了 <a href="https://learnku.com/docs/laravel/6.x/seeding/5174"><code>官方文档</code></a> 才知道 <code>db:seed</code> 命令会去运行 <code>DatabaseSeeder</code> 类，在这个类可以用来调用其它 <code>Seed</code> 类 也就是我们需要仿照注释的示例在  <code>DatabaseSeeder</code> 类中去调用我刚刚创建的<code>Seed</code> 类 <code>TestTableSeeder</code> 。那么我去修改一下 <code>DatabaseSeeder</code> 类</p>
+<pre><code>&lt;?php
+
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // $this-&gt;call(UsersTableSeeder::class);
+         $this-&gt;call(TestTableSeeder::class);
+    }
+}
+</code></pre>
+<p>不过这里需要主要一下填充文件的执行顺序，我们会创建很多填充文件如果有外键的话执行顺序不对是会报错的所以需要严格的自己指定顺序，OK我们在执行一下 <code>php artisan  db:seed</code> 命令<br>
+<img src="https://www.vincent.ac.cn//post-images/1573115750999.jpg" alt="" loading="lazy"><br>
+<img src="https://www.vincent.ac.cn//post-images/1573115755577.jpg" alt="" loading="lazy"><br>
+数据终于写入数据库中了，当然  <a href="https://learnku.com/docs/laravel/6.x/seeding/5174"><code>官方文档</code></a> 也给出了其他的方式运行比如可以使用 <code>--class</code> 选项来指定一个特定的 <code>seeder</code> 类。</p>
+<pre><code>php artisan db:seed --class=TestTableSeeder
+</code></pre>
+<p>也可以用 <code>migrate:refresh</code> 这个命令来填充数据库，该命令会回滚并重新运行所有迁移。这个命令可以用来重建数据库</p>
+<pre><code>php artisan migrate:refresh --seed
+</code></pre>
+<p>另外在生产环境中强制使用一些填充操作可能会导致原有数据的更新或丢失。为了保护生产环境数据库的数据，在运行填充命令前会进行确认。可以添加 <code>--force</code> 选项来强制运行填充命令:</p>
+<pre><code>php artisan db:seed --force
+</code></pre>
+<p>相比于迁移，填充的价值就没有那么革命性了，而且填充更强大的功能需要模型的支持这个后面会学到的。</p>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/Wb4f8UHdq/">https://www.vincent.ac.cn/post/Wb4f8UHdq/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/Wb4f8UHdq/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/Wb4f8UHdq/&sharesource=qzone&title=laravel 学习之路 数据库操作 数据插入与数据填充&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/Wb4f8UHdq/&sharesource=weibo&title=laravel 学习之路 数据库操作 数据插入与数据填充 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/ULKwYDOFh/">#
+                    php
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/r9lWhqCpR5/">#
+                    Laravel
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/Bh2gcn6S4/">
+                                                                                            laravel 学习之路 数据库操作 查询数据
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/xwp3_04xN/">
+                                                                                                    laravel 学习之路 数据库操作 Migrations
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                译 - 为什么要学习Go？
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-11-05</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">8.8
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">2529</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/9l7hz-cAk/">Go</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://www.vincent.ac.cn//post-images/go1.gif" alt="">
+                          
+                        <div class="post-content">
+                            <blockquote>
+<p>“Go将成为未来的服务器语言。” — TobiasLütke，Shopify</p>
+</blockquote>
+<p>在过去的几年中，出现了新的编程语言：Go或GoLang。没有什么比新的编程语言更使开发人员疯狂了，对吗？因此，我在4到5个月前开始学习Go语言，在这里我将告诉您为什么还要学习这种新语言。</p>
+<p>我不会教你如何在本文中写“ Hello World !!”。在线上还有很多其他文章。我将解释计算机硬件软件的当前阶段，以及为什么我们需要像Go这样的新语言？因为如果没有问题，那么我们就不需要解决方案，对吗？</p>
+<h2 id="硬件限制">硬件限制：</h2>
+<p><a href="https://www.investopedia.com/terms/m/mooreslaw.asp">摩尔定律</a>失败了。<br>
+英特尔早在<a href="http://www.informit.com/articles/article.aspx?p=339073">2004年</a>就<a href="http://www.informit.com/articles/article.aspx?p=339073">推出了</a>第一款时钟频率为3.0GHz的奔腾4处理器。今天，我的<a href="https://www.apple.com/macbook-pro/specs/">Mackbook Pro</a>的时钟速度为2.9GHz。因此，近十年来，原始处理能力并没有获得太多收益。您可以在下表中看到随时间增加处理能力的比较。<br>
+<img src="https://www.vincent.ac.cn//post-images/1572931625700.png" alt="" loading="lazy"></p>
+<p>从上面的图表中可以看到，单线程性能和处理器频率在近十年中一直保持稳定。如果您认为添加更多晶体管是解决方案，那么您错了。 这是因为在较小的规模上，一些量子特性开始出现（例如隧道效应），并且实际上放置更多晶体管的成本更高（<a href="https://www.quora.com/What-is-Quantum-Tunneling-Limit-How-does-it-limit-the-size-of-a-transistor">为什么？</a>），每美元可添加的晶体管数量开始下降。<br>
+因此，为了解决上述问题，</p>
+<ul>
+<li>制造商开始向处理器添加越来越多的内核。如今，我们有四核和八核CPU。</li>
+<li>我们还介绍了超线程。</li>
+<li>向处理器添加了更多缓存，以提高性能。</li>
+</ul>
+<p>但是上述解决方案也有其 自身的局限性。由于缓存具有物理限制，因此无法向处理器添加越来越多的缓存来提高性能：缓存越大，缓存越慢。向处理器添加更多内核也有其成本。同样，这不能无限期地扩展。这些多核处理器可以同时运行多个线程，这带来了并发性。我们稍后再讨论。</p>
+<p>因此，如果我们不能依靠硬件改进，唯一的方法就是使用更高效的软件来提高性能。但是可悲的是，现代编程语言效率不高。</p>
+<blockquote>
+<p>“现代处理器就像是硝基燃料的有趣汽车，它们在四分之一英里处表现出色。不幸的是现代编程语言都像蒙特卡洛，他们充满曲折。” - <a href="https://en.wikipedia.org/wiki/David_Ungar">戴维·安加</a></p>
+</blockquote>
+<h2 id="去有goroutines">去有goroutines！</h2>
+<p>如上所述，硬件制造商正在为处理器添加越来越多的内核，以提高性能。所有数据中心都在这些处理器上运行，我们应该期望在未来几年内内核数量会增加。更重要的是，当今的应用程序使用多个微服务来维护数据库连接，消息队列和维护缓存。因此，我们开发的软件和编程语言应轻松支持并发性，并且应随着内核数量的增加而扩展。</p>
+<p>**但是，大多数现代编程语言（如Java，Python等）都来自90年代的单线程环境。**这些编程语言大多数都支持多线程。但是真正的问题在于并发执行，线程锁定，竞争条件和死锁。 这些事情使得在这些语言上创建多线程应用程序变得困难。</p>
+<p>例如，在Java中创建新线程效率不高。由于每个线程消耗大约1MB的内存堆大小，最终如果您开始旋转数千个线程，它们将对堆施加巨大压力，并由于内存不足而导致关闭。另外，如果您想在两个或多个线程之间进行通信，则非常困难。</p>
+<p>另一方面，Go于2009年发布，当时多核处理器已经可用。这就是为什么走的是与保持并发考虑建造。Go具有goroutines而不是线程。它们从堆中消耗了将近2KB的内存。所以，你可以随时旋转百万够程的。<br>
+<img src="https://www.vincent.ac.cn//post-images/1572931674181.jpeg" alt="" loading="lazy"></p>
+<center>`Goroutines如何工作？Reffrance：http ://golangtutorials.blogspot.in/2011/06/goroutines.html`</center>
+<p>其他好处是：</p>
+<ul>
+<li>Goroutine具有可增长的分段堆栈。这意味着它们仅在需要时才使用更多的内存。</li>
+<li>Goroutine具有比线程更快的启动时间。</li>
+<li>Goroutine带有内置原语以在它们之间（通道）之间安全地通信。</li>
+<li>使用Goroutines可以避免共享数据结构时不得不使用互斥锁。</li>
+<li>此外，goroutine和OS线程没有1：1映射。一个goroutine可以在多个线程上运行。Goroutines被多路复用到少量的OS线程中。</li>
+</ul>
+<blockquote>
+<p>您可以看到Rob Pike出色的通话并发性并不是并行机制，因此无法对此有更深入的了解。</p>
+</blockquote>
+<p>以上所有这些，使Go在处理Java，C和C ++之类的并发性方面非常强大，同时保持了并发执行代码的平稳性和Erlang之类的美丽。<br>
+<img src="https://www.vincent.ac.cn//post-images/1572931686280.png" alt="" loading="lazy"></p>
+<center>`Go兼顾了两个世界。易于编写并发并有效管理并发`</center>
+<h2 id="go直接在基础硬件上运行">Go直接在基础硬件上运行。</h2>
+<p>与其他现代高级语言（例如Java / Python）相比，使用C，C ++的最大好处是它们的性能。因为C / C ++是经过编译而不进行解释的。</p>
+<p>处理器了解二进制文件。通常，当您在编译项目时使用Java或其他基于JVM的语言构建应用程序时，它会将人类可读的代码编译为字节代码，而JVM或在底层OS之上运行的其他虚拟机可以理解这些代码。在执行时，VM解释这些字节码并将其转换为处理器可以理解的二进制文件。<br>
+<img src="https://www.vincent.ac.cn//post-images/1572931702577.png" alt="" loading="lazy"></p>
+<center>`基于VM的语言的执行步骤`</center>
+<p>另一方面，C / C ++无法在VM上执行，这从执行周期中删除了一个步骤，从而提高了性能。它直接将人类可读的代码编译为二进制文件。<br>
+<img src="https://www.vincent.ac.cn//post-images/1572931712882.png" alt="" loading="lazy"></p>
+<p>但是，释放和分配这些语言中的变量是一个巨大的痛苦。大多数编程语言都使用垃圾收集器或引用计数算法来处理对象分配和删除。</p>
+<p>Go带来了两全其美的优势。像C / C ++这样的低级语言一样，Go是编译语言。这意味着性能几乎接近低级语言。它还使用垃圾回收来分配和删除对象。因此，不再需要malloc（）和free（）语句！！！凉！！！</p>
+<h2 id="用go编写的代码易于维护">用Go编写的代码易于维护。</h2>
+<p>我告诉你一件事。Go没有像其他语言一样疯狂的编程语法。它具有非常简洁的语法。</p>
+<p>Google Go语言的设计师在创建语言时就牢记这一点。由于google具有庞大的代码库，并且成千上万的开发人员正在同一个代码库上工作，因此对于其他开发人员而言，代码应易于理解，并且一段代码对另一段代码的影响应最小。这将使代码易于维护和修改。</p>
+<p>Go故意遗漏了现代OOP语言的许多功能。</p>
+<ul>
+<li>没有课程。每件事都只分为包。Go只有结构而不是类。</li>
+<li>不支持继承。 这将使代码易于修改。在Java / Python之类的其他语言中，如果类ABC继承了类XYZ，并且您对类XYZ进行了一些更改，则在继承XYZ的其他类中可能会产生一些副作用。通过删除继承，Go还可轻松理解代码（因为在查看一段代码时没有要查看的超类）。</li>
+<li>没有构造函数。</li>
+<li>没有注释。</li>
+<li>没有泛型。</li>
+<li>没有例外。</li>
+</ul>
+<p>上述变化使Go与其他语言完全不同，并且使Go编程也与其他语言不同。您可能不喜欢上面的几点。但是，这不像没有上述功能就无法编写应用程序。您所要做的就是再写2–3行。但从积极的方面来说，它将使您的代码更整洁，并为您的代码增加更多清晰度。<br>
+<img src="https://www.vincent.ac.cn//post-images/1572931725926.png" alt="" loading="lazy"></p>
+<center>`代码可读性与效率`</center>
+<p>上图显示Go几乎与C / C ++一样高效，同时使代码语法像Ruby，Python和其他语言一样简单。对于人类和加工者来说，这是双赢的局面！！！</p>
+<p>与Swift等其他新语言不同，Go的语法非常稳定。自2012年首次公开发布1.0版以来，它一直保持不变。这使其向后兼容。</p>
+<h2 id="go得到了google的支持">Go得到了Google的支持。</h2>
+<ul>
+<li>我知道这不是直接的技术优势。但是，Go是由Google设计和支持的。Google拥有世界上最大的云基础架构之一，并且已大规模扩展。Go是Google设计的，旨在解决他们在支持可扩展性和有效性方面的问题。这些都是您在创建自己的服务器时将面临的相同问题。</li>
+<li>此外，诸如Adobe，BBC，IBM，Intel甚至Medium的一些大公司也使用Go 。（来源：https : //github.com/golang/go/wiki/GoUsers）</li>
+</ul>
+<h2 id="结论">结论：</h2>
+<ul>
+<li>尽管Go与其他面向对象的语言有很大不同，但它仍然是相同的野兽。Go为您提供了诸如C / C ++的高性能，为Java提供了超高效的并发处理，并为Python / Perl等代码带来了乐趣。</li>
+<li>如果您没有学习Go的计划，我仍然会说硬件限制给我们（软件开发人员）编写超高效代码的压力。开发人员需要了解硬件并相应地优化程序。经过优化的软件可以在更便宜，更慢的硬件（例如IOT设备）上运行，并且总体上对最终用户体验的影响更好。</li>
+</ul>
+<p>————————————————<br>
+版权声明：本文为博主「Keval Patel」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>
+原文链接：<a href="https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65">https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65</a></p>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/go1/">https://www.vincent.ac.cn/post/go1/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/go1/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/go1/&sharesource=qzone&title=译 - 为什么要学习Go？&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/go1/&sharesource=weibo&title=译 - 为什么要学习Go？ + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">#
+                    Go
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/laravel4/">
+                                                                                            laravel 学习之路 路由与控制器
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/laravel3/">
+                                                                                                    laravel 学习之路 控制器Controller
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

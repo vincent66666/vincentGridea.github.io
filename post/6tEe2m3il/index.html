@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Goal-Web框架 collection 库
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2022-02-08</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">8.4
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1482</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/cdMZz1WVj/">GOAL</a>
+                                
+                                <a href="https://www.vincent.ac.cn/zP5jJNUgi/">开源项目</a>
+                                
+                                <a href="https://www.vincent.ac.cn/9l7hz-cAk/">Go</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <h2 id="goal-webcollection">Goal-web/collection</h2>
+<p>这是一个神奇的仓库<br>
+<a href="https://github.com/goal-web/collection">goal-web/collection</a></p>
+<h2 id="安装-install">安装 - install</h2>
+<pre><code class="language-bash">go get github.com/goal-web/collection
+</code></pre>
+<h2 id="使用">使用</h2>
+<pre><code class="language-go">package tests
+
+import (
+    &quot;errors&quot;
+    &quot;fmt&quot;
+    &quot;github.com/goal-web/collection&quot;
+    &quot;github.com/goal-web/contracts&quot;
+    &quot;github.com/shopspring/decimal&quot;
+    &quot;github.com/stretchr/testify/assert&quot;
+    &quot;testing&quot;
+)
+
+func TestNew(t *testing.T) {
+    collect, err := collection.New(1)
+    assert.Nil(t, collect)
+    assert.Error(t, err, err)
+
+    // 使用 MustNew 的时候，如果参数不是 array 或者 slice 的话，将会 panic
+    collect, err = collection.New([]int{1})
+    assert.NotNil(t, collect)
+    assert.Nil(t, err)
+}
+
+func TestArray(t *testing.T) {
+    intCollection := collection.MustNew([]interface{}{
+        1, 2, 3, true, &quot;字符串&quot;, &quot;true&quot;,
+    })
+    fmt.Println(intCollection.ToFloat64Array())
+    assert.True(t, intCollection.Len() == 6)
+
+    // 第二个参数是数据索引
+    intCollection.Map(func(data, index int) {
+        fmt.Println(fmt.Sprintf(&quot;第 %d 个，值：%d&quot;, index, data))
+    })
+
+    // 第三个参数是所有数据集合
+    intCollection.Map(func(data, index int, allData []interface{}) {
+        if index == 0 {
+            fmt.Println(&quot;allData&quot;, allData)
+        }
+        fmt.Println(fmt.Sprintf(&quot;第 %d 个，值：%d&quot;, index, data))
+    })
+
+    // 甚至可以直接转换成你想要的类型
+    intCollection.Map(func(data string, index int) {
+        fmt.Println(fmt.Sprintf(&quot;第 %d 个，值：%s&quot;, index, data))
+    })
+    intCollection.Map(func(data bool, index int) {
+        fmt.Println(fmt.Sprintf(&quot;第 %d 个，值：%v&quot;, index, data))
+    })
+
+    // 不返回任何值表示只遍历
+    intCollection.Map(func(data int) {
+        fmt.Println(&quot;只遍历: &quot;, data)
+    })
+    fmt.Println(intCollection.ToIntArray())
+
+    // 返回一个值会生成一个新的 collection
+    fmt.Println(intCollection.Map(func(data int) int {
+        if data &gt; 0 {
+            return 1
+        }
+        return 0
+    }).ToIntArray())
+}
+
+type User struct {
+    id    int
+    Name  string
+    Money float64
+}
+
+func TestStructArray(t *testing.T) {
+
+    users := collection.MustNew([]User{
+        {id: 1, Name: &quot;qbhy&quot;},
+        {id: 2, Name: &quot;goal&quot;},
+    })
+
+    users.Map(func(user User) {
+        fmt.Printf(&quot;user: id:%d Name:%s \n&quot;, user.id, user.Name)
+    })
+    // 使用 fields 接收的时候，未导出字段默认是 nil
+    users.Map(func(user contracts.Fields) {
+        fmt.Printf(&quot;user: id:%v Name:%s \n&quot;, user[&quot;id&quot;], user[&quot;name&quot;])
+    })
+
+    // 使用 map 修改数据后在用 where 筛选
+    assert.True(t, users.Map(func(user User) User {
+        if user.id == 1 {
+            user.Money = 100
+        }
+        return user
+    }).Where(&quot;money&quot;, 100).Len() == 1)
+}
+
+func TestFilterArray(t *testing.T) {
+
+    users := collection.MustNew([]User{
+        {id: 1, Name: &quot;qbhy&quot;, Money: 10000000},
+        {id: 2, Name: &quot;goal&quot;, Money: 10},
+    })
+
+    fmt.Println(&quot;第一个数据&quot;, users.ToInterfaceArray()[0])
+
+    richUsers := users.Filter(func(user User) bool {
+        return user.Money &gt; 100
+    })
+
+    assert.True(t, richUsers.Len() == 1)
+    fmt.Println(richUsers.ToInterfaceArray())
+
+    poorUsers := users.Skip(func(user User) bool {
+        return user.Money &gt; 100
+    })
+
+    assert.True(t, poorUsers.Len() == 1)
+    fmt.Println(poorUsers.ToInterfaceArray())
+
+    qbhyUsers := users.Where(&quot;name&quot;, &quot;qbhy&quot;)
+
+    assert.True(t, qbhyUsers.Len() == 1)
+    fmt.Println(qbhyUsers.ToInterfaceArray())
+
+    assert.True(t, users.WhereLte(&quot;money&quot;, 50).Len() == 1)
+    assert.True(t, users.Where(&quot;money&quot;, &quot;&lt;=&quot;, 50).Len() == 1)
+
+}
+
+// TestAggregateArray 聚合函数测试
+func TestAggregateArray(t *testing.T) {
+
+    users := collection.MustNew([]User{
+        {id: 1, Name: &quot;qbhy&quot;, Money: 10000000000000000},
+        {id: 2, Name: &quot;goal&quot;, Money: 10000000000000000},
+        {id: 3, Name: &quot;collection&quot;, Money: 0.645624123},
+    }).(*collection.Collection)
+
+    // SafeSum、SafeAvg、SafeMax、SafeMin 等方法需要 *collection.Collection 类型
+    fmt.Println(&quot;Sum&quot;, users.SafeSum(&quot;money&quot;))
+    fmt.Println(&quot;Avg&quot;, users.SafeAvg(&quot;money&quot;))
+    fmt.Println(&quot;Max&quot;, users.SafeMax(&quot;money&quot;))
+    fmt.Println(&quot;Min&quot;, users.SafeMin(&quot;money&quot;))
+    sum, _ := decimal.NewFromString(&quot;20000000000000000.645624123&quot;)
+    avg, _ := decimal.NewFromString(&quot;6666666666666666.8818747076666667&quot;)
+    max, _ := decimal.NewFromString(&quot;10000000000000000&quot;)
+    min, _ := decimal.NewFromString(&quot;0.645624123&quot;)
+
+    assert.True(t, users.SafeSum(&quot;money&quot;).Equal(sum))
+    assert.True(t, users.SafeAvg(&quot;money&quot;).Equal(avg))
+    assert.True(t, users.SafeMax(&quot;money&quot;).Equal(max))
+    assert.True(t, users.SafeMin(&quot;money&quot;).Equal(min))
+
+    users = collection.MustNew([]User{
+        {id: 1, Name: &quot;qbhy&quot;, Money: 1},
+        {id: 2, Name: &quot;goal&quot;, Money: 2},
+        {id: 3, Name: &quot;collection&quot;, Money: 0},
+    }).(*collection.Collection)
+
+    assert.True(t, users.Sum(&quot;money&quot;) == 3)
+    assert.True(t, users.Avg(&quot;money&quot;) == 1)
+    assert.True(t, users.Max(&quot;money&quot;) == 2)
+    assert.True(t, users.Min(&quot;money&quot;) == 0)
+    assert.True(t, users.Count() == 3)
+}
+
+// TestSortArray 测试排序功能
+func TestSortArray(t *testing.T) {
+    users := collection.MustNew([]User{
+        {id: 1, Name: &quot;qbhy&quot;, Money: 12},
+        {id: 2, Name: &quot;goal&quot;, Money: 1},
+        {id: 2, Name: &quot;goal&quot;, Money: 15},
+        {id: 2, Name: &quot;goal99&quot;, Money: 99},
+        {id: 3, Name: &quot;collection&quot;, Money: -5},
+        {id: 3, Name: &quot;移动&quot;, Money: 10086},
+    })
+
+    fmt.Println(users.ToInterfaceArray())
+
+    // 暂不支持转成 contracts.Fields
+    usersOrderByMoneyDesc := users.Sort(func(user User, next User) bool {
+        return user.Money &gt; next.Money
+    })
+    fmt.Println(usersOrderByMoneyDesc.ToInterfaceArray())
+    assert.True(t, usersOrderByMoneyDesc.ToInterfaceArray()[0].(User).Money == 10086)
+
+    usersOrderByMoneyAsc := users.Sort(func(user User, next User) bool {
+        return user.Money &lt; next.Money
+    })
+    fmt.Println(usersOrderByMoneyAsc.ToInterfaceArray())
+    assert.True(t, usersOrderByMoneyAsc.ToInterfaceArray()[0].(User).Money == -5)
+
+    numbers := collection.MustNew([]interface{}{
+        8, 0, 1, 2, 0.6, 4, 5, 6, -0.2, 7, 9, 3, &quot;10086&quot;,
+    })
+
+    sortedNumbers := numbers.Sort(func(i, j float64) bool {
+        return i &gt; j
+    }).ToFloat64Array()
+
+    fmt.Println(sortedNumbers)
+    assert.True(t, sortedNumbers[0] == 10086)
+}
+
+// TestCombine 测试组合集合功能
+func TestCombine(t *testing.T) {
+    users := collection.MustNew([]User{
+        {id: 1, Name: &quot;qbhy&quot;, Money: 12},
+    })
+
+    users = users.Push(User{id: 2, Name: &quot;goal&quot;, Money: 1000})
+    //users = users.Prepend(User{id: 2, Name: &quot;goal&quot;, Money: 1000}) // 插入到开头
+
+    assert.True(t, users.Len() == 2)
+    fmt.Println(users.ToInterfaceArray())
+
+    others := collection.MustNew([]User{
+        {id: 3, Name: &quot;马云&quot;, Money: 100000000},
+    })
+
+    all := others.Merge(users).Sort(func(pre User, next User) bool {
+        return pre.Money &gt; next.Money
+    })
+
+    assert.True(t, all.Len() == 3)
+    fmt.Println(all.ToInterfaceArray())
+    fmt.Println(all.Only(&quot;money&quot;, &quot;name&quot;).ToArrayFields())
+
+    assert.True(t, all.First(&quot;name&quot;) == &quot;马云&quot;) // 最有钱还是马云
+
+    normalUsers := all.Where(&quot;money&quot;, &quot;&gt;&quot;, 100)
+    assert.True(t, normalUsers.Len() == 2)                       // 两个普通人
+    assert.True(t, normalUsers.Last(&quot;name&quot;) == &quot;goal&quot;)           // 筛选不影响排序，跟马云比还差了点
+    assert.False(t, normalUsers.IsEmpty())                       // 有普通人
+    assert.True(t, normalUsers.Where(&quot;money&quot;, &quot;&lt;&quot;, 0).IsEmpty()) // 普通人都没有负债
+
+    randomUsers := all.Random(2)
+    // 随机获取两个数据
+    assert.True(t, randomUsers.Len() == 2)
+    fmt.Println(randomUsers.ToInterfaceArray())
+
+    assert.True(t, all.Pull().(User).Name == &quot;qbhy&quot;) // 从末尾取走一个
+    assert.True(t, all.Len() == 2)                   // 判断取走后的长度
+    assert.True(t, all.Shift().(User).Name == &quot;马云&quot;)  // 从开头取走一个
+    assert.True(t, all.Len() == 1)                   // 判断取走后的长度
+}
+
+func TestChunk(t *testing.T) {
+    collect := collection.MustNew([]int{
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+    })
+
+    err := collect.Chunk(5, func(collection contracts.Collection, page int) error {
+        fmt.Printf(&quot;页码：%d，数量：%d %v\n&quot;, page, collection.Len(), collection.ToInterfaceArray())
+        switch page {
+        case 4:
+            assert.True(t, collection.Len() == 4)
+        default:
+            assert.True(t, collection.Len() == 5)
+        }
+        return nil
+    })
+    assert.Nil(t, err)
+
+    err = collection.MustNew([]User{
+        {id: 1, Name: &quot;qbhy&quot;, Money: 12},
+        {id: 2, Name: &quot;goal&quot;, Money: 1},
+        {id: 2, Name: &quot;goal&quot;, Money: 15},
+        {id: 2, Name: &quot;goal99&quot;, Money: 99},
+        {id: 3, Name: &quot;collection&quot;, Money: -5},
+        {id: 3, Name: &quot;移动&quot;, Money: 10086},
+    }).Chunk(3, func(collection contracts.Collection, page int) error {
+        assert.True(t, page == 1)
+        assert.True(t, collection.First(&quot;name&quot;) == &quot;qbhy&quot;)
+        assert.True(t, collection.Last(&quot;name&quot;) == &quot;goal&quot;)
+        return errors.New(&quot;第一页退出&quot;)
+    })
+    assert.Error(t, err)
+}
+</code></pre>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/6tEe2m3il/">https://www.vincent.ac.cn/post/6tEe2m3il/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/6tEe2m3il/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/6tEe2m3il/&sharesource=qzone&title=Goal-Web框架 collection 库&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/6tEe2m3il/&sharesource=weibo&title=Goal-Web框架 collection 库 + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/cdMZz1WVj/">#
+                    GOAL
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/zP5jJNUgi/">#
+                    开源项目
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/9l7hz-cAk/">#
+                    Go
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/LGhYKiytt/">
+                                                                                            docker运行hyperf 出现  Access denied for user &#39;root&#39;@&#39;172.16.10.3&#39; (using password: YES)报错
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/ngpbCpPO-/">
+                                                                                                    Goal-Web框架 QueryBuilder组件
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

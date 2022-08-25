@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.vincent.ac.cn/</id>
+    <title>我的测试学习</title>
+    <updated>2022-08-25T06:42:07.242Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.vincent.ac.cn/"/>
+    <link rel="self" href="https://www.vincent.ac.cn/atom.xml"/>
+    <subtitle>不愤不启不悱不发</subtitle>
+    <logo>https://www.vincent.ac.cn/images/avatar.png</logo>
+    <icon>https://www.vincent.ac.cn/favicon.ico</icon>
+    <rights>All rights reserved 2022, 我的测试学习</rights>
+    <entry>
+        <title type="html"><![CDATA[jenkins参数化构建:条件触发构建]]></title>
+        <id>https://www.vincent.ac.cn/post/NyBeI-EwM/</id>
+        <link href="https://www.vincent.ac.cn/post/NyBeI-EwM/">
+        </link>
+        <updated>2022-04-21T08:15:12.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[jenkins+kubernetes(k8s)+docker持续集成与部署(CI/CD) ]]></title>
+        <id>https://www.vincent.ac.cn/post/Prix7QUh-/</id>
+        <link href="https://www.vincent.ac.cn/post/Prix7QUh-/">
+        </link>
+        <updated>2022-04-11T16:20:44.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用kubeadm安装kubernetes]]></title>
+        <id>https://www.vincent.ac.cn/post/DY4viH_Fi/</id>
+        <link href="https://www.vincent.ac.cn/post/DY4viH_Fi/">
+        </link>
+        <updated>2022-04-03T01:33:23.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用CODING 自动构建部署 Hyperf项目]]></title>
+        <id>https://www.vincent.ac.cn/post/R7iWociC1/</id>
+        <link href="https://www.vincent.ac.cn/post/R7iWociC1/">
+        </link>
+        <updated>2022-03-29T02:07:34.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Goal - 快速开始]]></title>
+        <id>https://www.vincent.ac.cn/post/1Xnpj3nCM/</id>
+        <link href="https://www.vincent.ac.cn/post/1Xnpj3nCM/">
+        </link>
+        <updated>2022-03-11T03:03:07.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Goal-Web框架 用户认证（Auth）模块]]></title>
+        <id>https://www.vincent.ac.cn/post/KiNHX9G7r/</id>
+        <link href="https://www.vincent.ac.cn/post/KiNHX9G7r/">
+        </link>
+        <updated>2022-03-08T03:19:38.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Goal-Web框架 洋葱模型的管道实现，你还在愁 go 没有好用的中间件吗？]]></title>
+        <id>https://www.vincent.ac.cn/post/4F-DbyJRx/</id>
+        <link href="https://www.vincent.ac.cn/post/4F-DbyJRx/">
+        </link>
+        <updated>2022-02-23T03:16:17.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Goal-Web框架 数据库组件]]></title>
+        <id>https://www.vincent.ac.cn/post/harkE6PNG/</id>
+        <link href="https://www.vincent.ac.cn/post/harkE6PNG/">
+        </link>
+        <updated>2022-02-17T03:09:55.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[docker运行hyperf 出现  Access denied for user 'root'@'172.16.10.3' (using password: YES)报错]]></title>
+        <id>https://www.vincent.ac.cn/post/LGhYKiytt/</id>
+        <link href="https://www.vincent.ac.cn/post/LGhYKiytt/">
+        </link>
+        <updated>2022-02-16T08:18:03.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Goal-Web框架 collection 库]]></title>
+        <id>https://www.vincent.ac.cn/post/6tEe2m3il/</id>
+        <link href="https://www.vincent.ac.cn/post/6tEe2m3il/">
+        </link>
+        <updated>2022-02-08T03:07:01.000Z</updated>
+    </entry>
+</feed>

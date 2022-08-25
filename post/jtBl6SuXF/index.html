@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                在浏览器输入 URL 回车之后发生了什么（超详细版）
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-11-14</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">13.6
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">3848</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/meUUKMjqL/">网络</a>
+                                
+                                <a href="https://www.vincent.ac.cn/kEMJHfwHiC/">TCP</a>
+                                
+                                <a href="https://www.vincent.ac.cn/9GCcJqs1bZ/">系统</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://www.vincent.ac.cn//post-images/jtBl6SuXF.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <p>这个问题已经是老生常谈了，更是经常被作为面试的压轴题出现，网上也有很多文章，但最近闲的无聊，然后就自己做了一篇笔记，感觉比之前理解更透彻了。</p>
+<p>这篇笔记是我这两天看了数十篇文章总结出来的，所以相对全面一点，但由于我是做前端的，所以会比较重点分析浏览器渲染页面那一部分，至于其他部分我会罗列出关键词，感兴趣的可以自行查阅，</p>
+<p>注意：本文的步骤是建立在，请求的是一个简单的 HTTP 请求，没有 HTTPS、HTTP2、最简单的 DNS、没有代理、并且服务器没有任何问题的基础上，尽管这是不切实际的。</p>
+<p>大致流程</p>
+<ol>
+<li>URL 解析</li>
+<li>DNS 查询</li>
+<li>TCP 连接</li>
+<li>处理请求</li>
+<li>接受响应</li>
+<li>渲染页面</li>
+</ol>
+<h2 id="url-解析">URL 解析</h2>
+<h3 id="地址解析">地址解析：</h3>
+<p>首先判断你输入的是一个合法的 URL 还是一个待搜索的关键词，并且根据你输入的内容进行自动完成、字符编码等操作。</p>
+<h3 id="hsts">HSTS</h3>
+<p>由于安全隐患，会使用 HSTS 强制客户端使用 HTTPS 访问页面。详见：你所不知道的 HSTS。</p>
+<h3 id="其他操作">其他操作</h3>
+<p>浏览器还会进行一些额外的操作，比如安全检查、访问限制（之前国产浏览器限制 996.icu）。</p>
+<h3 id="检查缓存">检查缓存</h3>
+<figure data-type="image" tabindex="1"><img src="https://www.vincent.ac.cn//post-images/1573718152314.jpg" alt="" loading="lazy"></figure>
+<h2 id="dns-查询">DNS 查询</h2>
+<p>基本步骤<br>
+<img src="https://www.vincent.ac.cn//post-images/1573718162047.jpg" alt="" loading="lazy"></p>
+<h3 id="浏览器缓存">浏览器缓存</h3>
+<p>浏览器会先检查是否在缓存中，没有则调用系统库函数进行查询。</p>
+<h3 id="操作系统缓存">操作系统缓存</h3>
+<p>操作系统也有自己的 DNS缓存，但在这之前，会向检查域名是否存在本地的 Hosts 文件里，没有则向 DNS 服务器发送查询请求。</p>
+<h3 id="路由器缓存">路由器缓存</h3>
+<p>路由器也有自己的缓存。</p>
+<h3 id="isp-dns-缓存">ISP DNS 缓存</h3>
+<p>ISP DNS 就是在客户端电脑上设置的首选 DNS 服务器，它们在大多数情况下都会有缓存。</p>
+<h3 id="根域名服务器查询">根域名服务器查询</h3>
+<p>在前面所有步骤没有缓存的情况下，本地 DNS 服务器会将请求转发到互联网上的根域，下面这个图很好的诠释了整个流程：<br>
+<img src="https://www.vincent.ac.cn//post-images/1573718176501.jpg" alt="" loading="lazy"></p>
+<blockquote>
+<p>根域名服务器：<a href="https://zh.wikipedia.org/wiki/%E6%A0%B9%E7%B6%B2%E5%9F%9F%E5%90%8D%E7%A8%B1%E4%BC%BA%E6%9C%8D%E5%99%A8">维基百科</a></p>
+</blockquote>
+<h3 id="需要注意的点">需要注意的点</h3>
+<ol>
+<li>递归方式：一路查下去中间不返回，得到最终结果才返回信息（浏览器到本地DNS服务器的过程）</li>
+<li>迭代方式，就是本地DNS服务器到根域名服务器查询的方式。</li>
+<li>什么是 DNS 劫持</li>
+<li>前端 dns-prefetch 优化</li>
+</ol>
+<h2 id="tcp-连接">TCP 连接</h2>
+<p>TCP/IP 分为四层，在发送数据时，每层都要对数据进行封装：<br>
+<img src="https://www.vincent.ac.cn//post-images/1573718187795.jpg" alt="" loading="lazy"></p>
+<h3 id="应用层发送-http-请求">应用层：发送 HTTP 请求</h3>
+<p>在前面的步骤我们已经得到服务器的 IP 地址，浏览器会开始构造一个 HTTP 报文，其中包括：</p>
+<ul>
+<li>请求报头（Request Header）：请求方法、目标地址、遵循的协议等等</li>
+<li>请求主体（其他参数）</li>
+</ul>
+<p>其中需要注意的点：</p>
+<ul>
+<li>浏览器只能发送 GET、POST 方法，而打开网页使用的是 GET 方法</li>
+</ul>
+<h3 id="传输层tcp-传输报文">传输层：TCP 传输报文</h3>
+<p>传输层会发起一条到达服务器的 TCP 连接，为了方便传输，会对数据进行分割（以报文段为单位），并标记编号，方便服务器接受时能够准确地还原报文信息。</p>
+<p>在建立连接前，会先进行 TCP 三次握手。</p>
+<blockquote>
+<p>关于 TCP/IP 三次握手，网上已经有很多段子和图片生动地描述了。</p>
+<ol>
+<li>相关知识点：<br>
+SYN 泛洪攻击</li>
+</ol>
+</blockquote>
+<h3 id="网络层ip协议查询mac地址">网络层：IP协议查询Mac地址</h3>
+<p>将数据段打包，并加入源及目标的IP地址，并且负责寻找传输路线。</p>
+<p>判断目标地址是否与当前地址处于同一网络中，是的话直接根据 Mac 地址发送，否则使用路由表查找下一跳地址，以及使用 ARP 协议查询它的 Mac 地址。</p>
+<blockquote>
+<p>注意：在 OSI 参考模型中 ARP 协议位于链路层，但在 TCP/IP 中，它位于网络层。</p>
+</blockquote>
+<h3 id="链路层以太网协议">链路层：以太网协议</h3>
+<h4 id="以太网协议">以太网协议</h4>
+<p>根据以太网协议将数据分为以“帧”为单位的数据包，每一帧分为两个部分：</p>
+<p>标头：数据包的发送者、接受者、数据类型<br>
+数据：数据包具体内容</p>
+<h4 id="mac-地址">Mac 地址</h4>
+<p>以太网规定了连入网络的所有设备都必须具备“网卡”接口，数据包都是从一块网卡传递到另一块网卡，网卡的地址就是 Mac 地址。每一个 Mac 地址都是独一无二的，具备了一对一的能力。</p>
+<h4 id="广播">广播</h4>
+<p>发送数据的方法很原始，直接把数据通过 ARP 协议，向本网络的所有机器发送，接收方根据标头信息与自身 Mac 地址比较，一致就接受，否则丢弃。</p>
+<h4 id="注意接收方回应是单播">注意：接收方回应是单播。</h4>
+<blockquote>
+<p>相关知识点：</p>
+<ol>
+<li>ARP 攻击</li>
+</ol>
+</blockquote>
+<h4 id="服务器接受请求">服务器接受请求</h4>
+<p>接受过程就是把以上步骤逆转过来，参见上图。</p>
+<h2 id="服务器处理请求">服务器处理请求</h2>
+<p>大致流程<br>
+<img src="https://www.vincent.ac.cn//post-images/1573718200413.jpg" alt="" loading="lazy"></p>
+<h3 id="httpd">HTTPD</h3>
+<p>最常见的 HTTPD 有 Linux 上常用的 Apache 和 Nginx，以及 Windows 上的 IIS。</p>
+<p>它会监听得到的请求，然后开启一个子进程去处理这个请求。</p>
+<h3 id="处理请求">处理请求</h3>
+<p>接受 TCP 报文后，会对连接进行处理，对HTTP协议进行解析（请求方法、域名、路径等），并且进行一些验证：</p>
+<ul>
+<li>验证是否配置虚拟主机</li>
+<li>验证虚拟主机是否接受此方法</li>
+<li>验证该用户可以使用该方法（根据 IP 地址、身份信息等）</li>
+</ul>
+<h3 id="重定向">重定向</h3>
+<p>假如服务器配置了 HTTP 重定向，就会返回一个 301永久重定向响应，浏览器就会根据响应，重新发送 HTTP 请求（重新执行上面的过程）。</p>
+<blockquote>
+<p>关于更多：<a href="https://www.cnblogs.com/workest/p/3891321.html">详见这篇文章</a></p>
+</blockquote>
+<h3 id="url-重写">URL 重写</h3>
+<p>然后会查看 URL 重写规则，如果请求的文件是真实存在的，比如图片、html、css、js文件等，则会直接把这个文件返回。</p>
+<p>否则服务器会按照规则把请求重写到 一个 REST 风格的 URL 上。</p>
+<p>然后根据动态语言的脚本，来决定调用什么类型的动态文件解释器来处理这个请求。</p>
+<p>以 PHP 语言的 MVC 框架举例，它首先会初始化一些环境的参数，根据 URL 由上到下地去匹配路由，然后让路由所定义的方法去处理请求。</p>
+<h2 id="浏览器接受响应">浏览器接受响应</h2>
+<p>浏览器接收到来自服务器的响应资源后，会对资源进行分析。</p>
+<p>首先查看 Response header，根据不同状态码做不同的事（比如上面提到的重定向）。</p>
+<p>如果响应资源进行了压缩（比如 gzip），还需要进行解压。</p>
+<p>然后，对响应资源做缓存。</p>
+<p>接下来，根据响应资源里的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a> 类型去解析响应内容（比如 HTML、Image各有不同的解析方式）。</p>
+<h2 id="渲染页面">渲染页面</h2>
+<h3 id="浏览器内核">浏览器内核</h3>
+<p><img src="https://www.vincent.ac.cn//post-images/1573718212294.jpg" alt="" loading="lazy"><br>
+不同的浏览器内核，渲染过程也不完全相同，但大致流程都差不多。</p>
+<h3 id="基本流程">基本流程</h3>
+<figure data-type="image" tabindex="2"><img src="https://www.vincent.ac.cn//post-images/1573718221663.jpg" alt="" loading="lazy"></figure>
+<h3 id="html-解析">HTML 解析</h3>
+<p>首先要知道浏览器解析是从上往下一行一行地解析的。</p>
+<p>解析的过程可以分为四个步骤：</p>
+<ol>
+<li>
+<p>解码（encoding）<br>
+传输回来的其实都是一些二进制字节数据，浏览器需要根据文件指定编码（例如UTF-8）转换成字符串，也就是HTML 代码。</p>
+</li>
+<li>
+<p>预解析（pre-parsing）<br>
+预解析做的事情是提前加载资源，减少处理时间，它会识别一些会请求资源的属性，比如img标签的src属性，并将这个请求加到请求队列中。</p>
+</li>
+<li>
+<p>符号化（Tokenization）<br>
+符号化是词法分析的过程，将输入解析成符号，HTML 符号包括，开始标签、结束标签、属性名和属性值。<br>
+它通过一个状态机去识别符号的状态，比如遇到<code>&lt;，&gt;</code>状态都会产生变化。</p>
+</li>
+<li>
+<p>构建树（tree construction）</p>
+</li>
+</ol>
+<blockquote>
+<p>注意：符号化和构建树是并行操作的，也就是说只要解析到一个开始标签，就会创建一个 DOM 节点。</p>
+</blockquote>
+<pre><code>在上一步符号化中，解析器获得这些标记，然后以合适的方法创建DOM对象并把这些符号插入到DOM对象中。
+```HTML
+&lt;html&gt;
+</code></pre>
+<head>
+    <title>Web page parsing</title>
+</head>
+<body>
+    <div>
+        <h1>Web page parsing</h1>
+        <p>This is an example Web page.</p>
+    </div>
+</body>
+</html>
+    ```
+    ![](https://www.vincent.ac.cn//post-images/1573718234151.jpg)
+<h4 id="浏览器容错进制">浏览器容错进制</h4>
+<p>你从来没有在浏览器看过类似”语法无效”的错误，这是因为浏览器去纠正错误的语法，然后继续工作。</p>
+<h4 id="事件">事件</h4>
+<p>当整个解析的过程完成以后，浏览器会通过DOMContentLoaded事件来通知DOM解析完成。</p>
+<h3 id="css-解析">CSS 解析</h3>
+<p>一旦浏览器下载了 CSS，CSS 解析器就会处理它遇到的任何 CSS，根据<a href="https://drafts.csswg.org/css-syntax-3/">语法规范</a>解析出所有的 CSS 并进行标记化，然后我们得到一个规则表。</p>
+<h4 id="css-匹配规则">CSS 匹配规则</h4>
+<p>在匹配一个节点对应的 CSS 规则时，是按照从右到左的顺序的，例如：div p { font-size :14px }会先寻找所有的p标签然后判断它的父元素是否为div。</p>
+<p>所以我们写 CSS 时，尽量用 id 和 class，千万不要过度层叠。</p>
+<h3 id="渲染树">渲染树</h3>
+<p>其实这就是一个 DOM 树和 CSS 规则树合并的过程。</p>
+<blockquote>
+<p>注意：渲染树会忽略那些不需要渲染的节点，比如设置了<code>display:none</code> 的节点。</p>
+</blockquote>
+<h4 id="计算">计算</h4>
+<p>通过计算让任何尺寸值都减少到三个可能之一：auto、百分比、px，比如把rem转化为px。</p>
+<h4 id="级联">级联</h4>
+<p>浏览器需要一种方法来确定哪些样式才真正需要应用到对应元素，所以它使用一个叫做specificity的公式，这个公式会通过：</p>
+<ul>
+<li>标签名、class、id</li>
+<li>是否内联样式</li>
+<li>!important</li>
+</ul>
+<p>然后得出一个权重值，取最高的那个。</p>
+<h4 id="渲染阻塞">渲染阻塞</h4>
+<p>当遇到一个script标签时，DOM 构建会被暂停，直至脚本完成执行，然后继续构建 DOM 树。</p>
+<p>但如果 JS 依赖 CSS 样式，而它还没有被下载和构建时，浏览器就会延迟脚本执行，直至 CSS Rules 被构建。</p>
+<p>所有我们知道：</p>
+<ul>
+<li>CSS 会阻塞 JS 执行</li>
+<li>JS 会阻塞后面的 DOM 解析</li>
+</ul>
+<p>为了避免这种情况，应该以下原则：</p>
+<ul>
+<li>CSS 资源排在 JavaScript 资源前面</li>
+<li>JS 放在 HTML 最底部，也就是 </body>前</li>
+</ul>
+<p>另外，如果要改变阻塞模式，可以使用 defer 与 async，详见：<a href="https://github.com/xiaoyu2er/blog/issues/8">这篇文章</a></p>
+<h3 id="布局与绘制">布局与绘制</h3>
+<p>确定渲染树种所有节点的几何属性，比如：位置、大小等等，最后输入一个盒子模型，它能精准地捕获到每个元素在屏幕内的准确位置与大小。</p>
+<p>然后遍历渲染树，调用渲染器的 paint() 方法在屏幕上显示其内容。</p>
+<h3 id="合并渲染层">合并渲染层</h3>
+<p>把以上绘制的所有图片合并，最终输出一张图片。</p>
+<h3 id="回流与重绘">回流与重绘</h3>
+<h4 id="回流reflow">回流(reflow)</h4>
+<p>当浏览器发现某个部分发现变化影响了布局时，需要倒回去重新渲染，会从html标签开始递归往下，重新计算位置和大小。</p>
+<p>reflow基本是无法避免的，因为当你滑动一下鼠标、resize 窗口，页面就会产生变化。</p>
+<h4 id="重绘repaint">重绘(repaint)</h4>
+<p>改变了某个元素的背景色、文字颜色等等不会影响周围元素的位置变化时，就会发生重绘。</p>
+<p>每次重绘后，浏览器还需要合并渲染层并输出到屏幕上。</p>
+<p>回流的成本要比重绘高很多，所以我们应该尽量避免产生回流。</p>
+<p>比如：</p>
+<ul>
+<li>display:none 会触发回流，而 visibility:hidden 只会触发重绘。</li>
+</ul>
+<h3 id="javascript-编译执行">JavaScript 编译执行</h3>
+<p>大致流程<br>
+<img src="https://www.vincent.ac.cn//post-images/1573718252965.jpg" alt="" loading="lazy"><br>
+可以分为三个阶段：</p>
+<ol>
+<li>
+<p>词法分析<br>
+JS 脚本加载完毕后，会首先进入语法分析阶段，它首先会分析代码块的语法是否正确，不正确则抛出“语法错误”，停止执行。</p>
+<p>几个步骤：</p>
+<p>分词，例如将var a = 2，，分成var、a、=、2这样的词法单元。<br>
+解析，将词法单元转换成抽象语法树（AST）。<br>
+代码生成，将抽象语法树转换成机器指令。</p>
+</li>
+<li>
+<p>预编译<br>
+JS 有三种运行环境：</p>
+<ul>
+<li>全局环境</li>
+<li>函数环境</li>
+<li>eval</li>
+</ul>
+<p>每进入一个不同的运行环境都会创建一个对应的执行上下文，根据不同的上下文环境，形成一个函数调用栈，栈底永远是全局执行上下文，栈顶则永远是当前执行上下文。</p>
+<h4 id="创建执行上下文">创建执行上下文</h4>
+<p>创建执行上下文的过程中，主要做了以下三件事：</p>
+<ul>
+<li>创建变量对象
+<ul>
+<li>参数、函数、变量</li>
+</ul>
+</li>
+<li>建立作用域链
+<ul>
+<li>确认当前执行环境是否能访问变量</li>
+</ul>
+</li>
+<li>确定 This 指向</li>
+</ul>
+</li>
+<li>
+<p>执行<br>
+JS 线程<br>
+<img src="https://www.vincent.ac.cn//post-images/1573718263528.jpg" alt="" loading="lazy"><br>
+虽然 JS 是单线程的，但实际上参与工作的线程一共有四个：</p>
+<blockquote>
+<p>其中三个只是协助，只有 JS 引擎线程是真正执行的</p>
+</blockquote>
+<ul>
+<li>JS 引擎线程：也叫 JS 内核，负责解析执行 JS 脚本程序的主线程，例如 V8 引擎</li>
+<li>&amp;事件触发线程：属于浏览器内核线程，主要用于控制事件，例如鼠标、键盘等，当事件被触发时，就会把事件的处理函数推进事件队列，等待 JS 引擎线程执行</li>
+<li>定时器触发线程：主要控制setInterval和setTimeout，用来计时，计时完毕后，则把定时器的处理函数推进事件队列中，等待 JS 引擎线程。</li>
+<li>HTTP 异步请求线程：通过XMLHttpRequest连接后，通过浏览器新开的一个线程，监控readyState状态变更时，如果设置了该状态的回调函数，则将该状态的处理函数推进事件队列中，等待JS引擎线程执行。</li>
+</ul>
+<p>注：浏览器对同一域名的并发连接数是有限的，通常为 6 个。</p>
+<h4 id="宏任务">宏任务</h4>
+<p>分为：</p>
+<ul>
+<li>同步任务：按照顺序执行，只有前一个任务完成后，才能执行后一个任务</li>
+<li>异步任务：不直接执行，只有满足触发条件时，相关的线程将该异步任务推进任务队列中，等待JS引擎主线程上的任务执行完毕时才开始执行，例如异步Ajax、DOM事件，setTimeout等。</li>
+</ul>
+<h4 id="微任务">微任务</h4>
+<p>微任务是ES6和Node环境下的，主要 API 有：Promise，process.nextTick。</p>
+<p>微任务的执行在宏任务的同步任务之后，在异步任务之前。<br>
+<img src="https://www.vincent.ac.cn//post-images/1573718275582.jpg" alt="" loading="lazy"></p>
+</li>
+</ol>
+<h5 id="代码例子">代码例子</h5>
+<pre><code>```
+console.log('1'); // 宏任务 同步
+
+setTimeout(function() {
+    console.log('2'); // 宏任务 异步
+})
+
+new Promise(function(resolve) {
+    console.log('3'); // 宏任务 同步
+    resolve();
+}).then(function() {
+    console.log('4') // 微任务
+})
+
+console.log('5') // 宏任务 同步
+```
+</code></pre>
+<p>以上代码输出顺序为：1,3,5,4,2</p>
+<h2 id="参考文档">参考文档</h2>
+<ul>
+<li><a href="https://github.com/skyline75489/what-happens-when-zh_CN">what-happens-when-zh_CN</a></li>
+<li><a href="https://alistapart.com/article/tags-to-dom/">Tags to DOM</a></li>
+<li><a href="https://heyingye.github.io/2018/04/16/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">彻底理解浏览器的缓存机制</a></li>
+<li><a href="https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/#The_rendering_engine">浏览器的工作原理：新式网络浏览器幕后揭秘</a></li>
+<li><a href="https://blog.fundebug.com/2019/01/03/understand-browser-rendering/">深入浅出浏览器渲染原理</a></li>
+<li><a href="https://heyingye.github.io/2018/03/19/js%E5%BC%95%E6%93%8E%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89/#%E9%A2%84%E7%BC%96%E8%AF%91%E9%98%B6%E6%AE%B5">js引擎的执行过程（一）</a></li>
+<li>还有一些找不到了。。。。。</li>
+</ul>
+<blockquote>
+<p>本文作者：4Ark<br>
+本文链接： https://4ark.me/post/b6c7c0a2.html</p>
+</blockquote>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/jtBl6SuXF/">https://www.vincent.ac.cn/post/jtBl6SuXF/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/jtBl6SuXF/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/jtBl6SuXF/&sharesource=qzone&title=在浏览器输入 URL 回车之后发生了什么（超详细版）&pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/jtBl6SuXF/&sharesource=weibo&title=在浏览器输入 URL 回车之后发生了什么（超详细版） + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/meUUKMjqL/">#
+                    网络
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/kEMJHfwHiC/">#
+                    TCP
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/9GCcJqs1bZ/">#
+                    系统
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/-JIl7kxRA/">
+                                                                                            laravel 模型Eloquent ORM 查询
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/eQcNjr_UO/">
+                                                                                                    网络上收集的有关 Redis 方面的面试题 
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

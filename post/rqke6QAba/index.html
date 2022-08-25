@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                初学 Spring Boot 创建项目并整合Mybatis Plus 
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-12-30</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">10.5
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">2344</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/1yAyn8xlB/">Mybatis Plus</a>
+                                
+                                <a href="https://www.vincent.ac.cn/0nRM6rsJ7/">Spring Boot</a>
+                                
+                                <a href="https://www.vincent.ac.cn/F9L3Hp040r/">Java</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_30/VpnJ8U.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <blockquote>
+<p>学习<code>java</code>总是绕不开 <code>spring</code> 的 <code>Spring Boot</code>是由<code>Pivotal团队</code>提供的全新框架，其设计目的是用来简化新<code>Spring</code>应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。简而言之，<code>Spring Boot</code>通过提供默认配置的方式整合了所有的框架，让我们可以更加简单、快速、方便地构建应用程序。</p>
+</blockquote>
+<h2 id="为什么要用spring-boot">为什么要用<code>Spring Boot</code>?</h2>
+<p><code>Spring Boot</code>包含以下几个特性:</p>
+<ol>
+<li>默认提供了大部分框架的使用方式，方便进行快速集成</li>
+<li><code>Spring Boot</code>应用可以独立运行，符合微服务的开发理念</li>
+<li><code>Spring Boot</code>内置<code>WEB</code>容器，无需部署<code>WAR</code>包即可运行</li>
+<li>提供了各种生产就绪型功能，如指标，健康检查和外部配置</li>
+<li><code>Spring Boot</code>通过网站提供了项目模板，方便项目的初始化</li>
+</ol>
+<p>通过以上这些非常优秀的特性，<code>Spring Boot</code>可以帮助我们非常简单、快速的构建起我们的项目，并能够非常方便进行后续开发、测试和部署。</p>
+<p>然后数据层，我们常用的是<code>Mybatis</code>，易上手，方便维护。但是单表操作比较困难，特别是添加字段或减少字段的时候，比较繁琐，所以这里我推荐使用<code>Mybatis Plus</code>，为简化开发而生，只<code>… CRUD </code>操作，从而节省大量时间。</p>
+<p>多说无益，实践为上。接下来，就来建立起我们的第一个<code>Spring Boot</code>项目。</p>
+<h2 id="新建spring-boot项目">新建<code>Spring Boot</code>项目</h2>
+<p>为方便我们初始化项目，<code>Spring Boot</code>给我们提供一个项目模板生成网站。</p>
+<ol>
+<li>打开浏览器，访问：<code>https://start.spring.io/</code></li>
+<li>根据页面提示，选择构建工具，开发语言，项目信息等。<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_30/5BPq8p.png" alt="" loading="lazy"></li>
+<li>点击 <code>Generate the project</code>，生成项目模板，生成之后会将压缩包下载到本地。</li>
+<li>使用<code>IDE</code>导入项目，我这里使用<code>IDEA</code>，通过导入<code>Maven</code>项目的方式导入。</li>
+</ol>
+<p>不过这里，我们使用<code>IDEA</code>来直接创建我们项目</p>
+<ol>
+<li>打开<code>IDEA</code>点击新建项目 选择 <code>Spring Initializr</code><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_30/io2LZX.png" alt="" loading="lazy"></li>
+<li>填写名称、位置、组、工件、软件包 语言选择 <code>Java</code> 类型选择 <code>Maven</code>  因为我这里的<code>SDK</code>是1.8版本 所以<code>Java</code>选择 <code>8</code> 打包选 <code>Jar</code><br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_30/ovadx6.png" alt="" loading="lazy"></li>
+<li>点下一步 选择 <code>Spring Boot</code> 版本这里我直接选了最新版 <code>2.6.2</code> 以及勾选需要的依赖点击完成即可(依赖也可不勾选后续在手动增加)<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_30/32ihHm.png" alt="" loading="lazy"></li>
+</ol>
+<h2 id="项目结构说明">项目结构说明</h2>
+<p><img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_30/9MrXNe.png" alt="" loading="lazy"><br>
+如上图所示，<code>Spring Boot</code> 的项目结构比较简单，只包含三个文件夹。</p>
+<ul>
+<li><code>src/main/java</code>  放置程序开发代码</li>
+<li><code>src/main/resources</code>  放置配置文件</li>
+<li><code>src/test/java</code>  放置测试程序代码<br>
+而在其下，包含以下主要文件。</li>
+<li><code>Demo3Application.java</code> 应用的启动类，包含<code>MAIN</code>方法，是程序的入口</li>
+<li><code>application.properties</code> 一个空的配置文件，后续可以配置数据源等信息</li>
+<li><code>Demo3ApplicationTests.java</code> 一个简单的单元测试类</li>
+<li><code>pom.xml</code> <code>Maven的配置文件</code>，这个应该不用多作介绍了吧</li>
+</ul>
+<h2 id="引入maven依赖">引入<code>Maven</code>依赖</h2>
+<p>编辑 <code>pox.xml</code>文件增加下列代码 (编辑该文件后<code>IDEA</code>右上角会出现一个 <code>Maven</code> 的小图标 点击刷新即可将新增的依赖引入到项目中)</p>
+<pre><code class="language-xml">        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;
+            &lt;scope&gt;runtime&lt;/scope&gt;
+            &lt;optional&gt;true&lt;/optional&gt;
+        &lt;/dependency&gt;
+        &lt;!-- lombok简化代码 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+            &lt;optional&gt;true&lt;/optional&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<ul>
+<li><code>web</code>:<code>Spring Boot Web</code>依赖。</li>
+<li><code>devtools</code>：项目的热加载重启插件</li>
+<li><code>lombok</code>：简化代码的工具</li>
+</ul>
+<h2 id="整合-mybatis-plus">整合 <code>Mybatis Plus</code></h2>
+<p>接下来，我们来整合 <code>Mybatis Plus</code>，让项目能完成基本的增删改查操作<br>
+步骤很简单：可以去官网看看 <a href="https://baomidou.com/">https://baomidou.com/</a></p>
+<h3 id="第一步引入maven依赖">第一步：引入<code>Maven</code>依赖</h3>
+<p><code>pom.xml</code>中导入 <code>Mybatis Plus</code>的<code>jar包</code>，因为后面会涉及到代码生成，所以我们还需要导入页面模板引擎，这里我们用的是<code>freemarker</code>。<br>
+编辑 <code>pox.xml</code>文件增加下列代码 (编辑该文件后<code>IDEA</code>右上角会出现一个 <code>Maven</code> 的小图标 点击刷新即可将新增的依赖引入到项目中)</p>
+<pre><code class="language-xml">        &lt;!--Mybatis-Plus begin --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-freemarker&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;mysql&lt;/groupId&gt;
+            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+            &lt;scope&gt;runtime&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;!--Mybatis-Plus 代码生成器--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-plus-generator&lt;/artifactId&gt;
+            &lt;version&gt;3.5.1&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
+            &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-plus-extension&lt;/artifactId&gt;
+            &lt;version&gt;3.4.3.4&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!-- Mybatis-Plus end --&gt;
+</code></pre>
+<h3 id="第二步然后去写配置文件">第二步：然后去写配置文件</h3>
+<p>这里我们用<code>yml</code>格式来配置 在 <code>src/main/resources</code>目录下创建一个 <code>application.yml</code> 配置文件</p>
+<pre><code class="language-yml"># DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&amp;useSSL=false&amp;characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai
+    username: root
+    password: admin111
+</code></pre>
+<h3 id="第三步编写快速生成代码">第三步：编写快速生成代码</h3>
+<p>那么现在就已经可以使用<code>Mybatis Plus</code>了，官方给我们提供了一个代码生成器，然后我写上自己的参数之后，就可以直接根据数据库表信息生成<code>entity、service、mapper</code>等接口和实现类。<br>
+首先在数据库中创建两张表</p>
+<pre><code class="language-sql">SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for m_blog
+-- ----------------------------
+DROP TABLE IF EXISTS `m_blog`;
+CREATE TABLE `m_blog` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `content` longtext,
+  `created` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `status` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of m_blog
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for m_user
+-- ----------------------------
+DROP TABLE IF EXISTS `m_user`;
+CREATE TABLE `m_user` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `username` varchar(64) DEFAULT NULL,
+  `avatar` varchar(255) DEFAULT NULL,
+  `email` varchar(64) DEFAULT NULL,
+  `password` varchar(64) DEFAULT NULL,
+  `status` int(5) NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `last_login` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `UK_USERNAME` (`username`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of m_user
+-- ----------------------------
+INSERT INTO `m_user` VALUES ('1', 'vincent', 'https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_30/hPBC1H.png', null, '96e79218965eb72c92a549dd5a330112', '0', '2020-04-20 10:44:01', null);
+</code></pre>
+<p>在 <code>src/main/java/com/example/demo3</code> 创建 <code>CodeGenerator.java</code> 文件</p>
+<pre><code class="language-java">package com.example.demo2;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.generator.FastAutoGenerator;
+import com.baomidou.mybatisplus.generator.config.OutputFile;
+import com.baomidou.mybatisplus.generator.config.rules.DateType;
+import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+
+import java.util.Collections;
+
+/**
+ * 代码生成器 ，先修改下面的常量配置参数，然后执行 main方法
+ *
+ * @author vincent
+ */
+public class CodeGenerator {
+
+    // 数据库连接配置
+
+    private static final String JDBC_URL = &quot;jdbc:mysql://localhost:3306/blog?useUnicode=true&amp;useSSL=false&amp;characterEncoding=utf8&amp;serverTimezone=UTC&quot;;
+    private static final String JDBC_USER_NAME = &quot;root&quot;;
+    private static final String JDBC_PASSWORD = &quot;admin111&quot;;
+
+    // 包名和模块名
+    /**
+     *
+     */
+    private static final String PACKAGE_NAME = &quot;com.example&quot;;
+    private static final String MODULE_NAME = &quot;blog&quot;;
+
+    // 表名，多个表使用英文逗号分割
+
+    private static final String[] TBL_NAMES = {&quot;m_user&quot;, &quot;m_blog&quot;};
+
+    // 表名的前缀，从表生成代码时会去掉前缀
+    /**
+     *
+     */
+    private static final String TABLE_PREFIX = &quot;m_&quot;;
+
+    // 生成代码入口main方法
+
+    /**
+     *
+     */
+    public static void main(String[] args) {
+        //获取项目路径
+        String projectPath = System.getProperty(&quot;user.dir&quot;);
+        FastAutoGenerator.create(JDBC_URL, JDBC_USER_NAME, JDBC_PASSWORD)
+                .globalConfig(builder -&gt; {
+                    builder.author(&quot;vincent&quot;)// 设置注释的作者
+                            .fileOverride()// 覆盖已生成文件
+                            .disableOpenDir() // 不打开生成文件目录
+                            .enableSwagger() // 开启 swagger 模式
+                            .commentDate(&quot;yyyy-MM-dd&quot;)// 设置注释的日期格式
+                            .dateType(DateType.TIME_PACK)// 使用java8新的时间类型
+                            .outputDir(projectPath + &quot;/src/main/java&quot;);// 指定输出目录,注意使用反斜杠\
+                })
+                .packageConfig(builder -&gt; {
+                    builder.parent(PACKAGE_NAME)// 设置父包名
+                            .moduleName(MODULE_NAME)// 设置父包模块名
+                            .entity(&quot;entity&quot;)// 设置MVC下各个模块的包名
+                            .mapper(&quot;dao&quot;)
+                            .service(&quot;service&quot;)
+                            .serviceImpl(&quot;service.impl&quot;)
+                            .controller(&quot;controller&quot;)
+                            .other(&quot;other&quot;)
+                            .pathInfo(Collections.singletonMap(OutputFile.mapperXml, projectPath + &quot;/src/main/resources/mapper&quot;)); // 设置mapperXml生成路径
+                })
+                .strategyConfig(builder -&gt; {
+                    builder.enableCapitalMode()
+                            .enableSkipView()
+                            .disableSqlFilter()
+                            .addInclude(TBL_NAMES)// 设置需要生成的表名
+                            .addTablePrefix(TABLE_PREFIX)
+                            .entityBuilder()
+                            .enableTableFieldAnnotation()// 生成实体时生成字段的注解，包括@TableId注解等
+                            .naming(NamingStrategy.underline_to_camel)
+                            .columnNaming(NamingStrategy.underline_to_camel)// 数据库表和字段映射到实体的命名策略，为下划线转驼峰
+                            .idType(IdType.NONE)// 全局主键类型为None
+                            .formatFileName(&quot;%sEntity&quot;)// 实体名称格式化为XXXEntity
+//                     开启生成@RestController控制器
+                            .controllerBuilder()
+                            .enableRestStyle()
+//                     格式化service接口和实现类的文件名称，去掉默认的ServiceName前面的I
+                            .serviceBuilder()
+                            .formatServiceFileName(&quot;%sService&quot;)
+                            .formatServiceImplFileName(&quot;%sServiceImpl&quot;)
+//                     格式化 mapper文件名,格式化xml实现类文件名称
+                            .mapperBuilder()
+                            .formatMapperFileName(&quot;%sDao&quot;)
+                            .formatXmlFileName(&quot;%sDao&quot;);// 设置过滤表前缀
+                })
+                // 使用Freemarker引擎模板，默认的是Velocity引擎模板
+                .templateEngine(new FreemarkerTemplateEngine())
+                .execute();
+
+    }
+}
+</code></pre>
+<h3 id="第四步代码生成">第四步：代码生成</h3>
+<p>执行 <code>CodeGenerator</code> 的 <code>main</code>方法 通过连接<code>MySQL</code>数据库，生成对应的代码框架如下<br>
+<img src="https://qingfengzui-1259530817.cos.ap-shanghai.myqcloud.com/uPic/2021_12_30/NxbWaj.png" alt="" loading="lazy"><br>
+简洁！方便！经过上面的步骤，基本上我们已经把 <code>Mybatis Plus</code>框架集成到项目中了。</p>
+<h3 id="第五步映射-dao-目录">第五步：映射 <code>Dao</code> 目录</h3>
+<p>编辑 <code>Demo2Application.java</code> 项目启动文件</p>
+<pre><code class="language-java">package com.example;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * @author vincent
+ */
+@SpringBootApplication
+@MapperScan(&quot;com.example.blog.dao&quot;)
+public class Demo2Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Demo2Application.class, args);
+    }
+
+}
+</code></pre>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/rqke6QAba/">https://www.vincent.ac.cn/post/rqke6QAba/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/rqke6QAba/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/rqke6QAba/&sharesource=qzone&title=初学 Spring Boot 创建项目并整合Mybatis Plus &pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/rqke6QAba/&sharesource=weibo&title=初学 Spring Boot 创建项目并整合Mybatis Plus  + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/1yAyn8xlB/">#
+                    Mybatis Plus
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/0nRM6rsJ7/">#
+                    Spring Boot
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/F9L3Hp040r/">#
+                    Java
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/UQkhpWrWQ/">
+                                                                                            初学 Spring Boot 封装接口统一响应结果并运行
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/Owh8LqeOM/">
+                                                                                                    swoole学习笔记 进程 二
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

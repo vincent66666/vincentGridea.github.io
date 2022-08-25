@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    我的测试学习
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Lorenzo`s blog">
+<meta name="description" content="悠悠众生，因果循环，大道至简，世间若尽是不如意事，越是执着，变越是苦，不如安下心来，看该看的风景，做好该做之事">
+<meta name="keywords" content="Lorenzo,php,go,rpc">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.vincent.ac.cn//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148326930-1"></script>
+                                <script>
+                                    window.dataLayer = window.dataLayer || [];
+
+                                    function gtag() {
+                                        dataLayer.push(arguments);
+                                    }
+                                    gtag('js', new Date());
+                                    gtag('config', 'UA-148326930-1');
+                                </script>
+                                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.vincent.ac.cn/">
+                    我的测试学习
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.vincent.ac.cn/">
+                            我的测试学习
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1661407627133" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                jenkins+kubernetes(k8s)+docker持续集成与部署(CI/CD) 
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            我的测试学习
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2022-04-12</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">7.3
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1440</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://www.vincent.ac.cn/5-TfXto0L/">k8s</a>
+                                
+                                <a href="https://www.vincent.ac.cn/W9jfq_kp_/">Devops</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <h2 id="环境背景">环境背景</h2>
+<ul>
+<li><code>km</code> - 2cpu - 4g内存 - ip - 192.168.23.39</li>
+<li><code>node1</code> - 2cpu - 2G内存 - ip - 192.168.23.40</li>
+<li><code>node1</code> - 2cpu - 2G内存 - ip - 192.168.23.41</li>
+<li>示例语言 - 因GO语言支持跨平台编译，对容器化部署非常友好，所以示例使用GO语言</li>
+<li><code>git</code> 仓库地址（<code>CI/CD</code>所需文件及代码）  <code>https://gitee.com/lzcit/k8s.git</code> <code>tag为: master-20220331-00</code></li>
+<li>所有操作基于官方文档说明</li>
+</ul>
+<h2 id="go语言安装">GO语言安装</h2>
+<pre><code class="language-bash">wget https://golang.google.cn/dl/go1.18.linux-amd64.tar.gz
+
+tar -xvzf go1.18.linux-amd64.tar.gz
+
+cp -a go /usr/local/go-1.18
+
+ln -s /usr/local/go-1.18/* /bin/
+</code></pre>
+<h2 id="搭建本地仓库">搭建本地仓库</h2>
+<ol>
+<li>搭建私有镜像仓库</li>
+</ol>
+<pre><code class="language-bash">#拉取所需镜像
+docker pull registry
+
+#启动私有镜像仓库
+docker run -itd -e REGISTRY_STORAGE_DELETE_ENABLED=true -p 5000:5000 -v /www/wwwroot/private_registry:/var/lib/registry --name docker_registry registry
+
+#私有镜像仓库可视化web仓库
+docker pull konradkleine/docker-registry-frontend:v2
+
+#启动私有镜像仓库可视化web
+docker run -d --restart=always -e ENV_DOCKER_REGISTRY_HOST=192.168.23.39 -e ENV_DOCKER_REGISTRY_PORT=5000 -p 9011:80 konradkleine/docker-registry-frontend:v2
+</code></pre>
+<ol start="2">
+<li>修改仓库源(三台机器都需要修改)</li>
+</ol>
+<pre><code class="language-bash">vim /etc/docker/daemon.json
+
+#增加如下代码
+&quot;insecure-registries&quot;: [
+	&quot;192.168.23.39:5000&quot;
+],
+</code></pre>
+<ol start="3">
+<li>常用命令</li>
+</ol>
+<pre><code class="language-bash">#查看所有仓库
+curl -XGET http://192.168.23.39:5000/v2/_catalog
+
+#查看某个仓库的tag
+curl -XGET http://192.168.23.39:5000/v2/k8s/tags/list
+
+#查看某个仓库tag的sha256码
+curl --header &quot;Accept: application/vnd.docker.distribution.manifest.v2+json&quot; -I -X HEAD http://192.168.23.39:5000/v2/k8s/manifests/tagname
+
+#删除某个Tag
+curl -v -X DELETE http://192.168.23.39:5000/v2/k8s/manifests/sha256:sha256code
+</code></pre>
+<h2 id="安装jenkins">安装<code>jenkins</code></h2>
+<ol>
+<li>安装<code>jenkins</code> - 基于官方文档</li>
+</ol>
+<pre><code class="language-bash">wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo --no-check-certificate
+
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+yum install -y java-11-openjdk
+
+yum install -y jenkins
+
+systemctl start jenkins
+
+systemctl daemon-reload
+
+#查看admin密码
+cat /var/lib/jenkins/secrets/initialAdminPassword
+</code></pre>
+<ol start="2">
+<li>初始化<code>jenkins</code></li>
+</ol>
+<ul>
+<li>访问: <code>http://192.168.23.39:8080/</code></li>
+<li>账号:<code>admin</code> 密码:<code>cat /var/lib/jenkins/secrets/initialAdminPassword</code></li>
+<li>登录后选择安装推荐的插件 ( 如果因为网络原因部分失败，请点击重试 )</li>
+<li>安装插件 - <code>Manage Jenkins -&gt; Manage Plugin</code>
+<ul>
+<li>搜索 <code>Authorization</code> 安装 <code>Role-based Authorization Strategy</code> 和 <code>Authorize Project</code> - 权限管理</li>
+<li>搜索 <code>kubernetes</code> 安装 <code>kubernetes</code></li>
+<li>搜索<code> Git Parameter</code> 安装<code> Git Parameter</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="创建cicd">创建<code>CI/CD</code></h2>
+<ol>
+<li>准备工作</li>
+</ol>
+<pre><code class="language-bash">#拉取环境镜像
+docker pull alpine:latest
+
+#安装git
+yum install -y git
+
+#将jenkins添加到docker用户组 - 重要
+gpasswd -a jenkins docker
+
+#重启jenkins
+systemctl restart jenkins
+</code></pre>
+<ol start="2">
+<li>创建<code>Pipeline</code><br>
+创建工作任务 - 输入任务名称 - 选择<code>Pipeline</code></li>
+<li><code>Pipeline</code>流水线配置推荐</li>
+</ol>
+<pre><code class="language-Jenkinsfile">pipeline {
+
+    agent any
+
+    stages {
+        stage('clone') {
+            steps {
+                echo 'clone' // 拉取代码
+            }
+        }
+        stage('build go') {
+            steps {
+                echo 'build go' // 编译可执行文件
+            }
+        }
+        stage('make image') {
+            steps {
+                echo 'make image' // 制作代码镜像
+            }
+        }
+        stage('push image') {
+            steps {
+                echo 'push image' // 推送到私有仓库
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'deploy' // 部署代码
+            }
+        }
+    }
+}
+</code></pre>
+<ol start="4">
+<li>使用流水线语法工具<br>
+选择工作任务点击设置，拉到最下面，点击 流水线语法
+<ol>
+<li>生成<code>git</code>语法 - 填充到 <code>clone</code>
+<ul>
+<li>示例步骤 - 选择<code>git</code></li>
+<li>输入仓库<code>url</code>:  <code>https://gitee.com/lzcit/k8s.git</code></li>
+<li>如需账号密码则需要 添加凭据 选择 <code>user_name with password </code>填充确定</li>
+<li>填充其他信息</li>
+<li>生成流水线脚本 填充到 <code>clone</code></li>
+</ul>
+<pre><code class="language-bash">git credentialsId: 'gitee_userid', url: 'https://gitee.com/lzcit/k8s.git'
+</code></pre>
+</li>
+<li>生成<code>kubernetes(k8s)</code>语法 - 填充到 <code>deploy</code>
+<ul>
+<li>准备工作</li>
+</ul>
+<pre><code class="language-bash">#kubernetes(k8s) 相关配置
+cat /root/.kube/config
+
+#分别保存 certificate-authority-data/client-certificate-data/client-key-data的值为对应的txt文件
+cat /root/.kube/config|grep certificate-authority-data |awk -F ': ' '{print $2}' &gt; certificate-authority-data.txt
+cat /root/.kube/config|grep client-certificate-data |awk -F ': ' '{print $2}' &gt; client-certificate-data.txt
+cat /root/.kube/config|grep client-key-data |awk -F ': ' '{print $2}' &gt; client-key-data.txt
+
+#生成秘钥文件
+cat certificate-authority-data.txt |base64 -d &gt; ca.crt
+cat client-certificate-data.txt |base64 -d &gt; client.crt
+cat client-key-data.txt |base64 -d &gt; client.key
+openssl pkcs12 -export -out cert.pfx -inkey client.key -in client.crt -certfile ca.crt
+#Enter Export Password:输入自定义密码
+#Verifying - Enter Export Password:再次输入自定义密码
+
+#查看kubernetes(k8s)集群信息
+kubectl cluster-info
+</code></pre>
+<ul>
+<li>示例步骤 - 选择<code>kubeconfig</code></li>
+<li>输入服务端点: <code>kubectl cluster-info</code> 可查看  <code>https://192.168.23.39:6443</code></li>
+<li>填充 <code>Certificate of certificate authority - ca.crt</code>文件内容</li>
+<li>添加凭据类型选择<code>Certificate</code>
+<ul>
+<li>上传<code>cert.pfx</code>文件</li>
+<li>输入密码为上面 自定义密码</li>
+<li>填充其他信息</li>
+</ul>
+</li>
+<li>生成流水线脚本 填充到 <code>deploy</code></li>
+</ul>
+<pre><code>kubeconfig(caCertificate: '''-----BEGIN CERTIFICATE-----
+MIIC/jCCAeagAwIBAgIBADANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwprdWJl
+cm5ldGVzMB4XDTIyMDMxOTA4MTAwM1oXDTMyMDMxNjA4MTAwM1owFTETMBEGA1UE
+AxMKa3ViZXJuZXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOMy
+ekzc4rWutBV/5ATcWLirMI8mXPycEW8WpGsZF28nlFBHy50UlmcD0tViV/JDjc2e
+mj9/DEWy/H81os1a8jTcyGLI8p+TKi3avDibQGe4etUDF+eJavEn5zqWEoP98ohA
+HfTJijBfIaI7n/qCiHVMnwvS+2yakaMcBoNhgOCDCN9gHpNqa1xBrXIr6o1HMrv7
+RQ88t26yss3e/wq3XqNApEBdk1nIkDHy/ZuFO+kTMtPPO67QBNa9LaFhKRU2/VdE
+/HAGk3n5JQ604Bn8hLZmDrf11p2dDbN6K9NtKbGuOLXbN0PsLnoBMCFdiRC/Ol1t
+RneY86zkPgk6FQEv15ECAwEAAaNZMFcwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB
+/wQFMAMBAf8wHQYDVR0OBBYEFLiwKGVC7HEf3goVSrzybGlpvWdSMBUGA1UdEQQO
+MAyCCmt1YmVybmV0ZXMwDQYJKoZIhvcNAQELBQADggEBABcXtzTpR+Oee8VzVQte
+gqvy3DQyTOcne5CS0q+kliyY36Tfsh9mieGhhHKRlD2esWVyl25qo6D0zgDhQOem
+y/QKS7/Wka3i49ygw4dxC/mJEAzMRsrCxsEFqptHXM6IMaXmsLbsil16kmMx2fLV
+4g46+TKqrRmdRSYMtUTieZtl+IJU9zmQJSYxCUFLXPysknxqenGOmbqnPat9FcZ1
+BkrZf7yD8fCbq50zcFtSP3d6hxiN9rbPGsNWGjkj+WXZ0EymxWVukKwX/BRuNlLP
+jDVgDCeR1rMCoGMkTgm1WqjynOAn/V4dl757E5da2NeOPgCfWBIuKdqOMPo4eWUV
+Mls=
+-----END CERTIFICATE-----''', credentialsId: 'kubernetes-pfx', serverUrl: 'https://192.168.23.39:6443') {
+    --TODO
+}
+</code></pre>
+</li>
+</ol>
+</li>
+<li>相关 <code>Deployment</code>与<code>Service</code>配置在<code>git</code>仓库内<code>go_app.yaml</code>文件</li>
+</ol>
+<pre><code class="language-yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-app
+  labels:
+    app: goweb
+spec:
+  selector:
+    matchLabels:
+      app: goweb
+  replicas: 10
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: goweb
+    spec:
+      containers:
+        - name: go-app
+          image: 192.168.23.39:5000/k8s:tag_name
+          imagePullPolicy: Always
+          ports:
+          - name: http
+            containerPort: 80
+          livenessProbe:
+            httpGet:
+              port: 80
+              path: /ping
+            initialDelaySeconds: 2
+            periodSeconds: 60
+            timeoutSeconds: 3
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-app
+spec:
+  type: ClusterIP
+  selector:
+    app: goweb
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+</code></pre>
+<ol start="6">
+<li>最终流水线脚本</li>
+</ol>
+<pre><code class="language-Jenkinsfile">pipeline {
+    
+    agent any
+
+    stages {
+        stage('clone') {
+            steps {
+                echo 'clone' // 拉取代码
+                git credentialsId: 'gitee_userid', url: 'https://gitee.com/lzcit/k8s.git'
+                sh &quot;git checkout master-20220331-00&quot; //切换本期对应的代码分支
+            }
+        }
+        stage('build go') {
+            steps {
+                echo 'build go' // 编译可执行文件
+                sh &quot;export GOPROXY='https://goproxy.cn' &amp;&amp; go mod tidy &amp;&amp; CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./run run.go&quot;
+                sh &quot;mkdir -p work &amp;&amp; cp -a run ./work/ &amp;&amp; cp -a static ./work/&quot;
+            }
+        }
+        stage('make image') {
+            steps {
+                echo 'make image' // 制作代码镜像
+                sh &quot;docker build -f Dockerfile -t 192.168.23.39:5000/k8s:tag_name .&quot; //相关Dockerfile在git上
+            }
+        }
+        stage('push image') {
+            steps {
+                echo 'push image' // 推送到私有仓库
+                sh &quot;docker push 192.168.23.39:5000/k8s:tag_name&quot;
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'deploy' // 部署代码
+                kubeconfig(caCertificate: '''-----BEGIN CERTIFICATE-----
+MIIC/jCCAeagAwIBAgIBADANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwprdWJl
+cm5ldGVzMB4XDTIyMDMyOTAzMzcyOVoXDTMyMDMyNjAzMzcyOVowFTETMBEGA1UE
+AxMKa3ViZXJuZXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOZO
+NeeVjwkKy0BoGA0QetynFk89/3Zlh2EUmbbBXMygwDkbiJ0wRGyIDXiYqQ4HniC5
+q0I8DwTB7WPkwhaHBGrQItXcuoo68hxnR3sRewwfuUB4uivkkhqIyeMk2KgSvbLW
+41dnX6QamWSYJLGkLMmLru+BaKkEPGe1SZQH6ognATDm19Kt5vtu70kZH5O7qH38
+TOguX+inuboREDB2RpMBm0Qp5NdXm3QXFlwHkryvYYIR5JkexHnUi9jjLy3V4qdQ
+uDJhrcS6/w286IHeMzZ5dOaKcQ4vp7/wyk4soD+5MHnaBmttRkUIGwaTwmWWQjUp
+votUOjK3CAkD/EsysqMCAwEAAaNZMFcwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB
+/wQFMAMBAf8wHQYDVR0OBBYEFObVS5S7UkExTHiRIaJzKXtAfuiYMBUGA1UdEQQO
+MAyCCmt1YmVybmV0ZXMwDQYJKoZIhvcNAQELBQADggEBAEN2sVIkQhuCGaLMuxTh
+e+91J7LYnMEw6U/RTM3jyxm/6L0iSOx4jYh3MES7Nl7r42IRF0QxOV8cPy3AzMby
+MZs+KEt67EusJFNucEkRbmcJuYmokbzc3U+hxQi4rA2AHnOLUPvH9cz6A1uaRlJ5
++PqGatgLSKXeZIwYtlI+JV5a6s4Ra2fBNbvcGSm0n8IJp0Jf5kgqmF7Gy5pBKDuP
+2ifb45U/ntkc7hIzXd+wJd6369W031NUjAOMCE1xovv4RGlW2BAa0PEX+XBuZ3bW
+UVTd0XVUVuhjoStKI+3jm7GF96d/a5Igj+JwkjeEq3POC131LMlt5gd2ohMTbcr2
+MyM=
+-----END CERTIFICATE-----''', credentialsId: 'kubernetes-key', serverUrl: 'https://192.168.23.39:6443') {
+                    sh &quot;kubectl apply -f go_app.yaml&quot;
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<ol start="7">
+<li>执行<code>jenkins -&gt; Build now</code> - 结束</li>
+</ol>
+
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>我的测试学习</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://www.vincent.ac.cn/post/Prix7QUh-/">https://www.vincent.ac.cn/post/Prix7QUh-/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.vincent.ac.cn/post/Prix7QUh-/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.vincent.ac.cn/post/Prix7QUh-/&sharesource=qzone&title=jenkins+kubernetes(k8s)+docker持续集成与部署(CI/CD) &pics=https://www.vincent.ac.cn//images/avatar.png?v=1661407627133&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.vincent.ac.cn/post/Prix7QUh-/&sharesource=weibo&title=jenkins+kubernetes(k8s)+docker持续集成与部署(CI/CD)  + " - " + &pic="https://www.vincent.ac.cn//images/avatar.png?v=1661407627133 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                        <div class="reward ">
+                                                                            <div class="reward-button ">&yen;
+                                                                                <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.vincent.ac.cn/alipay.jpg"><b>支付宝</b> </span>
+                                                                                <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.vincent.ac.cn/wechat.jpg"><b>微信</b> </span> </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://www.vincent.ac.cn/5-TfXto0L/">#
+                    k8s
+                        </a>
+                        
+                        <a href="https://www.vincent.ac.cn/W9jfq_kp_/">#
+                    Devops
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.vincent.ac.cn/post/NyBeI-EwM/">
+                                                                                            jenkins参数化构建:条件触发构建
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.vincent.ac.cn/post/DY4viH_Fi/">
+                                                                                                    使用kubeadm安装kubernetes
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        我的测试学习  <a href="https://beian.miit.gov.cn/"><b> 豫ICP备19031622号</b></a><br>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        我的测试学习 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1661407627133);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>
